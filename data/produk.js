@@ -3,7 +3,7 @@
    Perubahan manual akan hilang saat generator dijalankan lagi.
    Untuk mengubah data: edit file .psv / affiliate-links.psv, lalu jalankan:
        python3 tools/build_data.py
-   Dibuat: 2026-10-22 · 25 produk · 0 link affiliate
+   Dibuat: 2026-10-22 · 55 produk · 55 link affiliate
    ===================================================================== */
 
 window.TANGGAL_DATA = "22 Oktober 2026";
@@ -12,6 +12,14 @@ window.KATEGORI = [
   {
     "nama": "Perempuan",
     "ikon": "👩"
+  },
+  {
+    "nama": "Pria",
+    "ikon": "👨"
+  },
+  {
+    "nama": "Balita",
+    "ikon": "👶"
   }
 ];
 
@@ -102,6 +110,112 @@ window.GRUP = [
       "Semua produk sama-sama 10rb+ terjual (total) dan 1rb+/bulan, jadi tidak ada label 'Paling laris'.",
       "Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya."
     ]
+  },
+  {
+    "id": "sabun-mandi-pria",
+    "nama": "Sabun Mandi Pria",
+    "pendek": "Sabun Mandi",
+    "kategori": "Pria",
+    "produk": [
+      "kahf-cooling-and-brightening-body-wash-7761389796",
+      "kahf-body-wash-pria-200ml-cooling-21647317790",
+      "nextprime-perfume-body-wash-400ml-sabun-57160203220",
+      "cave-intense-bright-bar-soap-for-45909673005",
+      "bromen-brightening-soap-travel-kit-20-43511025971"
+    ],
+    "catatan": [
+      "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
+      "Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya."
+    ]
+  },
+  {
+    "id": "shampoo-pria",
+    "nama": "Sampo Pria",
+    "pendek": "Sampo",
+    "kategori": "Pria",
+    "produk": [
+      "barber-daily-dandruff-oil-control-shampoo-49002927902",
+      "paket-hemat-isi-3-garnier-men-20377685939",
+      "clear-men-shampoo-anti-ketombe-menthol-6330970391",
+      "men-s-biore-5-in-1-44601820030",
+      "cave-hair-shampoo-200ml-penumbuh-dan-6194503321"
+    ],
+    "catatan": [
+      "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
+      "Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya."
+    ]
+  },
+  {
+    "id": "facial-wash-pria",
+    "nama": "Facial Wash Pria",
+    "pendek": "Facial Wash",
+    "kategori": "Pria",
+    "produk": [
+      "kahf-skin-energizing-and-brightening-facial-5358717104",
+      "garnier-men-facial-wash-100ml-isi-27221469602",
+      "nextprime-men-facial-wash-100gr-all-57857445714",
+      "nivea-men-facial-foam-50-ml-28870869761",
+      "ms-glow-for-men-hydra-boost-25989145906"
+    ],
+    "catatan": [
+      "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
+      "3 dari 5 produk sama-sama 10rb+ terjual (total) dan 1rb+/bulan, jadi tidak ada label 'Paling laris'.",
+      "Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya."
+    ]
+  },
+  {
+    "id": "kaos-pria",
+    "nama": "Kaos Pria",
+    "pendek": "Kaos",
+    "kategori": "Pria",
+    "produk": [
+      "swan-shogunavo-kaos-oblong-pria-swan-7018844487",
+      "aerostreet-relix-kaos-pria-hitam-t-52902063835",
+      "zalmore-men-oneck-t-shirt-luma-2618261980",
+      "t-shirt-kaos-pria-wanita-giordano-55003749303",
+      "new-states-apparel-kaos-polos-pria-11356656903"
+    ],
+    "catatan": [
+      "3 dari 5 produk sama-sama punya rating 4.9, jadi tidak ada label 'Rating tertinggi'.",
+      "4 dari 5 produk sama-sama 10rb+ terjual (total) dan 1rb+/bulan, jadi tidak ada label 'Paling laris'.",
+      "Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya."
+    ]
+  },
+  {
+    "id": "sabun-bayi",
+    "nama": "Sabun Bayi",
+    "pendek": "Sabun Bayi",
+    "kategori": "Balita",
+    "produk": [
+      "cussons-baby-hair-body-wash-deep-27225960427",
+      "cussons-baby-soap-fresh-nourish-sabun-3759702423",
+      "zwitsal-baby-bar-soap-classic-4x70gr-29111536709",
+      "johnson-johnson-baby-bath-milk-and-29564446855",
+      "kodomo-top-to-toe-pink-refill-25544969362"
+    ],
+    "catatan": [
+      "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
+      "Semua produk sama-sama 10rb+ terjual (total) dan 1rb+/bulan, jadi tidak ada label 'Paling laris'.",
+      "Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya."
+    ]
+  },
+  {
+    "id": "shampoo-bayi",
+    "nama": "Sampo Bayi",
+    "pendek": "Sampo Bayi",
+    "kategori": "Balita",
+    "produk": [
+      "zwitsal-baby-shampoo-aloe-vera-kemiri-40300035677",
+      "moell-intensive-nourish-gentle-hair-shampoo-27572514218",
+      "my-baby-kids-shampoo-conditioner-refill-44377945225",
+      "lactacyd-baby-gentle-care-2in1-body-6116869548",
+      "kodomo-shampoo-gel-strawberry-botol-200-1427466351"
+    ],
+    "catatan": [
+      "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
+      "Semua produk sama-sama 10rb+ terjual (total) dan 1rb+/bulan, jadi tidak ada label 'Paling laris'.",
+      "Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya."
+    ]
   }
 ];
 
@@ -147,8 +261,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Sabun Mandi Wanita yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp4.000 (diskon 20%) dengan rating 5.0, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/30736001/25352313261",
-    "linkShopee": "https://shopee.co.id/product/30736001/25352313261",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/1qczkhuPVN",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -189,8 +303,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Mandi Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp26.000 (diskon 42%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/30736001/24421320173",
-    "linkShopee": "https://shopee.co.id/product/30736001/24421320173",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/1Lgj9mwJWI",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -231,8 +345,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Mandi Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp46.856 (diskon 41%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1040742641/28530610311",
-    "linkShopee": "https://shopee.co.id/product/1040742641/28530610311",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/1W09M5vgBL",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -272,8 +386,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Mandi Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp28.500 (diskon 43%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/842932300/52211633034",
-    "linkShopee": "https://shopee.co.id/product/842932300/52211633034",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/3g4dw4nQmm",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -314,8 +428,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Mandi Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp12.400 (diskon 6%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/64474495/45804607971",
-    "linkShopee": "https://shopee.co.id/product/64474495/45804607971",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/3qO48NmnRp",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -357,8 +471,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp75.000 (diskon 16%) dengan rating 4.9, 10rb+ terjual (total), dan 845 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/11487927/22056285778",
-    "linkShopee": "https://shopee.co.id/product/11487927/22056285778",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/3B8NLAfa46",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -398,8 +512,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp28.900 (diskon 26%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/59763733/1080733793",
-    "linkShopee": "https://shopee.co.id/product/59763733/1080733793",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/30ox8rgDP5",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -440,8 +554,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp32.800 (diskon 22%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/64474495/6459351595",
-    "linkShopee": "https://shopee.co.id/product/64474495/6459351595",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/4qGbKEZEgS",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -484,8 +598,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Sampo Wanita yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp55.800 (diskon 10%) dengan rating 5.0, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/932470899/42162249883",
-    "linkShopee": "https://shopee.co.id/product/932470899/42162249883",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/4fxB7vZs1R",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -529,8 +643,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Sampo Wanita yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp28.000 (diskon 28%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/494548950/43803162123",
-    "linkShopee": "https://shopee.co.id/product/494548950/43803162123",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/5AtRiqXy0Y",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -572,8 +686,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Facial Wash Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp39.000 (diskon 50%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/63983008/56310901303",
-    "linkShopee": "https://shopee.co.id/product/63983008/56310901303",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/5AtRXGuAV3",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -616,8 +730,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Facial Wash Wanita yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp23.500 (diskon 46%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/59763733/26720368293",
-    "linkShopee": "https://shopee.co.id/product/59763733/26720368293",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/1W09AVZ3fk",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -659,8 +773,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Facial Wash Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp34.560 (diskon 65%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/809769142/41101567247",
-    "linkShopee": "https://shopee.co.id/product/809769142/41101567247",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/1LgiyCZh0j",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -700,8 +814,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Facial Wash Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp31.300 (diskon 48%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1292772191/43358097567",
-    "linkShopee": "https://shopee.co.id/product/1292772191/43358097567",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/1qczZ7Xmzq",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -742,8 +856,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Facial Wash Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp59.200 (diskon 20%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/62583853/41107048405",
-    "linkShopee": "https://shopee.co.id/product/62583853/41107048405",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/2VsgXwmnFW",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -786,8 +900,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Baju Wanita yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp37.000 (diskon 47%) dengan rating 4.6, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1336306004/46703468016",
-    "linkShopee": "https://shopee.co.id/product/1336306004/46703468016",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/2LZGLdnQaV",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -829,8 +943,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Baju Wanita yang dibandingkan di Bandingin.id, produk ini paling seimbang (harga, rating, dan penjualan). Harganya Rp52.100 (diskon 21%) dengan rating 4.8, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/240107953/41813830067",
-    "linkShopee": "https://shopee.co.id/product/240107953/41813830067",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/BUllevfz6",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -874,8 +988,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Baju Wanita yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp82.999 (diskon 51%) dengan rating 4.9, 3rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/4645013/50963613239",
-    "linkShopee": "https://shopee.co.id/product/4645013/50963613239",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/1BLZLwJK5",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -918,8 +1032,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Baju Wanita yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp99.900 (diskon 33%) dengan rating 4.9, 3rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/94449187/48863609762",
-    "linkShopee": "https://shopee.co.id/product/94449187/48863609762",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/W7cAGuPJC",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -960,8 +1074,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Baju Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp54.900 (diskon 68%) dengan rating 4.7, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/344625575/44314124281",
-    "linkShopee": "https://shopee.co.id/product/344625575/44314124281",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/70L5uDZNHT",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -1001,8 +1115,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Tas Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp161.500 (diskon 19%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/33366710/21085396782",
-    "linkShopee": "https://shopee.co.id/product/33366710/21085396782",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/3VlDYBnNGW",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -1044,8 +1158,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Tas Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp129.000 (diskon 68%) dengan rating 4.8, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/44802360/29811148509",
-    "linkShopee": "https://shopee.co.id/product/44802360/29811148509",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/3LRnLso0bV",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -1086,8 +1200,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Tas Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp155.999 (diskon 70%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1533514627/27791396863",
-    "linkShopee": "https://shopee.co.id/product/1533514627/27791396863",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/8pmk5aSOYq",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -1131,8 +1245,8 @@ window.PRODUK = [
     ],
     "kesimpulan": "Dari 5 pilihan Tas Wanita yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp63.000 (diskon 52%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/424016930/48104536967",
-    "linkShopee": "https://shopee.co.id/product/424016930/48104536967",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/8fTJtHT1tp",
+    "linkAffiliate": true,
     "tokopedia": ""
   },
   {
@@ -1173,8 +1287,1288 @@ window.PRODUK = [
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Tas Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp146.099 (diskon 77%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1384531049/43362258108",
-    "linkShopee": "https://shopee.co.id/product/1384531049/43362258108",
-    "linkAffiliate": false,
+    "linkShopee": "https://s.shopee.co.id/9APaUCR7sw",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "kahf-cooling-and-brightening-body-wash-7761389796",
+    "contoh": false,
+    "nama": "Kahf Cooling and Brightening Body Wash (200ml) - Skin Softening & Moisturizing - Wangi Tahan Lama - Suitable for All Skin Types - Pencuci Badan",
+    "kategori": "Pria",
+    "jenis": "sabun-mandi-pria",
+    "jenisNama": "Sabun Mandi Pria",
+    "jenisPendek": "Sabun Mandi",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-823ph-mpbqww124eff83",
+    "harga": 29500,
+    "hargaAsli": 57000,
+    "diskon": 48,
+    "rating": 4.9,
+    "terjual": 911,
+    "terjualPlus": false,
+    "terjualLabel": "911",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 14750,
+    "satuanIsi": "ml",
+    "kota": "KOTA JAKARTA TIMUR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (911/bln). Diskon 48%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 911 terjual per bulan.",
+      "Sedang diskon 48% dari harga coret Rp57.000.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp14.750 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 200ml, Cooling, Wangi Tahan Lama (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Toko yang sama juga menjual Kahf Body Wash Pria 200ml (Cooling… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Mandi Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp29.500 (diskon 48%) dengan rating 4.9, 10rb+ terjual (total), dan 911 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/326487418/7761389796",
+    "linkShopee": "https://s.shopee.co.id/906AHtRlDv",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "kahf-body-wash-pria-200ml-cooling-21647317790",
+    "contoh": false,
+    "nama": "Kahf Body Wash Pria 200ml (Cooling & Brightening / Relaxing & Acne Fight) - Sabun Mandi Cair Melembapkan, Mencerahkan & Menghilangkan Jerawat Punggung - Wangi Tahan Lama",
+    "kategori": "Pria",
+    "jenis": "sabun-mandi-pria",
+    "jenisNama": "Sabun Mandi Pria",
+    "jenisPendek": "Sabun Mandi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zto-mskmpync7jt61d",
+    "harga": 29500,
+    "hargaAsli": 57000,
+    "diskon": 48,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 14750,
+    "satuanIsi": "ml",
+    "kota": "KOTA JAKARTA TIMUR",
+    "label": [
+      "Paling laris",
+      "Paling seimbang"
+    ],
+    "ringkasan": "Paling laris di kelompok Sabun Mandi Pria. Rating 4.9, 10rb+ terjual. Diskon 48%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 48% dari harga coret Rp57.000.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp14.750 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 200ml, Cair, Cooling, Wangi Tahan Lama (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Toko yang sama juga menjual Kahf Cooling and Brightening Body Wash… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Sabun Mandi Pria yang dibandingkan di Bandingin.id, produk ini paling laris sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp29.500 (diskon 48%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/326487418/21647317790",
+    "linkShopee": "https://s.shopee.co.id/6L5P6zh8Yw",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "nextprime-perfume-body-wash-400ml-sabun-57160203220",
+    "contoh": false,
+    "nama": "NEXTPRIME Perfume body wash 400ml / Sabun Pencerah /sabun mandi cair/ mencerahkan kulit / menyegarkan/ busa melimpah / Fresh Citrus / Clean Woods / Vibrant Blue untuk pria 400g sabun mandi cair pria / Brightening Triple Action Soap Bar /next prime men",
+    "kategori": "Pria",
+    "jenis": "sabun-mandi-pria",
+    "jenisNama": "Sabun Mandi Pria",
+    "jenisPendek": "Sabun Mandi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-mukf19lrhyiv43",
+    "harga": 55000,
+    "hargaAsli": 99000,
+    "diskon": 44,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 4000,
+    "terjualTotalLabel": "4rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KAB. TANGERANG",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 4rb+ terjual (1rb+/bln). Diskon 44%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 4rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 44% dari harga coret Rp99.000.",
+      "Yang tertulis di judul produk: 400ml, 400g, cair (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Cave Intense Bright Bar Soap for… (Rp29.000).",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Mandi Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp55.000 (diskon 44%) dengan rating 4.9, 4rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/1676091426/57160203220",
+    "linkShopee": "https://s.shopee.co.id/6VOpJIgVDz",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "cave-intense-bright-bar-soap-for-45909673005",
+    "contoh": false,
+    "nama": "Cave Intense Bright Bar Soap for Men 85gr - Sabun Batang Deep Clean Pria 5 in1 untuk Badan dan Muka Membantu Mencerahkan, Merawat, dan Melembabkan Kulit",
+    "kategori": "Pria",
+    "jenis": "sabun-mandi-pria",
+    "jenisNama": "Sabun Mandi Pria",
+    "jenisPendek": "Sabun Mandi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822wj-mnz4mhqp02yrec",
+    "harga": 29000,
+    "hargaAsli": 60000,
+    "diskon": 52,
+    "rating": 4.9,
+    "terjual": 905,
+    "terjualPlus": false,
+    "terjualLabel": "905",
+    "terjualTotal": 2000,
+    "terjualTotalLabel": "2rb+",
+    "hargaPer100": 34118,
+    "satuanIsi": "g",
+    "kota": "KOTA JAKARTA TIMUR",
+    "label": [
+      "Paling murah"
+    ],
+    "ringkasan": "Paling murah di kelompok Sabun Mandi Pria. Rating 4.9, 2rb+ terjual. Diskon 52%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 2rb+ terjual (total) dan 905 terjual per bulan.",
+      "Sedang diskon 52% dari harga coret Rp60.000.",
+      "Harga paling murah di antara 5 pilihan Sabun Mandi Pria yang dibandingkan di Bandingin.id.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp34.117 per 100 g (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 85gr, Bar Soap, Batang (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Diskonnya sangat besar (52%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Penjualannya (2rb+ total, 905/bulan) paling sedikit di kelompok ini.",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Sabun Mandi Pria yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp29.000 (diskon 52%) dengan rating 4.9, 2rb+ terjual (total), dan 905 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/268430688/45909673005",
+    "linkShopee": "https://s.shopee.co.id/9Kj0gVViTY",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "bromen-brightening-soap-travel-kit-20-43511025971",
+    "contoh": false,
+    "nama": "BROMEN Brightening Soap Travel Kit [@20 gr Isi 3 Pcs] Free Soapcase - Kandungan Charcoal Active Care",
+    "kategori": "Pria",
+    "jenis": "sabun-mandi-pria",
+    "jenisNama": "Sabun Mandi Pria",
+    "jenisPendek": "Sabun Mandi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztn-mqmzocx5dzwie5",
+    "harga": 40900,
+    "hargaAsli": 89000,
+    "diskon": 54,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 68167,
+    "satuanIsi": "g",
+    "kota": "KOTA SURABAYA",
+    "label": [
+      "Paling laris"
+    ],
+    "ringkasan": "Paling laris di kelompok Sabun Mandi Pria. Rating 4.9, 10rb+ terjual. Diskon 54%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 54% dari harga coret Rp89.000.",
+      "Yang tertulis di judul produk: 20 gr, Isi 3, Charcoal (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Diskonnya sangat besar (54%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ada pilihan lebih murah di kelompok yang sama: Cave Intense Bright Bar Soap for… (Rp29.000).",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Sabun Mandi Pria yang dibandingkan di Bandingin.id, produk ini paling laris. Harganya Rp40.900 (diskon 54%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/6490430/43511025971",
+    "linkShopee": "https://s.shopee.co.id/9V2QsoV58b",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "barber-daily-dandruff-oil-control-shampoo-49002927902",
+    "contoh": false,
+    "nama": "Barber Daily Dandruff & Oil-Control Shampoo 165mL",
+    "kategori": "Pria",
+    "jenis": "shampoo-pria",
+    "jenisNama": "Sampo Pria",
+    "jenisPendek": "Sampo",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztc-mrpbsddg5dkxc5",
+    "harga": 38100,
+    "hargaAsli": 65000,
+    "diskon": 41,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 23091,
+    "satuanIsi": "ml",
+    "kota": "KOTA JAKARTA TIMUR",
+    "label": [
+      "Paling laris",
+      "Paling seimbang"
+    ],
+    "ringkasan": "Paling laris di kelompok Sampo Pria. Rating 4.9, 10rb+ terjual. Diskon 41%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 41% dari harga coret Rp65.000.",
+      "Yang tertulis di judul produk: 165mL (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Men's Biore 5 in 1 Shampoo… (Rp33.400).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Sampo Pria yang dibandingkan di Bandingin.id, produk ini paling laris sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp38.100 (diskon 41%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/18102367/49002927902",
+    "linkShopee": "https://s.shopee.co.id/2gC6kMjbfH",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "paket-hemat-isi-3-garnier-men-20377685939",
+    "contoh": false,
+    "nama": "[PAKET HEMAT ISI 3] Garnier Men Shampoo Color Hair Color Hitam Alami - 20ml Cat Rambut Tutup Uban",
+    "kategori": "Pria",
+    "jenis": "shampoo-pria",
+    "jenisNama": "Sampo Pria",
+    "jenisPendek": "Sampo",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134305-81ztc-muk93riltamie5",
+    "harga": 57557,
+    "hargaAsli": 71400,
+    "diskon": 19,
+    "rating": 4.9,
+    "terjual": 986,
+    "terjualPlus": false,
+    "terjualLabel": "986",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 287785,
+    "satuanIsi": "ml",
+    "kota": "KOTA JAKARTA UTARA",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (986/bln). Diskon 19%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 986 terjual per bulan.",
+      "Sedang diskon 19% dari harga coret Rp71.400.",
+      "Yang tertulis di judul produk: 20ml, ISI 3 (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Men's Biore 5 in 1 Shampoo… (Rp33.400).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp57.557 (diskon 19%) dengan rating 4.9, 10rb+ terjual (total), dan 986 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/62583853/20377685939",
+    "linkShopee": "https://s.shopee.co.id/3qO48VfAIW",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "clear-men-shampoo-anti-ketombe-menthol-6330970391",
+    "contoh": false,
+    "nama": "CLEAR Men Shampoo Anti Ketombe Menthol Fresh Active 160ML - TwinPack",
+    "kategori": "Pria",
+    "jenis": "shampoo-pria",
+    "jenisNama": "Sampo Pria",
+    "jenisPendek": "Sampo",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-ls9dqmetxlpj15",
+    "harga": 61700,
+    "hargaAsli": 71600,
+    "diskon": 14,
+    "rating": 4.9,
+    "terjual": 227,
+    "terjualPlus": false,
+    "terjualLabel": "227",
+    "terjualTotal": 7000,
+    "terjualTotalLabel": "7rb+",
+    "hargaPer100": 38562,
+    "satuanIsi": "ml",
+    "kota": "KAB. BOGOR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 7rb+ terjual (227/bln). Diskon 14%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 7rb+ terjual (total) dan 227 terjual per bulan.",
+      "Sedang diskon 14% dari harga coret Rp71.600.",
+      "Yang tertulis di judul produk: 160ML, Menthol, Anti Ketombe (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Men's Biore 5 in 1 Shampoo… (Rp33.400).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp61.700 (diskon 14%) dengan rating 4.9, 7rb+ terjual (total), dan 227 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/14318452/6330970391",
+    "linkShopee": "https://s.shopee.co.id/3g4dwCfndV",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "men-s-biore-5-in-1-44601820030",
+    "contoh": false,
+    "nama": "Men's Biore 5 in 1 Shampoo & Sabun Mandi Cair Pria Fresh Menthol 400ml Pouch",
+    "kategori": "Pria",
+    "jenis": "shampoo-pria",
+    "jenisNama": "Sampo Pria",
+    "jenisPendek": "Sampo",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-82252-mj5bioauqaytcd",
+    "harga": 33400,
+    "hargaAsli": 35100,
+    "diskon": 5,
+    "rating": 4.9,
+    "terjual": 241,
+    "terjualPlus": false,
+    "terjualLabel": "241",
+    "terjualTotal": 3000,
+    "terjualTotalLabel": "3rb+",
+    "hargaPer100": 8350,
+    "satuanIsi": "ml",
+    "kota": "KAB. BOGOR",
+    "label": [
+      "Paling murah"
+    ],
+    "ringkasan": "Paling murah di kelompok Sampo Pria. Rating 4.9, 3rb+ terjual.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 3rb+ terjual (total) dan 241 terjual per bulan.",
+      "Harga paling murah di antara 5 pilihan Sampo Pria yang dibandingkan di Bandingin.id.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp8.350 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 400ml, Pouch, Cair, Menthol (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Penjualannya (3rb+ total, 241/bulan) paling sedikit di kelompok ini.",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Sampo Pria yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp33.400 (diskon 5%) dengan rating 4.9, 3rb+ terjual (total), dan 241 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/36092728/44601820030",
+    "linkShopee": "https://s.shopee.co.id/3VlDjtgQyU",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "cave-hair-shampoo-200ml-penumbuh-dan-6194503321",
+    "contoh": false,
+    "nama": "Cave Hair Shampoo 200ml - Penumbuh dan Penebal Rambut Anti Rontok dengan Biotin dan Minyak Kemiri",
+    "kategori": "Pria",
+    "jenis": "shampoo-pria",
+    "jenisNama": "Sampo Pria",
+    "jenisPendek": "Sampo",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-22100-3sktotztg8ivdc",
+    "harga": 126000,
+    "hargaAsli": null,
+    "diskon": 0,
+    "rating": 4.9,
+    "terjual": 202,
+    "terjualPlus": false,
+    "terjualLabel": "202",
+    "terjualTotal": 7000,
+    "terjualTotalLabel": "7rb+",
+    "hargaPer100": 63000,
+    "satuanIsi": "ml",
+    "kota": "KOTA JAKARTA TIMUR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 7rb+ terjual (202/bln).",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 7rb+ terjual (total) dan 202 terjual per bulan.",
+      "Yang tertulis di judul produk: 200ml, Anti Rontok (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Men's Biore 5 in 1 Shampoo… (Rp33.400).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp126.000 dengan rating 4.9, 7rb+ terjual (total), dan 202 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/268430688/6194503321",
+    "linkShopee": "https://s.shopee.co.id/3LRnXah4JT",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "kahf-skin-energizing-and-brightening-facial-5358717104",
+    "contoh": false,
+    "nama": "Kahf Skin Energizing and Brightening Facial Wash Foam 100ml - Sabun Cuci Muka Pria Face Wash Gentle Cleanser Beneran Kerasa Bersih, Bebas Drama Muka Ketarik, Wajah Cerah - 5x Brightening System, Niacinamide, Symradiance - Suitable for Daily Use",
+    "kategori": "Pria",
+    "jenis": "facial-wash-pria",
+    "jenisNama": "Facial Wash Pria",
+    "jenisPendek": "Facial Wash",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zti-mu77v543yfwiec",
+    "harga": 42500,
+    "hargaAsli": 83500,
+    "diskon": 49,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 8500,
+    "satuanIsi": "ml",
+    "kota": "KOTA JAKARTA TIMUR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 49%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 49% dari harga coret Rp83.500.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp8.500 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 100ml, Niacinamide (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Nivea Men Facial Foam 50 ml… (Rp18.750).",
+      "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Facial Wash Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp42.500 (diskon 49%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/326487418/5358717104",
+    "linkShopee": "https://s.shopee.co.id/1qczkpucEK",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "garnier-men-facial-wash-100ml-isi-27221469602",
+    "contoh": false,
+    "nama": "GARNIER Men Facial Wash 100ml ISI 2 Semua Varian Sabun Cuci Muka Pria - face wash Skincare pembersih wajah skincare pria acno fight turbo bright wasabi charcoal oil control lawan jerawat kulit kusam face wash",
+    "kategori": "Pria",
+    "jenis": "facial-wash-pria",
+    "jenisNama": "Facial Wash Pria",
+    "jenisPendek": "Facial Wash",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134305-81ztc-muk4uueqha858c",
+    "harga": 37500,
+    "hargaAsli": null,
+    "diskon": 0,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KOTA JAKARTA UTARA",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln).",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Yang tertulis di judul produk: 100ml, ISI 2, charcoal (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Nivea Men Facial Foam 50 ml… (Rp18.750).",
+      "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
+      "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Facial Wash Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp37.500 dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/62583853/27221469602",
+    "linkShopee": "https://s.shopee.co.id/1gJZYWvFZJ",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "nextprime-men-facial-wash-100gr-all-57857445714",
+    "contoh": false,
+    "nama": "NEXTPRIME Men Facial Wash 100gr All Variant - Mencerahkan / Merawat kulit berjerawat / Kontrol tampilan minyak / Acne / sabun cuci muka / sabun muka pria / pembersih wajah / pencuci muka / sabun wajah / cleanser / skincare pria/ next prime men face wash",
+    "kategori": "Pria",
+    "jenis": "facial-wash-pria",
+    "jenisNama": "Facial Wash Pria",
+    "jenisPendek": "Facial Wash",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztm-mtc5d34w6uipb5",
+    "harga": 35200,
+    "hargaAsli": 99000,
+    "diskon": 64,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KAB. TANGERANG",
+    "label": [
+      "Paling seimbang"
+    ],
+    "ringkasan": "Paling seimbang di kelompok Facial Wash Pria. Rating 4.9, 10rb+ terjual. Diskon 64%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 64% dari harga coret Rp99.000.",
+      "Yang tertulis di judul produk: 100gr (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Diskonnya sangat besar (64%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ada pilihan lebih murah di kelompok yang sama: Nivea Men Facial Foam 50 ml… (Rp18.750).",
+      "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
+      "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Facial Wash Pria yang dibandingkan di Bandingin.id, produk ini paling seimbang (harga, rating, dan penjualan). Harganya Rp35.200 (diskon 64%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/1676091426/57857445714",
+    "linkShopee": "https://s.shopee.co.id/1W09MDvsuI",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "nivea-men-facial-foam-50-ml-28870869761",
+    "contoh": false,
+    "nama": "Nivea Men Facial Foam 50 ml - 100ml - Pembersih Muka Pria - Merah Jingga Official",
+    "kategori": "Pria",
+    "jenis": "facial-wash-pria",
+    "jenisNama": "Facial Wash Pria",
+    "jenisPendek": "Facial Wash",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-7rfh7-m3vihzh2bu0260",
+    "harga": 18750,
+    "hargaAsli": null,
+    "diskon": 0,
+    "rating": 4.9,
+    "terjual": 703,
+    "terjualPlus": false,
+    "terjualLabel": "703",
+    "terjualTotal": 5000,
+    "terjualTotalLabel": "5rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KAB. BOGOR",
+    "label": [
+      "Paling murah"
+    ],
+    "ringkasan": "Paling murah di kelompok Facial Wash Pria. Rating 4.9, 5rb+ terjual.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 5rb+ terjual (total) dan 703 terjual per bulan.",
+      "Harga paling murah di antara 5 pilihan Facial Wash Pria yang dibandingkan di Bandingin.id.",
+      "Yang tertulis di judul produk: 50 ml, 100ml (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Penjualannya (5rb+ total, 703/bulan) paling sedikit di kelompok ini.",
+      "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Facial Wash Pria yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp18.750 dengan rating 4.9, 5rb+ terjual (total), dan 703 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/1346168602/28870869761",
+    "linkShopee": "https://s.shopee.co.id/1Lgj9uwWFH",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "ms-glow-for-men-hydra-boost-25989145906",
+    "contoh": false,
+    "nama": "Ms Glow For Men - Hydra Boost Facial Wash - 100 Ml - Sabun Muka Pria Untuk Kulit Kering",
+    "kategori": "Pria",
+    "jenis": "facial-wash-pria",
+    "jenisNama": "Facial Wash Pria",
+    "jenisPendek": "Facial Wash",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztq-mu3az1xpboxu8e",
+    "harga": 35000,
+    "hargaAsli": 45000,
+    "diskon": 22,
+    "rating": 4.9,
+    "terjual": 848,
+    "terjualPlus": false,
+    "terjualLabel": "848",
+    "terjualTotal": 6000,
+    "terjualTotalLabel": "6rb+",
+    "hargaPer100": 35000,
+    "satuanIsi": "ml",
+    "kota": "KAB. MALANG",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 6rb+ terjual (848/bln). Diskon 22%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 6rb+ terjual (total) dan 848 terjual per bulan.",
+      "Sedang diskon 22% dari harga coret Rp45.000.",
+      "Yang tertulis di judul produk: 100 Ml (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Nivea Men Facial Foam 50 ml… (Rp18.750).",
+      "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Facial Wash Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp35.000 (diskon 22%) dengan rating 4.9, 6rb+ terjual (total), dan 848 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/218954892/25989145906",
+    "linkShopee": "https://s.shopee.co.id/2VsgY3s4sW",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "swan-shogunavo-kaos-oblong-pria-swan-7018844487",
+    "contoh": false,
+    "nama": "SWAN SHOGUNAVO Kaos Oblong Pria Swan Brand - Type Deluxe",
+    "kategori": "Pria",
+    "jenis": "kaos-pria",
+    "jenisNama": "Kaos Pria",
+    "jenisPendek": "Kaos",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zti-mt4scvtdeivd76",
+    "harga": 24542,
+    "hargaAsli": 80000,
+    "diskon": 69,
+    "rating": 4.8,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "",
+    "label": [
+      "Paling murah"
+    ],
+    "ringkasan": "Paling murah di kelompok Kaos Pria. Rating 4.8, 10rb+ terjual. Diskon 69%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 69% dari harga coret Rp80.000.",
+      "Harga paling murah di antara 5 pilihan Kaos Pria yang dibandingkan di Bandingin.id."
+    ],
+    "kekurangan": [
+      "Diskonnya sangat besar (69%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Lokasi pengiriman tidak tercantum di data. Cek di halaman produk.",
+      "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp24.542 (diskon 69%) dengan rating 4.8, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/26727290/7018844487",
+    "linkShopee": "https://s.shopee.co.id/7puCtrcnCO",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "aerostreet-relix-kaos-pria-hitam-t-52902063835",
+    "contoh": false,
+    "nama": "Aerostreet Relix Kaos Pria Hitam T-shirt Cowok Men Casual Cotton Combed Adem Tidak Panas AACAA",
+    "kategori": "Pria",
+    "jenis": "kaos-pria",
+    "jenisNama": "Kaos Pria",
+    "jenisPendek": "Kaos",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822ws-mminybqvyn0vf7",
+    "harga": 69635,
+    "hargaAsli": 179800,
+    "diskon": 61,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KAB. KLATEN",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 61%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 61% dari harga coret Rp179.800.",
+      "Yang tertulis di judul produk: Cotton Combed (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Diskonnya sangat besar (61%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ada pilihan lebih murah di kelompok yang sama: SWAN SHOGUNAVO Kaos Oblong Pria Swan… (Rp24.542).",
+      "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Kaos Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp69.635 (diskon 61%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/177400943/52902063835",
+    "linkShopee": "https://s.shopee.co.id/7famhYdQXN",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "zalmore-men-oneck-t-shirt-luma-2618261980",
+    "contoh": false,
+    "nama": "Zalmore Men Oneck T-Shirt - LUMA Cotton™ Premium - Kaos Polos Pria Lembut Ringan Sejuk",
+    "kategori": "Pria",
+    "jenis": "kaos-pria",
+    "jenisNama": "Kaos Pria",
+    "jenisPendek": "Kaos",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zti-mspct9nsjg1z63",
+    "harga": 65500,
+    "hargaAsli": 90000,
+    "diskon": 27,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KAB. TANGERANG",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 27%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 27% dari harga coret Rp90.000.",
+      "Yang tertulis di judul produk: Cotton, Oneck (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: SWAN SHOGUNAVO Kaos Oblong Pria Swan… (Rp24.542).",
+      "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Kaos Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp65.500 (diskon 27%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/168504422/2618261980",
+    "linkShopee": "https://s.shopee.co.id/70L5pPKwO3",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "t-shirt-kaos-pria-wanita-giordano-55003749303",
+    "contoh": false,
+    "nama": "T-shirt Kaos Pria Wanita Giordano Terbaru Regular M L XL Bahan Katun Combat 24s Premium High Quality",
+    "kategori": "Pria",
+    "jenis": "kaos-pria",
+    "jenisNama": "Kaos Pria",
+    "jenisPendek": "Kaos",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-8224z-mipctg4vdm2u99",
+    "harga": 67000,
+    "hargaAsli": null,
+    "diskon": 0,
+    "rating": 4.7,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 4000,
+    "terjualTotalLabel": "4rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KOTA TANGERANG",
+    "label": [],
+    "ringkasan": "Rating 4.7 dari 5, 4rb+ terjual (1rb+/bln).",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating cukup baik: 4.7 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 4rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Yang tertulis di judul produk: Katun (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ratingnya (4.7) paling rendah di kelompok ini (tertinggi 4.9).",
+      "Ada pilihan lebih murah di kelompok yang sama: SWAN SHOGUNAVO Kaos Oblong Pria Swan… (Rp24.542).",
+      "Penjualannya (4rb+ total, 1rb+/bulan) paling sedikit di kelompok ini.",
+      "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Kaos Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp67.000 dengan rating 4.7, 4rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/1645740611/55003749303",
+    "linkShopee": "https://s.shopee.co.id/7VHMVFe3sM",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "new-states-apparel-kaos-polos-pria-11356656903",
+    "contoh": false,
+    "nama": "NEW STATES APPAREL Kaos Polos Pria dan Wanita Lengan Pendek Premium Cotton 24s S-5XL -7200",
+    "kategori": "Pria",
+    "jenis": "kaos-pria",
+    "jenisNama": "Kaos Pria",
+    "jenisPendek": "Kaos",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822wn-mln8wo1gw0sofb",
+    "harga": 42000,
+    "hargaAsli": 86000,
+    "diskon": 51,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": null,
+    "satuanIsi": null,
+    "kota": "KOTA JAKARTA BARAT",
+    "label": [
+      "Paling seimbang"
+    ],
+    "ringkasan": "Paling seimbang di kelompok Kaos Pria. Rating 4.9, 10rb+ terjual. Diskon 51%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 51% dari harga coret Rp86.000.",
+      "Yang tertulis di judul produk: Cotton 24s, Lengan Pendek, S-5XL (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Diskonnya sangat besar (51%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ada pilihan lebih murah di kelompok yang sama: SWAN SHOGUNAVO Kaos Oblong Pria Swan… (Rp24.542).",
+      "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini paling seimbang (harga, rating, dan penjualan). Harganya Rp42.000 (diskon 51%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/555777672/11356656903",
+    "linkShopee": "https://s.shopee.co.id/7VHMJXLI7B",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "cussons-baby-hair-body-wash-deep-27225960427",
+    "contoh": false,
+    "nama": "Cussons Baby Hair & Body Wash Deep Moisture Refill 375ml",
+    "kategori": "Balita",
+    "jenis": "sabun-bayi",
+    "jenisNama": "Sabun Bayi",
+    "jenisPendek": "Sabun Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-82250-mfthyp6tup70e3",
+    "harga": 16900,
+    "hargaAsli": 32900,
+    "diskon": 49,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 4507,
+    "satuanIsi": "ml",
+    "kota": "KAB. TANGERANG",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 49%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 49% dari harga coret Rp32.900.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp4.506 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 375ml, Refill (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Cussons Baby Soap Fresh & Nourish… (Rp5.600).",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp16.900 (diskon 49%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/30736001/27225960427",
+    "linkShopee": "https://s.shopee.co.id/7KxwIwehDL",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "cussons-baby-soap-fresh-nourish-sabun-3759702423",
+    "contoh": false,
+    "nama": "Cussons Baby Soap Fresh & Nourish - Sabun Bayi 60gr",
+    "kategori": "Balita",
+    "jenis": "sabun-bayi",
+    "jenisNama": "Sabun Bayi",
+    "jenisPendek": "Sabun Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134301-825ab-mqlngubdurkd8a",
+    "harga": 5600,
+    "hargaAsli": 6000,
+    "diskon": 7,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 9333,
+    "satuanIsi": "g",
+    "kota": "KAB. BOGOR",
+    "label": [
+      "Paling murah",
+      "Paling seimbang"
+    ],
+    "ringkasan": "Paling murah di kelompok Sabun Bayi. Rating 4.9, 10rb+ terjual.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Harga paling murah di antara 5 pilihan Sabun Bayi yang dibandingkan di Bandingin.id.",
+      "Yang tertulis di judul produk: 60gr (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Sabun Bayi yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp5.600 (diskon 7%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/175473624/3759702423",
+    "linkShopee": "https://s.shopee.co.id/5q98WBkPG4",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "zwitsal-baby-bar-soap-classic-4x70gr-29111536709",
+    "contoh": false,
+    "nama": "ZWITSAL BABY BAR SOAP CLASSIC 4x70GR",
+    "kategori": "Balita",
+    "jenis": "sabun-bayi",
+    "jenisNama": "Sabun Bayi",
+    "jenisPendek": "Sabun Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134301-7rdw8-m040q86ro55t5c",
+    "harga": 16500,
+    "hargaAsli": 19400,
+    "diskon": 15,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 5893,
+    "satuanIsi": "g",
+    "kota": "",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 15%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 15% dari harga coret Rp19.400.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp5.892 per 100 g (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 4x70GR, BAR SOAP (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Cussons Baby Soap Fresh & Nourish… (Rp5.600).",
+      "Lokasi pengiriman tidak tercantum di data. Cek di halaman produk.",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp16.500 (diskon 15%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/14318452/29111536709",
+    "linkShopee": "https://s.shopee.co.id/W7cAOf93h",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "johnson-johnson-baby-bath-milk-and-29564446855",
+    "contoh": false,
+    "nama": "Johnson & Johnson Baby Bath Milk and Rice Refill 400ml",
+    "kategori": "Balita",
+    "jenis": "sabun-bayi",
+    "jenisNama": "Sabun Bayi",
+    "jenisPendek": "Sabun Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822wu-mp3gjfafkbuz13",
+    "harga": 42500,
+    "hargaAsli": null,
+    "diskon": 0,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 10625,
+    "satuanIsi": "ml",
+    "kota": "KAB. TANGERANG",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln).",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Yang tertulis di judul produk: 400ml, Refill (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Cussons Baby Soap Fresh & Nourish… (Rp5.600).",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp42.500 dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/30736001/29564446855",
+    "linkShopee": "https://s.shopee.co.id/1BLZTh34c",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "kodomo-top-to-toe-pink-refill-25544969362",
+    "contoh": false,
+    "nama": "Kodomo Top To Toe Pink Refill 400 ml x2",
+    "kategori": "Balita",
+    "jenis": "sabun-bayi",
+    "jenisNama": "Sabun Bayi",
+    "jenisPendek": "Sabun Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134201-81ztj-mu1rwforhuki1c",
+    "harga": 40000,
+    "hargaAsli": 52500,
+    "diskon": 24,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 5000,
+    "satuanIsi": "ml",
+    "kota": "KAB. BOGOR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 24%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 24% dari harga coret Rp52.500.",
+      "Yang tertulis di judul produk: 400 ml, Refill (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: Cussons Baby Soap Fresh & Nourish… (Rp5.600).",
+      "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sabun Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp40.000 (diskon 24%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/64474495/25544969362",
+    "linkShopee": "https://s.shopee.co.id/BUllmgPjf",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "zwitsal-baby-shampoo-aloe-vera-kemiri-40300035677",
+    "contoh": false,
+    "nama": "ZWITSAL Baby Shampoo - Aloe Vera, Kemiri & Seledri 300 mL",
+    "kategori": "Balita",
+    "jenis": "shampoo-bayi",
+    "jenisNama": "Sampo Bayi",
+    "jenisPendek": "Sampo Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98q-lwf77e6ralwbd2",
+    "harga": 31300,
+    "hargaAsli": 38000,
+    "diskon": 18,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 10433,
+    "satuanIsi": "ml",
+    "kota": "KAB. BOGOR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 18%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 18% dari harga coret Rp38.000.",
+      "Yang tertulis di judul produk: 300 mL, Aloe Vera (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: MY BABY Kids Shampoo & Conditioner… (Rp12.573).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp31.300 (diskon 18%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/1517647103/40300035677",
+    "linkShopee": "https://s.shopee.co.id/113slJdF2q",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "moell-intensive-nourish-gentle-hair-shampoo-27572514218",
+    "contoh": false,
+    "nama": "Moell Intensive Nourish Gentle Hair Shampoo Bayi Anak 185gr Dengan Calendula Oil - Kulit Kepala Sensitif & Iritasi - Tanpa SLS & Alkohol - Menumbuhkan & Melebatkan Rambut - Skincare Bayi Newborn - Skincare Anak - Formulasi Dokter",
+    "kategori": "Balita",
+    "jenis": "shampoo-bayi",
+    "jenisNama": "Sampo Bayi",
+    "jenisPendek": "Sampo Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-8224z-mi1ceiym6q6a4d",
+    "harga": 65000,
+    "hargaAsli": 95000,
+    "diskon": 32,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 35135,
+    "satuanIsi": "g",
+    "kota": "KAB. BOGOR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 32%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 32% dari harga coret Rp95.000.",
+      "Yang tertulis di judul produk: 185gr (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: MY BABY Kids Shampoo & Conditioner… (Rp12.573).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp65.000 (diskon 32%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/339900241/27572514218",
+    "linkShopee": "https://s.shopee.co.id/1BNIxccbht",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "my-baby-kids-shampoo-conditioner-refill-44377945225",
+    "contoh": false,
+    "nama": "MY BABY Kids Shampoo & Conditioner Refill 200 mL",
+    "kategori": "Balita",
+    "jenis": "shampoo-bayi",
+    "jenisNama": "Sampo Bayi",
+    "jenisPendek": "Sampo Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-8262h-mjdwgjdi4hky86",
+    "harga": 12573,
+    "hargaAsli": 12700,
+    "diskon": 1,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 6286,
+    "satuanIsi": "ml",
+    "kota": "KOTA JAKARTA TIMUR",
+    "label": [
+      "Paling murah",
+      "Paling seimbang"
+    ],
+    "ringkasan": "Paling murah di kelompok Sampo Bayi. Rating 4.9, 10rb+ terjual.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Harga paling murah di antara 5 pilihan Sampo Bayi yang dibandingkan di Bandingin.id.",
+      "Paling hemat per isi di kelompok ini: sekitar Rp6.286 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
+      "Yang tertulis di judul produk: 200 mL, Refill (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Dari 5 pilihan Sampo Bayi yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp12.573 dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/152263707/44377945225",
+    "linkShopee": "https://s.shopee.co.id/AKbXsT6wQm",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "lactacyd-baby-gentle-care-2in1-body-6116869548",
+    "contoh": false,
+    "nama": "Lactacyd Baby Gentle Care 2in1 Body Wash and Hair Shampoo 60mL – Sabun & Sampo Bayi Melindungi dari Iritasi",
+    "kategori": "Balita",
+    "jenis": "shampoo-bayi",
+    "jenisNama": "Sampo Bayi",
+    "jenisPendek": "Sampo Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822wt-mow7ukk4i70v25",
+    "harga": 33600,
+    "hargaAsli": 39100,
+    "diskon": 14,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 56000,
+    "satuanIsi": "ml",
+    "kota": "KOTA DEPOK",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 14%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 14% dari harga coret Rp39.100.",
+      "Yang tertulis di judul produk: 60mL (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: MY BABY Kids Shampoo & Conditioner… (Rp12.573).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp33.600 (diskon 14%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/212080821/6116869548",
+    "linkShopee": "https://s.shopee.co.id/AUuy4m6J5p",
+    "linkAffiliate": true,
+    "tokopedia": ""
+  },
+  {
+    "id": "kodomo-shampoo-gel-strawberry-botol-200-1427466351",
+    "contoh": false,
+    "nama": "Kodomo Shampoo Gel Strawberry Botol 200 ml",
+    "kategori": "Balita",
+    "jenis": "shampoo-bayi",
+    "jenisNama": "Sampo Bayi",
+    "jenisPendek": "Sampo Bayi",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134301-7rdxz-mcvtlr2ybt5ae8",
+    "harga": 14800,
+    "hargaAsli": 19900,
+    "diskon": 26,
+    "rating": 4.9,
+    "terjual": 1000,
+    "terjualPlus": true,
+    "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
+    "hargaPer100": 7400,
+    "satuanIsi": "ml",
+    "kota": "KAB. BOGOR",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (1rb+/bln). Diskon 26%.",
+    "kelebihan": [
+      "Dijual oleh toko resmi di Shopee (Shopee Mall).",
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
+      "Sedang diskon 26% dari harga coret Rp19.900.",
+      "Yang tertulis di judul produk: 200 ml, Botol (menurut penjual)."
+    ],
+    "kekurangan": [
+      "Ada pilihan lebih murah di kelompok yang sama: MY BABY Kids Shampoo & Conditioner… (Rp12.573).",
+      "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+      "Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.",
+      "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
+    ],
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Bayi lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp14.800 (diskon 26%) dengan rating 4.9, 10rb+ terjual (total), dan 1rb+ terjual per bulan. Perhatikan usia yang dianjurkan di kemasan sebelum memakai. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/64474495/1427466351",
+    "linkShopee": "https://s.shopee.co.id/9fLr57URne",
+    "linkAffiliate": true,
     "tokopedia": ""
   }
 ];
@@ -1196,6 +2590,38 @@ window.TOP10 = [
       "wardah-shampoo-scentlock-fragrance-wangi-tahan-1080733793",
       "gloow-be-low-ph-bright-facial-43358097567",
       "emeron-shampoo-hijab-clean-fresh-botol-6459351595"
+    ]
+  },
+  {
+    "kategori": "Pria",
+    "ikon": "👨",
+    "produk": [
+      "kahf-body-wash-pria-200ml-cooling-21647317790",
+      "nextprime-men-facial-wash-100gr-all-57857445714",
+      "garnier-men-facial-wash-100ml-isi-27221469602",
+      "barber-daily-dandruff-oil-control-shampoo-49002927902",
+      "bromen-brightening-soap-travel-kit-20-43511025971",
+      "new-states-apparel-kaos-polos-pria-11356656903",
+      "kahf-skin-energizing-and-brightening-facial-5358717104",
+      "zalmore-men-oneck-t-shirt-luma-2618261980",
+      "aerostreet-relix-kaos-pria-hitam-t-52902063835",
+      "swan-shogunavo-kaos-oblong-pria-swan-7018844487"
+    ]
+  },
+  {
+    "kategori": "Balita",
+    "ikon": "👶",
+    "produk": [
+      "cussons-baby-soap-fresh-nourish-sabun-3759702423",
+      "my-baby-kids-shampoo-conditioner-refill-44377945225",
+      "kodomo-shampoo-gel-strawberry-botol-200-1427466351",
+      "zwitsal-baby-bar-soap-classic-4x70gr-29111536709",
+      "cussons-baby-hair-body-wash-deep-27225960427",
+      "zwitsal-baby-shampoo-aloe-vera-kemiri-40300035677",
+      "lactacyd-baby-gentle-care-2in1-body-6116869548",
+      "kodomo-top-to-toe-pink-refill-25544969362",
+      "johnson-johnson-baby-bath-milk-and-29564446855",
+      "moell-intensive-nourish-gentle-hair-shampoo-27572514218"
     ]
   }
 ];
