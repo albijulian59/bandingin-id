@@ -1,0 +1,104 @@
+{
+  "pelembab-wajah-wanita": [
+    {
+      "label": "Kulit berminyak / berjerawat",
+      "item": "8657140008",
+      "alasan": "Lotion oil-free dengan 70% birch sap, ringan dan tidak berat di wajah."
+    },
+    {
+      "label": "Kulit kering / sensitif",
+      "item": "25080136975",
+      "alasan": "Krim ceramide tanpa pewangi yang paling fokus menjaga skin barrier."
+    },
+    {
+      "label": "Paling hemat",
+      "item": "28169257360",
+      "alasan": "Sekitar Rp1.400 per gram, dengan varian untuk kulit kusam, kering, dan berjerawat."
+    }
+  ],
+  "serum-wajah-wanita": [
+    {
+      "label": "Kulit berminyak / berjerawat",
+      "item": "24507405136",
+      "alasan": "10% niacinamide dengan alpha arbutin dan tranexamic acid untuk minyak dan bekas jerawat."
+    },
+    {
+      "label": "Kulit kering / sensitif",
+      "item": "26268363527",
+      "alasan": "Lima jenis hyaluronic acid, bebas pewangi, hidrasi tanpa lengket."
+    },
+    {
+      "label": "Paling hemat",
+      "item": "42528194882",
+      "alasan": "Sekitar Rp1.700 per ml dengan lima varian bahan aktif."
+    }
+  ],
+  "sunscreen-wanita": [
+    {
+      "label": "Kulit berminyak / berjerawat",
+      "item": "28673092386",
+      "alasan": "Tekstur sangat cair dengan hasil semi-matte, dibuat untuk kulit berminyak dan kombinasi."
+    },
+    {
+      "label": "Kulit kering / sensitif",
+      "item": "22161849050",
+      "alasan": "Tekstur lotion melembapkan dengan hasil sedikit dewy, bisa menggantikan pelembap pagi."
+    },
+    {
+      "label": "Paling hemat",
+      "item": "42807278779",
+      "alasan": "Sekitar Rp1.100 per gram untuk SPF 40 PA++++ dengan hasil soft-matte."
+    }
+  ],
+  "pelembab-wajah-pria": [
+    {
+      "label": "Kulit berminyak / berjerawat",
+      "item": "41827149473",
+      "alasan": "3% niacinamide untuk kontrol minyak dengan tekstur ringan yang tidak lengket."
+    },
+    {
+      "label": "Kulit kering / sensitif",
+      "item": "14516182420",
+      "alasan": "Centella dan ceramide untuk menenangkan kulit, nyaman setelah bercukur."
+    },
+    {
+      "label": "Paling hemat",
+      "item": "24386158862",
+      "alasan": "Sekitar Rp1.200 per ml dan sudah termasuk perlindungan SPF untuk pagi hari."
+    }
+  ],
+  "serum-wajah-pria": [
+    {
+      "label": "Kulit berminyak / berjerawat",
+      "item": "23541411702",
+      "alasan": "15% niacinamide + zinc PCA, paling terarah untuk minyak, pori, dan jerawat."
+    },
+    {
+      "label": "Kulit kering / sensitif",
+      "item": "25142085435",
+      "alasan": "Niacinamide 5% + alpha arbutin 1% tanpa pewangi dan alkohol."
+    },
+    {
+      "label": "Paling hemat",
+      "item": "28471442468",
+      "alasan": "Sekitar Rp2.000 per ml, cocok untuk mulai memakai serum."
+    }
+  ],
+  "sunscreen-pria": [
+    {
+      "label": "Kulit berminyak / berjerawat",
+      "item": "56059310616",
+      "alasan": "Sunscreen serum SPF 50 PA++++ yang ringan, tanpa white cast, dan termurah di kelompok ini."
+    },
+    {
+      "label": "Kulit kering / sensitif",
+      "item": "29204771380",
+      "alasan": "Krim melembapkan dengan hyaluronic acid dan centella."
+    },
+    {
+      "label": "Paling hemat",
+      "item": "16581227588",
+      "alasan": "Sekitar Rp2.600 per ml untuk sun serum Korea SPF50+ PA++++."
+    }
+  ]
+}

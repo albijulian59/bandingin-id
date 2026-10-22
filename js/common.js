@@ -91,6 +91,30 @@
   function badgeContoh(p) {
     return p.contoh ? '<span class="badge-contoh" title="Produk contoh, bukan review asli">Contoh</span>' : "";
   }
+  function badgeKorea(p) {
+    return p.merekKorea ? '<span class="badge-korea" title="Merek asal Korea Selatan">🇰🇷 Merek Korea</span>' : "";
+  }
+  var LABEL_KULIT = { berminyak: "Kulit berminyak", kering: "Kulit kering", normal: "Kulit normal", sensitif: "Kulit sensitif", berjerawat: "Kulit berjerawat" };
+  function cocokKulit(p) {
+    if (!(p.cocokKulit || []).length) return "";
+    return '<div class="kulit"><span class="kulit-judul">Cocok untuk:</span> ' + p.cocokKulit.map(function (k) {
+      return '<span class="kulit-chip">' + esc(LABEL_KULIT[k] || k) + "</span>";
+    }).join("") + "</div>";
+  }
+  // Kotak "Pilihan Bandingin.id" untuk satu kelompok (hanya kalau ada di tools/pilihan.json)
+  var IKON_PILIHAN = ["💧", "🌿", "💰"];
+  function pilihanHtml(g) {
+    var list = (g && g.pilihan || []).filter(function (x) { return produkById[x.produk]; });
+    if (!list.length) return "";
+    return '<div class="pilihan"><h4>✅ Pilihan Bandingin.id: ' + esc(g.nama) + "</h4>" +
+      '<p class="pilihan-intro">Bandingin.id menilai dari analisa kandungan, tekstur, dan harga per ml:</p><ul>' +
+      list.map(function (x, i) {
+        var p = produkById[x.produk];
+        return '<li><span class="pilihan-ikon" aria-hidden="true">' + (IKON_PILIHAN[i] || "⭐") + "</span><div>" +
+          '<b class="pilihan-label">' + esc(x.label) + '</b> <a href="review.html?id=' + encodeURIComponent(p.id) + '">' +
+          esc(judulPendek(p.nama, 7)) + "</a><br><span class=\"pilihan-alasan\">" + esc(x.alasan) + "</span></div></li>";
+      }).join("") + "</ul></div>";
+  }
   var WARNA_LABEL = { "Paling murah": "lbl-murah", "Rating tertinggi": "lbl-rating", "Paling laris": "lbl-laris", "Paling seimbang": "lbl-seimbang" };
   var IKON_LABEL = { "Paling murah": "💰", "Rating tertinggi": "⭐", "Paling laris": "🔥", "Paling seimbang": "⚖️" };
   function label(p) {
@@ -113,16 +137,16 @@
       return '<tr' + (p.id === idAktif ? ' class="aktif"' : "") + ">" +
         '<td class="t-img"><a href="' + link + '">' + gambar(p, false, true) + "</a></td>" +
         '<td class="t-nama"><a href="' + link + '">' + esc(p.nama) + "</a>" +
-          (p.id === idAktif ? ' <span class="sedang">(sedang dilihat)</span>' : "") +
+          (p.id === idAktif ? ' <span class="sedang">(sedang dilihat)</span>' : "") + badgeKorea(p) +
           '<div class="lbls">' + label(p) + "</div></td>" +
         '<td class="t-harga" data-th="Harga"><b>' + esc(rupiah(p.harga)) + "</b>" +
           (p.hargaAsli ? '<br><s class="harga-asli">' + esc(rupiah(p.hargaAsli)) + "</s>" : "") + "</td>" +
         '<td data-th="Diskon">' + (p.diskon ? '<span class="diskon">-' + p.diskon + "%</span>" : "–") + "</td>" +
         '<td data-th="Rating">⭐ ' + Number(p.rating).toFixed(1) + "</td>" +
-        '<td data-th="Terjual/bln">' + esc(terjualTeks(p)) + "</td>" +
+        '<td data-th="Terjual/bln">' + (terjualTeks(p) ? esc(terjualTeks(p)) : "–") + "</td>" +
         '<td class="t-btn">' + tombolToko(p, true) + "</td></tr>";
     }).join("");
-    return '<p class="geser">👉 Geser tabel ke samping untuk melihat semua kolom</p><div class="tabel-wrap"><table class="tabel">' +
+    return pilihanHtml(g) + '<p class="geser">👉 Geser tabel ke samping untuk melihat semua kolom</p><div class="tabel-wrap"><table class="tabel">' +
       "<thead><tr><th>Gambar</th><th>Nama produk</th><th>Harga</th><th>Diskon</th><th>Rating</th><th>Terjual/bln</th><th></th></tr></thead>" +
       "<tbody>" + rows + "</tbody></table></div>" +
       ((g.catatan || []).length ? '<ul class="catatan">' + g.catatan.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + "</ul>" : "");
@@ -135,7 +159,7 @@
       '<a class="card-img" href="' + link + '">' + gambar(p, false, true) + badgeContoh(p) +
         (p.diskon >= 5 ? '<span class="badge-diskon">-' + p.diskon + "%</span>" : "") + "</a>" +
       '<div class="card-body">' +
-        '<span class="cat">' + esc(p.jenisNama || p.kategori) + "</span>" +
+        '<span class="cat">' + esc(p.jenisNama || p.kategori) + "</span>" + badgeKorea(p) +
         '<h3><a href="' + link + '" title="' + esc(p.nama) + '">' + esc(p.nama) + "</a></h3>" +
         '<div class="meta">' + bintang(p.rating) +
           (p.terjual != null ? '<span class="sold">' + esc(terjualTeks(p)) + " terjual/bln</span>" : "") + "</div>" +
@@ -190,7 +214,7 @@
 
   window.Situs = {
     esc: esc, rupiah: rupiah, terjualTeks: terjualTeks, terjualTotalTeks: terjualTotalTeks, rentangTerjual: rentangTerjual, angkaTerjual: angkaTerjual, bintang: bintang, gambar: gambar, gagal: gagal,
-    tombolToko: tombolToko, badgeContoh: badgeContoh, label: label, hargaHtml: hargaHtml,
+    tombolToko: tombolToko, badgeContoh: badgeContoh, badgeKorea: badgeKorea, cocokKulit: cocokKulit, pilihanHtml: pilihanHtml, label: label, hargaHtml: hargaHtml,
     tabelGrup: tabelGrup, grupDari: grupDari, produkById: produkById,
     kartu: kartu, urutTerlaris: urutTerlaris, judulPendek: judulPendek, linkShopee: linkShopee,
     produkUnggulan: produkUnggulan, daftarUnggulan: daftarUnggulan, REL: REL

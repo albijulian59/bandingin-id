@@ -12,7 +12,10 @@ Opsi:
                        atau folder sumber-data/ di dalam website kalau ada)
     --tanggal "22 Oktober 2026"   tanggal pengambilan data (tampil di website)
 
-File di folder sumber: perempuan.psv, pria.psv, balita.psv (+ affiliate-links.psv).
+File di folder sumber: perempuan.psv, pria.psv, balita.psv (+ affiliate-links.psv, merek-korea.txt).
+File konten tulisan tangan (di folder tools/):
+    analisa.json  -> analisa Bandingin.id per produk skincare (kunci = item ID Shopee); menggantikan teks otomatis
+    pilihan.json  -> "Pilihan Bandingin.id" per kelompok skincare (kunci = id kelompok, mis. sunscreen-pria)
 Format tiap baris produk (10 kolom, dipisah ' | '):
     keyword | judul | harga | harga asli (atau -) | rating | total terjual | terjual/bln | kota | URL produk | URL gambar
     contoh total terjual: '10RB+ Terjual', terjual/bln: '1RB+ Terjual/Bln'
@@ -47,7 +50,16 @@ JENIS = {
     "kaos pria": ("Kaos Pria", "Kaos", "Pria", "baju"),
     "sabun bayi": ("Sabun Bayi", "Sabun Bayi", "Balita", "sabun"),
     "shampoo bayi": ("Sampo Bayi", "Sampo Bayi", "Balita", "sampo"),
+    "pelembab wajah wanita": ("Pelembab Wajah Wanita", "Pelembab", "Perempuan", "pelembab"),
+    "serum wajah wanita": ("Serum Wajah Wanita", "Serum", "Perempuan", "serum"),
+    "sunscreen wanita": ("Sunscreen Wanita", "Sunscreen", "Perempuan", "sunscreen"),
+    "pelembab wajah pria": ("Pelembab Wajah Pria", "Pelembab", "Pria", "pelembab"),
+    "serum wajah pria": ("Serum Wajah Pria", "Serum", "Pria", "serum"),
+    "sunscreen pria": ("Sunscreen Pria", "Sunscreen", "Pria", "sunscreen"),
 }
+URUTAN_JENIS = list(JENIS)          # urutan kelompok di website = urutan di JENIS
+TIPE_SKINCARE = ("pelembab", "serum", "sunscreen")
+JUMLAH_PER_JENIS = 5                # --final: tiap kelompok harus berisi 5 produk
 
 # Hal yang tertulis di judul produk (dikutip apa adanya, tidak dinilai kebenarannya)
 POLA_FITUR = [
@@ -63,6 +75,8 @@ POLA_FITUR = [
     r"\bLengan (?:Panjang|Pendek)\b|\b(?:Long|Short) Sleeve\b", r"\bOversize\b", r"\bSlim Fit\b|\bRegular Fit\b",
     r"\bCrew ?Neck\b|\bO-?Neck\b|\bV-?Neck\b|\bOneck\b", r"\b(?:S|M|L)\s?-\s?\d?X{1,3}L\b|\bAll ?Size\b",
     r"\bSelempang\b|\bSling ?Bag\b", r"\bTote ?Bag\b|\bTotebag\b", r"\bShoulder(?: Bag)?\b", r"\bSatchel\b",
+    r"\bSPF ?\d+\+?(?: ?PA\+{2,4})?", r"\bHyaluronic(?: Acid)?\b", r"\bRetinol\b", r"\bCentella\b|\bCica\b",
+    r"\bAlpha Arbutin\b", r"\bTranexamic(?: Acid)?\b", r"\bSalicylic\b",
     r"\bTas Tangan\b", r"\bKapasitas Besar\b", r"\bTali Panjang\b", r"\bAnti Air\b|\bWaterproof\b",
 ]
 
@@ -70,16 +84,27 @@ POLA_FITUR = [
 POLA_VARIAN = (r"\bAll Series\b|\bSemua Varian\b|\bAll Variant|\bSeries\b|\([^)]*,[^)]*\)|\bVarian\b"
                r"|\b\d+\s?(?:ml|gr|g)\s?/\s?\d+|\bPilih\b")
 
-# Catatan umum per tipe produk (tanpa klaim medis)
-CATATAN_TIPE = {
-    "sabun": "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
-    "sampo": "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
-    "facial": "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
-    "baju": "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
-    "tas": "Cek ukuran (dimensi) tas, bahan, dan foto asli dari pembeli di halaman produk supaya sesuai harapan.",
+# Tips praktis per tipe produk (tanpa klaim medis), tampil di kotak "Tips" halaman review
+TIPS_TIPE = {
+    "sabun": "Kulit kering lebih nyaman dengan sabun yang melembapkan; kulit berminyak biasanya cocok dengan sabun yang terasa segar. Kalau kulit mudah iritasi, coba di sedikit area dulu.",
+    "sampo": "Pilih sampo sesuai masalah utama (rontok, ketombe, rambut kering/berminyak) dan nilai hasilnya setelah 2–3 minggu pemakaian rutin.",
+    "facial": "Cocokkan dengan jenis kulit: gel/foam ringan untuk kulit berminyak, formula lembut tanpa scrub untuk kulit kering atau sensitif.",
+    "baju": "Ukuran dan potongan bisa berbeda antar merek. Bandingkan tabel ukuran dengan baju yang sudah pas di badan, dan lihat foto dari pembeli.",
+    "tas": "Cek dimensi tas (panjang × tinggi × lebar) dan bandingkan dengan barang yang biasa dibawa, lalu lihat foto asli dari pembeli.",
+    "pelembab": "Pakai setelah cuci muka dan serum, pagi dan malam. Di pagi hari, tutup dengan sunscreen.",
+    "serum": "Pakai 2–3 tetes setelah cuci muka, sebelum pelembap. Untuk bahan aktif baru, mulai beberapa kali seminggu dulu, lalu tingkatkan.",
+    "sunscreen": "Pakai sebagai langkah terakhir skincare pagi, kira-kira dua ruas jari untuk wajah dan leher. Ulangi sesuai anjuran kemasan saat banyak di luar ruangan.",
 }
-CATATAN_BALITA = ("Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada "
-                  "sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.")
+TIPS_BALITA = ("Tips: perhatikan usia yang dianjurkan di kemasan, lalu coba dulu di sedikit area kulit si kecil "
+               "sebelum dipakai rutin. Ikuti petunjuk pemakaian di kemasan.")
+# Kekurangan cadangan kalau dari data tidak ada kekurangan yang menonjol
+KEKURANGAN_TIPE = {
+    "sabun": "Komposisi lengkap tidak tertulis di judul; cek daftar bahan di halaman produk bila punya alergi tertentu.",
+    "sampo": "Komposisi lengkap tidak tertulis di judul; cek daftar bahan di halaman produk bila kulit kepala sensitif.",
+    "facial": "Jenis kulit yang paling cocok tidak selalu disebut di judul; cek deskripsi produk.",
+    "baju": "Bahan dan ukuran detail perlu dicek di tabel ukuran penjual.",
+    "tas": "Dimensi dan berat tas perlu dicek di deskripsi penjual.",
+}
 
 def rupiah(n):
     return "Rp" + f"{int(n):,}".replace(",", ".")
@@ -121,6 +146,10 @@ def nilai_rentang(n):
 
 def teks_terjual(p):
     return rentang_terjual(p["terjual"])
+
+def teks_bln(p):
+    """'1rb+' atau None kalau terjual/bln tidak ada di data ('-')."""
+    return rentang_terjual(p["terjual"]) if p.get("_adaBln", True) else None
 
 def slug(s, maks=6):
     kata = re.sub(r"[^a-z0-9]+", " ", s.lower()).split()
@@ -167,7 +196,7 @@ def fitur_judul(judul):
 def ukuran_total(judul, tipe):
     """Isi total dari judul untuk sabun/sampo/facial wash: '3x100gr' -> (300, 'g'), '400ml' -> (400, 'ml').
     None kalau tidak jelas (tidak ada ukuran, beberapa ukuran berbeda, atau judul berisi banyak varian)."""
-    if tipe not in ("sabun", "sampo", "facial") or re.search(POLA_VARIAN, judul, re.I):
+    if tipe not in ("sabun", "sampo", "facial") + TIPE_SKINCARE or re.search(POLA_VARIAN, judul, re.I):
         return None
     t = judul.replace(",", ".")
     m = re.search(r"\b(\d+)\s?[xX]\s?(\d+(?:\.\d+)?)\s?(ml|gr|gram|g)\b", t, re.I)
@@ -209,7 +238,8 @@ def baca_produk(sumber):
                     info = (kw.title(), kw.title(), kategori, "")
                 elif info[2] != kategori:
                     print(f"  ! {file} baris {no}: keyword '{kw}' biasanya untuk kategori {info[2]}, bukan {kategori}")
-                n, plus, _ = terjual(laku)
+                ada_bln = laku.strip() not in ("", "-")
+                n, plus, _ = terjual(laku) if ada_bln else (0, False, "")
                 tot, _, _ = terjual(total)
                 h, ha = angka(harga), angka(asli)
                 if h is None:
@@ -232,6 +262,8 @@ def baca_produk(sumber):
                     "rating": float(rating),
                     "terjual": n,
                     "terjualPlus": plus,
+                    "_adaBln": ada_bln,
+                    "_item": m.group(2) if m else "",
                     "terjualTotal": tot,
                     "kota": "" if kota in ("-", "") else kota,
                     "urlProduk": url,
@@ -239,6 +271,19 @@ def baca_produk(sumber):
                     "_isi": ukuran_total(judul, info[3]),
                 })
     return produk, hilang
+
+def baca_merek(path):
+    if not os.path.exists(path):
+        print(f"  ! {path} belum ada (tanpa badge Merek Korea)")
+        return []
+    return [x.strip() for x in open(path, encoding="utf-8") if x.strip() and not x.startswith("#")]
+
+def baca_json(path):
+    if not os.path.exists(path):
+        print(f"  ! {path} belum ada (dilewati)")
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
 
 def kunci_laris(p):
     """Laris = total terjual (rentang yang tampil), lalu terjual/bln (rentang yang tampil)."""
@@ -276,7 +321,8 @@ def beri_label(grup):
         catatan.append(f"{r} dari {len(grup)} produk sama-sama punya rating {rmax}, jadi tidak ada label 'Rating tertinggi'.")
     t = juara(kunci_laris, "Paling laris", maks_seri=2)
     top = max(grup, key=kunci_laris)
-    jt = f"{rentang_terjual(top['terjualTotal'])} terjual (total) dan {rentang_terjual(top['terjual'])}/bulan"
+    jt = f"{rentang_terjual(top['terjualTotal'])} terjual (total)" + (
+        f" dan {teks_bln(top)}/bulan" if teks_bln(top) else "")
     if t is False:
         catatan.append(f"Semua produk sama-sama {jt}, jadi tidak ada label 'Paling laris'.")
     elif t is not True:
@@ -301,7 +347,7 @@ def tulis_review(p, grup, tanggal):
     laris_min = min(kunci_laris(x) for x in grup)
     laris_max = max(kunci_laris(x) for x in grup)
     jenis = p["jenisNama"]
-    jt = rentang_terjual(p["terjual"])
+    jt = teks_bln(p)
     jtot = rentang_terjual(p["terjualTotal"])
 
     plus = ["Dijual oleh toko resmi di Shopee (Shopee Mall)."]
@@ -310,8 +356,8 @@ def tulis_review(p, grup, tanggal):
     elif p["rating"] >= 4.5:
         plus.append(f"Rating cukup baik: {p['rating']} dari 5 menurut pembeli di Shopee.")
     if p["terjualTotal"] >= 1000:
-        plus.append(f"Banyak dibeli: {jtot} terjual (total) dan {jt} terjual per bulan.")
-    elif p["terjual"] >= 500:
+        plus.append(f"Banyak dibeli: {jtot} terjual (total)" + (f" dan {jt} terjual per bulan." if jt else "."))
+    elif jt and p["terjual"] >= 500:
         plus.append(f"Cukup laris: sekitar {jt} terjual per bulan.")
     if p["diskon"] >= 10:
         plus.append(f"Sedang diskon {p['diskon']}% dari harga coret {rupiah(p['hargaAsli'])}.")
@@ -336,7 +382,7 @@ def tulis_review(p, grup, tanggal):
         minus.append(f"Ada pilihan lebih murah di kelompok yang sama: {nama_pendek(termurah['nama'])} "
                      f"({rupiah(termurah['harga'])}).")
     if kunci_laris(p) == laris_min and laris_min < laris_max:
-        minus.append(f"Penjualannya ({jtot} total, {jt}/bulan) paling sedikit di kelompok ini.")
+        minus.append(f"Penjualannya ({jtot} total" + (f", {jt}/bulan" if jt else "") + ") paling sedikit di kelompok ini.")
     kembar = [x for x in lain if x["_toko"] == p["_toko"] and x["harga"] == p["harga"]]
     if kembar:
         minus.append(f"Toko yang sama juga menjual {nama_pendek(kembar[0]['nama'])} dengan harga sama persis. "
@@ -346,12 +392,8 @@ def tulis_review(p, grup, tanggal):
     if re.search(POLA_VARIAN, p["nama"], re.I):
         minus.append("Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian "
                      "tertentu saja, jadi cek lagi varian yang kamu pilih.")
-    if p["tipe"] in CATATAN_TIPE:
-        minus.append(CATATAN_TIPE[p["tipe"]])
-    if p["kategori"] == "Balita":
-        minus.append(CATATAN_BALITA)
-    minus.append("Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil "
-                 "di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli.")
+    if not minus and p["tipe"] in KEKURANGAN_TIPE:
+        minus.append(KEKURANGAN_TIPE[p["tipe"]])
 
     kal = []
     L = p["label"]
@@ -364,18 +406,20 @@ def tulis_review(p, grup, tanggal):
         kal.append(f"Produk ini tidak unggul di satu hal tertentu dibanding {len(lain)} pilihan {jenis} lainnya, "
                    "tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya.")
     kal.append(f"Harganya {rupiah(p['harga'])}" + (f" (diskon {p['diskon']}%)" if p["diskon"] >= 5 else "")
-               + f" dengan rating {p['rating']}, {jtot} terjual (total), dan {jt} terjual per bulan.")
-    if p["kategori"] == "Balita":
-        kal.append("Perhatikan usia yang dianjurkan di kemasan sebelum memakai.")
+               + f" dengan rating {p['rating']} dan {jtot} terjual (total)"
+               + (f", sekitar {jt} terjual per bulan." if jt else "."))
     kal.append("Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.")
 
     if L:
         ring = L[0] + f" di kelompok {jenis}. Rating {p['rating']}, {jtot} terjual."
     else:
-        ring = f"Rating {p['rating']} dari 5, {jtot} terjual ({jt}/bln)."
+        ring = f"Rating {p['rating']} dari 5, {jtot} terjual" + (f" ({jt}/bln)." if jt else ".")
     if p["diskon"] >= 10:
         ring += f" Diskon {p['diskon']}%."
-    return ring, plus, minus, " ".join(kal)
+    tips = [TIPS_TIPE[p["tipe"]]] if p["tipe"] in TIPS_TIPE else []
+    if p["kategori"] == "Balita":
+        tips.append(TIPS_BALITA)
+    return ring, plus, minus, " ".join(kal), tips
 
 def susun_top10(produk, maks=10):
     """Top 10 terlaris per kategori. Urutan: total terjual (Shopee maks. '10RB+'), lalu terjual/bln,
@@ -409,22 +453,43 @@ def main():
     if not produk:
         sys.exit("ERROR: tidak ada produk yang terbaca. Cek folder sumber.")
 
+    produk.sort(key=lambda p: URUTAN_JENIS.index(p["jenis"].replace("-", " ")) if p["jenis"].replace("-", " ") in URUTAN_JENIS else 99)
+    merek_korea = baca_merek(os.path.join(a.sumber, "merek-korea.txt"))
+    analisa = baca_json(os.path.join(SITE, "tools", "analisa.json"))
+    pilihan = baca_json(os.path.join(SITE, "tools", "pilihan.json"))
+    per_item = {p["_item"]: p for p in produk}
     urutan, grup = [], {}
     for p in produk:
         if p["jenis"] not in grup:
             grup[p["jenis"]] = []; urutan.append(p["jenis"])
         grup[p["jenis"]].append(p)
 
-    daftar_grup, pakai_aff = [], 0
+    daftar_grup, pakai_aff, belum_analisa = [], 0, []
     for j in urutan:
         g = grup[j]
         if len(g) < 2:
             print(f"  ! Kelompok '{g[0]['jenisNama']}' hanya berisi {len(g)} produk")
         catatan = beri_label(g)
         for p in g:
-            p["ringkasan"], p["kelebihan"], p["kekurangan"], p["kesimpulan"] = tulis_review(p, g, a.tanggal)
+            p["ringkasan"], p["kelebihan"], p["kekurangan"], p["kesimpulan"], p["tips"] = tulis_review(p, g, a.tanggal)
+            p["analisa"], p["cocokKulit"] = None, []
+            an = analisa.get(p["_item"])
+            if an:   # analisa tulisan tangan menggantikan teks otomatis
+                p["ringkasan"], p["analisa"] = an["ringkasan"], an["analisa"]
+                p["kelebihan"], p["kekurangan"] = an["kelebihan"], an["kekurangan"]
+                p["kesimpulan"], p["cocokKulit"] = an["kesimpulan"], an.get("cocokKulit", [])
+            elif p["tipe"] in TIPE_SKINCARE:
+                belum_analisa.append(p)
+        pil = []
+        for x in pilihan.get(j, []):
+            q = per_item.get(str(x["item"]))
+            if not q or q["jenis"] != j:
+                print(f"  ! pilihan.json '{j}': item {x['item']} tidak ada di kelompok ini (dilewati)")
+                continue
+            pil.append({"label": x["label"], "produk": q["id"], "alasan": x["alasan"]})
         daftar_grup.append({"id": j, "nama": g[0]["jenisNama"], "pendek": g[0]["jenisPendek"],
-                            "kategori": g[0]["kategori"], "produk": [p["id"] for p in g], "catatan": catatan})
+                            "kategori": g[0]["kategori"], "produk": [p["id"] for p in g], "catatan": catatan,
+                            "pilihan": pil})
 
     keluar, tanpa_aff = [], []
     for p in produk:
@@ -438,12 +503,14 @@ def main():
             "id": p["id"], "contoh": False, "nama": p["nama"], "kategori": p["kategori"],
             "jenis": p["jenis"], "jenisNama": p["jenisNama"], "jenisPendek": p["jenisPendek"], "gambar": p["gambar"],
             "harga": p["harga"], "hargaAsli": p["hargaAsli"], "diskon": p["diskon"],
-            "rating": p["rating"], "terjual": p["terjual"], "terjualPlus": p["terjualPlus"],
-            "terjualLabel": rentang_terjual(p["terjual"]),
+            "rating": p["rating"], "terjual": p["terjual"] if p["_adaBln"] else None,
+            "terjualPlus": p["terjualPlus"], "terjualLabel": teks_bln(p),
             "terjualTotal": p["terjualTotal"], "terjualTotalLabel": rentang_terjual(p["terjualTotal"]),
             "hargaPer100": round(hi[0]) if hi else None, "satuanIsi": hi[1] if hi else None,
             "kota": p["kota"], "label": p["label"], "ringkasan": p["ringkasan"],
             "kelebihan": p["kelebihan"], "kekurangan": p["kekurangan"], "kesimpulan": p["kesimpulan"],
+            "analisa": p["analisa"], "cocokKulit": p["cocokKulit"], "tips": p["tips"],
+            "merekKorea": any(m.lower() in p["nama"].lower() for m in merek_korea),
             "urlProduk": p["urlProduk"], "linkShopee": link or p["urlProduk"], "linkAffiliate": bool(link),
             "tokopedia": "",
         })
@@ -491,8 +558,19 @@ def main():
         print(f"  ! {len(tidak_dipakai)} link di affiliate-links.psv tidak cocok dengan produk mana pun:")
         for u in sorted(tidak_dipakai):
             print("    -", u)
+    print(f"  {sum(1 for p in produk if p['analisa'])} produk memakai analisa tulisan tangan (tools/analisa.json), "
+          f"{sum(1 for x in keluar if x['merekKorea'])} produk bermerek Korea")
+    for p in belum_analisa:
+        print("    ! skincare tanpa analisa:", p["_item"], nama_pendek(p["nama"]))
+    kurang = [g for g in daftar_grup if len(g["produk"]) != JUMLAH_PER_JENIS]
+    for g in kurang:
+        print(f"  ! Kelompok {g['nama']} berisi {len(g['produk'])} produk (seharusnya {JUMLAH_PER_JENIS})")
     if a.final:
         masalah = []
+        if kurang:
+            masalah.append(f"{len(kurang)} kelompok tidak berisi {JUMLAH_PER_JENIS} produk")
+        if belum_analisa:
+            masalah.append(f"{len(belum_analisa)} produk skincare belum punya analisa")
         if hilang:
             masalah.append("file belum ada: " + ", ".join(hilang))
         if tanpa_aff:

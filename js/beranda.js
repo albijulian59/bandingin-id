@@ -10,6 +10,7 @@
   var elCari = document.getElementById("cari");
   var elInfo = document.getElementById("info-hasil");
   var elUrut = document.getElementById("urut");
+  var elPilihan = document.getElementById("pilihan-grup");
 
   function buatFilter() {
     var daftar = [{ nama: "Semua", ikon: "✨" }].concat(window.KATEGORI || []);
@@ -56,6 +57,8 @@
     elInfo.textContent = hasil.length + " produk ditemukan" +
       (kategoriAktif !== "Semua" ? " di " + kategoriAktif : "") +
       (jenisAktif ? " (" + ((S.grupDari(jenisAktif) || {}).nama || "") + ")" : "") + (q ? ' untuk "' + kataCari.trim() + '"' : "");
+    // Kotak "Pilihan Bandingin.id" di atas kelompok skincare yang sedang dipilih (sub-filter)
+    if (elPilihan) elPilihan.innerHTML = jenisAktif && !q ? S.pilihanHtml(S.grupDari(jenisAktif)) : "";
     elGrid.innerHTML = hasil.length ? hasil.map(S.kartu).join("") :
       '<div class="empty">😕 Produk tidak ditemukan. Coba kata lain atau pilih kategori "Semua".</div>';
   }

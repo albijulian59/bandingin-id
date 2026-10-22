@@ -1,15 +1,15 @@
 # Panduan Website "Bandingin.id"
 
-Bandingin.id membandingkan produk **perawatan diri & fashion** dari toko resmi Shopee (Shopee Mall)
-berdasarkan data, bukan review pribadi. Produk dibagi ke 3 kategori menurut pemakainya:
+Bandingin.id membandingkan produk **perawatan diri, skincare & fashion** dari toko resmi Shopee (Shopee Mall).
+Produk skincare punya analisa kandungan tulisan tangan; produk lain diulas otomatis dari data. Produk dibagi ke 3 kategori menurut pemakainya:
 
 | Kategori      | Jenis produk (masing-masing 5 pilihan)                                   | Jumlah |
 |---------------|---------------------------------------------------------------------------|--------|
-| 👩 Perempuan  | Sabun Mandi Wanita, Sampo Wanita, Facial Wash Wanita, Baju Wanita, Tas Wanita | 25 |
-| 👨 Pria       | Sabun Mandi Pria, Sampo Pria, Facial Wash Pria, Kaos Pria                  | 20 |
+| 👩 Perempuan  | Sabun Mandi, Sampo, Facial Wash, Baju, Tas, Pelembab Wajah, Serum Wajah, Sunscreen (Wanita) | 40 |
+| 👨 Pria       | Sabun Mandi, Sampo, Facial Wash, Kaos, Pelembab Wajah, Serum Wajah, Sunscreen (Pria)        | 35 |
 | 👶 Balita     | Sabun Bayi, Sampo Bayi                                                     | 10 |
 
-Total 55 produk. Data diambil **22 Oktober 2026**. Jumlah produk yang tampil di website selalu
+Total 85 produk. Data diambil **22 Oktober 2026**. Jumlah produk yang tampil di website selalu
 dihitung otomatis dari data.
 
 > Versi lama (80 produk gadget, rumah tangga, dll.) disimpan di git dengan tag `versi-80-produk`.
@@ -66,14 +66,16 @@ Setiap kali kamu mengubah file `.psv`, **jalankan generator lagi** supaya websit
 4. Kalau berhasil, akan muncul tulisan seperti:
    ```
    Selesai: .../data/produk.js
-     55 produk, 11 kelompok perbandingan
-       Perempuan: 25 produk (...)
-       Pria: 20 produk (...)
+     85 produk, 17 kelompok perbandingan
+       Perempuan: 40 produk (...)
+       Pria: 35 produk (...)
        Balita: 10 produk (...)
-     55 produk memakai link affiliate, 0 masih memakai link biasa
+     85 produk memakai link affiliate, 0 masih memakai link biasa
+     30 produk memakai analisa tulisan tangan (tools/analisa.json), 12 produk bermerek Korea
    ```
 5. **Sebelum deploy** jalankan pemeriksaan akhir. Perintah ini gagal (dengan pesan
-   `BELUM SIAP DEPLOY`) kalau ada file kategori yang belum ada atau produk tanpa link affiliate:
+   `BELUM SIAP DEPLOY`) kalau ada file kategori yang belum ada, produk tanpa link affiliate, kelompok
+   yang tidak berisi 5 produk, atau produk skincare yang belum punya analisa:
    ```
    python3 tools/build_data.py --final
    ```
@@ -174,19 +176,49 @@ kesehatan/medis** (khasiat atau keamanan produk tidak dinilai).
   kelompoknya, paling hemat per 100 ml/g (kalau ukuran jelas di judul), dan hal yang tertulis di
   judul produk (ditandai "menurut penjual").
 - **Kekurangan**: misalnya diskon sangat besar dari harga coret, rating paling rendah di
-  kelompoknya, ada pilihan lebih murah, judul mencakup beberapa varian, plus catatan umum sesuai
-  jenis produk (kecocokan sabun/sampo/facial wash berbeda tiap orang; cek tabel ukuran baju; cek
-  dimensi tas). Untuk **Balita** selalu ada catatan: perhatikan usia yang dianjurkan di kemasan dan
-  lakukan uji pada sedikit area kulit dulu.
+  kelompoknya, ada pilihan lebih murah, atau judul mencakup beberapa varian.
 - **Label perbandingan**: 💰 Paling murah · ⭐ Rating tertinggi · 🔥 Paling laris (total terjual,
   lalu per bulan) · ⚖️ Paling seimbang. Kalau semua (atau lebih dari 2) produk nilainya sama,
   label tidak diberikan dan ada catatan kecil di bawah tabel.
 
-Setiap halaman review otomatis menampilkan tulisan bahwa ulasan disusun dari data yang tampil di
-toko resmi Shopee per tanggal data, bukan dari uji langsung.
+**Tips** (kotak 💡 di halaman review) berisi saran praktis sesuai jenis produk (cara pakai serum/
+sunscreen, cek tabel ukuran baju, dll.). Untuk **Balita** selalu ada tips: perhatikan usia yang
+dianjurkan di kemasan dan coba dulu di sedikit area kulit.
 
-> Gaya bahasa website sengaja netral dan berbasis data ("Bandingin.id membandingkan…"),
-> bukan pendapat pribadi. Saat menambah produk, jangan tulis seolah-olah produk sudah dicoba sendiri.
+Tidak ada catatan "belum dicoba" di tiap review/kartu. Hanya ada **satu catatan kecil di footer**:
+"Ulasan disusun dari analisa kandungan dan informasi produk. Bandingin.id mendapat komisi dari link affiliate."
+
+### 5a. Analisa skincare (tulisan tangan): `tools/analisa.json`
+
+Untuk 30 produk skincare (pelembab, serum, sunscreen), review otomatis **diganti** dengan analisa
+yang ditulis manual. Kuncinya adalah **item ID** Shopee (angka terakhir di URL produk,
+`https://shopee.co.id/product/<toko>/<ITEM ID>`). Isi tiap produk:
+
+```
+"16581227588": {
+  "ringkasan": "satu kalimat",
+  "analisa": "80–150 kata: kandungan utama, jenis kulit yang cocok, tekstur & hasil akhir, harga per ml",
+  "kelebihan": ["...", "..."], "kekurangan": ["...", "..."],
+  "kesimpulan": "untuk siapa produk ini", "cocokKulit": ["berminyak", "kering", "normal", "sensitif", "berjerawat"]
+}
+```
+
+Aturan menulis: gaya netral ("Bandingin.id menilai…", tanpa "kami"/"saya"), jangan mengaku sudah
+mencoba, jangan klaim medis atau hasil pasti (pakai "umumnya", "dikenal untuk", "cocok untuk"),
+dan kalau fakta tidak bisa dipastikan dari sumber resmi, lebih baik tidak ditulis.
+Kalau produk skincare diganti, tulis analisa untuk item ID barunya (`--final` gagal kalau belum ada).
+
+### 5b. "Pilihan Bandingin.id": `tools/pilihan.json`
+
+Kotak hijau di atas tiap kelompok skincare (halaman perbandingan, bagian perbandingan di halaman
+review, dan di beranda saat sub-filter Pelembab/Serum/Sunscreen dipilih). Kunci = id kelompok
+(mis. `sunscreen-pria`), isi = daftar `{"label", "item" (item ID), "alasan"}`, biasanya 3:
+kulit berminyak/berjerawat, kulit kering/sensitif, dan paling hemat.
+
+### 5c. Badge 🇰🇷 Merek Korea
+
+Daftar merek ada di `merek-korea.txt` (folder data, satu merek per baris). Produk yang judulnya
+mengandung salah satu merek itu (tidak peduli huruf besar/kecil) otomatis mendapat badge.
 
 ---
 

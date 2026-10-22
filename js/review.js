@@ -37,29 +37,27 @@
     '<nav class="crumbs"><a href="index.html">Beranda</a> › <a href="index.html?kategori=' +
       encodeURIComponent(p.kategori) + '#produk">' + S.esc(p.kategori) + "</a>" +
       (g ? ' › <a href="perbandingan.html#' + S.esc(g.id) + '">' + S.esc(g.nama) + "</a>" : "") + "</nav>" +
-    (p.contoh ? '<div class="note-contoh">⚠️ Ini adalah <b>produk contoh</b> untuk tampilan website. Isi review, harga, dan link belum asli.</div>' :
-      '<div class="note-sumber">ℹ️ Ulasan ini disusun dari data yang tampil di toko resmi Shopee (judul produk, harga, rating, dan penjualan per ' +
-      S.esc(tgl) + '), bukan dari uji langsung, dan tidak menilai keamanan atau khasiat produk. Harga bisa berubah.' +
-      (p.kategori === "Balita" ? ' Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu.' : "") +
-      "</div>") +
+    (p.contoh ? '<div class="note-contoh">⚠️ Ini adalah <b>produk contoh</b> untuk tampilan website. Isi review, harga, dan link belum asli.</div>' : "") +
     '<div class="review-top">' +
       '<div class="review-img">' + S.gambar(p, true) + S.badgeContoh(p) + "</div>" +
       '<div class="review-info">' +
-        '<span class="cat">' + S.esc(p.jenisNama || p.kategori) + "</span>" +
+        '<span class="cat">' + S.esc(p.jenisNama || p.kategori) + "</span>" + S.badgeKorea(p) +
         "<h1>" + S.esc(p.nama) + "</h1>" +
         S.bintang(p.rating) +
         '<div class="lbls">' + S.label(p) + "</div>" +
-        '<p class="price big">' + S.hargaHtml(p) + "</p>" +
+        '<p class="price big">' + S.hargaHtml(p) + "</p>" + S.cocokKulit(p) +
         fakta +
         '<div class="btns">' + S.tombolToko(p) + "</div>" +
       "</div>" +
     "</div>" +
+    (p.analisa ? '<section class="box analisa"><h2>🔬 Analisa Bandingin.id</h2><p>' + S.esc(p.analisa) + "</p></section>" : "") +
     '<div class="proscons">' +
       '<section class="box pros"><h2>👍 Kelebihan</h2>' + daftar(p.kelebihan, "list-pros") + "</section>" +
       '<section class="box cons"><h2>👎 Kekurangan</h2>' + daftar(p.kekurangan, "list-cons") + "</section>" +
     "</div>" +
     '<section class="box kesimpulan"><h2>📝 Kesimpulan</h2><p>' + S.esc(p.kesimpulan) + "</p>" +
       '<div class="btns">' + S.tombolToko(p) + "</div></section>" +
+    ((p.tips || []).length ? '<section class="box tips"><h2>💡 Tips</h2>' + daftar(p.tips, "list-tips") + "</section>" : "") +
     (g ? '<section class="box banding" id="perbandingan"><h2>📊 Perbandingan ' + S.esc(g.nama) + "</h2>" +
       '<p class="muted small">' + g.produk.length + " pilihan " + S.esc(g.nama) + " dari toko resmi di Shopee, data per " + S.esc(tgl) + ".</p>" +
       S.tabelGrup(g, p.id) +

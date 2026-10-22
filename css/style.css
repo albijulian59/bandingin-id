@@ -363,3 +363,25 @@ img { max-width: 100%; display: block; }
   .subfilter::-webkit-scrollbar { display: none; }
   .subchip { flex: none; font-size: .8rem; }
 }
+
+/* ===== Analisa skincare, Pilihan Bandingin.id, badge Merek Korea, tips ===== */
+.badge-korea { display: inline-block; margin-left: 6px; font-size: .68rem; font-weight: 700; color: #1e3a8a; background: #e0e7ff; border-radius: 999px; padding: 1px 7px; vertical-align: middle; white-space: nowrap; }
+.analisa { margin-top: 20px; border-top: 4px solid #0ea5e9; }
+.analisa p { margin: 0; font-size: 1.02rem; }
+.tips { margin-top: 20px; background: #fffbeb; border-color: #fde68a; }
+.box .list-tips li::before { content: "💡"; position: absolute; left: 0; }
+.kulit { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 10px; font-size: .85rem; }
+.kulit-judul { font-weight: 700; color: var(--muted); }
+.kulit-chip { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; border-radius: 999px; padding: 1px 9px; font-size: .78rem; font-weight: 600; }
+.pilihan { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius); padding: 14px 18px; margin: 0 0 14px; }
+.pilihan h4 { margin: 0 0 4px; font-size: 1.02rem; color: #14532d; }
+.pilihan-intro { margin: 0 0 8px; font-size: .85rem; color: var(--muted); }
+.pilihan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pilihan li { display: flex; gap: 10px; align-items: flex-start; padding: 0; font-size: .92rem; }
+.pilihan li::before { content: none; }
+.pilihan-ikon { font-size: 1.1rem; line-height: 1.4; }
+.pilihan-label { color: #166534; }
+.pilihan-alasan { color: #374151; font-size: .86rem; }
+#pilihan-grup:empty { display: none; }
+.footnote { margin: 0 0 10px; font-size: .82rem; color: #9ca3af; }
+@media (min-width: 900px) { .pilihan ul { grid-template-columns: repeat(3, 1fr); } }
