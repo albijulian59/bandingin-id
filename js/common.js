@@ -202,5 +202,9 @@
     document.querySelectorAll(".tanggal-data").forEach(function (el) {
       el.textContent = window.TANGGAL_DATA || "";
     });
+    // Jumlah produk selalu dihitung dari data (tidak ditulis manual)
+    document.querySelectorAll(".jumlah-produk").forEach(function (el) {
+      el.textContent = (window.PRODUK || []).length;
+    });
   });
 })();

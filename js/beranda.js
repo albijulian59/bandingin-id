@@ -1,10 +1,11 @@
-/* Halaman utama: filter kategori, pencarian, urutan, daftar produk. */
+/* Halaman utama: filter kategori (+ sub-filter jenis produk), pencarian, urutan, daftar produk. */
 (function () {
   var S = window.Situs;
   var produk = window.PRODUK || [];
-  var kategoriAktif = "Semua", kataCari = "", urutan = "default";
+  var kategoriAktif = "Semua", jenisAktif = "", kataCari = "", urutan = "default";
 
   var elFilter = document.getElementById("filter");
+  var elSub = document.getElementById("subfilter");
   var elGrid = document.getElementById("grid");
   var elCari = document.getElementById("cari");
   var elInfo = document.getElementById("info-hasil");
@@ -21,6 +22,21 @@
     }).join("");
   }
 
+  // Sub-filter jenis produk (mis. Sabun Mandi / Sampo / Facial Wash) saat satu kategori dipilih
+  function buatSubfilter() {
+    var gs = (window.GRUP || []).filter(function (g) { return g.kategori === kategoriAktif; });
+    if (kategoriAktif === "Semua" || gs.length < 2) { elSub.hidden = true; elSub.innerHTML = ""; jenisAktif = ""; return; }
+    if (jenisAktif && !gs.some(function (g) { return g.id === jenisAktif; })) jenisAktif = "";
+    var daftar = [{ id: "", pendek: "Semua " + kategoriAktif, n: produk.filter(function (p) { return p.kategori === kategoriAktif; }).length }]
+      .concat(gs.map(function (g) { return { id: g.id, pendek: g.pendek || g.nama, n: g.produk.length }; }));
+    elSub.innerHTML = daftar.map(function (d) {
+      var on = d.id === jenisAktif;
+      return '<button type="button" class="subchip' + (on ? " active" : "") + '" data-jenis="' + S.esc(d.id) +
+        '" aria-pressed="' + on + '">' + S.esc(d.pendek) + ' <span class="count">' + d.n + "</span></button>";
+    }).join("");
+    elSub.hidden = false;
+  }
+
   function urutkan(list) {
     var a = list.slice();
     if (urutan === "murah") a.sort(function (x, y) { return x.harga - y.harga; });
@@ -32,13 +48,14 @@
   function tampilkan() {
     var q = kataCari.trim().toLowerCase();
     var hasil = produk.filter(function (p) {
-      var cocokKat = kategoriAktif === "Semua" || p.kategori === kategoriAktif;
+      var cocokKat = (kategoriAktif === "Semua" || p.kategori === kategoriAktif) && (!jenisAktif || p.jenis === jenisAktif);
       var teks = (p.nama + " " + (p.jenisNama || "") + " " + p.kategori + " " + (p.ringkasan || "")).toLowerCase();
       return cocokKat && (!q || teks.indexOf(q) !== -1);
     });
     hasil = urutkan(hasil);
     elInfo.textContent = hasil.length + " produk ditemukan" +
-      (kategoriAktif !== "Semua" ? " di " + kategoriAktif : "") + (q ? ' untuk "' + kataCari.trim() + '"' : "");
+      (kategoriAktif !== "Semua" ? " di " + kategoriAktif : "") +
+      (jenisAktif ? " (" + ((S.grupDari(jenisAktif) || {}).nama || "") + ")" : "") + (q ? ' untuk "' + kataCari.trim() + '"' : "");
     elGrid.innerHTML = hasil.length ? hasil.map(S.kartu).join("") :
       '<div class="empty">😕 Produk tidak ditemukan. Coba kata lain atau pilih kategori "Semua".</div>';
   }
@@ -47,7 +64,14 @@
     var b = e.target.closest("button[data-kat]");
     if (!b) return;
     kategoriAktif = b.getAttribute("data-kat");
-    buatFilter(); tampilkan();
+    jenisAktif = "";
+    buatFilter(); buatSubfilter(); tampilkan();
+  });
+  elSub.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-jenis]");
+    if (!b) return;
+    jenisAktif = b.getAttribute("data-jenis");
+    buatSubfilter(); tampilkan();
   });
   elCari.addEventListener("input", function () { kataCari = elCari.value; tampilkan(); });
   elUrut.addEventListener("change", function () { urutan = elUrut.value; tampilkan(); });
@@ -58,8 +82,10 @@
 
   var params = new URLSearchParams(location.search);
   if (params.get("kategori")) kategoriAktif = params.get("kategori");
+  if (params.get("jenis")) jenisAktif = params.get("jenis");
   if (params.get("cari")) { kataCari = params.get("cari"); elCari.value = kataCari; }
 
   buatFilter();
+  buatSubfilter();
   tampilkan();
 })();

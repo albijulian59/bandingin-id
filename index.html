@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
-  <title>Bandingin.id — Bandingkan Produk Toko Resmi Sebelum Beli</title>
-  <meta name="description" content="Bandingin.id membandingkan 80 produk dari toko resmi Shopee berdasarkan data harga, diskon, rating, dan penjualan: gadget, skincare, fashion, rumah tangga, dan mainan.">
+  <title>Bandingin.id — Bandingkan Perawatan Diri &amp; Fashion dari Toko Resmi Sebelum Beli</title>
+  <meta name="description" content="Bandingin.id membandingkan produk perawatan diri dan fashion untuk perempuan, pria, dan balita dari toko resmi Shopee: sabun mandi, sampo, facial wash, baju, kaos, tas, serta sabun dan sampo bayi. Berdasarkan data harga, diskon, rating, dan penjualan.">
 </head>
 <body>
   <header class="site-header">
@@ -21,7 +21,7 @@
   </header>
 
   <main>
-    <!-- Slide show di bagian atas. Slide 1 = hero (statis); slide 2-5 = produk unggulan per kategori,
+    <!-- Slide show di bagian atas. Slide 1 = hero (statis); slide berikutnya = produk unggulan per kategori,
          dibuat otomatis oleh js/slideshow.js dari data/produk.js (aturan pilihan: Situs.produkUnggulan). -->
     <section class="hero hs" id="slideshow" aria-roledescription="carousel" aria-label="Sorotan Bandingin.id">
       <div class="wrap">
@@ -29,9 +29,9 @@
           <div class="hs-track" id="hs-track" aria-live="polite">
             <div class="hs-slide hs-intro" role="group" aria-roledescription="slide" aria-label="1 dari 1">
               <h1>Bandingin dulu, <br>baru beli.</h1>
-              <p>Bandingin.id membandingkan 80 produk dari toko resmi di Shopee berdasarkan data harga, diskon, rating, dan penjualan. Lihat kelebihan, kekurangan, dan kesimpulannya dengan bahasa yang mudah dipahami.</p>
+              <p>Bandingin.id membandingkan <span class="jumlah-produk">55</span> produk perawatan diri &amp; fashion untuk perempuan, pria, dan balita dari toko resmi Shopee, berdasarkan data harga, diskon, rating, dan penjualan. Lihat kelebihan, kekurangan, dan kesimpulannya dengan bahasa yang mudah dipahami.</p>
               <form class="search" id="form-cari" role="search">
-                <input id="cari" type="search" placeholder="Cari produk, misalnya: air fryer, sunscreen…" aria-label="Cari produk" autocomplete="off">
+                <input id="cari" type="search" placeholder="Cari produk, misalnya: sampo, facial wash, tas…" aria-label="Cari produk" autocomplete="off">
                 <button type="submit">Cari</button>
               </form>
               <p class="hero-note">Data per <span class="tanggal-data">22 Oktober 2026</span> · <a href="perbandingan.html">Lihat tabel perbandingan →</a></p>
@@ -47,7 +47,7 @@
     </section>
 
     <!-- Top 10 Terlaris per kategori. Isi dibuat oleh js/top10.js dari window.TOP10 (data/produk.js,
-         sumber: top10-kandidat.psv). Bagian lain di atas daftar produk bisa ditambah di sini juga. -->
+         disusun dari produk tiap kategori). Bagian lain di atas daftar produk bisa ditambah di sini juga. -->
     <section class="wrap" id="top10" aria-labelledby="top10-judul">
       <div class="top10">
         <div class="top10-head">
@@ -61,6 +61,7 @@
 
     <section class="wrap" id="kategori">
       <div class="filter" id="filter" aria-label="Filter kategori"></div>
+      <div class="subfilter" id="subfilter" aria-label="Filter jenis produk" hidden></div>
     </section>
 
     <section class="wrap" id="produk">
@@ -87,7 +88,7 @@
       <div class="disclosure" id="disclosure">
         <h3>Pengungkapan Afiliasi</h3>
         <p>Beberapa link di Bandingin.id adalah <b>link afiliasi</b> (misalnya Shopee Affiliate). Kalau kamu membeli lewat link tersebut, Bandingin.id bisa mendapat komisi kecil <b>tanpa biaya tambahan</b> untuk kamu. Komisi ini membantu website tetap berjalan dan datanya tetap diperbarui.</p>
-        <p>Bandingin.id membandingkan produk dari toko resmi berdasarkan data yang tampil di Shopee (judul produk, harga, rating, dan penjualan per <span class="tanggal-data">22 Oktober 2026</span>), <b>bukan dari uji langsung</b>. Harga, stok, dan promo bisa berubah, jadi selalu cek di halaman toko sebelum membeli.</p>
+        <p>Bandingin.id membandingkan produk dari toko resmi berdasarkan data yang tampil di Shopee (judul produk, harga, rating, dan penjualan per <span class="tanggal-data">22 Oktober 2026</span>), <b>bukan dari uji langsung</b>, dan tidak menilai keamanan atau khasiat produk. Harga, stok, dan promo bisa berubah, jadi selalu cek deskripsi, komposisi/bahan, dan petunjuk pemakaian di halaman toko sebelum membeli.</p>
       </div>
       <p class="copy">© <span id="tahun">2026</span> Bandingin.id · Bandingkan produk dari toko resmi sebelum membeli</p>
     </div>

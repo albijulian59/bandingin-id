@@ -28,6 +28,7 @@
     "<li><span>Rating</span><b>" + Number(p.rating).toFixed(1) + " / 5</b></li>" +
     (p.terjual != null ? "<li><span>Terjual</span><b>" + S.esc(S.terjualTeks(p)) + " / bulan</b></li>" : "") +
     (p.terjualTotal != null ? "<li><span>Total terjual</span><b>" + S.esc(S.terjualTotalTeks(p)) + "</b></li>" : "") +
+    (p.hargaPer100 ? "<li><span>Harga per 100 " + S.esc(p.satuanIsi) + "</span><b>± " + S.esc(S.rupiah(p.hargaPer100)) + "</b></li>" : "") +
     (p.kota ? "<li><span>Dikirim dari</span><b>" + S.esc(p.kota) + "</b></li>" : "") +
     (p.contoh ? "" : "<li><span>Toko</span><b>Toko resmi (Shopee Mall)</b></li>") +
     "</ul>";
@@ -37,8 +38,10 @@
       encodeURIComponent(p.kategori) + '#produk">' + S.esc(p.kategori) + "</a>" +
       (g ? ' › <a href="perbandingan.html#' + S.esc(g.id) + '">' + S.esc(g.nama) + "</a>" : "") + "</nav>" +
     (p.contoh ? '<div class="note-contoh">⚠️ Ini adalah <b>produk contoh</b> untuk tampilan website. Isi review, harga, dan link belum asli.</div>' :
-      '<div class="note-sumber">ℹ️ Review ini disusun dari data toko resmi di Shopee (spesifikasi, harga, rating, dan penjualan per ' +
-      S.esc(tgl) + '), bukan dari uji langsung. Harga bisa berubah.</div>') +
+      '<div class="note-sumber">ℹ️ Ulasan ini disusun dari data yang tampil di toko resmi Shopee (judul produk, harga, rating, dan penjualan per ' +
+      S.esc(tgl) + '), bukan dari uji langsung, dan tidak menilai keamanan atau khasiat produk. Harga bisa berubah.' +
+      (p.kategori === "Balita" ? ' Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada sedikit area kulit dulu.' : "") +
+      "</div>") +
     '<div class="review-top">' +
       '<div class="review-img">' + S.gambar(p, true) + S.badgeContoh(p) + "</div>" +
       '<div class="review-info">' +

@@ -348,3 +348,18 @@ img { max-width: 100%; display: block; }
   .t10-harga { font-size: .82rem; }
   .t10-btn { font-size: .72rem; padding: 6px 9px; }
 }
+
+/* Sub-filter jenis produk (muncul saat satu kategori dipilih) */
+.subfilter { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 10px; }
+.subfilter[hidden] { display: none; }
+.subchip { border: 1px dashed #c7d2fe; background: #eef2ff; color: var(--utama-gelap); border-radius: 999px; padding: 5px 12px;
+  font-size: .84rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.subchip .count { opacity: .7; font-weight: 500; margin-left: 2px; }
+.subchip:hover { border-color: var(--utama); }
+.subchip.active { background: var(--utama); border: 1px solid var(--utama); color: #fff; }
+.subchip:focus-visible { outline: 3px solid #a5b4fc; outline-offset: 2px; }
+@media (max-width: 720px) {
+  .subfilter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+  .subfilter::-webkit-scrollbar { display: none; }
+  .subchip { flex: none; font-size: .8rem; }
+}

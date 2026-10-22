@@ -18,7 +18,7 @@
     return '<div class="hs-slide hs-produk" role="group" aria-roledescription="slide">' +
       '<a class="hs-img" href="' + link + '" tabindex="-1" aria-hidden="true">' + img + "</a>" +
       '<div class="hs-info">' +
-        '<p class="hs-kicker">' + u.ikon + " Pilihan teratas " + S.esc(u.kategori) + "</p>" +
+        '<p class="hs-kicker">' + u.ikon + " Pilihan teratas untuk " + S.esc(u.kategori) + "</p>" +
         '<span class="hs-cat">' + S.esc(p.jenisNama || p.kategori) + "</span>" +
         '<h2 class="hs-judul"><a href="' + link + '" title="' + S.esc(p.nama) + '">' + S.esc(S.judulPendek(p.nama)) + "</a></h2>" +
         '<p class="hs-harga"><b>' + S.esc(S.rupiah(p.harga)) + "</b>" +

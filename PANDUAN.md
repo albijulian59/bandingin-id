@@ -1,8 +1,18 @@
 # Panduan Website "Bandingin.id"
 
-Bandingin.id membandingkan produk dari toko resmi berdasarkan data, bukan review pribadi.
-Website ini berisi **80 produk asli dari toko resmi Shopee (Shopee Mall)**, dibagi ke
-4 kategori dan 20 jenis produk (masing-masing 4 pilihan). Data diambil **22 Oktober 2026**.
+Bandingin.id membandingkan produk **perawatan diri & fashion** dari toko resmi Shopee (Shopee Mall)
+berdasarkan data, bukan review pribadi. Produk dibagi ke 3 kategori menurut pemakainya:
+
+| Kategori      | Jenis produk (masing-masing 5 pilihan)                                   | Jumlah |
+|---------------|---------------------------------------------------------------------------|--------|
+| 👩 Perempuan  | Sabun Mandi Wanita, Sampo Wanita, Facial Wash Wanita, Baju Wanita, Tas Wanita | 25 |
+| 👨 Pria       | Sabun Mandi Pria, Sampo Pria, Facial Wash Pria, Kaos Pria                  | 20 |
+| 👶 Balita     | Sabun Bayi, Sampo Bayi                                                     | 10 |
+
+Total 55 produk. Data diambil **22 Oktober 2026**. Jumlah produk yang tampil di website selalu
+dihitung otomatis dari data.
+
+> Versi lama (80 produk gadget, rumah tangga, dll.) disimpan di git dengan tag `versi-80-produk`.
 
 Semua isi website (daftar produk, review, tabel perbandingan) **dibuat otomatis** dari
 file data. Jadi kamu **tidak perlu mengedit HTML** sama sekali.
@@ -15,20 +25,22 @@ file data. Jadi kamu **tidak perlu mengedit HTML** sama sekali.
 |-------------------------|--------------------------------------------------------------|----------------------|
 | `tools/build_data.py`   | **Generator**: membaca file data lalu membuat `data/produk.js` | Tidak (cukup dijalankan) |
 | `data/produk.js`        | Hasil generator. Dipakai oleh website.                       | ❌ **Jangan diedit manual** |
-| `index.html`            | Halaman utama (cari, filter kategori, urutkan)               | Tidak                |
+| `index.html`            | Halaman utama (slide show, Top 10, filter kategori + jenis, cari, urutkan) | Tidak  |
 | `review.html`           | Halaman review (satu untuk semua produk)                     | Tidak                |
-| `perbandingan.html`     | Tabel perbandingan 20 jenis produk                           | Tidak                |
+| `perbandingan.html`     | Tabel perbandingan per jenis produk                          | Tidak                |
 | `css/`, `js/`           | Tampilan dan program kecil website                           | Tidak                |
 
-File data ada di folder **`/workspace/shopee-data/`**:
+File data ada di folder **`/workspace/shopee-data-v2/`**:
 
 | File                       | Isinya                                         |
 |----------------------------|------------------------------------------------|
-| `gadget-hp.psv`            | 20 produk Gadget & HP                          |
-| `fashion-skincare.psv`     | 20 produk Fashion & Skincare                   |
-| `rumah-tangga.psv`         | 20 produk Rumah Tangga                         |
-| `mainan-hobi.psv`          | 20 produk Mainan & Hobi                        |
+| `perempuan.psv`            | 25 produk Perempuan                            |
+| `pria.psv`                 | 20 produk Pria                                 |
+| `balita.psv`               | 10 produk Balita                               |
 | `affiliate-links.psv`      | **Link affiliate Shopee kamu** (lihat bagian 3) |
+
+Kalau salah satu file belum ada, generator hanya memberi peringatan dan tetap jalan
+(berguna untuk mencoba tampilan). Untuk deploy, pakai `--final` (lihat bagian 2).
 
 ---
 
@@ -54,8 +66,16 @@ Setiap kali kamu mengubah file `.psv`, **jalankan generator lagi** supaya websit
 4. Kalau berhasil, akan muncul tulisan seperti:
    ```
    Selesai: .../data/produk.js
-     80 produk, 20 kelompok perbandingan
-     80 produk memakai link affiliate, 0 masih memakai link biasa
+     55 produk, 11 kelompok perbandingan
+       Perempuan: 25 produk (...)
+       Pria: 20 produk (...)
+       Balita: 10 produk (...)
+     55 produk memakai link affiliate, 0 masih memakai link biasa
+   ```
+5. **Sebelum deploy** jalankan pemeriksaan akhir. Perintah ini gagal (dengan pesan
+   `BELUM SIAP DEPLOY`) kalau ada file kategori yang belum ada atau produk tanpa link affiliate:
+   ```
+   python3 tools/build_data.py --final
    ```
 
 Kalau file data kamu ada di folder lain, tambahkan `--sumber`:
@@ -94,7 +114,8 @@ Contoh:
 
 Aturan penting:
 - Link produk asli harus **sama persis** dengan link di file `.psv` (generator mencocokkan dari situ).
-- Produk yang belum punya link affiliate **tetap tampil**, tombolnya memakai link produk biasa.
+- Produk yang belum punya link affiliate **tetap tampil** (tombolnya memakai link produk biasa),
+  tapi website **tidak boleh di-deploy** sebelum semua produk punya link affiliate (`--final`).
 - Generator akan memberi tahu kalau ada link affiliate yang tidak cocok dengan produk mana pun.
 - Nama menu di Shopee Affiliate bisa berubah. Intinya: cari menu untuk **membuat link affiliate dari link produk**.
 
@@ -103,37 +124,41 @@ Aturan penting:
 ## 4. Menambah atau mengganti produk
 
 Buka salah satu file `.psv` dengan Notepad / TextEdit / VS Code. Satu baris = satu produk,
-9 kolom dipisah ` | `:
+10 kolom dipisah ` | `:
 
 ```
-jenis | judul produk | harga | harga coret (atau -) | rating | terjual per bulan | kota | link produk | link gambar
+jenis | judul produk | harga | harga coret (atau -) | rating | total terjual | terjual per bulan | kota | link produk | link gambar
 ```
 
 Contoh:
 ```
-air fryer | HAN RIVER Air Fryer HRAF04 3.5L Low Power 500 Watt | Rp319.130 | Rp899.000 | 4.9 | 1RB+ Terjual/Bln | Kab. Tangerang | https://shopee.co.id/product/177266177/12719204055 | https://down-id.img.susercontent.com/file/...
+shampoo wanita | Sunsilk Shampoo Silky Smooth 450ml | Rp55.800 | Rp61.900 | 5.0 | 10RB+ Terjual | 1RB+ Terjual/Bln | Kab. Bogor | https://shopee.co.id/product/... | https://down-id.img.susercontent.com/file/...
 ```
 
 Penjelasan kolom:
 
 | Kolom              | Cara mengisi                                                                 |
 |--------------------|------------------------------------------------------------------------------|
-| jenis              | Jenis produk, misalnya `air fryer`. Produk dengan jenis sama akan dibandingkan dalam satu tabel. |
+| jenis              | Salah satu dari: `sabun mandi wanita`, `shampoo wanita`, `facial wash wanita`, `baju wanita`, `tas wanita`, `sabun mandi pria`, `shampoo pria`, `facial wash pria`, `kaos pria`, `sabun bayi`, `shampoo bayi`. Produk dengan jenis sama dibandingkan dalam satu tabel. Nama kelompok & kategorinya diatur di `JENIS` dalam `tools/build_data.py`. |
 | judul produk       | Salin dari Shopee. Fitur di review **hanya diambil dari judul ini**.          |
 | harga              | Harga sekarang, misalnya `Rp319.130`.                                        |
 | harga coret        | Harga sebelum diskon. Kalau tidak ada, tulis `-`.                            |
 | rating             | Misalnya `4.9`.                                                              |
-| terjual per bulan  | Seperti di Shopee, misalnya `1RB+ Terjual/Bln` atau `870 Terjual/Bln`.       |
-
-Di website, angka terjual ditampilkan sebagai rentang: di bawah 1.000 tampil angkanya (`870`), 1.000–9.999 dibulatkan ke bawah per ribuan (`1rb+` … `9rb+`), dan 10.000 ke atas tampil `10rb+`. Fungsinya ada di `tools/build_data.py` (`rentang_terjual`) dan `js/common.js` (`Situs.rentangTerjual`); angka aslinya tetap disimpan di field `terjual` untuk urutan "Terlaris".
+| total terjual      | Dari halaman produk, misalnya `10RB+ Terjual` atau `518 Terjual`.            |
+| terjual per bulan  | Dari kartu hasil pencarian, misalnya `1RB+ Terjual/Bln` atau `870 Terjual/Bln`. |
 | kota               | Kota pengirim, misalnya `Jakarta Utara`. Kalau tidak tahu, tulis `-`.         |
 | link produk        | Link produk biasa dari Shopee (bukan link affiliate).                        |
 | link gambar        | Link foto produk (klik kanan foto di Shopee → *Salin alamat gambar*).         |
 
-Sebaiknya setiap jenis berisi **4 produk** supaya tabel perbandingan rapi.
+Di website, angka terjual ditampilkan sebagai rentang: di bawah 1.000 tampil angkanya (`870`),
+1.000–9.999 dibulatkan ke bawah per ribuan (`1rb+` … `9rb+`), dan 10.000 ke atas tampil `10rb+`.
+Fungsinya ada di `tools/build_data.py` (`rentang_terjual`) dan `js/common.js` (`Situs.rentangTerjual`);
+angka aslinya tetap disimpan (`terjual`, `terjualTotal`) untuk pengurutan.
+
+Sebaiknya setiap jenis berisi **5 produk** supaya tabel perbandingan rapi.
 Setelah mengedit, **jalankan generator** lalu buka/refresh website.
 
-Kalau ada baris yang salah (jumlah kolom bukan 9), generator akan memberi tahu nomor barisnya
+Kalau ada baris yang salah (jumlah kolom bukan 10), generator akan memberi tahu nomor barisnya
 dan baris itu dilewati.
 
 ---
@@ -141,19 +166,24 @@ dan baris itu dilewati.
 ## 5. Bagaimana review dibuat?
 
 Generator menulis review **hanya dari data yang ada**: judul produk, harga, diskon, rating,
-penjualan per bulan, kota pengirim, dan status toko resmi. Generator **tidak mengarang
-spesifikasi** dan **tidak mengaku sudah mencoba produk**.
+total terjual, penjualan per bulan, kota pengirim, dan status toko resmi. Generator **tidak
+mengarang spesifikasi**, **tidak mengaku sudah mencoba produk**, dan **tidak membuat klaim
+kesehatan/medis** (khasiat atau keamanan produk tidak dinilai).
 
-- **Kelebihan**: misalnya rating tinggi, laris, sedang diskon, paling murah di kelompoknya,
-  dan fitur yang tertulis di judul.
+- **Kelebihan**: misalnya rating tinggi, banyak terjual, sedang diskon, paling murah di
+  kelompoknya, paling hemat per 100 ml/g (kalau ukuran jelas di judul), dan hal yang tertulis di
+  judul produk (ditandai "menurut penjual").
 - **Kekurangan**: misalnya diskon sangat besar dari harga coret, rating paling rendah di
-  kelompoknya, ada pilihan lebih murah, atau judul mencakup beberapa varian.
-- **Label perbandingan**: 💰 Paling murah · ⭐ Rating tertinggi · 🔥 Paling laris ·
-  ⚖️ Paling seimbang. Kalau semua (atau 3 dari 4) produk nilainya sama, label tidak diberikan
-  dan ada catatan kecil di bawah tabel.
+  kelompoknya, ada pilihan lebih murah, judul mencakup beberapa varian, plus catatan umum sesuai
+  jenis produk (kecocokan sabun/sampo/facial wash berbeda tiap orang; cek tabel ukuran baju; cek
+  dimensi tas). Untuk **Balita** selalu ada catatan: perhatikan usia yang dianjurkan di kemasan dan
+  lakukan uji pada sedikit area kulit dulu.
+- **Label perbandingan**: 💰 Paling murah · ⭐ Rating tertinggi · 🔥 Paling laris (total terjual,
+  lalu per bulan) · ⚖️ Paling seimbang. Kalau semua (atau lebih dari 2) produk nilainya sama,
+  label tidak diberikan dan ada catatan kecil di bawah tabel.
 
-Setiap halaman review otomatis menampilkan tulisan bahwa review disusun dari data toko resmi
-Shopee per tanggal data, bukan dari uji langsung.
+Setiap halaman review otomatis menampilkan tulisan bahwa ulasan disusun dari data yang tampil di
+toko resmi Shopee per tanggal data, bukan dari uji langsung.
 
 > Gaya bahasa website sengaja netral dan berbasis data ("Bandingin.id membandingkan…"),
 > bukan pendapat pribadi. Saat menambah produk, jangan tulis seolah-olah produk sudah dicoba sendiri.
@@ -205,13 +235,20 @@ yang menyebut "Bandingin.id" ada di `tools/build_data.py`; setelah mengubahnya, 
 - **Website kosong / produk tidak muncul** → `data/produk.js` rusak karena diedit manual.
   Jalankan generator lagi.
 - **Gambar tidak muncul** → link gambar salah atau sudah dihapus Shopee. Website otomatis
-  menampilkan ikon kategori sebagai gantinya. Perbarui link gambar di file `.psv`.
+  menampilkan ikon kategori (👩 👨 👶) sebagai gantinya. Perbarui link gambar di file `.psv`.
 - **Link affiliate tidak terpakai** → link produk asli di `affiliate-links.psv` tidak sama
   persis dengan yang ada di `.psv`. Lihat pesan dari generator.
 - **Harga sudah berubah** → wajar. Ambil data baru, perbarui `.psv`, lalu jalankan generator
   dengan `--tanggal` yang baru.
 
-## Slide show & Top 10 Terlaris (beranda)
+## 11. Slide show, Top 10 Terlaris, dan filter (beranda)
 
-- **Slide show** (`js/slideshow.js`): slide 1 = hero, slide 2–5 = produk unggulan per kategori, dipilih otomatis oleh `Situs.produkUnggulan` di `js/common.js` (utamakan label "Paling seimbang", lalu rating, terjual/bln, diskon, harga termurah).
-- **Top 10 Terlaris** (`js/top10.js`): sumbernya `top10-kandidat.psv` di folder data (11 kolom: kategori | keyword | judul | harga | harga coret | rating | total terjual | terjual/bln | kota | link produk | link gambar). Link produknya harus sama dengan salah satu dari 80 produk. `tools/build_data.py` menambahkan `terjualTotal` ke produk tersebut dan menyusun `window.TOP10` per kategori: total terjual → terjual/bln → rating → harga termurah.
+- **Slide show** (`js/slideshow.js`): slide 1 = hero, lalu satu produk unggulan per kategori
+  (Perempuan, Pria, Balita), dipilih otomatis oleh `Situs.produkUnggulan` di `js/common.js`
+  (utamakan label "Paling seimbang", lalu rating, terjual/bln, diskon, harga termurah).
+- **Top 10 Terlaris** (`js/top10.js`): tab Perempuan / Pria / Balita. Disusun oleh
+  `tools/build_data.py` (`window.TOP10`) dari semua produk di kategori itu: total terjual →
+  terjual/bln → rating → harga termurah.
+- **Filter**: chip kategori (Semua / Perempuan / Pria / Balita). Saat satu kategori dipilih,
+  muncul sub-filter jenis (mis. Sabun Mandi / Sampo / Facial Wash / Baju / Tas). Bisa juga lewat
+  link, misalnya `index.html?kategori=Pria&jenis=kaos-pria`.

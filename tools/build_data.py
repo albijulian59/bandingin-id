@@ -1,69 +1,85 @@
 #!/usr/bin/env python3
 """
-Generator data produk untuk website "Bandingin.id".
+Generator data produk untuk website "Bandingin.id" (perawatan diri & fashion: Perempuan, Pria, Balita).
 
 Membaca file .psv hasil pengumpulan data Shopee lalu membuat data/produk.js.
 
-Pemakaian (dari folder web-review-affiliate):
-    python3 tools/build_data.py
+Pemakaian (dari folder website):
+    python3 tools/build_data.py            # boleh ada file yang belum lengkap (hanya peringatan)
+    python3 tools/build_data.py --final    # untuk deploy: gagal kalau ada file hilang atau link affiliate kurang
 Opsi:
-    --sumber  FOLDER   folder berisi file .psv (default: /workspace/shopee-data,
+    --sumber  FOLDER   folder berisi file .psv (default: /workspace/shopee-data-v2,
                        atau folder sumber-data/ di dalam website kalau ada)
     --tanggal "22 Oktober 2026"   tanggal pengambilan data (tampil di website)
 
-Format tiap baris .psv (dipisah ' | '):
-    keyword | judul | harga | harga asli (atau -) | rating | terjual/bln | kota | URL produk | URL gambar
+File di folder sumber: perempuan.psv, pria.psv, balita.psv (+ affiliate-links.psv).
+Format tiap baris produk (10 kolom, dipisah ' | '):
+    keyword | judul | harga | harga asli (atau -) | rating | total terjual | terjual/bln | kota | URL produk | URL gambar
+    contoh total terjual: '10RB+ Terjual', terjual/bln: '1RB+ Terjual/Bln'
 
-File link affiliate (opsional) affiliate-links.psv di folder sumber:
+File link affiliate affiliate-links.psv:
     nomor | URL produk asli | link affiliate
-
-File kandidat Top 10 Terlaris (opsional) top10-kandidat.psv di folder sumber (11 kolom):
-    kategori | keyword | judul | harga | harga asli | rating | total terjual | terjual/bln | kota | URL produk | URL gambar
 """
 import argparse, json, math, os, re, sys
 from datetime import date
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SUMBER_BAWAAN = "/workspace/shopee-data-v2"
 
+# (file, nama kategori, ikon)
 KATEGORI = [
-    ("gadget-hp.psv", "Gadget & HP", "📱"),
-    ("fashion-skincare.psv", "Fashion & Skincare", "👗"),
-    ("rumah-tangga.psv", "Rumah Tangga", "🏠"),
-    ("mainan-hobi.psv", "Mainan & Hobi", "🧸"),
+    ("perempuan.psv", "Perempuan", "👩"),
+    ("pria.psv", "Pria", "👨"),
+    ("balita.psv", "Balita", "👶"),
 ]
 
-# Nama kelompok (jenis produk) yang tampil di website
-NAMA_JENIS = {
-    "tws earbuds": "TWS Earbuds", "power bank": "Power Bank", "charger hp": "Charger HP",
-    "smartwatch": "Smartwatch & Smartband", "speaker bluetooth": "Speaker Bluetooth",
-    "sunscreen": "Sunscreen", "facial wash": "Sabun Cuci Muka (Facial Wash)",
-    "moisturizer": "Pelembap Wajah (Moisturizer)", "kaos pria": "Kaos Pria",
-    "tas wanita": "Tas Wanita", "air fryer": "Air Fryer", "rice cooker": "Rice Cooker",
-    "blender": "Blender & Chopper", "rak serbaguna": "Rak Serbaguna",
-    "vacuum cleaner": "Vacuum Cleaner", "lego": "LEGO", "rubik": "Kubus Puzzle & Magnetik",
-    "mainan edukasi anak": "Mainan Edukasi Anak", "action figure": "Action Figure",
-    "puzzle": "Puzzle",
+# keyword (kolom 1) -> (nama kelompok, nama pendek untuk sub-filter, kategori, tipe)
+# tipe dipakai untuk memilih teks review yang sesuai: sabun, sampo, facial, baju, tas
+JENIS = {
+    "sabun mandi wanita": ("Sabun Mandi Wanita", "Sabun Mandi", "Perempuan", "sabun"),
+    "shampoo wanita": ("Sampo Wanita", "Sampo", "Perempuan", "sampo"),
+    "facial wash wanita": ("Facial Wash Wanita", "Facial Wash", "Perempuan", "facial"),
+    "baju wanita": ("Baju Wanita", "Baju", "Perempuan", "baju"),
+    "tas wanita": ("Tas Wanita", "Tas", "Perempuan", "tas"),
+    "sabun mandi pria": ("Sabun Mandi Pria", "Sabun Mandi", "Pria", "sabun"),
+    "shampoo pria": ("Sampo Pria", "Sampo", "Pria", "sampo"),
+    "facial wash pria": ("Facial Wash Pria", "Facial Wash", "Pria", "facial"),
+    "kaos pria": ("Kaos Pria", "Kaos", "Pria", "baju"),
+    "sabun bayi": ("Sabun Bayi", "Sabun Bayi", "Balita", "sabun"),
+    "shampoo bayi": ("Sampo Bayi", "Sampo Bayi", "Balita", "sampo"),
 }
 
-# Fitur yang dicari di judul produk (hanya yang tertulis di judul)
+# Hal yang tertulis di judul produk (dikutip apa adanya, tidak dinilai kebenarannya)
 POLA_FITUR = [
-    r"\d[\d.,]*\s?mAh", r"\b\d+(?:[.,]\d+)?\s?(?:L|Liter)\b", r"\b\d+\s?(?:W|Watt|w)\b",
-    r"\b(?:BT|Bluetooth)\s?\d\.\d\b", r"\bIPX\d\b", r"\bGaransi(?: Resmi)?(?: \d+ Tahun)?",
-    r"\bSPF\s?\d+(?:\s?PA\+*)?", r"\bPA\+{2,}", r"\b\d+\s?(?:ml|ML|gr)\b", r"\b\d+Pa\b",
-    r"\b\d+\s?(?:Pieces|PCS|pcs|Pcs)\b", r"\b\d+ in 1\b", r"\bAMOLED\b", r"\bGPS\b", r"\bNFC\b",
-    r"\bECG\b", r"\bFast Charging\b", r"\bQuick Charging\b", r"\bType[ -]C\b", r"\bAnti Lengket\b",
-    r"\bCordless\b", r"\bTanpa Kabel\b", r"\bLow (?:Watt|Power)\b", r"\bStainless(?: 304)?\b",
-    r"\bMagnetic\b", r"\bKayu\b", r"\bLow pH\b", r"\bNiacinamide\b", r"\bCeramide\b",
-    r"\bPanthenol\b", r"\bCotton Combed(?: \d+s)?\b", r"\bPremium Cotton(?: \d+s)?\b",
-    r"\bOversize\b", r"\bS-\d?X+L\b", r"\bRGB\b", r"\b\d\s?(?:MIC|Microphon)\b", r"\bWaterproof\b",
-    r"\bLayar Sentuh(?: Digital)?\b", r"\b\d+ Mode\b", r"\bDengan Roda\b|\bBeroda\b",
-    r"\bAnti Karat\b", r"\b\d+/?\d* Susun\b", r"\b\d+ Tier\b", r"\bDua Kecepatan\b",
-    r"\bBluetooth Call\b", r"\bWireless Charging\b", r"\bPortable\b", r"\bLampu\b",
+    r"\b\d+(?:[.,]\d+)?\s?(?:ml|mL|ML|gr|gram|g|G|L)\b", r"\b\d+\s?[xX]\s?\d+\s?(?:ml|mL|gr|g)?\b", r"\bIsi \d+\b",
+    r"\bPouch\b", r"\bRefill\b", r"\bBotol\b", r"\bBatang\b|\bBar Soap\b", r"\bCair\b",
+    r"\bLow pH\b", r"\bpH[ -]?Balanced?\b", r"\bHypoallergenic\b", r"\bTear[- ]Free\b|\bTidak Pedih\b",
+    r"\bNiacinamide\b", r"\bCeramide\b", r"\bPanthenol\b", r"\bCollagen\b", r"\bVitamin [A-Z]\b",
+    r"\bSalicylic(?: Acid)?\b", r"\bCharcoal\b", r"\bMenthol\b|\bCool(?:ing)?\b", r"\bAloe Vera\b",
+    r"\bOat(?:meal)?\b", r"\bChamomile\b", r"\bMinyak Telon\b|\bTelon\b", r"\bZaitun\b|\bOlive\b",
+    r"\bAnti Ketombe\b|\bAnti[- ]Dandruff\b", r"\bAnti (?:Rambut )?Rontok\b|\bAnti[- ]Hair ?fall\b",
+    r"\bWangi Tahan Lama\b", r"\bHijab\b",
+    r"\bKatun(?: Rayon)?\b|\bCotton(?: Combed)?(?: \d+s)?\b|\bRayon\b|\bLinen(?: Rami)?\b",
+    r"\bLengan (?:Panjang|Pendek)\b|\b(?:Long|Short) Sleeve\b", r"\bOversize\b", r"\bSlim Fit\b|\bRegular Fit\b",
+    r"\bCrew ?Neck\b|\bO-?Neck\b|\bV-?Neck\b|\bOneck\b", r"\b(?:S|M|L)\s?-\s?\d?X{1,3}L\b|\bAll ?Size\b",
+    r"\bSelempang\b|\bSling ?Bag\b", r"\bTote ?Bag\b|\bTotebag\b", r"\bShoulder(?: Bag)?\b", r"\bSatchel\b",
+    r"\bTas Tangan\b", r"\bKapasitas Besar\b", r"\bTali Panjang\b", r"\bAnti Air\b|\bWaterproof\b",
 ]
 
-# Tanda judul mencakup beberapa varian (pilihan ukuran/tipe/kapasitas)
-POLA_VARIAN = (r"\bAll Series\b|\([^)]*,[^)]*\)|\d[\d.,]*\s?mAh\s?/\s?\d|\bSPF\s?\d+\s?/\s?SPF"
-               r"|\b\d+/\d+ Susun\b|\d+% & \d+%|\d+ Tier & \d+ Tier|\b\d+w \d+w\b")
+# Judul mencakup beberapa varian (harga bisa beda per varian)
+POLA_VARIAN = (r"\bAll Series\b|\bSemua Varian\b|\bAll Variant|\bSeries\b|\([^)]*,[^)]*\)|\bVarian\b"
+               r"|\b\d+\s?(?:ml|gr|g)\s?/\s?\d+|\bPilih\b")
+
+# Catatan umum per tipe produk (tanpa klaim medis)
+CATATAN_TIPE = {
+    "sabun": "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
+    "sampo": "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
+    "facial": "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
+    "baju": "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
+    "tas": "Cek ukuran (dimensi) tas, bahan, dan foto asli dari pembeli di halaman produk supaya sesuai harapan.",
+}
+CATATAN_BALITA = ("Untuk produk bayi dan balita, perhatikan usia yang dianjurkan di kemasan dan lakukan uji pada "
+                  "sedikit area kulit dulu. Bandingin.id tidak menilai keamanan produk; ikuti petunjuk pemakaian di kemasan.")
 
 def rupiah(n):
     return "Rp" + f"{int(n):,}".replace(",", ".")
@@ -114,16 +130,6 @@ def nama_pendek(judul, maks=6):
     kata = judul.split()
     return " ".join(kata[:maks]) + ("…" if len(kata) > maks else "")
 
-def fitur_judul(judul):
-    hasil, lihat = [], set()
-    for pola in POLA_FITUR:
-        for m in re.finditer(pola, judul, re.I):
-            f = m.group(0).strip()
-            k = f.lower().replace(" ", "")
-            if k not in lihat:
-                lihat.add(k); hasil.append(f)
-    return hasil[:6]
-
 def normal_url(u):
     return u.strip().split("?")[0].rstrip("/")
 
@@ -147,60 +153,67 @@ def baca_affiliate(path):
             peta[normal_url(asli)] = aff
     return peta
 
-def baca_top10(path):
-    """top10-kandidat.psv (opsional), 11 kolom dipisah ' | ':
-    kategori | keyword | judul | harga | harga asli | rating | total terjual | terjual/bln | kota | URL produk | URL gambar
-    Hasil: {URL produk (dinormalkan): {"kategori", "total", "bulanan", "rating", "harga"}}"""
-    peta = {}
-    if not os.path.exists(path):
-        return peta
-    with open(path, encoding="utf-8") as f:
-        for no, baris in enumerate(f, 1):
-            if not baris.strip() or baris.startswith("#"):
-                continue
-            bag = [x.strip() for x in baris.rstrip("\n").split(" | ")]
-            if len(bag) != 11:
-                print(f"  ! top10-kandidat.psv baris {no} dilewati: ada {len(bag)} kolom, seharusnya 11")
-                continue
-            peta[normal_url(bag[9])] = {"kategori": bag[0], "total": terjual(bag[6])[0],
-                                        "bulanan": terjual(bag[7])[0], "rating": float(bag[5]),
-                                        "harga": angka(bag[3]), "no": no}
-    return peta
 
-def susun_top10(produk, kandidat, maks=10):
-    """Top 10 terlaris per kategori. Urutan: total terjual (Shopee maks. '10RB+'), lalu terjual/bln,
-    lalu rating, lalu harga termurah, lalu id (supaya selalu sama)."""
-    per_url = {normal_url(p["urlProduk"]): p for p in produk}
-    hasil = []
-    for _, kat, ikon in KATEGORI:
-        calon = []
-        for url, k in kandidat.items():
-            p = per_url.get(url)
-            if not p or p["kategori"] != kat:
-                continue
-            calon.append((-k["total"], -k["bulanan"], -k["rating"], p["harga"], p["id"], p["id"]))
-        calon.sort()
-        hasil.append({"kategori": kat, "ikon": ikon, "produk": [c[-1] for c in calon[:maks]]})
-    return hasil
+def fitur_judul(judul):
+    hasil, lihat = [], set()
+    for pola in POLA_FITUR:
+        for m in re.finditer(pola, judul, re.I):
+            f = m.group(0).strip()
+            k = f.lower().replace(" ", "")
+            if k not in lihat and not any(k in x for x in lihat):
+                lihat.add(k); hasil.append(f)
+    return hasil[:6]
+
+def ukuran_total(judul, tipe):
+    """Isi total dari judul untuk sabun/sampo/facial wash: '3x100gr' -> (300, 'g'), '400ml' -> (400, 'ml').
+    None kalau tidak jelas (tidak ada ukuran, beberapa ukuran berbeda, atau judul berisi banyak varian)."""
+    if tipe not in ("sabun", "sampo", "facial") or re.search(POLA_VARIAN, judul, re.I):
+        return None
+    t = judul.replace(",", ".")
+    m = re.search(r"\b(\d+)\s?[xX]\s?(\d+(?:\.\d+)?)\s?(ml|gr|gram|g)\b", t, re.I)
+    if m:
+        jumlah, isi, sat = int(m.group(1)), float(m.group(2)), m.group(3).lower()
+    else:
+        semua = re.findall(r"\b(\d+(?:\.\d+)?)\s?(ml|gr|gram|g|l|liter)\b", t, re.I)
+        if len({(a, b.lower()) for a, b in semua}) != 1:
+            return None
+        isi, sat = float(semua[0][0]), semua[0][1].lower()
+        if sat in ("l", "liter"):
+            isi, sat = isi * 1000, "ml"
+        k = re.search(r"\b(?:Isi|isi)\s?(\d+)\b|\b[xX]\s?(\d+)\b|\b(\d+)\s?[xX]\b(?!\s?\d)", t)
+        jumlah = int(next(g for g in k.groups() if g)) if k else 1
+    sat = "ml" if sat == "ml" else "g"
+    total = isi * jumlah
+    return (total, sat) if 5 <= total <= 5000 else None
 
 def baca_produk(sumber):
-    produk = []
+    produk, hilang = [], []
     for file, kategori, _ in KATEGORI:
         path = os.path.join(sumber, file)
         if not os.path.exists(path):
-            print(f"  ! File tidak ditemukan: {path}")
+            print(f"  ! File belum ada (dilewati): {path}")
+            hilang.append(file)
             continue
         with open(path, encoding="utf-8") as f:
             for no, baris in enumerate(f, 1):
-                if not baris.strip():
+                if not baris.strip() or baris.lstrip().startswith("#"):
                     continue
                 bag = [x.strip() for x in baris.rstrip("\n").split(" | ")]
-                if len(bag) != 9:
-                    print(f"  ! {file} baris {no} dilewati: ada {len(bag)} kolom, seharusnya 9")
+                if len(bag) != 10:
+                    print(f"  ! {file} baris {no} dilewati: ada {len(bag)} kolom, seharusnya 10")
                     continue
-                kw, judul, harga, asli, rating, laku, kota, url, img = bag
-                n, plus, ttk = terjual(laku)
+                kw, judul, harga, asli, rating, total, laku, kota, url, img = bag
+                info = JENIS.get(kw.lower())
+                if not info:
+                    print(f"  ! {file} baris {no}: keyword '{kw}' belum dikenal, dipakai apa adanya")
+                    info = (kw.title(), kw.title(), kategori, "")
+                elif info[2] != kategori:
+                    print(f"  ! {file} baris {no}: keyword '{kw}' biasanya untuk kategori {info[2]}, bukan {kategori}")
+                n, plus, _ = terjual(laku)
+                tot, _, _ = terjual(total)
                 h, ha = angka(harga), angka(asli)
+                if h is None:
+                    print(f"  ! {file} baris {no} dilewati: harga kosong"); continue
                 if ha is not None and ha <= h:
                     ha = None
                 m = re.search(r"/product/(\d+)/(\d+)", url)
@@ -208,7 +221,9 @@ def baca_produk(sumber):
                     "id": slug(judul) + "-" + (m.group(2) if m else str(len(produk))),
                     "kategori": kategori,
                     "jenis": slug(kw, 5),
-                    "jenisNama": NAMA_JENIS.get(kw.lower(), kw.title()),
+                    "jenisNama": info[0],
+                    "jenisPendek": info[1],
+                    "tipe": info[3],
                     "nama": judul,
                     "gambar": img,
                     "harga": h,
@@ -217,14 +232,27 @@ def baca_produk(sumber):
                     "rating": float(rating),
                     "terjual": n,
                     "terjualPlus": plus,
+                    "terjualTotal": tot,
                     "kota": "" if kota in ("-", "") else kota,
                     "urlProduk": url,
                     "_toko": m.group(1) if m else "",
+                    "_isi": ukuran_total(judul, info[3]),
                 })
-    return produk
+    return produk, hilang
+
+def kunci_laris(p):
+    """Laris = total terjual (rentang yang tampil), lalu terjual/bln (rentang yang tampil)."""
+    return (nilai_rentang(p["terjualTotal"]), nilai_rentang(p["terjual"]))
+
+def per_isi(p):
+    """Harga per 100 ml / 100 g (kalau isi produk jelas dari judul)."""
+    if not p["_isi"]:
+        return None
+    total, sat = p["_isi"]
+    return p["harga"] / total * 100, sat
 
 def beri_label(grup):
-    """Label verdict per kelompok. Seri = semua yang seri dapat label, kecuali semua 4 seri."""
+    """Label verdict per kelompok. Seri = semua yang seri dapat label (maks. 2), kecuali semuanya seri."""
     for p in grup:
         p["label"] = []
     catatan = []
@@ -246,25 +274,21 @@ def beri_label(grup):
         catatan.append(f"Semua produk di kelompok ini punya rating sama ({rmax}), jadi tidak ada label 'Rating tertinggi'.")
     elif r is not True:
         catatan.append(f"{r} dari {len(grup)} produk sama-sama punya rating {rmax}, jadi tidak ada label 'Rating tertinggi'.")
-    # Dibandingkan per rentang yang tampil di website (mis. 2.000 dan 2.500 sama-sama '2rb+')
-    t = juara(lambda p: nilai_rentang(p["terjual"]), "Paling laris", maks_seri=2)
-    top = max(grup, key=lambda p: p["terjual"])
+    t = juara(kunci_laris, "Paling laris", maks_seri=2)
+    top = max(grup, key=kunci_laris)
+    jt = f"{rentang_terjual(top['terjualTotal'])} terjual (total) dan {rentang_terjual(top['terjual'])}/bulan"
     if t is False:
-        catatan.append(f"Semua produk sama-sama {teks_terjual(grup[0])} terjual/bulan "
-                       "(Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'.")
+        catatan.append(f"Semua produk sama-sama {jt}, jadi tidak ada label 'Paling laris'.")
     elif t is not True:
-        catatan.append(f"{t} dari {len(grup)} produk sama-sama {teks_terjual(top)} terjual/bulan, "
-                       "jadi tidak ada label 'Paling laris'.")
-    elif any(p["terjualPlus"] for p in grup):
-        catatan.append("Angka seperti '1rb+' berarti 1.000 atau lebih (Shopee tidak menampilkan angka pastinya).")
-    # Paling seimbang: gabungan rating, penjualan, dan harga (dalam kelompok)
+        catatan.append(f"{t} dari {len(grup)} produk sama-sama {jt}, jadi tidak ada label 'Paling laris'.")
+    catatan.append("Angka seperti '10rb+' berarti 10.000 atau lebih. Shopee tidak menampilkan angka pastinya.")
+    # Paling seimbang: gabungan rating, penjualan (total + bulanan), dan harga (dalam kelompok)
     def skala(v, a, b):
         return 0.5 if a == b else (v - a) / (b - a)
-    rs = [p["rating"] for p in grup]; ss = [math.log10(p["terjual"] + 1) for p in grup]
-    hs = [math.log10(p["harga"]) for p in grup]
+    laku = lambda p: math.log10(p["terjualTotal"] + 1) + math.log10(p["terjual"] + 1)
+    rs = [p["rating"] for p in grup]; ss = [laku(p) for p in grup]; hs = [math.log10(p["harga"]) for p in grup]
     for p in grup:
-        p["_skor"] = (0.4 * skala(p["rating"], min(rs), max(rs))
-                      + 0.3 * skala(math.log10(p["terjual"] + 1), min(ss), max(ss))
+        p["_skor"] = (0.4 * skala(p["rating"], min(rs), max(rs)) + 0.3 * skala(laku(p), min(ss), max(ss))
                       + 0.3 * (1 - skala(math.log10(p["harga"]), min(hs), max(hs))))
     max(grup, key=lambda p: (p["_skor"], p["rating"], -p["harga"]))["label"].append("Paling seimbang")
     return catatan
@@ -274,27 +298,33 @@ def tulis_review(p, grup, tanggal):
     termurah = min(grup, key=lambda x: x["harga"])
     rating_max = max(x["rating"] for x in grup)
     rating_min = min(x["rating"] for x in grup)
-    jual_min = min(x["terjual"] for x in grup)
-    jual_max = max(x["terjual"] for x in grup)
+    laris_min = min(kunci_laris(x) for x in grup)
+    laris_max = max(kunci_laris(x) for x in grup)
     jenis = p["jenisNama"]
-    jt = teks_terjual(p)
+    jt = rentang_terjual(p["terjual"])
+    jtot = rentang_terjual(p["terjualTotal"])
 
     plus = ["Dijual oleh toko resmi di Shopee (Shopee Mall)."]
     if p["rating"] >= 4.8:
         plus.append(f"Rating tinggi: {p['rating']} dari 5 menurut pembeli di Shopee.")
     elif p["rating"] >= 4.5:
         plus.append(f"Rating cukup baik: {p['rating']} dari 5 menurut pembeli di Shopee.")
-    if p["terjual"] >= 1000:
-        plus.append(f"Laris: {jt} terjual per bulan.")
+    if p["terjualTotal"] >= 1000:
+        plus.append(f"Banyak dibeli: {jtot} terjual (total) dan {jt} terjual per bulan.")
     elif p["terjual"] >= 500:
         plus.append(f"Cukup laris: sekitar {jt} terjual per bulan.")
     if p["diskon"] >= 10:
         plus.append(f"Sedang diskon {p['diskon']}% dari harga coret {rupiah(p['hargaAsli'])}.")
     if "Paling murah" in p["label"]:
         plus.append(f"Harga paling murah di antara {len(grup)} pilihan {jenis} yang dibandingkan di Bandingin.id.")
+    hi = per_isi(p)
+    banding_isi = [per_isi(x) for x in grup if per_isi(x) and per_isi(x)[1] == (hi[1] if hi else None)]
+    if hi and len(banding_isi) >= 2 and hi[0] <= min(b[0] for b in banding_isi):
+        plus.append(f"Paling hemat per isi di kelompok ini: sekitar {rupiah(hi[0])} per 100 {hi[1]} "
+                    "(dihitung dari ukuran yang tertulis di judul).")
     fit = fitur_judul(p["nama"])
     if fit:
-        plus.append("Fitur yang tertulis di judul produk: " + ", ".join(fit) + ".")
+        plus.append("Yang tertulis di judul produk: " + ", ".join(fit) + " (menurut penjual).")
 
     minus = []
     if p["diskon"] >= 50:
@@ -305,8 +335,8 @@ def tulis_review(p, grup, tanggal):
     if p["harga"] > termurah["harga"] * 1.1:
         minus.append(f"Ada pilihan lebih murah di kelompok yang sama: {nama_pendek(termurah['nama'])} "
                      f"({rupiah(termurah['harga'])}).")
-    if p["terjual"] < 1000 and p["terjual"] == jual_min and jual_min < jual_max:
-        minus.append(f"Penjualannya ({jt} per bulan) paling sedikit di kelompok ini.")
+    if kunci_laris(p) == laris_min and laris_min < laris_max:
+        minus.append(f"Penjualannya ({jtot} total, {jt}/bulan) paling sedikit di kelompok ini.")
     kembar = [x for x in lain if x["_toko"] == p["_toko"] and x["harga"] == p["harga"]]
     if kembar:
         minus.append(f"Toko yang sama juga menjual {nama_pendek(kembar[0]['nama'])} dengan harga sama persis. "
@@ -316,10 +346,12 @@ def tulis_review(p, grup, tanggal):
     if re.search(POLA_VARIAN, p["nama"], re.I):
         minus.append("Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian "
                      "tertentu saja, jadi cek lagi varian yang kamu pilih.")
-    if len(minus) < 1:
-        minus.append(f"Harga yang tercantum adalah harga per {tanggal} dan bisa berubah saat promo selesai.")
-    minus.append("Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, "
-                 "dan ulasan pembeli di Shopee sebelum membeli.")
+    if p["tipe"] in CATATAN_TIPE:
+        minus.append(CATATAN_TIPE[p["tipe"]])
+    if p["kategori"] == "Balita":
+        minus.append(CATATAN_BALITA)
+    minus.append("Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil "
+                 "di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli.")
 
     kal = []
     L = p["label"]
@@ -330,42 +362,52 @@ def tulis_review(p, grup, tanggal):
                    + " sekaligus ".join(teks[x] for x in L) + ".")
     else:
         kal.append(f"Produk ini tidak unggul di satu hal tertentu dibanding {len(lain)} pilihan {jenis} lainnya, "
-                   "tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya.")
+                   "tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya.")
     kal.append(f"Harganya {rupiah(p['harga'])}" + (f" (diskon {p['diskon']}%)" if p["diskon"] >= 5 else "")
-               + f" dengan rating {p['rating']} dan {jt} terjual per bulan.")
+               + f" dengan rating {p['rating']}, {jtot} terjual (total), dan {jt} terjual per bulan.")
+    if p["kategori"] == "Balita":
+        kal.append("Perhatikan usia yang dianjurkan di kemasan sebelum memakai.")
     kal.append("Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.")
 
     if L:
-        ring = L[0] + f" di kelompok {jenis}. Rating {p['rating']}, {jt} terjual/bln."
+        ring = L[0] + f" di kelompok {jenis}. Rating {p['rating']}, {jtot} terjual."
     else:
-        ring = f"Rating {p['rating']} dari 5, {jt} terjual per bulan."
+        ring = f"Rating {p['rating']} dari 5, {jtot} terjual ({jt}/bln)."
     if p["diskon"] >= 10:
         ring += f" Diskon {p['diskon']}%."
     return ring, plus, minus, " ".join(kal)
+
+def susun_top10(produk, maks=10):
+    """Top 10 terlaris per kategori. Urutan: total terjual (Shopee maks. '10RB+'), lalu terjual/bln,
+    lalu rating, lalu harga termurah, lalu id (supaya selalu sama)."""
+    hasil = []
+    for _, kat, ikon in KATEGORI:
+        calon = sorted((p for p in produk if p["kategori"] == kat),
+                       key=lambda p: (-p["terjualTotal"], -p["terjual"], -p["rating"], p["harga"], p["id"]))
+        if calon:
+            hasil.append({"kategori": kat, "ikon": ikon, "produk": [p["id"] for p in calon[:maks]]})
+    return hasil
 
 def main():
     ap = argparse.ArgumentParser()
     bawaan = os.path.join(SITE, "sumber-data")
     if not os.path.isdir(bawaan):
-        bawaan = "/workspace/shopee-data"
+        bawaan = SUMBER_BAWAAN
     ap.add_argument("--sumber", default=bawaan)
     ap.add_argument("--tanggal", default="22 Oktober 2026")
+    ap.add_argument("--final", action="store_true",
+                    help="mode deploy: gagal kalau ada file kategori hilang atau produk tanpa link affiliate")
     a = ap.parse_args()
 
     print(f"Membaca data dari: {a.sumber}")
-    produk = baca_produk(a.sumber)
-    aff = baca_affiliate(os.path.join(a.sumber, "affiliate-links.psv"))
-    kandidat = baca_top10(os.path.join(a.sumber, "top10-kandidat.psv"))
-    per_url = {normal_url(p["urlProduk"]): p for p in produk}
-    for url, k in kandidat.items():
-        p = per_url.get(url)
-        if not p:
-            print(f"  ! top10-kandidat.psv baris {k['no']}: produk tidak ada di data 80 produk ({url})")
-        elif p["kategori"] != k["kategori"]:
-            print(f"  ! top10-kandidat.psv baris {k['no']}: kategori '{k['kategori']}' beda dengan '{p['kategori']}'")
-        else:
-            p["terjualTotal"] = k["total"]
+    produk, hilang = baca_produk(a.sumber)
+    path_aff = os.path.join(a.sumber, "affiliate-links.psv")
+    if not os.path.exists(path_aff):
+        print(f"  ! File link affiliate belum ada: {path_aff} (sementara memakai link Shopee biasa)")
+    aff = baca_affiliate(path_aff)
     print(f"  {len(produk)} produk dibaca, {len(aff)} link affiliate ditemukan")
+    if not produk:
+        sys.exit("ERROR: tidak ada produk yang terbaca. Cek folder sumber.")
 
     urutan, grup = [], {}
     for p in produk:
@@ -376,26 +418,30 @@ def main():
     daftar_grup, pakai_aff = [], 0
     for j in urutan:
         g = grup[j]
+        if len(g) < 2:
+            print(f"  ! Kelompok '{g[0]['jenisNama']}' hanya berisi {len(g)} produk")
         catatan = beri_label(g)
         for p in g:
             p["ringkasan"], p["kelebihan"], p["kekurangan"], p["kesimpulan"] = tulis_review(p, g, a.tanggal)
-        daftar_grup.append({"id": j, "nama": g[0]["jenisNama"], "kategori": g[0]["kategori"],
-                            "produk": [p["id"] for p in g], "catatan": catatan})
+        daftar_grup.append({"id": j, "nama": g[0]["jenisNama"], "pendek": g[0]["jenisPendek"],
+                            "kategori": g[0]["kategori"], "produk": [p["id"] for p in g], "catatan": catatan})
 
-    keluar = []
+    keluar, tanpa_aff = [], []
     for p in produk:
         link = aff.get(normal_url(p["urlProduk"]))
         if link:
             pakai_aff += 1
+        else:
+            tanpa_aff.append(p)
+        hi = per_isi(p)
         keluar.append({
             "id": p["id"], "contoh": False, "nama": p["nama"], "kategori": p["kategori"],
-            "jenis": p["jenis"], "jenisNama": p["jenisNama"], "gambar": p["gambar"],
+            "jenis": p["jenis"], "jenisNama": p["jenisNama"], "jenisPendek": p["jenisPendek"], "gambar": p["gambar"],
             "harga": p["harga"], "hargaAsli": p["hargaAsli"], "diskon": p["diskon"],
             "rating": p["rating"], "terjual": p["terjual"], "terjualPlus": p["terjualPlus"],
             "terjualLabel": rentang_terjual(p["terjual"]),
-            # Total terjual (dari halaman produk) hanya ada untuk kandidat Top 10
-            **({"terjualTotal": p["terjualTotal"], "terjualTotalLabel": rentang_terjual(p["terjualTotal"])}
-               if "terjualTotal" in p else {}),
+            "terjualTotal": p["terjualTotal"], "terjualTotalLabel": rentang_terjual(p["terjualTotal"]),
+            "hargaPer100": round(hi[0]) if hi else None, "satuanIsi": hi[1] if hi else None,
             "kota": p["kota"], "label": p["label"], "ringkasan": p["ringkasan"],
             "kelebihan": p["kelebihan"], "kekurangan": p["kekurangan"], "kesimpulan": p["kesimpulan"],
             "urlProduk": p["urlProduk"], "linkShopee": link or p["urlProduk"], "linkAffiliate": bool(link),
@@ -405,10 +451,13 @@ def main():
     ids = [p["id"] for p in keluar]
     if len(ids) != len(set(ids)):
         sys.exit("ERROR: ada id produk yang sama. Cek data.")
-    tidak_dipakai = set(aff) - {normal_url(p["urlProduk"]) for p in produk}
+    urls = [normal_url(p["urlProduk"]) for p in produk]
+    if len(urls) != len(set(urls)):
+        print("  ! Ada URL produk yang dipakai lebih dari sekali.")
+    tidak_dipakai = set(aff) - set(urls)
 
-    kat = [{"nama": n, "ikon": i} for _, n, i in KATEGORI]
-    top10 = susun_top10(produk, kandidat) if kandidat else []
+    kat = [{"nama": n, "ikon": i} for _, n, i in KATEGORI if any(p["kategori"] == n for p in produk)]
+    top10 = susun_top10(produk)
     isi = (
         "/* =====================================================================\n"
         "   FILE INI DIBUAT OTOMATIS oleh tools/build_data.py — JANGAN DIEDIT MANUAL.\n"
@@ -421,7 +470,8 @@ def main():
         f"window.KATEGORI = {json.dumps(kat, ensure_ascii=False, indent=2)};\n\n"
         f"window.GRUP = {json.dumps(daftar_grup, ensure_ascii=False, indent=2)};\n\n"
         f"window.PRODUK = {json.dumps(keluar, ensure_ascii=False, indent=2)};\n\n"
-        "// Top 10 terlaris per kategori (id produk, urutan peringkat). Sumber: top10-kandidat.psv\n"
+        "// Top 10 terlaris per kategori (id produk, urutan peringkat):\n"
+        "// total terjual, lalu terjual/bln, lalu rating, lalu harga termurah\n"
         f"window.TOP10 = {json.dumps(top10, ensure_ascii=False, indent=2)};\n"
     )
     out = os.path.join(SITE, "data", "produk.js")
@@ -429,13 +479,27 @@ def main():
         f.write(isi)
     print(f"Selesai: {out}")
     print(f"  {len(keluar)} produk, {len(daftar_grup)} kelompok perbandingan")
-    print(f"  {pakai_aff} produk memakai link affiliate, {len(keluar) - pakai_aff} masih memakai link biasa")
-    if top10:
-        print(f"  Top 10: {len(kandidat)} kandidat, " + ", ".join(f"{t['kategori']} {len(t['produk'])}" for t in top10))
+    for k in kat:
+        gs = [g for g in daftar_grup if g["kategori"] == k["nama"]]
+        print(f"    {k['nama']}: {sum(len(g['produk']) for g in gs)} produk (" +
+              ", ".join(f"{g['nama']} {len(g['produk'])}" for g in gs) + ")")
+    print(f"  {pakai_aff} produk memakai link affiliate, {len(tanpa_aff)} masih memakai link biasa")
+    if tanpa_aff and len(tanpa_aff) <= 10:
+        for p in tanpa_aff:
+            print("    - tanpa affiliate:", p["urlProduk"])
     if tidak_dipakai:
         print(f"  ! {len(tidak_dipakai)} link di affiliate-links.psv tidak cocok dengan produk mana pun:")
         for u in sorted(tidak_dipakai):
             print("    -", u)
+    if a.final:
+        masalah = []
+        if hilang:
+            masalah.append("file belum ada: " + ", ".join(hilang))
+        if tanpa_aff:
+            masalah.append(f"{len(tanpa_aff)} produk tanpa link affiliate")
+        if masalah:
+            sys.exit("BELUM SIAP DEPLOY: " + "; ".join(masalah))
+        print("  SIAP DEPLOY: semua file ada dan semua produk memakai link affiliate.")
 
 if __name__ == "__main__":
     main()

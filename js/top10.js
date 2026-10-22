@@ -1,5 +1,5 @@
 /* Bagian "Top 10 Terlaris" di beranda: tab per kategori + daftar peringkat #1-#10.
-   Data: window.TOP10 (dibuat tools/build_data.py dari top10-kandidat.psv). */
+   Data: window.TOP10 (disusun tools/build_data.py dari produk tiap kategori). */
 (function () {
   var S = window.Situs;
   var data = (window.TOP10 || []).filter(function (t) { return t.produk && t.produk.length; });
