@@ -9,7 +9,6 @@
   var elKontrol = document.getElementById("hs-kontrol");
   var btnPrev = document.getElementById("hs-prev");
   var btnNext = document.getElementById("hs-next");
-  var btnJeda = document.getElementById("hs-jeda");
   var JEDA_MS = 5000;
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -69,17 +68,9 @@
     track.setAttribute("aria-live", timer ? "off" : "polite");
     root.classList.toggle("hs-jalan", !!timer);
   }
-  function setJeda(v) {
-    dijeda = v;
-    btnJeda.setAttribute("aria-pressed", v ? "true" : "false");
-    btnJeda.setAttribute("aria-label", v ? "Putar slide show" : "Jeda slide show");
-    btnJeda.textContent = v ? "▶" : "❚❚";
-    mulai();
-  }
 
   btnPrev.addEventListener("click", function () { tampil(aktif - 1, true); });
   btnNext.addEventListener("click", function () { tampil(aktif + 1, true); });
-  btnJeda.addEventListener("click", function () { setJeda(!dijeda); });
   dots.forEach(function (d, i) { d.addEventListener("click", function () { tampil(i, true); }); });
   root.addEventListener("keydown", function (e) {
     if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
@@ -105,7 +96,6 @@
     else mulai();
   }, { passive: true });
 
-  if (reduce) { btnJeda.hidden = true; }
   tampil(0);
   mulai();
   window.SlideShow = { ke: function (i) { tampil(i, true); }, aktif: function () { return aktif; }, jumlah: n };
