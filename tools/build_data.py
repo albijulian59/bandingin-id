@@ -37,25 +37,26 @@ KATEGORI = [
 ]
 
 # keyword (kolom 1) -> (nama kelompok, nama pendek untuk sub-filter, kategori, tipe)
-# tipe dipakai untuk memilih teks review yang sesuai: sabun, sampo, facial, baju, tas
+# tipe dipakai untuk memilih teks review yang sesuai: sabun, sampo, facial, pelembab, serum, sunscreen, baju, tas
+# URUTAN di sini = urutan kelompok di website (per kategori), apa pun urutan baris di file .psv.
 JENIS = {
     "sabun mandi wanita": ("Sabun Mandi Wanita", "Sabun Mandi", "Perempuan", "sabun"),
     "shampoo wanita": ("Sampo Wanita", "Sampo", "Perempuan", "sampo"),
     "facial wash wanita": ("Facial Wash Wanita", "Facial Wash", "Perempuan", "facial"),
+    "pelembab wajah wanita": ("Pelembab Wajah Wanita", "Pelembab", "Perempuan", "pelembab"),
+    "serum wajah wanita": ("Serum Wajah Wanita", "Serum", "Perempuan", "serum"),
+    "sunscreen wanita": ("Sunscreen Wanita", "Sunscreen", "Perempuan", "sunscreen"),
     "baju wanita": ("Baju Wanita", "Baju", "Perempuan", "baju"),
     "tas wanita": ("Tas Wanita", "Tas", "Perempuan", "tas"),
     "sabun mandi pria": ("Sabun Mandi Pria", "Sabun Mandi", "Pria", "sabun"),
     "shampoo pria": ("Sampo Pria", "Sampo", "Pria", "sampo"),
     "facial wash pria": ("Facial Wash Pria", "Facial Wash", "Pria", "facial"),
-    "kaos pria": ("Kaos Pria", "Kaos", "Pria", "baju"),
-    "sabun bayi": ("Sabun Bayi", "Sabun Bayi", "Balita", "sabun"),
-    "shampoo bayi": ("Sampo Bayi", "Sampo Bayi", "Balita", "sampo"),
-    "pelembab wajah wanita": ("Pelembab Wajah Wanita", "Pelembab", "Perempuan", "pelembab"),
-    "serum wajah wanita": ("Serum Wajah Wanita", "Serum", "Perempuan", "serum"),
-    "sunscreen wanita": ("Sunscreen Wanita", "Sunscreen", "Perempuan", "sunscreen"),
     "pelembab wajah pria": ("Pelembab Wajah Pria", "Pelembab", "Pria", "pelembab"),
     "serum wajah pria": ("Serum Wajah Pria", "Serum", "Pria", "serum"),
     "sunscreen pria": ("Sunscreen Pria", "Sunscreen", "Pria", "sunscreen"),
+    "kaos pria": ("Kaos Pria", "Kaos", "Pria", "baju"),
+    "sabun bayi": ("Sabun Bayi", "Sabun Bayi", "Balita", "sabun"),
+    "shampoo bayi": ("Sampo Bayi", "Sampo Bayi", "Balita", "sampo"),
 }
 URUTAN_JENIS = list(JENIS)          # urutan kelompok di website = urutan di JENIS
 TIPE_SKINCARE = ("pelembab", "serum", "sunscreen")
