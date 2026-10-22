@@ -34,16 +34,23 @@ KATEGORI = [
 ]
 
 # keyword (kolom 1) -> (nama kelompok, nama pendek untuk sub-filter, kategori, tipe)
-# tipe dipakai untuk memilih teks review yang sesuai: sabun, sampo, facial, baju, tas
+# tipe dipakai untuk memilih teks review yang sesuai: sabun, sampo, facial, pelembab, serum, sunscreen, baju, tas
+# URUTAN di sini = urutan kelompok di website (per kategori), apa pun urutan baris di file .psv.
 JENIS = {
     "sabun mandi wanita": ("Sabun Mandi Wanita", "Sabun Mandi", "Perempuan", "sabun"),
     "shampoo wanita": ("Sampo Wanita", "Sampo", "Perempuan", "sampo"),
     "facial wash wanita": ("Facial Wash Wanita", "Facial Wash", "Perempuan", "facial"),
+    "pelembab wajah wanita": ("Pelembab Wajah Wanita", "Pelembab", "Perempuan", "pelembab"),
+    "serum wajah wanita": ("Serum Wajah Wanita", "Serum", "Perempuan", "serum"),
+    "sunscreen wanita": ("Sunscreen Wanita", "Sunscreen", "Perempuan", "sunscreen"),
     "baju wanita": ("Baju Wanita", "Baju", "Perempuan", "baju"),
     "tas wanita": ("Tas Wanita", "Tas", "Perempuan", "tas"),
     "sabun mandi pria": ("Sabun Mandi Pria", "Sabun Mandi", "Pria", "sabun"),
     "shampoo pria": ("Sampo Pria", "Sampo", "Pria", "sampo"),
     "facial wash pria": ("Facial Wash Pria", "Facial Wash", "Pria", "facial"),
+    "pelembab wajah pria": ("Pelembab Wajah Pria", "Pelembab", "Pria", "pelembab"),
+    "serum wajah pria": ("Serum Wajah Pria", "Serum", "Pria", "serum"),
+    "sunscreen pria": ("Sunscreen Pria", "Sunscreen", "Pria", "sunscreen"),
     "kaos pria": ("Kaos Pria", "Kaos", "Pria", "baju"),
     "sabun bayi": ("Sabun Bayi", "Sabun Bayi", "Balita", "sabun"),
     "shampoo bayi": ("Sampo Bayi", "Sampo Bayi", "Balita", "sampo"),
@@ -59,6 +66,9 @@ POLA_FITUR = [
     r"\bOat(?:meal)?\b", r"\bChamomile\b", r"\bMinyak Telon\b|\bTelon\b", r"\bZaitun\b|\bOlive\b",
     r"\bAnti Ketombe\b|\bAnti[- ]Dandruff\b", r"\bAnti (?:Rambut )?Rontok\b|\bAnti[- ]Hair ?fall\b",
     r"\bWangi Tahan Lama\b", r"\bHijab\b",
+    r"\bSPF\s?\d+\+?(?:\s?PA\s?\+{1,4})?", r"\bPA\s?\+{1,4}", r"\bBroad Spectrum\b", r"\bTone[- ]?Up\b", r"\bMatte\b",
+    r"\bHyaluronic(?: Acid)?\b", r"\bRetinol\b", r"\bCentella\b|\bCica\b", r"\bAlpha Arbutin\b|\bArbutin\b",
+    r"\bNon[- ]?Comedogenic\b", r"\bOil[- ]?Free\b", r"\bGel\b", r"\bMencerahkan\b|\bBrightening\b",
     r"\bKatun(?: Rayon)?\b|\bCotton(?: Combed)?(?: \d+s)?\b|\bRayon\b|\bLinen(?: Rami)?\b",
     r"\bLengan (?:Panjang|Pendek)\b|\b(?:Long|Short) Sleeve\b", r"\bOversize\b", r"\bSlim Fit\b|\bRegular Fit\b",
     r"\bCrew ?Neck\b|\bO-?Neck\b|\bV-?Neck\b|\bOneck\b", r"\b(?:S|M|L)\s?-\s?\d?X{1,3}L\b|\bAll ?Size\b",
@@ -71,10 +81,19 @@ POLA_VARIAN = (r"\bAll Series\b|\bSemua Varian\b|\bAll Variant|\bSeries\b|\([^)]
                r"|\b\d+\s?(?:ml|gr|g)\s?/\s?\d+|\bPilih\b")
 
 # Catatan umum per tipe produk (tanpa klaim medis)
+# Jumlah produk yang diharapkan per kelompok (dicek dengan --final)
+JUMLAH_PER_JENIS = 5
+
 CATATAN_TIPE = {
     "sabun": "Kecocokan sabun berbeda untuk tiap orang. Kalau kulit mudah iritasi, coba di sedikit area kulit dulu.",
     "sampo": "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
     "facial": "Kecocokan facial wash berbeda untuk tiap jenis kulit. Cek jenis kulit yang disebut di deskripsi dan coba di sedikit area dulu.",
+    "pelembab": ("Reaksi kulit terhadap pelembab berbeda untuk tiap orang. Lakukan uji pada sedikit area kulit dulu. "
+                 "Klaim seperti 'mencerahkan' atau 'melembapkan' adalah klaim penjual; Bandingin.id tidak menilai hasilnya."),
+    "serum": ("Reaksi kulit terhadap serum berbeda untuk tiap orang, apalagi untuk kulit sensitif. Lakukan uji pada sedikit "
+              "area kulit dulu dan ikuti petunjuk pemakaian. Klaim seperti 'mencerahkan' adalah klaim penjual; Bandingin.id tidak menilai hasilnya."),
+    "sunscreen": ("Nilai SPF/PA hanya disebut sesuai yang tertulis di judul atau kemasan; Bandingin.id tidak menguji tingkat "
+                  "perlindungannya. Ikuti petunjuk pemakaian di kemasan, termasuk anjuran pemakaian ulang."),
     "baju": "Ukuran dan potongan baju bisa berbeda antar merek. Cek tabel ukuran dan foto dari pembeli di halaman produk.",
     "tas": "Cek ukuran (dimensi) tas, bahan, dan foto asli dari pembeli di halaman produk supaya sesuai harapan.",
 }
@@ -167,7 +186,7 @@ def fitur_judul(judul):
 def ukuran_total(judul, tipe):
     """Isi total dari judul untuk sabun/sampo/facial wash: '3x100gr' -> (300, 'g'), '400ml' -> (400, 'ml').
     None kalau tidak jelas (tidak ada ukuran, beberapa ukuran berbeda, atau judul berisi banyak varian)."""
-    if tipe not in ("sabun", "sampo", "facial") or re.search(POLA_VARIAN, judul, re.I):
+    if tipe not in ("sabun", "sampo", "facial", "pelembab", "serum", "sunscreen") or re.search(POLA_VARIAN, judul, re.I):
         return None
     t = judul.replace(",", ".")
     m = re.search(r"\b(\d+)\s?[xX]\s?(\d+(?:\.\d+)?)\s?(ml|gr|gram|g)\b", t, re.I)
@@ -409,6 +428,12 @@ def main():
     if not produk:
         sys.exit("ERROR: tidak ada produk yang terbaca. Cek folder sumber.")
 
+    # Urutkan produk: kategori (urutan KATEGORI), lalu kelompok (urutan JENIS), lalu urutan baris di file
+    posisi_kat = {n: i for i, (_, n, _) in enumerate(KATEGORI)}
+    posisi_jenis = {slug(k, 5): i for i, k in enumerate(JENIS)}
+    produk = [p for _, p in sorted(enumerate(produk), key=lambda x: (
+        posisi_kat.get(x[1]["kategori"], 99), posisi_jenis.get(x[1]["jenis"], 999), x[0]))]
+
     urutan, grup = [], {}
     for p in produk:
         if p["jenis"] not in grup:
@@ -483,6 +508,9 @@ def main():
         gs = [g for g in daftar_grup if g["kategori"] == k["nama"]]
         print(f"    {k['nama']}: {sum(len(g['produk']) for g in gs)} produk (" +
               ", ".join(f"{g['nama']} {len(g['produk'])}" for g in gs) + ")")
+    belum = [info[0] for kw, info in JENIS.items() if slug(kw, 5) not in grup]
+    if belum:
+        print(f"  ! Kelompok yang belum ada datanya ({len(belum)}): " + ", ".join(belum))
     print(f"  {pakai_aff} produk memakai link affiliate, {len(tanpa_aff)} masih memakai link biasa")
     if tanpa_aff and len(tanpa_aff) <= 10:
         for p in tanpa_aff:
@@ -495,6 +523,13 @@ def main():
         masalah = []
         if hilang:
             masalah.append("file belum ada: " + ", ".join(hilang))
+        kurang = []
+        for kw, info in JENIS.items():
+            n = len(grup.get(slug(kw, 5), []))
+            if n != JUMLAH_PER_JENIS:
+                kurang.append(f"{info[0]} {n}/{JUMLAH_PER_JENIS}")
+        if kurang:
+            masalah.append("jumlah produk per kelompok belum sesuai: " + ", ".join(kurang))
         if tanpa_aff:
             masalah.append(f"{len(tanpa_aff)} produk tanpa link affiliate")
         if masalah:

@@ -135,7 +135,7 @@ window.GRUP = [
     "kategori": "Pria",
     "produk": [
       "barber-daily-dandruff-oil-control-shampoo-49002927902",
-      "paket-hemat-isi-3-garnier-men-20377685939",
+      "urbanx-men-s-3-in-1-27263959989",
       "clear-men-shampoo-anti-ketombe-menthol-6330970391",
       "men-s-biore-5-in-1-44601820030",
       "cave-hair-shampoo-200ml-penumbuh-dan-6194503321"
@@ -376,7 +376,8 @@ window.PRODUK = [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
       "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
-      "Sedang diskon 43% dari harga coret Rp50.000."
+      "Sedang diskon 43% dari harga coret Rp50.000.",
+      "Yang tertulis di judul produk: Brightening (menurut penjual)."
     ],
     "kekurangan": [
       "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
@@ -675,7 +676,7 @@ window.PRODUK = [
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
       "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
       "Sedang diskon 50% dari harga coret Rp78.000.",
-      "Yang tertulis di judul produk: 100 ml (menurut penjual)."
+      "Yang tertulis di judul produk: 100 ml, Brightening (menurut penjual)."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (50%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
@@ -1320,7 +1321,7 @@ window.PRODUK = [
       "Banyak dibeli: 10rb+ terjual (total) dan 911 terjual per bulan.",
       "Sedang diskon 48% dari harga coret Rp57.000.",
       "Paling hemat per isi di kelompok ini: sekitar Rp14.750 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
-      "Yang tertulis di judul produk: 200ml, Cooling, Wangi Tahan Lama (menurut penjual)."
+      "Yang tertulis di judul produk: 200ml, Cooling, Wangi Tahan Lama, Brightening (menurut penjual)."
     ],
     "kekurangan": [
       "Toko yang sama juga menjual Kahf Body Wash Pria 200ml (Cooling… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
@@ -1365,7 +1366,7 @@ window.PRODUK = [
       "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
       "Sedang diskon 48% dari harga coret Rp57.000.",
       "Paling hemat per isi di kelompok ini: sekitar Rp14.750 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
-      "Yang tertulis di judul produk: 200ml, Cair, Cooling, Wangi Tahan Lama (menurut penjual)."
+      "Yang tertulis di judul produk: 200ml, Cair, Cooling, Wangi Tahan Lama, Brightening, Mencerahkan (menurut penjual)."
     ],
     "kekurangan": [
       "Toko yang sama juga menjual Kahf Cooling and Brightening Body Wash… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
@@ -1406,7 +1407,7 @@ window.PRODUK = [
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
       "Banyak dibeli: 4rb+ terjual (total) dan 1rb+ terjual per bulan.",
       "Sedang diskon 44% dari harga coret Rp99.000.",
-      "Yang tertulis di judul produk: 400ml, 400g, cair (menurut penjual)."
+      "Yang tertulis di judul produk: 400ml, 400g, cair, mencerahkan, Brightening (menurut penjual)."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: Cave Intense Bright Bar Soap for… (Rp29.000).",
@@ -1451,7 +1452,7 @@ window.PRODUK = [
       "Sedang diskon 52% dari harga coret Rp60.000.",
       "Harga paling murah di antara 5 pilihan Sabun Mandi Pria yang dibandingkan di Bandingin.id.",
       "Paling hemat per isi di kelompok ini: sekitar Rp34.117 per 100 g (dihitung dari ukuran yang tertulis di judul).",
-      "Yang tertulis di judul produk: 85gr, Bar Soap, Batang (menurut penjual)."
+      "Yang tertulis di judul produk: 85gr, Bar Soap, Batang, Mencerahkan (menurut penjual)."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (52%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
@@ -1495,7 +1496,7 @@ window.PRODUK = [
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
       "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
       "Sedang diskon 54% dari harga coret Rp89.000.",
-      "Yang tertulis di judul produk: 20 gr, Isi 3, Charcoal (menurut penjual)."
+      "Yang tertulis di judul produk: 20 gr, Isi 3, Charcoal, Brightening (menurut penjual)."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (54%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
@@ -1554,43 +1555,44 @@ window.PRODUK = [
     "tokopedia": ""
   },
   {
-    "id": "paket-hemat-isi-3-garnier-men-20377685939",
+    "id": "urbanx-men-s-3-in-1-27263959989",
     "contoh": false,
-    "nama": "[PAKET HEMAT ISI 3] Garnier Men Shampoo Color Hair Color Hitam Alami - 20ml Cat Rambut Tutup Uban",
+    "nama": "URBANX Men's 3-in-1 Shampoo 300ml Hair Wash Amino Acids Oil-control Dandruff relief Anti-itch MARIS SAL-Antimicrobial Nourishes Oil Control",
     "kategori": "Pria",
     "jenis": "shampoo-pria",
     "jenisNama": "Sampo Pria",
     "jenisPendek": "Sampo",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134305-81ztc-muk93riltamie5",
-    "harga": 57557,
-    "hargaAsli": 71400,
-    "diskon": 19,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-82252-mijtu83khlogc6",
+    "harga": 45900,
+    "hargaAsli": 110000,
+    "diskon": 58,
     "rating": 4.9,
-    "terjual": 986,
+    "terjual": 258,
     "terjualPlus": false,
-    "terjualLabel": "986",
-    "terjualTotal": 10000,
-    "terjualTotalLabel": "10rb+",
-    "hargaPer100": 287785,
+    "terjualLabel": "258",
+    "terjualTotal": 4000,
+    "terjualTotalLabel": "4rb+",
+    "hargaPer100": 15300,
     "satuanIsi": "ml",
-    "kota": "KOTA JAKARTA UTARA",
+    "kota": "KAB. TANGERANG",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 10rb+ terjual (986/bln). Diskon 19%.",
+    "ringkasan": "Rating 4.9 dari 5, 4rb+ terjual (258/bln). Diskon 58%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Banyak dibeli: 10rb+ terjual (total) dan 986 terjual per bulan.",
-      "Sedang diskon 19% dari harga coret Rp71.400.",
-      "Yang tertulis di judul produk: 20ml, ISI 3 (menurut penjual)."
+      "Banyak dibeli: 4rb+ terjual (total) dan 258 terjual per bulan.",
+      "Sedang diskon 58% dari harga coret Rp110.000.",
+      "Yang tertulis di judul produk: 300ml (menurut penjual)."
     ],
     "kekurangan": [
+      "Diskonnya sangat besar (58%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Ada pilihan lebih murah di kelompok yang sama: Men's Biore 5 in 1 Shampoo… (Rp33.400).",
       "Kecocokan sampo berbeda untuk tiap jenis rambut dan kulit kepala. Coba dulu dan lihat hasilnya setelah beberapa kali pemakaian.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Ulasan ini disusun dari data yang tampil di Shopee; baca deskripsi, komposisi/bahan, dan ulasan pembeli sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp57.557 (diskon 19%) dengan rating 4.9, 10rb+ terjual (total), dan 986 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/62583853/20377685939",
-    "linkShopee": "https://s.shopee.co.id/3qO48VfAIW",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 4 pilihan Sampo Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu cocok dengan merek atau modelnya. Harganya Rp45.900 (diskon 58%) dengan rating 4.9, 4rb+ terjual (total), dan 258 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/307327183/27263959989",
+    "linkShopee": "https://s.shopee.co.id/8pmk6apkOe",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -1748,7 +1750,7 @@ window.PRODUK = [
       "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
       "Sedang diskon 49% dari harga coret Rp83.500.",
       "Paling hemat per isi di kelompok ini: sekitar Rp8.500 per 100 ml (dihitung dari ukuran yang tertulis di judul).",
-      "Yang tertulis di judul produk: 100ml, Niacinamide (menurut penjual)."
+      "Yang tertulis di judul produk: 100ml, Niacinamide, Brightening (menurut penjual)."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: Nivea Men Facial Foam 50 ml… (Rp18.750).",
@@ -1832,7 +1834,7 @@ window.PRODUK = [
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
       "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
       "Sedang diskon 64% dari harga coret Rp99.000.",
-      "Yang tertulis di judul produk: 100gr (menurut penjual)."
+      "Yang tertulis di judul produk: 100gr, Mencerahkan (menurut penjual)."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (64%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
@@ -2557,7 +2559,7 @@ window.PRODUK = [
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
       "Banyak dibeli: 10rb+ terjual (total) dan 1rb+ terjual per bulan.",
       "Sedang diskon 26% dari harga coret Rp19.900.",
-      "Yang tertulis di judul produk: 200 ml, Botol (menurut penjual)."
+      "Yang tertulis di judul produk: 200 ml, Botol, Gel (menurut penjual)."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: MY BABY Kids Shampoo & Conditioner… (Rp12.573).",

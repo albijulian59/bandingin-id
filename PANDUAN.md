@@ -1,15 +1,16 @@
 # Panduan Website "Bandingin.id"
 
-Bandingin.id membandingkan produk **perawatan diri & fashion** dari toko resmi Shopee (Shopee Mall)
+Bandingin.id membandingkan produk **perawatan diri, skincare & fashion** dari toko resmi Shopee (Shopee Mall)
 berdasarkan data, bukan review pribadi. Produk dibagi ke 3 kategori menurut pemakainya:
 
 | Kategori      | Jenis produk (masing-masing 5 pilihan)                                   | Jumlah |
 |---------------|---------------------------------------------------------------------------|--------|
-| 👩 Perempuan  | Sabun Mandi Wanita, Sampo Wanita, Facial Wash Wanita, Baju Wanita, Tas Wanita | 25 |
-| 👨 Pria       | Sabun Mandi Pria, Sampo Pria, Facial Wash Pria, Kaos Pria                  | 20 |
+| 👩 Perempuan  | Sabun Mandi Wanita, Sampo Wanita, Facial Wash Wanita, Pelembab Wajah Wanita, Serum Wajah Wanita, Sunscreen Wanita, Baju Wanita, Tas Wanita | 40 |
+| 👨 Pria       | Sabun Mandi Pria, Sampo Pria, Facial Wash Pria, Pelembab Wajah Pria, Serum Wajah Pria, Sunscreen Pria, Kaos Pria | 35 |
 | 👶 Balita     | Sabun Bayi, Sampo Bayi                                                     | 10 |
 
-Total 55 produk. Data diambil **22 Oktober 2026**. Jumlah produk yang tampil di website selalu
+Total 85 produk. Urutan kelompok di website mengikuti urutan `JENIS` di `tools/build_data.py`
+(bukan urutan baris di file). Data diambil **22 Oktober 2026**. Jumlah produk yang tampil di website selalu
 dihitung otomatis dari data.
 
 > Versi lama (80 produk gadget, rumah tangga, dll.) disimpan di git dengan tag `versi-80-produk`.
@@ -34,8 +35,8 @@ File data ada di folder **`/workspace/shopee-data-v2/`**:
 
 | File                       | Isinya                                         |
 |----------------------------|------------------------------------------------|
-| `perempuan.psv`            | 25 produk Perempuan                            |
-| `pria.psv`                 | 20 produk Pria                                 |
+| `perempuan.psv`            | 40 produk Perempuan                            |
+| `pria.psv`                 | 35 produk Pria                                 |
 | `balita.psv`               | 10 produk Balita                               |
 | `affiliate-links.psv`      | **Link affiliate Shopee kamu** (lihat bagian 3) |
 
@@ -66,14 +67,15 @@ Setiap kali kamu mengubah file `.psv`, **jalankan generator lagi** supaya websit
 4. Kalau berhasil, akan muncul tulisan seperti:
    ```
    Selesai: .../data/produk.js
-     55 produk, 11 kelompok perbandingan
+     85 produk, 17 kelompok perbandingan
        Perempuan: 25 produk (...)
        Pria: 20 produk (...)
        Balita: 10 produk (...)
-     55 produk memakai link affiliate, 0 masih memakai link biasa
+     85 produk memakai link affiliate, 0 masih memakai link biasa
    ```
 5. **Sebelum deploy** jalankan pemeriksaan akhir. Perintah ini gagal (dengan pesan
-   `BELUM SIAP DEPLOY`) kalau ada file kategori yang belum ada atau produk tanpa link affiliate:
+   `BELUM SIAP DEPLOY`) kalau ada file kategori yang belum ada, ada kelompok yang jumlah produknya
+   bukan 5, atau ada produk tanpa link affiliate:
    ```
    python3 tools/build_data.py --final
    ```
@@ -139,7 +141,7 @@ Penjelasan kolom:
 
 | Kolom              | Cara mengisi                                                                 |
 |--------------------|------------------------------------------------------------------------------|
-| jenis              | Salah satu dari: `sabun mandi wanita`, `shampoo wanita`, `facial wash wanita`, `baju wanita`, `tas wanita`, `sabun mandi pria`, `shampoo pria`, `facial wash pria`, `kaos pria`, `sabun bayi`, `shampoo bayi`. Produk dengan jenis sama dibandingkan dalam satu tabel. Nama kelompok & kategorinya diatur di `JENIS` dalam `tools/build_data.py`. |
+| jenis              | Salah satu dari: `sabun mandi wanita`, `shampoo wanita`, `facial wash wanita`, `pelembab wajah wanita`, `serum wajah wanita`, `sunscreen wanita`, `baju wanita`, `tas wanita`, `sabun mandi pria`, `shampoo pria`, `facial wash pria`, `pelembab wajah pria`, `serum wajah pria`, `sunscreen pria`, `kaos pria`, `sabun bayi`, `shampoo bayi`. Produk dengan jenis sama dibandingkan dalam satu tabel. Nama kelompok & kategorinya diatur di `JENIS` dalam `tools/build_data.py`. |
 | judul produk       | Salin dari Shopee. Fitur di review **hanya diambil dari judul ini**.          |
 | harga              | Harga sekarang, misalnya `Rp319.130`.                                        |
 | harga coret        | Harga sebelum diskon. Kalau tidak ada, tulis `-`.                            |
@@ -175,7 +177,9 @@ kesehatan/medis** (khasiat atau keamanan produk tidak dinilai).
   judul produk (ditandai "menurut penjual").
 - **Kekurangan**: misalnya diskon sangat besar dari harga coret, rating paling rendah di
   kelompoknya, ada pilihan lebih murah, judul mencakup beberapa varian, plus catatan umum sesuai
-  jenis produk (kecocokan sabun/sampo/facial wash berbeda tiap orang; cek tabel ukuran baju; cek
+  jenis produk (kecocokan sabun/sampo/facial wash berbeda tiap orang; pelembab/serum: reaksi kulit
+  berbeda, uji di sedikit area, klaim seperti "mencerahkan" adalah klaim penjual; sunscreen: SPF/PA
+  hanya sesuai yang tertulis, ikuti anjuran pemakaian ulang di kemasan; cek tabel ukuran baju; cek
   dimensi tas). Untuk **Balita** selalu ada catatan: perhatikan usia yang dianjurkan di kemasan dan
   lakukan uji pada sedikit area kulit dulu.
 - **Label perbandingan**: 💰 Paling murah · ⭐ Rating tertinggi · 🔥 Paling laris (total terjual,
@@ -250,5 +254,5 @@ yang menyebut "Bandingin.id" ada di `tools/build_data.py`; setelah mengubahnya, 
   `tools/build_data.py` (`window.TOP10`) dari semua produk di kategori itu: total terjual →
   terjual/bln → rating → harga termurah.
 - **Filter**: chip kategori (Semua / Perempuan / Pria / Balita). Saat satu kategori dipilih,
-  muncul sub-filter jenis (mis. Sabun Mandi / Sampo / Facial Wash / Baju / Tas). Bisa juga lewat
+  muncul sub-filter jenis (mis. Sabun Mandi / Sampo / Facial Wash / Pelembab / Serum / Sunscreen / Baju / Tas). Bisa juga lewat
   link, misalnya `index.html?kategori=Pria&jenis=kaos-pria`.
