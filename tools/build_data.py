@@ -72,18 +72,36 @@ def angka(teks):
     return int(re.sub(r"[^\d]", "", teks))
 
 def terjual(teks):
-    """'1RB+ Terjual/Bln' -> (1000, True, '1RB+'); '919 Terjual/Bln' -> (919, False, '919')"""
-    t = teks.replace("Terjual/Bln", "").strip()
-    m = re.match(r"([\d.,]+)\s*(RB|JT)?(\+)?", t, re.I)
+    """Teks terjual Shopee -> (angka, ada_plus, teks_asli). Contoh:
+    '1RB+ Terjual/Bln' -> 1000, '919 Terjual/Bln' -> 919, '10RB+' -> 10000, '2,5RB+' -> 2500."""
+    t = re.sub(r"terjual\s*/?\s*(bln|bulan)?", "", teks, flags=re.I).strip()
+    m = re.match(r"([\d.,]+)\s*(RB|JT)?\s*(\+)?", t, re.I)
     if not m:
         return 0, False, t
-    n = float(m.group(1).replace(",", "."))
-    kali = {"RB": 1000, "JT": 1000000}.get((m.group(2) or "").upper(), 1)
-    return int(n * kali), bool(m.group(3)), t
+    satuan = (m.group(2) or "").upper()
+    angka_t = m.group(1)
+    if satuan:
+        n = float(angka_t.replace(",", "."))          # '2,5RB' -> 2.5 ribu
+    else:
+        n = float(re.sub(r"[.,]", "", angka_t))       # '1.234' -> 1234
+    kali = {"RB": 1000, "JT": 1000000}.get(satuan, 1)
+    return int(round(n * kali)), bool(m.group(3)), t
+
+def rentang_terjual(n):
+    """Angka terjual -> label rentang (sama dengan Situs.rentangTerjual di js/common.js).
+    < 1000 -> '919'; 1000-9999 -> '1rb+' ... '9rb+' (dibulatkan ke bawah); >= 10000 -> '10rb+'."""
+    n = int(n or 0)
+    if n < 1000:
+        return str(n)
+    return f"{min(n // 1000, 10)}rb+"
+
+def nilai_rentang(n):
+    """Nilai angka dari rentang yang tampil: 2500 -> 2000, 15000 -> 10000, 919 -> 919."""
+    n = int(n or 0)
+    return n if n < 1000 else min(n // 1000, 10) * 1000
 
 def teks_terjual(p):
-    n = rupiah(p["terjual"])[2:]
-    return (n + "+" if p["terjualPlus"] else n)
+    return rentang_terjual(p["terjual"])
 
 def slug(s, maks=6):
     kata = re.sub(r"[^a-z0-9]+", " ", s.lower()).split()
@@ -189,16 +207,17 @@ def beri_label(grup):
         catatan.append(f"Semua produk di kelompok ini punya rating sama ({rmax}), jadi tidak ada label 'Rating tertinggi'.")
     elif r is not True:
         catatan.append(f"{r} dari {len(grup)} produk sama-sama punya rating {rmax}, jadi tidak ada label 'Rating tertinggi'.")
-    t = juara(lambda p: p["terjual"], "Paling laris", maks_seri=2)
+    # Dibandingkan per rentang yang tampil di website (mis. 2.000 dan 2.500 sama-sama '2rb+')
+    t = juara(lambda p: nilai_rentang(p["terjual"]), "Paling laris", maks_seri=2)
     top = max(grup, key=lambda p: p["terjual"])
     if t is False:
         catatan.append(f"Semua produk sama-sama {teks_terjual(grup[0])} terjual/bulan "
-                       "(Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'.")
+                       "(Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'.")
     elif t is not True:
         catatan.append(f"{t} dari {len(grup)} produk sama-sama {teks_terjual(top)} terjual/bulan, "
                        "jadi tidak ada label 'Paling laris'.")
     elif any(p["terjualPlus"] for p in grup):
-        catatan.append("Angka seperti '1.000+' berarti lebih dari 1.000. Shopee tidak menampilkan angka pastinya.")
+        catatan.append("Angka seperti '1rb+' berarti 1.000 atau lebih (Shopee tidak menampilkan angka pastinya).")
     # Paling seimbang: gabungan rating, penjualan, dan harga (dalam kelompok)
     def skala(v, a, b):
         return 0.5 if a == b else (v - a) / (b - a)
@@ -324,6 +343,7 @@ def main():
             "jenis": p["jenis"], "jenisNama": p["jenisNama"], "gambar": p["gambar"],
             "harga": p["harga"], "hargaAsli": p["hargaAsli"], "diskon": p["diskon"],
             "rating": p["rating"], "terjual": p["terjual"], "terjualPlus": p["terjualPlus"],
+            "terjualLabel": rentang_terjual(p["terjual"]),
             "kota": p["kota"], "label": p["label"], "ringkasan": p["ringkasan"],
             "kelebihan": p["kelebihan"], "kekurangan": p["kekurangan"], "kesimpulan": p["kesimpulan"],
             "urlProduk": p["urlProduk"], "linkShopee": link or p["urlProduk"], "linkAffiliate": bool(link),

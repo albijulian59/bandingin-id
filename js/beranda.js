@@ -21,28 +21,11 @@
     }).join("");
   }
 
-  function kartu(p) {
-    var link = "review.html?id=" + encodeURIComponent(p.id);
-    return '<article class="card">' +
-      '<a class="card-img" href="' + link + '">' + S.gambar(p, false, true) + S.badgeContoh(p) +
-        (p.diskon >= 5 ? '<span class="badge-diskon">-' + p.diskon + "%</span>" : "") + "</a>" +
-      '<div class="card-body">' +
-        '<span class="cat">' + S.esc(p.jenisNama || p.kategori) + "</span>" +
-        '<h3><a href="' + link + '" title="' + S.esc(p.nama) + '">' + S.esc(p.nama) + "</a></h3>" +
-        '<div class="meta">' + S.bintang(p.rating) +
-          (p.terjual != null ? '<span class="sold">' + S.esc(S.terjualTeks(p)) + " terjual/bln</span>" : "") + "</div>" +
-        '<p class="price">' + S.hargaHtml(p) + "</p>" +
-        '<div class="lbls">' + S.label(p) + "</div>" +
-        '<a class="more" href="' + link + '">Baca review & perbandingan →</a>' +
-        '<div class="btns">' + S.tombolToko(p) + "</div>" +
-      "</div></article>";
-  }
-
   function urutkan(list) {
     var a = list.slice();
     if (urutan === "murah") a.sort(function (x, y) { return x.harga - y.harga; });
     else if (urutan === "rating") a.sort(function (x, y) { return y.rating - x.rating || (y.terjual || 0) - (x.terjual || 0) || x.harga - y.harga; });
-    else if (urutan === "laris") a.sort(function (x, y) { return (y.terjual || 0) - (x.terjual || 0) || y.rating - x.rating || x.harga - y.harga; });
+    else if (urutan === "laris") a.sort(S.urutTerlaris);
     return a;
   }
 
@@ -56,7 +39,7 @@
     hasil = urutkan(hasil);
     elInfo.textContent = hasil.length + " produk ditemukan" +
       (kategoriAktif !== "Semua" ? " di " + kategoriAktif : "") + (q ? ' untuk "' + kataCari.trim() + '"' : "");
-    elGrid.innerHTML = hasil.length ? hasil.map(kartu).join("") :
+    elGrid.innerHTML = hasil.length ? hasil.map(S.kartu).join("") :
       '<div class="empty">😕 Produk tidak ditemukan. Coba kata lain atau pilih kategori "Semua".</div>';
   }
 

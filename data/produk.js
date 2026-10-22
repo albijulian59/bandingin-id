@@ -36,11 +36,10 @@ window.GRUP = [
       "anker-soundcore-tws-true-wireless-earbuds-23431802281",
       "goojodoq-j201-earphone-bluetooth-tws-a6-24879062430",
       "robot-tws-wireless-earphone-airbuds-t50s-14332695246",
-      "robot-tws-wireless-earphone-airbuds-new-11898858651"
+      "huawei-freebuds-se-4-anc-tws-42925334730"
     ],
     "catatan": [
-      "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -49,12 +48,12 @@ window.GRUP = [
     "kategori": "Gadget & HP",
     "produk": [
       "ugreen-power-bank-slim-10-000mah-21785647904",
-      "ugreen-power-bank-10-000mah-20-16299331253",
+      "kiip-e33c-power-bank-slim-10000mah-24471130667",
       "robot-power-bank-ccc-rt180s-10000mah-7953106172",
       "anker-zolo-portable-power-bank-3c-54200985823"
     ],
     "catatan": [
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "3 dari 4 produk sama-sama 1rb+ terjual/bulan, jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -69,7 +68,7 @@ window.GRUP = [
     ],
     "catatan": [
       "3 dari 4 produk sama-sama punya rating 4.9, jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -84,7 +83,7 @@ window.GRUP = [
     ],
     "catatan": [
       "3 dari 4 produk sama-sama punya rating 5.0, jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -92,13 +91,13 @@ window.GRUP = [
     "nama": "Speaker Bluetooth",
     "kategori": "Gadget & HP",
     "produk": [
-      "bluetooth-speaker-with-2mic-rgb-light-40333054251",
+      "eggel-terra-3-max-waterproof-bluetooth-26234735250",
       "bluetooth-speaker-with-2microphon-3d-stereo-51217549547",
-      "bluetooth-speaker-wireless-rgb-light-full-44917282362",
-      "mini-speaker-bluetooth-wireless-audio-speaker-57664645093"
+      "olike-speaker-bluetooth-sf11-hd-audio-26075065288",
+      "advance-v3-v1-speaker-bluetooth-mini-26942061219"
     ],
     "catatan": [
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "3 dari 4 produk sama-sama 1rb+ terjual/bulan, jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -113,7 +112,7 @@ window.GRUP = [
     ],
     "catatan": [
       "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -128,7 +127,7 @@ window.GRUP = [
     ],
     "catatan": [
       "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -143,7 +142,7 @@ window.GRUP = [
     ],
     "catatan": [
       "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -153,11 +152,11 @@ window.GRUP = [
     "produk": [
       "new-states-apparel-kaos-polos-pria-11356656903",
       "swan-shogunavo-kaos-oblong-pria-swan-5140805278",
-      "swan-shogunavo-kaos-oblong-pria-swan-7018844487",
+      "zalmore-men-oneck-t-shirt-luma-2618261980",
       "ldn-kaos-pria-premium-cotton-combed-49765426226"
     ],
     "catatan": [
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -171,7 +170,7 @@ window.GRUP = [
       "tas-wanita-les-catino-haida-satchel-55655790648"
     ],
     "catatan": [
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -181,12 +180,12 @@ window.GRUP = [
     "produk": [
       "han-river-air-fryer-hraf04-3-12719204055",
       "han-river-air-fryer-4-2l-51563691144",
-      "han-river-air-fryer-4-2l-27875273445",
+      "gaabor-mini-air-fryer-2l-low-19451696457",
       "philips-airfryer-low-watt-500w-transparan-27150840451"
     ],
     "catatan": [
       "Semua produk di kelompok ini punya rating sama (4.9), jadi tidak ada label 'Rating tertinggi'.",
-      "Angka seperti '1.000+' berarti lebih dari 1.000. Shopee tidak menampilkan angka pastinya."
+      "Angka seperti '1rb+' berarti 1.000 atau lebih (Shopee tidak menampilkan angka pastinya)."
     ]
   },
   {
@@ -196,12 +195,12 @@ window.GRUP = [
     "produk": [
       "han-river-rice-cooker-2-2l-40956262281",
       "philips-rice-cooker-1-8-l-29416117732",
-      "han-river-rice-cooker-2-2l-53908935347",
+      "cosmos-rice-cooker-non-stick-1-44750546165",
       "philips-rice-cooker-1-8-liter-24486283103"
     ],
     "catatan": [
       "3 dari 4 produk sama-sama punya rating 4.9, jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "3 dari 4 produk sama-sama 1rb+ terjual/bulan, jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -215,7 +214,7 @@ window.GRUP = [
       "bravhom-chopper-blender-portable-350ml-1200mah-52611526665"
     ],
     "catatan": [
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -229,7 +228,7 @@ window.GRUP = [
       "rak-penyimpanan-plastik-4-tier-5-53868083027"
     ],
     "catatan": [
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -238,13 +237,12 @@ window.GRUP = [
     "kategori": "Rumah Tangga",
     "produk": [
       "han-river-vacuum-cleaner-5-in-22623016051",
-      "han-river-vacuum-cleaner-hisap-dan-27070882088",
+      "xooqo6-vacuum-cleaner-7-in1-penyedot-46154294623",
       "bear-vacuum-cleaner-cordless-5-in-24261659111",
-      "han-river-vacuum-cleaner-20000pa-super-21273145781"
+      "kiip-vacuum-cleaner-portabel-tanpa-kabel-24744404736"
     ],
     "catatan": [
-      "3 dari 4 produk sama-sama punya rating 4.9, jadi tidak ada label 'Rating tertinggi'.",
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "3 dari 4 produk sama-sama 1rb+ terjual/bulan, jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -284,7 +282,7 @@ window.GRUP = [
       "babytoys-balok-susun-edukasi-diy-brick-19783360105"
     ],
     "catatan": [
-      "Semua produk sama-sama 1.000+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1RB+'), jadi tidak ada label 'Paling laris'."
+      "Semua produk sama-sama 1rb+ terjual/bulan (Shopee hanya menampilkan angka bulat seperti '1rb+'), jadi tidak ada label 'Paling laris'."
     ]
   },
   {
@@ -310,7 +308,7 @@ window.GRUP = [
       "lakoe-wooden-toys-puzzle-kayu-edukasi-22010494385"
     ],
     "catatan": [
-      "Angka seperti '1.000+' berarti lebih dari 1.000. Shopee tidak menampilkan angka pastinya."
+      "Angka seperti '1rb+' berarti 1.000 atau lebih (Shopee tidak menampilkan angka pastinya)."
     ]
   }
 ];
@@ -330,20 +328,22 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Utara",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 34%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 34%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 34% dari harga coret Rp299.000."
     ],
     "kekurangan": [
+      "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
       "Ada pilihan lebih murah di kelompok yang sama: Goojodoq J201 Earphone bluetooth TWS-A6 pro… (Rp39.900).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan TWS Earbuds lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp197.000 (diskon 34%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan TWS Earbuds lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp197.000 (diskon 34%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/161989888/23431802281",
     "linkShopee": "https://s.shopee.co.id/9fLqtWdzVb",
     "linkAffiliate": true,
@@ -363,25 +363,26 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Barat",
     "label": [
-      "Paling murah",
-      "Paling seimbang"
+      "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok TWS Earbuds. Rating 4.9, 1.000+ terjual/bln. Diskon 80%.",
+    "ringkasan": "Paling murah di kelompok TWS Earbuds. Rating 4.9, 1rb+ terjual/bln. Diskon 80%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 80% dari harga coret Rp200.000.",
       "Harga paling murah di antara 4 pilihan TWS Earbuds yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: Bluetooth 5.3."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (80%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan TWS Earbuds yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp39.900 (diskon 80%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan TWS Earbuds yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp39.900 (diskon 80%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/297771167/24879062430",
     "linkShopee": "https://s.shopee.co.id/AAI7URc5Ui",
     "linkAffiliate": true,
@@ -401,61 +402,63 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 71%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 71%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 71% dari harga coret Rp350.000.",
       "Fitur yang tertulis di judul produk: BT 6.0, IPX4, Garansi 1 Tahun, WaterProof."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (71%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
       "Ada pilihan lebih murah di kelompok yang sama: Goojodoq J201 Earphone bluetooth TWS-A6 pro… (Rp39.900).",
-      "Toko yang sama juga menjual Robot TWS Wireless Earphone Airbuds New… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan TWS Earbuds lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp102.599 (diskon 71%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan TWS Earbuds lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp102.599 (diskon 71%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/11868085/14332695246",
     "linkShopee": "https://s.shopee.co.id/9zyhI8ciph",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "robot-tws-wireless-earphone-airbuds-new-11898858651",
+    "id": "huawei-freebuds-se-4-anc-tws-42925334730",
     "contoh": false,
-    "nama": "Robot TWS Wireless Earphone Airbuds New T50S Original BT 6.0 True Wireless Headset Bluetooth Earbuds IPX4 WaterProof - Garansi 1 Tahun",
+    "nama": "HUAWEI FreeBuds SE 4 ANC TWS l Up to 50dB l 10mm Dynamic Driver - 50H Long Battery Life l IP54",
     "kategori": "Gadget & HP",
     "jenis": "tws-earbuds",
     "jenisNama": "TWS Earbuds",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztq-mqh5m4j2f75u1d",
-    "harga": 102599,
-    "hargaAsli": 350000,
-    "diskon": 71,
-    "rating": 4.9,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztj-mu81fw59u32gf5",
+    "harga": 438000,
+    "hargaAsli": 699000,
+    "diskon": 37,
+    "rating": 5.0,
     "terjual": 1000,
     "terjualPlus": true,
-    "kota": "Kab. Tangerang",
-    "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 71%.",
+    "terjualLabel": "1rb+",
+    "kota": "Tangerang",
+    "label": [
+      "Rating tertinggi",
+      "Paling seimbang"
+    ],
+    "ringkasan": "Rating tertinggi di kelompok TWS Earbuds. Rating 5.0, 1rb+ terjual/bln. Diskon 37%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
-      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 71% dari harga coret Rp350.000.",
-      "Fitur yang tertulis di judul produk: BT 6.0, IPX4, Garansi 1 Tahun, WaterProof."
+      "Rating tinggi: 5.0 dari 5 menurut pembeli di Shopee.",
+      "Laris: 1rb+ terjual per bulan.",
+      "Sedang diskon 37% dari harga coret Rp699.000."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (71%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Ada pilihan lebih murah di kelompok yang sama: Goojodoq J201 Earphone bluetooth TWS-A6 pro… (Rp39.900).",
-      "Toko yang sama juga menjual Robot TWS Wireless Earphone Airbuds T50S… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan TWS Earbuds lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp102.599 (diskon 71%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/11868085/11898858651",
-    "linkShopee": "https://s.shopee.co.id/AUuxt3aooo",
+    "kesimpulan": "Dari 4 pilihan TWS Earbuds yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp438.000 (diskon 37%) dengan rating 5.0 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/39372120/42925334730",
+    "linkShopee": "https://s.shopee.co.id/8V9tc9kMc6",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -473,62 +476,63 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Pusat",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 16%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 16%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 16% dari harga coret Rp325.000.",
       "Fitur yang tertulis di judul produk: 10.000mAh, 20w, Fast Charging, Type C."
     ],
     "kekurangan": [
       "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
       "Ada pilihan lebih murah di kelompok yang sama: ROBOT Power Bank CCC RT180S 10000mAh… (Rp146.964).",
-      "Toko yang sama juga menjual UGREEN Power Bank 10.000Mah 20.000Mah PD… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Power Bank lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp272.000 (diskon 16%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Power Bank lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp272.000 (diskon 16%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1082522935/21785647904",
     "linkShopee": "https://s.shopee.co.id/AKbXgkbS9n",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "ugreen-power-bank-10-000mah-20-16299331253",
+    "id": "kiip-e33c-power-bank-slim-10000mah-24471130667",
     "contoh": false,
-    "nama": "UGREEN Power Bank 10.000Mah 20.000Mah PD Type C Fast Charging 20w 30w",
+    "nama": "KiiP E33C Power Bank Slim 10000mAh Dual Input Type-C Micro USB Port",
     "kategori": "Gadget & HP",
     "jenis": "power-bank",
     "jenisNama": "Power Bank",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822wp-mp7gqknyihoi63",
-    "harga": 272000,
-    "hargaAsli": 325000,
-    "diskon": 16,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rbk8-ma3zijrp38dsb4",
+    "harga": 169000,
+    "hargaAsli": 469000,
+    "diskon": 64,
     "rating": 4.9,
-    "terjual": 1000,
-    "terjualPlus": true,
-    "kota": "Semarang",
+    "terjual": 883,
+    "terjualPlus": false,
+    "terjualLabel": "883",
+    "kota": "Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 16%.",
+    "ringkasan": "Rating 4.9 dari 5, 883 terjual per bulan. Diskon 64%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 16% dari harga coret Rp325.000.",
-      "Fitur yang tertulis di judul produk: 10.000Mah, 20.000Mah, 20w, 30w, Fast Charging, Type C."
+      "Cukup laris: sekitar 883 terjual per bulan.",
+      "Sedang diskon 64% dari harga coret Rp469.000.",
+      "Fitur yang tertulis di judul produk: 10000mAh, Type-C."
     ],
     "kekurangan": [
+      "Diskonnya sangat besar (64%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
       "Ada pilihan lebih murah di kelompok yang sama: ROBOT Power Bank CCC RT180S 10000mAh… (Rp146.964).",
-      "Toko yang sama juga menjual UGREEN Power Bank Slim 10.000mAh PD… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
-      "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
+      "Penjualannya (883 per bulan) paling sedikit di kelompok ini.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Power Bank lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp272.000 (diskon 16%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/1082522935/16299331253",
-    "linkShopee": "https://s.shopee.co.id/2VsgMMEPwQ",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Power Bank lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp169.000 (diskon 64%) dengan rating 4.9 dan 883 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/271658549/24471130667",
+    "linkShopee": "https://s.shopee.co.id/8KqTPqkzx5",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -546,15 +550,16 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Power Bank. Rating 4.9, 1.000+ terjual/bln. Diskon 71%.",
+    "ringkasan": "Paling murah di kelompok Power Bank. Rating 4.9, 1rb+ terjual/bln. Diskon 71%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 71% dari harga coret Rp515.000.",
       "Harga paling murah di antara 4 pilihan Power Bank yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: 10000mAh, 12W, Garansi Resmi 1 Tahun, Fast Charging, Type-C."
@@ -564,7 +569,7 @@ window.PRODUK = [
       "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Power Bank yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp146.964 (diskon 71%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Power Bank yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp146.964 (diskon 71%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/11868085/7953106172",
     "linkShopee": "https://s.shopee.co.id/2LZGA3F3HP",
     "linkAffiliate": true,
@@ -584,16 +589,17 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Utara",
     "label": [
       "Rating tertinggi",
       "Paling seimbang"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Power Bank. Rating 5.0, 1.000+ terjual/bln. Diskon 21%.",
+    "ringkasan": "Rating tertinggi di kelompok Power Bank. Rating 5.0, 1rb+ terjual/bln. Diskon 21%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 5.0 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 21% dari harga coret Rp375.000.",
       "Fitur yang tertulis di judul produk: 10,000 mAh, 20,000 mAh, 5W, Fast Charging, Type-C, Portable."
     ],
@@ -602,7 +608,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Power Bank yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp297.000 (diskon 21%) dengan rating 5.0 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Power Bank yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp297.000 (diskon 21%) dengan rating 5.0 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1314499687/54200985823",
     "linkShopee": "https://s.shopee.co.id/1W09AWIDyG",
     "linkAffiliate": true,
@@ -622,16 +628,17 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Bogor",
     "label": [
       "Paling murah",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling murah di kelompok Charger HP. Rating 4.9, 1.000+ terjual/bln. Diskon 50%.",
+    "ringkasan": "Paling murah di kelompok Charger HP. Rating 4.9, 1rb+ terjual/bln. Diskon 50%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 50% dari harga coret Rp60.000.",
       "Harga paling murah di antara 4 pilihan Charger HP yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: Garansi 1 Tahun, Quick Charging."
@@ -640,7 +647,7 @@ window.PRODUK = [
       "Diskonnya sangat besar (50%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Charger HP yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp29.859 (diskon 50%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Charger HP yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp29.859 (diskon 50%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/11868085/40061004044",
     "linkShopee": "https://s.shopee.co.id/1LgiyDIrJF",
     "linkAffiliate": true,
@@ -660,13 +667,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Pusat",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Fitur yang tertulis di judul produk: 20w, 30w, Fast Charging, Type C."
     ],
     "kekurangan": [
@@ -674,7 +682,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Charger HP lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp276.000 dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Charger HP lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp276.000 dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1082522935/23783277447",
     "linkShopee": "https://s.shopee.co.id/1qczZ8GxIM",
     "linkAffiliate": true,
@@ -694,13 +702,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Pusat",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Fitur yang tertulis di judul produk: 20w, 30w, FAST Charging, Type C."
     ],
     "kekurangan": [
@@ -708,7 +717,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Charger HP lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp89.000 dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Charger HP lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp89.000 dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/704013655/16192621075",
     "linkShopee": "https://s.shopee.co.id/LoBmOOnyv",
     "linkAffiliate": true,
@@ -728,13 +737,14 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Pusat",
     "label": [],
-    "ringkasan": "Rating 4.8 dari 5, 1.000+ terjual per bulan.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Fitur yang tertulis di judul produk: 180W, Fast Charging, Type-C."
     ],
     "kekurangan": [
@@ -742,7 +752,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: ROBOT Charger Single Port Quick Charging… (Rp29.859).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Charger HP lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp55.065 (diskon 7%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Charger HP lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp55.065 (diskon 7%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1115282610/29730902382",
     "linkShopee": "https://s.shopee.co.id/BUla5PRJu",
     "linkAffiliate": true,
@@ -762,13 +772,14 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [],
-    "ringkasan": "Rating 5.0 dari 5, 1.000+ terjual per bulan. Diskon 25%.",
+    "ringkasan": "Rating 5.0 dari 5, 1rb+ terjual per bulan. Diskon 25%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 5.0 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 25% dari harga coret Rp799.000.",
       "Fitur yang tertulis di judul produk: AMOLED."
     ],
@@ -776,7 +787,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: NDASK Smartwatch Serie S11 2.1\" HD… (Rp120.888).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Smartwatch & Smartband lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp599.000 (diskon 25%) dengan rating 5.0 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Smartwatch & Smartband lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp599.000 (diskon 25%) dengan rating 5.0 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/39372120/50755623104",
     "linkShopee": "https://s.shopee.co.id/1BLNmQ4et",
     "linkAffiliate": true,
@@ -796,22 +807,23 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [
       "Paling seimbang"
     ],
-    "ringkasan": "Paling seimbang di kelompok Smartwatch & Smartband. Rating 5.0, 1.000+ terjual/bln. Diskon 31%.",
+    "ringkasan": "Paling seimbang di kelompok Smartwatch & Smartband. Rating 5.0, 1rb+ terjual/bln. Diskon 31%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 5.0 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 31% dari harga coret Rp679.000."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: NDASK Smartwatch Serie S11 2.1\" HD… (Rp120.888).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Smartwatch & Smartband yang dibandingkan di Bandingin.id, produk ini paling seimbang (harga, rating, dan penjualan). Harganya Rp469.000 (diskon 31%) dengan rating 5.0 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Smartwatch & Smartband yang dibandingkan di Bandingin.id, produk ini paling seimbang (harga, rating, dan penjualan). Harganya Rp469.000 (diskon 31%) dengan rating 5.0 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/39372120/28774352018",
     "linkShopee": "https://s.shopee.co.id/2VsgMNGYaO",
     "linkAffiliate": true,
@@ -831,13 +843,14 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [],
-    "ringkasan": "Rating 5.0 dari 5, 1.000+ terjual per bulan. Diskon 22%.",
+    "ringkasan": "Rating 5.0 dari 5, 1rb+ terjual per bulan. Diskon 22%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 5.0 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 22% dari harga coret Rp2.699.000.",
       "Fitur yang tertulis di judul produk: ECG."
     ],
@@ -845,7 +858,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: NDASK Smartwatch Serie S11 2.1\" HD… (Rp120.888).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Smartwatch & Smartband lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp2.099.000 (diskon 22%) dengan rating 5.0 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Smartwatch & Smartband lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp2.099.000 (diskon 22%) dengan rating 5.0 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/39372120/57259931145",
     "linkShopee": "https://s.shopee.co.id/2LZGA4HBvN",
     "linkAffiliate": true,
@@ -865,15 +878,16 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Smartwatch & Smartband. Rating 4.9, 1.000+ terjual/bln. Diskon 83%.",
+    "ringkasan": "Paling murah di kelompok Smartwatch & Smartband. Rating 4.9, 1rb+ terjual/bln. Diskon 83%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 83% dari harga coret Rp698.000.",
       "Harga paling murah di antara 4 pilihan Smartwatch & Smartband yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: AMOLED, GPS, NFC, Waterproof, Bluetooth Call, Wireless Charging."
@@ -883,47 +897,47 @@ window.PRODUK = [
       "Ratingnya (4.9) paling rendah di kelompok ini (tertinggi 5.0).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Smartwatch & Smartband yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp120.888 (diskon 83%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Smartwatch & Smartband yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp120.888 (diskon 83%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1815992633/48060895456",
     "linkShopee": "https://s.shopee.co.id/1W09AXYWdH",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "bluetooth-speaker-with-2mic-rgb-light-40333054251",
+    "id": "eggel-terra-3-max-waterproof-bluetooth-26234735250",
     "contoh": false,
-    "nama": "Bluetooth Speaker With 2MIC RGB Light Super Sound Quality Audio Speaker Portable Home Party Speaker",
+    "nama": "Eggel Terra 3 Max Waterproof Bluetooth Speaker with RGB Lights",
     "kategori": "Gadget & HP",
     "jenis": "speaker-bluetooth",
     "jenisNama": "Speaker Bluetooth",
-    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-8259a-mr71n9jkjksiec",
-    "harga": 48000,
-    "hargaAsli": 359000,
-    "diskon": 87,
-    "rating": 4.6,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztg-msnsih9r2dja81",
+    "harga": 979000,
+    "hargaAsli": 1200000,
+    "diskon": 18,
+    "rating": 5.0,
     "terjual": 1000,
     "terjualPlus": true,
-    "kota": "Kab. Tangerang",
+    "terjualLabel": "1rb+",
+    "kota": "Kab. Bandung Barat",
     "label": [
-      "Paling murah"
+      "Rating tertinggi",
+      "Paling seimbang"
     ],
-    "ringkasan": "Paling murah di kelompok Speaker Bluetooth. Rating 4.6, 1.000+ terjual/bln. Diskon 87%.",
+    "ringkasan": "Rating tertinggi di kelompok Speaker Bluetooth. Rating 5.0, 1rb+ terjual/bln. Diskon 18%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
-      "Rating cukup baik: 4.6 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 87% dari harga coret Rp359.000.",
-      "Harga paling murah di antara 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id.",
-      "Fitur yang tertulis di judul produk: RGB, 2MIC, Portable."
+      "Rating tinggi: 5.0 dari 5 menurut pembeli di Shopee.",
+      "Laris: 1rb+ terjual per bulan.",
+      "Sedang diskon 18% dari harga coret Rp1.200.000.",
+      "Fitur yang tertulis di judul produk: RGB, Waterproof."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (87%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Ratingnya (4.6) paling rendah di kelompok ini (tertinggi 4.7).",
+      "Ada pilihan lebih murah di kelompok yang sama: Bluetooth Speaker With 2Microphon 3D Stereo… (Rp48.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp48.000 (diskon 87%) dengan rating 4.6 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/1575671950/40333054251",
-    "linkShopee": "https://s.shopee.co.id/2LZGA4VLwS",
+    "kesimpulan": "Dari 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp979.000 (diskon 18%) dengan rating 5.0 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/52784804/26234735250",
+    "linkShopee": "https://s.shopee.co.id/8pmk0lj5wC",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -941,103 +955,97 @@ window.PRODUK = [
     "rating": 4.7,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
-      "Paling murah",
-      "Rating tertinggi",
-      "Paling seimbang"
+      "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Speaker Bluetooth. Rating 4.7, 1.000+ terjual/bln. Diskon 80%.",
+    "ringkasan": "Paling murah di kelompok Speaker Bluetooth. Rating 4.7, 1rb+ terjual/bln. Diskon 80%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating cukup baik: 4.7 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 80% dari harga coret Rp239.000.",
       "Harga paling murah di antara 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: RGB, 2Microphon."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (80%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Toko yang sama juga menjual Bluetooth Speaker Wireless RGB Light Full… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Ratingnya (4.7) paling rendah di kelompok ini (tertinggi 5.0).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp48.000 (diskon 80%) dengan rating 4.7 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp48.000 (diskon 80%) dengan rating 4.7 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1084063668/51217549547",
     "linkShopee": "https://s.shopee.co.id/2VsgMNUibV",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "bluetooth-speaker-wireless-rgb-light-full-44917282362",
+    "id": "olike-speaker-bluetooth-sf11-hd-audio-26075065288",
     "contoh": false,
-    "nama": "Bluetooth Speaker Wireless RGB Light Full Bass Kualitas Suara Super With 2 Microphon Portable Karaoke Set",
+    "nama": "Olike Speaker Bluetooth SF11 HD Audio Super Bass + Radio FM - IPX4 - 8 Jam Playtime - Bluetooth 6.0",
     "kategori": "Gadget & HP",
     "jenis": "speaker-bluetooth",
     "jenisNama": "Speaker Bluetooth",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zto-msp1mhkeazgl6d",
-    "harga": 48000,
-    "hargaAsli": 239000,
-    "diskon": 80,
-    "rating": 4.6,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zte-mspdjcpk8c966d",
+    "harga": 172001,
+    "hargaAsli": 309000,
+    "diskon": 44,
+    "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
-    "label": [
-      "Paling murah"
-    ],
-    "ringkasan": "Paling murah di kelompok Speaker Bluetooth. Rating 4.6, 1.000+ terjual/bln. Diskon 80%.",
+    "label": [],
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 44%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
-      "Rating cukup baik: 4.6 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 80% dari harga coret Rp239.000.",
-      "Harga paling murah di antara 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id.",
-      "Fitur yang tertulis di judul produk: RGB, 2 Microphon, Portable."
+      "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
+      "Laris: 1rb+ terjual per bulan.",
+      "Sedang diskon 44% dari harga coret Rp309.000.",
+      "Fitur yang tertulis di judul produk: Bluetooth 6.0, IPX4."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (80%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Ratingnya (4.6) paling rendah di kelompok ini (tertinggi 4.7).",
-      "Toko yang sama juga menjual Bluetooth Speaker With 2Microphon 3D Stereo… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Ada pilihan lebih murah di kelompok yang sama: Bluetooth Speaker With 2Microphon 3D Stereo… (Rp48.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Speaker Bluetooth yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp48.000 (diskon 80%) dengan rating 4.6 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/1084063668/44917282362",
-    "linkShopee": "https://s.shopee.co.id/20wPlSWccQ",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Speaker Bluetooth lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp172.001 (diskon 44%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/59414059/26075065288",
+    "linkShopee": "https://s.shopee.co.id/8fTJoSjjHB",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "mini-speaker-bluetooth-wireless-audio-speaker-57664645093",
+    "id": "advance-v3-v1-speaker-bluetooth-mini-26942061219",
     "contoh": false,
-    "nama": "Mini Speaker Bluetooth Wireless Audio Speaker Super Sound Quality RGB Light Portable Karaoke Set",
+    "nama": "ADVANCE V3 / V1 Speaker Bluetooth Mini 4H Playtime Super Bass",
     "kategori": "Gadget & HP",
     "jenis": "speaker-bluetooth",
     "jenisNama": "Speaker Bluetooth",
-    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-82585-mqzykf3vszy928",
-    "harga": 48999,
-    "hargaAsli": 359000,
-    "diskon": 86,
-    "rating": 4.6,
-    "terjual": 1000,
-    "terjualPlus": true,
-    "kota": "Kab. Tangerang",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-824h0-mf11ckin82z0c2",
+    "harga": 132400,
+    "hargaAsli": null,
+    "diskon": 0,
+    "rating": 4.9,
+    "terjual": 709,
+    "terjualPlus": false,
+    "terjualLabel": "709",
+    "kota": "Surabaya",
     "label": [],
-    "ringkasan": "Rating 4.6 dari 5, 1.000+ terjual per bulan. Diskon 86%.",
+    "ringkasan": "Rating 4.9 dari 5, 709 terjual per bulan.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
-      "Rating cukup baik: 4.6 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 86% dari harga coret Rp359.000.",
-      "Fitur yang tertulis di judul produk: RGB, Portable."
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Cukup laris: sekitar 709 terjual per bulan."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (86%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Ratingnya (4.6) paling rendah di kelompok ini (tertinggi 4.7).",
+      "Ada pilihan lebih murah di kelompok yang sama: Bluetooth Speaker With 2Microphon 3D Stereo… (Rp48.000).",
+      "Penjualannya (709 per bulan) paling sedikit di kelompok ini.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Speaker Bluetooth lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp48.999 (diskon 86%) dengan rating 4.6 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/1084063668/57664645093",
-    "linkShopee": "https://s.shopee.co.id/2BFpxlVzHT",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Speaker Bluetooth lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp132.400 dengan rating 4.9 dan 709 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/3684562/26942061219",
+    "linkShopee": "https://s.shopee.co.id/9APaPNhpGI",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -1055,13 +1063,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 55%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 55%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 55% dari harga coret Rp96.580.",
       "Fitur yang tertulis di judul produk: 40 gr."
     ],
@@ -1070,7 +1079,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Emina Sun Battle Bright Glow SPF… (Rp17.025).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sunscreen lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp43.900 (diskon 55%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sunscreen lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp43.900 (diskon 55%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1112776376/42807278779",
     "linkShopee": "https://s.shopee.co.id/4Vdkk2whqr",
     "linkAffiliate": true,
@@ -1090,13 +1099,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Deli Serdang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 43%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 43%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 43% dari harga coret Rp71.100.",
       "Fitur yang tertulis di judul produk: SPF 50 PA, SPF 35 PA."
     ],
@@ -1105,7 +1115,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sunscreen lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp40.180 (diskon 43%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sunscreen lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp40.180 (diskon 43%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/59763733/28218154859",
     "linkShopee": "https://s.shopee.co.id/40hU97ybrm",
     "linkAffiliate": true,
@@ -1125,16 +1135,17 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Semarang",
     "label": [
       "Paling murah",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling murah di kelompok Sunscreen. Rating 4.9, 1.000+ terjual/bln. Diskon 26%.",
+    "ringkasan": "Paling murah di kelompok Sunscreen. Rating 4.9, 1rb+ terjual/bln. Diskon 26%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 26% dari harga coret Rp23.000.",
       "Harga paling murah di antara 4 pilihan Sunscreen yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: SPF 35 PA+++, PA+++."
@@ -1143,7 +1154,7 @@ window.PRODUK = [
       "Harga yang tercantum adalah harga per 22 Oktober 2026 dan bisa berubah saat promo selesai.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Sunscreen yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp17.025 (diskon 26%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Sunscreen yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp17.025 (diskon 26%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1346168602/28862479028",
     "linkShopee": "https://s.shopee.co.id/4B0uLQxyWp",
     "linkAffiliate": true,
@@ -1163,13 +1174,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Pusat",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 69%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 69%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 69% dari harga coret Rp96.000.",
       "Fitur yang tertulis di judul produk: SPF50, SPF35 PA++++, PA++++."
     ],
@@ -1179,7 +1191,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sunscreen lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp29.625 (diskon 69%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sunscreen lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp29.625 (diskon 69%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1346168602/29411545569",
     "linkShopee": "https://s.shopee.co.id/50a1Kxunq0",
     "linkAffiliate": true,
@@ -1199,13 +1211,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Deli Serdang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 50%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 50%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 50% dari harga coret Rp78.000.",
       "Fitur yang tertulis di judul produk: 100 ml."
     ],
@@ -1215,7 +1228,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sabun Cuci Muka (Facial Wash) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp39.000 (diskon 50%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sabun Cuci Muka (Facial Wash) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp39.000 (diskon 50%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/63983008/56310901303",
     "linkShopee": "https://s.shopee.co.id/5AtRXGuAV3",
     "linkAffiliate": true,
@@ -1235,16 +1248,17 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Deli Serdang",
     "label": [
       "Paling murah",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling murah di kelompok Sabun Cuci Muka (Facial Wash). Rating 4.9, 1.000+ terjual/bln. Diskon 46%.",
+    "ringkasan": "Paling murah di kelompok Sabun Cuci Muka (Facial Wash). Rating 4.9, 1rb+ terjual/bln. Diskon 46%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 46% dari harga coret Rp43.475.",
       "Harga paling murah di antara 4 pilihan Sabun Cuci Muka (Facial Wash) yang dibandingkan di Bandingin.id."
     ],
@@ -1252,7 +1266,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Sabun Cuci Muka (Facial Wash) yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp23.500 (diskon 46%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Sabun Cuci Muka (Facial Wash) yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp23.500 (diskon 46%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/59763733/26720368293",
     "linkShopee": "https://s.shopee.co.id/1W09AVZ3fk",
     "linkAffiliate": true,
@@ -1272,13 +1286,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 65%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 65%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 65% dari harga coret Rp99.000.",
       "Fitur yang tertulis di judul produk: Low pH, Niacinamide."
     ],
@@ -1288,7 +1303,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sabun Cuci Muka (Facial Wash) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp34.600 (diskon 65%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sabun Cuci Muka (Facial Wash) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp34.600 (diskon 65%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/809769142/41101567247",
     "linkShopee": "https://s.shopee.co.id/1LgiyCZh0j",
     "linkAffiliate": true,
@@ -1308,13 +1323,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 48%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 48%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 48% dari harga coret Rp60.000.",
       "Fitur yang tertulis di judul produk: Low pH."
     ],
@@ -1322,7 +1338,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Wardah Facial Wash All Series (Acnederm,… (Rp23.500).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sabun Cuci Muka (Facial Wash) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp31.300 (diskon 48%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Sabun Cuci Muka (Facial Wash) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp31.300 (diskon 48%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1292772191/43358097567",
     "linkShopee": "https://s.shopee.co.id/1qczZ7Xmzq",
     "linkAffiliate": true,
@@ -1342,13 +1358,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Deli Serdang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 60%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 60%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 60% dari harga coret Rp107.100.",
       "Fitur yang tertulis di judul produk: Niacinamide, Ceramide."
     ],
@@ -1358,7 +1375,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Pelembap Wajah (Moisturizer) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp42.500 (diskon 60%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Pelembap Wajah (Moisturizer) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp42.500 (diskon 60%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/63983008/28169257360",
     "linkShopee": "https://s.shopee.co.id/1gJZMoYQKp",
     "linkAffiliate": true,
@@ -1378,16 +1395,17 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [
       "Paling murah",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling murah di kelompok Pelembap Wajah (Moisturizer). Rating 4.9, 1.000+ terjual/bln. Diskon 65%.",
+    "ringkasan": "Paling murah di kelompok Pelembap Wajah (Moisturizer). Rating 4.9, 1rb+ terjual/bln. Diskon 65%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 65% dari harga coret Rp109.780.",
       "Harga paling murah di antara 4 pilihan Pelembap Wajah (Moisturizer) yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: Panthenol."
@@ -1397,7 +1415,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Pelembap Wajah (Moisturizer) yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp38.300 (diskon 65%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Pelembap Wajah (Moisturizer) yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp38.300 (diskon 65%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/684531921/40120679283",
     "linkShopee": "https://s.shopee.co.id/2BFpxjWWJw",
     "linkAffiliate": true,
@@ -1417,13 +1435,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Bogor",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 76%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 76%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 76% dari harga coret Rp162.000.",
       "Fitur yang tertulis di judul produk: 100ml."
     ],
@@ -1431,7 +1450,7 @@ window.PRODUK = [
       "Diskonnya sangat besar (76%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Pelembap Wajah (Moisturizer) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp39.000 (diskon 76%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Pelembap Wajah (Moisturizer) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp39.000 (diskon 76%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/714408412/27755593773",
     "linkShopee": "https://s.shopee.co.id/7AeVuvMYn5",
     "linkAffiliate": true,
@@ -1451,13 +1470,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Timur",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 46%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 46%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 46% dari harga coret Rp259.000.",
       "Fitur yang tertulis di judul produk: Ceramide."
     ],
@@ -1465,7 +1485,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Facetology Panthenol Barrier Boost Moisturizer Series… (Rp38.300).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Pelembap Wajah (Moisturizer) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp139.000 (diskon 46%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Pelembap Wajah (Moisturizer) lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp139.000 (diskon 46%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/380266264/22324918043",
     "linkShopee": "https://s.shopee.co.id/7Kxw7ELvS8",
     "linkAffiliate": true,
@@ -1485,16 +1505,17 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Barat",
     "label": [
       "Rating tertinggi",
       "Paling seimbang"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Kaos Pria. Rating 4.9, 1.000+ terjual/bln. Diskon 51%.",
+    "ringkasan": "Rating tertinggi di kelompok Kaos Pria. Rating 4.9, 1rb+ terjual/bln. Diskon 51%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 51% dari harga coret Rp86.000.",
       "Fitur yang tertulis di judul produk: Premium Cotton 24s, S-5XL."
     ],
@@ -1503,7 +1524,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: SWAN SHOGUNAVO Kaos Oblong Pria Swan… (Rp24.542).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp42.000 (diskon 51%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp42.000 (diskon 51%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/555777672/11356656903",
     "linkShopee": "https://s.shopee.co.id/7VHMJXLI7B",
     "linkAffiliate": true,
@@ -1523,65 +1544,63 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Utara",
     "label": [
       "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Kaos Pria. Rating 4.8, 1.000+ terjual/bln. Diskon 69%.",
+    "ringkasan": "Paling murah di kelompok Kaos Pria. Rating 4.8, 1rb+ terjual/bln. Diskon 69%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 69% dari harga coret Rp80.000.",
       "Harga paling murah di antara 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (69%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Ratingnya (4.8) paling rendah di kelompok ini (tertinggi 4.9).",
-      "Toko yang sama juga menjual SWAN SHOGUNAVO Kaos Oblong Pria Swan… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp24.542 (diskon 69%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp24.542 (diskon 69%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/26727290/5140805278",
     "linkShopee": "https://s.shopee.co.id/7famVqKemE",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "swan-shogunavo-kaos-oblong-pria-swan-7018844487",
+    "id": "zalmore-men-oneck-t-shirt-luma-2618261980",
     "contoh": false,
-    "nama": "SWAN SHOGUNAVO Kaos Oblong Pria Swan Brand Type Deluxe",
+    "nama": "Zalmore Men Oneck T-Shirt - LUMA Cotton Premium - Kaos Polos Pria Lembut Ringan Sejuk",
     "kategori": "Fashion & Skincare",
     "jenis": "kaos-pria",
     "jenisNama": "Kaos Pria",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zti-mt4scvtdeivd76",
-    "harga": 24542,
-    "hargaAsli": 80000,
-    "diskon": 69,
-    "rating": 4.8,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81zti-mspct9nsjg1z63",
+    "harga": 72000,
+    "hargaAsli": 90000,
+    "diskon": 20,
+    "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
-    "kota": "Jakarta Utara",
+    "terjualLabel": "1rb+",
+    "kota": "Kab. Tangerang",
     "label": [
-      "Paling murah"
+      "Rating tertinggi"
     ],
-    "ringkasan": "Paling murah di kelompok Kaos Pria. Rating 4.8, 1.000+ terjual/bln. Diskon 69%.",
+    "ringkasan": "Rating tertinggi di kelompok Kaos Pria. Rating 4.9, 1rb+ terjual/bln. Diskon 20%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
-      "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 69% dari harga coret Rp80.000.",
-      "Harga paling murah di antara 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id."
+      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
+      "Laris: 1rb+ terjual per bulan.",
+      "Sedang diskon 20% dari harga coret Rp90.000."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (69%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Ratingnya (4.8) paling rendah di kelompok ini (tertinggi 4.9).",
-      "Toko yang sama juga menjual SWAN SHOGUNAVO Kaos Oblong Pria Swan… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Ada pilihan lebih murah di kelompok yang sama: SWAN SHOGUNAVO Kaos Oblong Pria Swan… (Rp24.542).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp24.542 (diskon 69%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/26727290/7018844487",
-    "linkShopee": "https://s.shopee.co.id/7puCi9K1RH",
+    "kesimpulan": "Dari 4 pilihan Kaos Pria yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp72.000 (diskon 20%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/168504422/2618261980",
+    "linkShopee": "https://s.shopee.co.id/70L5pPKwO3",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -1599,13 +1618,14 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.8 dari 5, 1.000+ terjual per bulan. Diskon 68%.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 68%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 68% dari harga coret Rp200.000.",
       "Fitur yang tertulis di judul produk: Cotton Combed 32s, Premium Cotton, Oversize, S-XXXL."
     ],
@@ -1615,7 +1635,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: SWAN SHOGUNAVO Kaos Oblong Pria Swan… (Rp24.542).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Kaos Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp65.000 (diskon 68%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Kaos Pria lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp65.000 (diskon 68%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1645740611/49765426226",
     "linkShopee": "https://s.shopee.co.id/30owxGpHHP",
     "linkAffiliate": true,
@@ -1635,23 +1655,24 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Bogor",
     "label": [
       "Rating tertinggi",
       "Paling seimbang"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Tas Wanita. Rating 4.9, 1.000+ terjual/bln. Diskon 23%.",
+    "ringkasan": "Rating tertinggi di kelompok Tas Wanita. Rating 4.9, 1rb+ terjual/bln. Diskon 23%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 23% dari harga coret Rp199.000."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: Tas Wanita Les Catino Haida Satchel (Rp99.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Tas Wanita yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp152.600 (diskon 23%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Tas Wanita yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp152.600 (diskon 23%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/33366710/21085396782",
     "linkShopee": "https://s.shopee.co.id/3VlDYBnNGW",
     "linkAffiliate": true,
@@ -1671,13 +1692,14 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Depok",
     "label": [],
-    "ringkasan": "Rating 4.8 dari 5, 1.000+ terjual per bulan. Diskon 68%.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 68%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 68% dari harga coret Rp399.800."
     ],
     "kekurangan": [
@@ -1686,7 +1708,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Tas Wanita Les Catino Haida Satchel (Rp99.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Tas Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp129.000 (diskon 68%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Tas Wanita lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp129.000 (diskon 68%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/44802360/29811148509",
     "linkShopee": "https://s.shopee.co.id/3LRnLso0bV",
     "linkAffiliate": true,
@@ -1706,22 +1728,23 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Bogor",
     "label": [
       "Rating tertinggi"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Tas Wanita. Rating 4.9, 1.000+ terjual/bln. Diskon 16%.",
+    "ringkasan": "Rating tertinggi di kelompok Tas Wanita. Rating 4.9, 1rb+ terjual/bln. Diskon 16%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 16% dari harga coret Rp349.000."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: Tas Wanita Les Catino Haida Satchel (Rp99.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Tas Wanita yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp294.100 (diskon 16%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Tas Wanita yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp294.100 (diskon 16%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/33366710/19171535841",
     "linkShopee": "https://s.shopee.co.id/3qO3wnm6ac",
     "linkAffiliate": true,
@@ -1741,15 +1764,16 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Depok",
     "label": [
       "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Tas Wanita. Rating 4.8, 1.000+ terjual/bln. Diskon 55%.",
+    "ringkasan": "Paling murah di kelompok Tas Wanita. Rating 4.8, 1rb+ terjual/bln. Diskon 55%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 55% dari harga coret Rp219.800.",
       "Harga paling murah di antara 4 pilihan Tas Wanita yang dibandingkan di Bandingin.id."
     ],
@@ -1758,7 +1782,7 @@ window.PRODUK = [
       "Ratingnya (4.8) paling rendah di kelompok ini (tertinggi 4.9).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Tas Wanita yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp99.000 (diskon 55%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Tas Wanita yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp99.000 (diskon 55%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/44802360/55655790648",
     "linkShopee": "https://s.shopee.co.id/3g4dkUmjvb",
     "linkAffiliate": true,
@@ -1778,25 +1802,26 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling laris",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling laris di kelompok Air Fryer. Rating 4.9, 1.000+ terjual/bln. Diskon 65%.",
+    "ringkasan": "Paling laris di kelompok Air Fryer. Rating 4.9, 1rb+ terjual/bln. Diskon 65%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 65% dari harga coret Rp899.000.",
       "Fitur yang tertulis di judul produk: 3.5L, 500 Watt, Low Power."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (65%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Toko yang sama juga menjual HAN RIVER Air Fryer 4.2L Wajan… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Ada pilihan lebih murah di kelompok yang sama: Gaabor mini Air Fryer 2L Low… (Rp278.594).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Air Fryer yang dibandingkan di Bandingin.id, produk ini paling laris sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp319.130 (diskon 65%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Air Fryer yang dibandingkan di Bandingin.id, produk ini paling laris sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp319.130 (diskon 65%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/177266177/12719204055",
     "linkShopee": "https://s.shopee.co.id/30owxJxl7d",
     "linkAffiliate": true,
@@ -1816,61 +1841,64 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 919,
     "terjualPlus": false,
+    "terjualLabel": "919",
     "kota": "Kab. Tangerang",
-    "label": [
-      "Paling murah"
-    ],
-    "ringkasan": "Paling murah di kelompok Air Fryer. Rating 4.9, 919 terjual/bln. Diskon 72%.",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 919 terjual per bulan. Diskon 72%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
       "Cukup laris: sekitar 919 terjual per bulan.",
       "Sedang diskon 72% dari harga coret Rp1.099.000.",
-      "Harga paling murah di antara 4 pilihan Air Fryer yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: 4.2L, Anti Lengket."
     ],
     "kekurangan": [
       "Diskonnya sangat besar (72%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ada pilihan lebih murah di kelompok yang sama: Gaabor mini Air Fryer 2L Low… (Rp278.594).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Air Fryer yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp309.430 (diskon 72%) dengan rating 4.9 dan 919 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Air Fryer lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp309.430 (diskon 72%) dengan rating 4.9 dan 919 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/177266177/51563691144",
     "linkShopee": "https://s.shopee.co.id/2qVWl0yOSc",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "han-river-air-fryer-4-2l-27875273445",
+    "id": "gaabor-mini-air-fryer-2l-low-19451696457",
     "contoh": false,
-    "nama": "HAN RIVER Air Fryer 4.2L Wajan Anti Lengket Low Watt 800 Watt",
+    "nama": "Gaabor mini Air Fryer 2L Low Watt 600W Mesin Penggorengan Tanpa Minyak Anti Lengket / AF20-YE01A",
     "kategori": "Rumah Tangga",
     "jenis": "air-fryer",
     "jenisNama": "Air Fryer",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-8224y-mjxh7q5godty2b",
-    "harga": 319130,
-    "hargaAsli": 899000,
-    "diskon": 65,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822wg-mpn6ai6h6ubz65",
+    "harga": 278594,
+    "hargaAsli": 1199000,
+    "diskon": 77,
     "rating": 4.9,
-    "terjual": 870,
+    "terjual": 636,
     "terjualPlus": false,
-    "kota": "Kab. Tangerang",
-    "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 870 terjual per bulan. Diskon 65%.",
+    "terjualLabel": "636",
+    "kota": "Tangerang",
+    "label": [
+      "Paling murah"
+    ],
+    "ringkasan": "Paling murah di kelompok Air Fryer. Rating 4.9, 636 terjual/bln. Diskon 77%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Cukup laris: sekitar 870 terjual per bulan.",
-      "Sedang diskon 65% dari harga coret Rp899.000.",
-      "Fitur yang tertulis di judul produk: 4.2L, 800 Watt, Anti Lengket, Low Watt."
+      "Cukup laris: sekitar 636 terjual per bulan.",
+      "Sedang diskon 77% dari harga coret Rp1.199.000.",
+      "Harga paling murah di antara 4 pilihan Air Fryer yang dibandingkan di Bandingin.id.",
+      "Fitur yang tertulis di judul produk: 2L, 600W, Anti Lengket, Low Watt."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (65%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Toko yang sama juga menjual HAN RIVER Air Fryer HRAF04 3.5L… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Diskonnya sangat besar (77%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Penjualannya (636 per bulan) paling sedikit di kelompok ini.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Air Fryer lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp319.130 (diskon 65%) dengan rating 4.9 dan 870 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/177266177/27875273445",
-    "linkShopee": "https://s.shopee.co.id/2gC6Yhz1nb",
+    "kesimpulan": "Dari 4 pilihan Air Fryer yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp278.594 (diskon 77%) dengan rating 4.9 dan 636 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/510291426/19451696457",
+    "linkShopee": "https://s.shopee.co.id/7VHMQKJ2NA",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -1888,6 +1916,7 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 847,
     "terjualPlus": false,
+    "terjualLabel": "847",
     "kota": "Kab. Deli Serdang",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 847 terjual per bulan.",
@@ -1898,8 +1927,7 @@ window.PRODUK = [
       "Fitur yang tertulis di judul produk: 4.2 L, 500W, Low Watt, Layar Sentuh Digital."
     ],
     "kekurangan": [
-      "Ada pilihan lebih murah di kelompok yang sama: HAN RIVER Air Fryer 4.2L Multifungsi… (Rp309.430).",
-      "Penjualannya (847 per bulan) paling sedikit di kelompok ini.",
+      "Ada pilihan lebih murah di kelompok yang sama: Gaabor mini Air Fryer 2L Low… (Rp278.594).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
     "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Air Fryer lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp1.248.000 dengan rating 4.9 dan 847 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
@@ -1922,15 +1950,16 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Rice Cooker. Rating 4.8, 1.000+ terjual/bln. Diskon 68%.",
+    "ringkasan": "Paling murah di kelompok Rice Cooker. Rating 4.8, 1rb+ terjual/bln. Diskon 68%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 68% dari harga coret Rp899.000.",
       "Harga paling murah di antara 4 pilihan Rice Cooker yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: 2.2L, Anti Lengket, 6 Mode."
@@ -1938,10 +1967,9 @@ window.PRODUK = [
     "kekurangan": [
       "Diskonnya sangat besar (68%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Ratingnya (4.8) paling rendah di kelompok ini (tertinggi 4.9).",
-      "Toko yang sama juga menjual HAN RIVER Rice Cooker 2.2L Magic… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Rice Cooker yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp290.030 (diskon 68%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Rice Cooker yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp290.030 (diskon 68%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/177266177/40956262281",
     "linkShopee": "https://s.shopee.co.id/2LZGA60ITZ",
     "linkAffiliate": true,
@@ -1961,13 +1989,14 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Bogor",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 14%.",
+    "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 14%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 14% dari harga coret Rp1.044.000.",
       "Fitur yang tertulis di judul produk: 1.8 L, 400 Watt."
     ],
@@ -1975,48 +2004,44 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: HAN RIVER Rice Cooker 2.2L Magic… (Rp290.030).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rice Cooker lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp903.000 (diskon 14%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rice Cooker lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp903.000 (diskon 14%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/22841291/29416117732",
     "linkShopee": "https://s.shopee.co.id/9APaIelyBZ",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "han-river-rice-cooker-2-2l-53908935347",
+    "id": "cosmos-rice-cooker-non-stick-1-44750546165",
     "contoh": false,
-    "nama": "HAN RIVER Rice Cooker 2.2L Magic Com 6 Mode Multifungsi Smart Touch (varian 2)",
+    "nama": "COSMOS Rice Cooker Non Stick 1,8L Black Series CRJ-3301",
     "kategori": "Rumah Tangga",
     "jenis": "rice-cooker",
     "jenisNama": "Rice Cooker",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-822wr-mn3s3rjkf6ro9c",
-    "harga": 290030,
-    "hargaAsli": 899000,
-    "diskon": 68,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-8224z-mggbcbp5qwi6ed",
+    "harga": 345250,
+    "hargaAsli": 365000,
+    "diskon": 5,
     "rating": 4.9,
-    "terjual": 1000,
-    "terjualPlus": true,
-    "kota": "Kab. Tangerang",
-    "label": [
-      "Paling murah",
-      "Paling seimbang"
-    ],
-    "ringkasan": "Paling murah di kelompok Rice Cooker. Rating 4.9, 1.000+ terjual/bln. Diskon 68%.",
+    "terjual": 901,
+    "terjualPlus": false,
+    "terjualLabel": "901",
+    "kota": "Tangerang Selatan",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 901 terjual per bulan.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 68% dari harga coret Rp899.000.",
-      "Harga paling murah di antara 4 pilihan Rice Cooker yang dibandingkan di Bandingin.id.",
-      "Fitur yang tertulis di judul produk: 2.2L, 6 Mode."
+      "Cukup laris: sekitar 901 terjual per bulan.",
+      "Fitur yang tertulis di judul produk: 1,8L."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (68%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Toko yang sama juga menjual HAN RIVER Rice Cooker 2.2L Magic… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Ada pilihan lebih murah di kelompok yang sama: HAN RIVER Rice Cooker 2.2L Magic… (Rp290.030).",
+      "Penjualannya (901 per bulan) paling sedikit di kelompok ini.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Rice Cooker yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp290.030 (diskon 68%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/177266177/53908935347",
-    "linkShopee": "https://s.shopee.co.id/8fTJhjnsCU",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rice Cooker lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp345.250 (diskon 5%) dengan rating 4.9 dan 901 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/857133773/44750546165",
+    "linkShopee": "https://s.shopee.co.id/7KxwE1Jfi9",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -2034,20 +2059,23 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Utara",
-    "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan.",
+    "label": [
+      "Paling seimbang"
+    ],
+    "ringkasan": "Paling seimbang di kelompok Rice Cooker. Rating 4.9, 1rb+ terjual/bln.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Fitur yang tertulis di judul produk: 1.8 Liter, Garansi Resmi, 3 In 1."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: HAN RIVER Rice Cooker 2.2L Magic… (Rp290.030).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rice Cooker lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp459.000 dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Rice Cooker yang dibandingkan di Bandingin.id, produk ini paling seimbang (harga, rating, dan penjualan). Harganya Rp459.000 dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/85961994/24486283103",
     "linkShopee": "https://s.shopee.co.id/8pmju2nErX",
     "linkAffiliate": true,
@@ -2067,16 +2095,17 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi",
       "Paling seimbang"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Blender & Chopper. Rating 4.9, 1.000+ terjual/bln. Diskon 64%.",
+    "ringkasan": "Rating tertinggi di kelompok Blender & Chopper. Rating 4.9, 1rb+ terjual/bln. Diskon 64%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 64% dari harga coret Rp400.000.",
       "Fitur yang tertulis di judul produk: 300ml."
     ],
@@ -2085,7 +2114,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: BRAVHOM Chopper Blender Portable 350ML 1200mAh… (Rp49.495).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Blender & Chopper yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp144.399 (diskon 64%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Blender & Chopper yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp144.399 (diskon 64%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/440963114/16893232845",
     "linkShopee": "https://s.shopee.co.id/9fLqtZk4Ai",
     "linkAffiliate": true,
@@ -2105,13 +2134,14 @@ window.PRODUK = [
     "rating": 4.7,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.7 dari 5, 1.000+ terjual per bulan. Diskon 39%.",
+    "ringkasan": "Rating 4.7 dari 5, 1rb+ terjual per bulan. Diskon 39%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating cukup baik: 4.7 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 39% dari harga coret Rp120.000.",
       "Fitur yang tertulis di judul produk: Portable."
     ],
@@ -2119,7 +2149,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: BRAVHOM Chopper Blender Portable 350ML 1200mAh… (Rp49.495).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Blender & Chopper lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp73.635 (diskon 39%) dengan rating 4.7 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Blender & Chopper lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp73.635 (diskon 39%) dengan rating 4.7 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/853682015/28430394030",
     "linkShopee": "https://s.shopee.co.id/9pfH5sjQpl",
     "linkAffiliate": true,
@@ -2139,15 +2169,16 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Blender & Chopper. Rating 4.9, 1.000+ terjual/bln. Diskon 21%.",
+    "ringkasan": "Rating tertinggi di kelompok Blender & Chopper. Rating 4.9, 1rb+ terjual/bln. Diskon 21%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 21% dari harga coret Rp319.000.",
       "Fitur yang tertulis di judul produk: 250W, Low Watt, Stainless 304, Dua Kecepatan."
     ],
@@ -2155,7 +2186,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: BRAVHOM Chopper Blender Portable 350ML 1200mAh… (Rp49.495).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Blender & Chopper yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp252.999 (diskon 21%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Blender & Chopper yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp252.999 (diskon 21%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/440963114/27979176423",
     "linkShopee": "https://s.shopee.co.id/7famVu5dSd",
     "linkAffiliate": true,
@@ -2175,15 +2206,16 @@ window.PRODUK = [
     "rating": 4.6,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Bogor",
     "label": [
       "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Blender & Chopper. Rating 4.6, 1.000+ terjual/bln. Diskon 65%.",
+    "ringkasan": "Paling murah di kelompok Blender & Chopper. Rating 4.6, 1rb+ terjual/bln. Diskon 65%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating cukup baik: 4.6 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 65% dari harga coret Rp140.000.",
       "Harga paling murah di antara 4 pilihan Blender & Chopper yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: 1200mAh, 350ML, Portable."
@@ -2193,7 +2225,7 @@ window.PRODUK = [
       "Ratingnya (4.6) paling rendah di kelompok ini (tertinggi 4.9).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Blender & Chopper yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp49.495 (diskon 65%) dengan rating 4.6 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Blender & Chopper yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp49.495 (diskon 65%) dengan rating 4.6 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1112573223/52611526665",
     "linkShopee": "https://s.shopee.co.id/6q1fWN8o9U",
     "linkAffiliate": true,
@@ -2213,13 +2245,14 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.8 dari 5, 1.000+ terjual per bulan. Diskon 58%.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 58%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 58% dari harga coret Rp300.000.",
       "Fitur yang tertulis di judul produk: dengan Roda, Anti Karat."
     ],
@@ -2229,7 +2262,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Rak Penyimpanan Plastik 4 Tier &… (Rp24.900).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rak Serbaguna lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp127.000 (diskon 58%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rak Serbaguna lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp127.000 (diskon 58%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1559347904/46512766425",
     "linkShopee": "https://s.shopee.co.id/6fiFK49RUT",
     "linkAffiliate": true,
@@ -2249,15 +2282,16 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Rak Serbaguna. Rating 4.9, 1.000+ terjual/bln. Diskon 77%.",
+    "ringkasan": "Rating tertinggi di kelompok Rak Serbaguna. Rating 4.9, 1rb+ terjual/bln. Diskon 77%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 77% dari harga coret Rp159.000.",
       "Fitur yang tertulis di judul produk: Beroda."
     ],
@@ -2266,7 +2300,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Rak Penyimpanan Plastik 4 Tier &… (Rp24.900).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Rak Serbaguna yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp36.900 (diskon 77%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Rak Serbaguna yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp36.900 (diskon 77%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1339033567/52418505122",
     "linkShopee": "https://s.shopee.co.id/7AeVuz7XTa",
     "linkAffiliate": true,
@@ -2286,13 +2320,14 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.8 dari 5, 1.000+ terjual per bulan. Diskon 46%.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 46%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 46% dari harga coret Rp330.000.",
       "Fitur yang tertulis di judul produk: 5/6 Susun."
     ],
@@ -2302,7 +2337,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rak Serbaguna lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp179.000 (diskon 46%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Rak Serbaguna lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp179.000 (diskon 46%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/908346763/24631613056",
     "linkShopee": "https://s.shopee.co.id/70L5ig8AoZ",
     "linkAffiliate": true,
@@ -2322,17 +2357,18 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah",
       "Rating tertinggi",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling murah di kelompok Rak Serbaguna. Rating 4.9, 1.000+ terjual/bln. Diskon 77%.",
+    "ringkasan": "Paling murah di kelompok Rak Serbaguna. Rating 4.9, 1rb+ terjual/bln. Diskon 77%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 77% dari harga coret Rp110.000.",
       "Harga paling murah di antara 4 pilihan Rak Serbaguna yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: Beroda, 4 Tier, 5 Tier."
@@ -2342,7 +2378,7 @@ window.PRODUK = [
       "Judulnya mencakup beberapa varian/ukuran. Harga yang tampil bisa jadi untuk varian tertentu saja, jadi cek lagi varian yang kamu pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Rak Serbaguna yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp24.900 (diskon 77%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Rak Serbaguna yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp24.900 (diskon 77%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/989242280/53868083027",
     "linkShopee": "https://s.shopee.co.id/4Vdkk5RFLX",
     "linkAffiliate": true,
@@ -2362,15 +2398,17 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
+      "Rating tertinggi",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling seimbang di kelompok Vacuum Cleaner. Rating 4.9, 1.000+ terjual/bln. Diskon 75%.",
+    "ringkasan": "Rating tertinggi di kelompok Vacuum Cleaner. Rating 4.9, 1rb+ terjual/bln. Diskon 75%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 75% dari harga coret Rp899.000.",
       "Fitur yang tertulis di judul produk: 20000Pa, 5 in 1, Cordless, Portable."
     ],
@@ -2379,44 +2417,45 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Bear Vacuum Cleaner Cordless 5 in… (Rp164.890).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Vacuum Cleaner yang dibandingkan di Bandingin.id, produk ini paling seimbang (harga, rating, dan penjualan). Harganya Rp227.950 (diskon 75%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Vacuum Cleaner yang dibandingkan di Bandingin.id, produk ini rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp227.950 (diskon 75%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/177266177/22623016051",
     "linkShopee": "https://s.shopee.co.id/4fxAwOQc0a",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "han-river-vacuum-cleaner-hisap-dan-27070882088",
+    "id": "xooqo6-vacuum-cleaner-7-in1-penyedot-46154294623",
     "contoh": false,
-    "nama": "HAN RIVER Vacuum Cleaner Hisap dan Mengepel 5 in 1 Tanpa Kabel",
+    "nama": "Xooqo6 Vacuum Cleaner 7 IN1 Penyedot Debu Portable Cordless Multifungsi Alat Pel Lantai & Sapu Lantai Otomatis",
     "kategori": "Rumah Tangga",
     "jenis": "vacuum-cleaner",
     "jenisNama": "Vacuum Cleaner",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-82250-mjxh7q5gejuu95",
-    "harga": 241530,
-    "hargaAsli": 899000,
-    "diskon": 73,
-    "rating": 4.9,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-8224w-mkfe2gziawaub2",
+    "harga": 219999,
+    "hargaAsli": 899999,
+    "diskon": 76,
+    "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 73%.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 76%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
-      "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 73% dari harga coret Rp899.000.",
-      "Fitur yang tertulis di judul produk: 5 in 1, Tanpa Kabel."
+      "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
+      "Laris: 1rb+ terjual per bulan.",
+      "Sedang diskon 76% dari harga coret Rp899.999.",
+      "Fitur yang tertulis di judul produk: Cordless, Portable."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (73%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Diskonnya sangat besar (76%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Ada pilihan lebih murah di kelompok yang sama: Bear Vacuum Cleaner Cordless 5 in… (Rp164.890).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Vacuum Cleaner lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp241.530 (diskon 73%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/177266177/27070882088",
-    "linkShopee": "https://s.shopee.co.id/4qGb8hPyfd",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Vacuum Cleaner lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp219.999 (diskon 76%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/1672985574/46154294623",
+    "linkShopee": "https://s.shopee.co.id/7puCowHlhG",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -2434,15 +2473,16 @@ window.PRODUK = [
     "rating": 4.7,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
     ],
-    "ringkasan": "Paling murah di kelompok Vacuum Cleaner. Rating 4.7, 1.000+ terjual/bln. Diskon 77%.",
+    "ringkasan": "Paling murah di kelompok Vacuum Cleaner. Rating 4.7, 1rb+ terjual/bln. Diskon 77%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating cukup baik: 4.7 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 77% dari harga coret Rp719.900.",
       "Harga paling murah di antara 4 pilihan Vacuum Cleaner yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: 5 in 1, Cordless."
@@ -2452,44 +2492,47 @@ window.PRODUK = [
       "Ratingnya (4.7) paling rendah di kelompok ini (tertinggi 4.9).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Vacuum Cleaner yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp164.890 (diskon 77%) dengan rating 4.7 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Vacuum Cleaner yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp164.890 (diskon 77%) dengan rating 4.7 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/149205613/24261659111",
     "linkShopee": "https://s.shopee.co.id/50a1L0PLKg",
     "linkAffiliate": true,
     "tokopedia": ""
   },
   {
-    "id": "han-river-vacuum-cleaner-20000pa-super-21273145781",
+    "id": "kiip-vacuum-cleaner-portabel-tanpa-kabel-24744404736",
     "contoh": false,
-    "nama": "HAN RIVER Vacuum Cleaner 20000Pa Super Strong Suction 5 in 1",
+    "nama": "KiiP Vacuum Cleaner Portabel Tanpa Kabel Genggam 16000Pa 3in1 Penghisap Debu Mobil Wireless",
     "kategori": "Rumah Tangga",
     "jenis": "vacuum-cleaner",
     "jenisNama": "Vacuum Cleaner",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98q-lr72hxfl8947d3",
-    "harga": 232000,
-    "hargaAsli": 899000,
-    "diskon": 74,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rbk9-ma58po199tjx94",
+    "harga": 363000,
+    "hargaAsli": 599000,
+    "diskon": 39,
     "rating": 4.9,
-    "terjual": 1000,
-    "terjualPlus": true,
-    "kota": "Kab. Tangerang",
-    "label": [],
-    "ringkasan": "Rating 4.9 dari 5, 1.000+ terjual per bulan. Diskon 74%.",
+    "terjual": 879,
+    "terjualPlus": false,
+    "terjualLabel": "879",
+    "kota": "Tangerang",
+    "label": [
+      "Rating tertinggi"
+    ],
+    "ringkasan": "Rating tertinggi di kelompok Vacuum Cleaner. Rating 4.9, 879 terjual/bln. Diskon 39%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
-      "Sedang diskon 74% dari harga coret Rp899.000.",
-      "Fitur yang tertulis di judul produk: 20000Pa, 5 in 1."
+      "Cukup laris: sekitar 879 terjual per bulan.",
+      "Sedang diskon 39% dari harga coret Rp599.000.",
+      "Fitur yang tertulis di judul produk: 16000Pa, Tanpa Kabel."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (74%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
       "Ada pilihan lebih murah di kelompok yang sama: Bear Vacuum Cleaner Cordless 5 in… (Rp164.890).",
+      "Penjualannya (879 per bulan) paling sedikit di kelompok ini.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Vacuum Cleaner lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp232.000 (diskon 74%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/300470793/21273145781",
-    "linkShopee": "https://s.shopee.co.id/5AtRXJOhzj",
+    "kesimpulan": "Dari 4 pilihan Vacuum Cleaner yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp363.000 (diskon 39%) dengan rating 4.9 dan 879 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/271658549/24744404736",
+    "linkShopee": "https://s.shopee.co.id/7famcdIP2F",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -2507,6 +2550,7 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 312,
     "terjualPlus": false,
+    "terjualLabel": "312",
     "kota": "Jakarta Utara",
     "label": [
       "Paling laris",
@@ -2542,6 +2586,7 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 222,
     "terjualPlus": false,
+    "terjualLabel": "222",
     "kota": "Jakarta Utara",
     "label": [],
     "ringkasan": "Rating 5.0 dari 5, 222 terjual per bulan.",
@@ -2574,6 +2619,7 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 222,
     "terjualPlus": false,
+    "terjualLabel": "222",
     "kota": "Jakarta Utara",
     "label": [
       "Paling murah"
@@ -2608,6 +2654,7 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 187,
     "terjualPlus": false,
+    "terjualLabel": "187",
     "kota": "Jakarta Utara",
     "label": [],
     "ringkasan": "Rating 5.0 dari 5, 187 terjual per bulan.",
@@ -2641,6 +2688,7 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 940,
     "terjualPlus": false,
+    "terjualLabel": "940",
     "kota": "",
     "label": [
       "Rating tertinggi",
@@ -2681,6 +2729,7 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 679,
     "terjualPlus": false,
+    "terjualLabel": "679",
     "kota": "Jakarta Barat",
     "label": [
       "Paling murah"
@@ -2717,6 +2766,7 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 653,
     "terjualPlus": false,
+    "terjualLabel": "653",
     "kota": "Tangerang",
     "label": [
       "Rating tertinggi"
@@ -2754,6 +2804,7 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 515,
     "terjualPlus": false,
+    "terjualLabel": "515",
     "kota": "Jakarta Barat",
     "label": [],
     "ringkasan": "Rating 4.8 dari 5, 515 terjual per bulan. Diskon 41%.",
@@ -2789,13 +2840,14 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Barat",
     "label": [],
-    "ringkasan": "Rating 4.8 dari 5, 1.000+ terjual per bulan. Diskon 58%.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 58%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 58% dari harga coret Rp40.000.",
       "Fitur yang tertulis di judul produk: Kayu."
     ],
@@ -2805,7 +2857,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Satu Keluarga Puzzle Kayu 9Pcs Karakter… (Rp6.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Mainan Edukasi Anak lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp16.800 (diskon 58%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Mainan Edukasi Anak lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp16.800 (diskon 58%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/346014230/18490527375",
     "linkShopee": "https://s.shopee.co.id/AKbXgmMgqb",
     "linkAffiliate": true,
@@ -2825,17 +2877,18 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah",
       "Rating tertinggi",
       "Paling seimbang"
     ],
-    "ringkasan": "Paling murah di kelompok Mainan Edukasi Anak. Rating 4.9, 1.000+ terjual/bln.",
+    "ringkasan": "Paling murah di kelompok Mainan Edukasi Anak. Rating 4.9, 1rb+ terjual/bln.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Harga paling murah di antara 4 pilihan Mainan Edukasi Anak yang dibandingkan di Bandingin.id.",
       "Fitur yang tertulis di judul produk: 9Pcs, Kayu."
     ],
@@ -2843,7 +2896,7 @@ window.PRODUK = [
       "Harga yang tercantum adalah harga per 22 Oktober 2026 dan bisa berubah saat promo selesai.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Mainan Edukasi Anak yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp6.000 dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Mainan Edukasi Anak yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus rating tertinggi sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp6.000 dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/494896079/24635387044",
     "linkShopee": "https://s.shopee.co.id/AAI7UTNKBa",
     "linkAffiliate": true,
@@ -2863,22 +2916,23 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi"
     ],
-    "ringkasan": "Rating tertinggi di kelompok Mainan Edukasi Anak. Rating 4.9, 1.000+ terjual/bln. Diskon 33%.",
+    "ringkasan": "Rating tertinggi di kelompok Mainan Edukasi Anak. Rating 4.9, 1rb+ terjual/bln. Diskon 33%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 33% dari harga coret Rp44.400."
     ],
     "kekurangan": [
       "Ada pilihan lebih murah di kelompok yang sama: Satu Keluarga Puzzle Kayu 9Pcs Karakter… (Rp6.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Mainan Edukasi Anak yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp29.600 (diskon 33%) dengan rating 4.9 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Mainan Edukasi Anak yang dibandingkan di Bandingin.id, produk ini rating tertinggi. Harganya Rp29.600 (diskon 33%) dengan rating 4.9 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1076838044/44382744576",
     "linkShopee": "https://s.shopee.co.id/8V9tVPhcnh",
     "linkAffiliate": true,
@@ -2898,13 +2952,14 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Jakarta Barat",
     "label": [],
-    "ringkasan": "Rating 4.8 dari 5, 1.000+ terjual per bulan. Diskon 27%.",
+    "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 27%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 27% dari harga coret Rp67.500.",
       "Fitur yang tertulis di judul produk: 100 pcs."
     ],
@@ -2913,7 +2968,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: Satu Keluarga Puzzle Kayu 9Pcs Karakter… (Rp6.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Mainan Edukasi Anak lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp49.275 (diskon 27%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Mainan Edukasi Anak lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp49.275 (diskon 27%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/346014230/19783360105",
     "linkShopee": "https://s.shopee.co.id/80DcuUjWoc",
     "linkAffiliate": true,
@@ -2933,6 +2988,7 @@ window.PRODUK = [
     "rating": 5.0,
     "terjual": 808,
     "terjualPlus": false,
+    "terjualLabel": "808",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah",
@@ -2973,6 +3029,7 @@ window.PRODUK = [
     "rating": 4.7,
     "terjual": 594,
     "terjualPlus": false,
+    "terjualLabel": "594",
     "kota": "Kab. Tangerang",
     "label": [],
     "ringkasan": "Rating 4.7 dari 5, 594 terjual per bulan. Diskon 60%.",
@@ -3008,6 +3065,7 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 433,
     "terjualPlus": false,
+    "terjualLabel": "433",
     "kota": "Jakarta Utara",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 433 terjual per bulan. Diskon 52%.",
@@ -3042,6 +3100,7 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 367,
     "terjualPlus": false,
+    "terjualLabel": "367",
     "kota": "Medan",
     "label": [
       "Paling murah"
@@ -3079,15 +3138,16 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling laris"
     ],
-    "ringkasan": "Paling laris di kelompok Puzzle. Rating 4.8, 1.000+ terjual/bln. Diskon 48%.",
+    "ringkasan": "Paling laris di kelompok Puzzle. Rating 4.8, 1rb+ terjual/bln. Diskon 48%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan.",
+      "Laris: 1rb+ terjual per bulan.",
       "Sedang diskon 48% dari harga coret Rp23.000.",
       "Fitur yang tertulis di judul produk: Kayu."
     ],
@@ -3096,7 +3156,7 @@ window.PRODUK = [
       "Ada pilihan lebih murah di kelompok yang sama: King Puzzle Edukasi Puzzle Kayu Macam… (Rp4.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Puzzle yang dibandingkan di Bandingin.id, produk ini paling laris. Harganya Rp11.946 (diskon 48%) dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Puzzle yang dibandingkan di Bandingin.id, produk ini paling laris. Harganya Rp11.946 (diskon 48%) dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/494896079/23165993656",
     "linkShopee": "https://s.shopee.co.id/1BLNnzcl0",
     "linkAffiliate": true,
@@ -3116,22 +3176,23 @@ window.PRODUK = [
     "rating": 4.8,
     "terjual": 1000,
     "terjualPlus": true,
+    "terjualLabel": "1rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling laris"
     ],
-    "ringkasan": "Paling laris di kelompok Puzzle. Rating 4.8, 1.000+ terjual/bln.",
+    "ringkasan": "Paling laris di kelompok Puzzle. Rating 4.8, 1rb+ terjual/bln.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.8 dari 5 menurut pembeli di Shopee.",
-      "Laris: 1.000+ terjual per bulan."
+      "Laris: 1rb+ terjual per bulan."
     ],
     "kekurangan": [
       "Ratingnya (4.8) paling rendah di kelompok ini (tertinggi 4.9).",
       "Ada pilihan lebih murah di kelompok yang sama: King Puzzle Edukasi Puzzle Kayu Macam… (Rp4.000).",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Puzzle yang dibandingkan di Bandingin.id, produk ini paling laris. Harganya Rp19.999 dengan rating 4.8 dan 1.000+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "kesimpulan": "Dari 4 pilihan Puzzle yang dibandingkan di Bandingin.id, produk ini paling laris. Harganya Rp19.999 dengan rating 4.8 dan 1rb+ terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
     "urlProduk": "https://shopee.co.id/product/1292364260/40983997992",
     "linkShopee": "https://s.shopee.co.id/BUla6yzQ3",
     "linkAffiliate": true,
@@ -3151,6 +3212,7 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 755,
     "terjualPlus": false,
+    "terjualLabel": "755",
     "kota": "Kab. Bantul",
     "label": [
       "Paling murah",
@@ -3189,6 +3251,7 @@ window.PRODUK = [
     "rating": 4.9,
     "terjual": 673,
     "terjualPlus": false,
+    "terjualLabel": "673",
     "kota": "Kab. Bekasi",
     "label": [
       "Rating tertinggi"

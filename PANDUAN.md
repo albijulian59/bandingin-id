@@ -124,6 +124,8 @@ Penjelasan kolom:
 | harga coret        | Harga sebelum diskon. Kalau tidak ada, tulis `-`.                            |
 | rating             | Misalnya `4.9`.                                                              |
 | terjual per bulan  | Seperti di Shopee, misalnya `1RB+ Terjual/Bln` atau `870 Terjual/Bln`.       |
+
+Di website, angka terjual ditampilkan sebagai rentang: di bawah 1.000 tampil angkanya (`870`), 1.000–9.999 dibulatkan ke bawah per ribuan (`1rb+` … `9rb+`), dan 10.000 ke atas tampil `10rb+`. Fungsinya ada di `tools/build_data.py` (`rentang_terjual`) dan `js/common.js` (`Situs.rentangTerjual`); angka aslinya tetap disimpan di field `terjual` untuk urutan "Terlaris".
 | kota               | Kota pengirim, misalnya `Jakarta Utara`. Kalau tidak tahu, tulis `-`.         |
 | link produk        | Link produk biasa dari Shopee (bukan link affiliate).                        |
 | link gambar        | Link foto produk (klik kanan foto di Shopee → *Salin alamat gambar*).         |

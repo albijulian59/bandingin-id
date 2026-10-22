@@ -17,9 +17,26 @@
     if (typeof n !== "number") return n || "";
     return "Rp" + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
+  // Teks terjual Shopee / angka -> angka. "1RB+ Terjual/Bln" -> 1000, "2,5RB+" -> 2500, "919" -> 919
+  function angkaTerjual(v) {
+    if (typeof v === "number") return v;
+    var t = String(v == null ? "" : v).replace(/terjual\s*\/?\s*(bln|bulan)?/i, "").trim();
+    var m = t.match(/^([\d.,]+)\s*(rb|jt)?/i);
+    if (!m) return 0;
+    var satuan = (m[2] || "").toLowerCase();
+    var n = satuan ? parseFloat(m[1].replace(",", ".")) : parseFloat(m[1].replace(/[.,]/g, ""));
+    return Math.round(n * (satuan === "rb" ? 1000 : satuan === "jt" ? 1000000 : 1)) || 0;
+  }
+  // Angka/teks terjual -> label rentang (sama dengan rentang_terjual di tools/build_data.py).
+  // < 1000 -> "919"; 1000-9999 -> "1rb+" ... "9rb+" (dibulatkan ke bawah); >= 10000 -> "10rb+"
+  function rentangTerjual(v) {
+    var n = angkaTerjual(v);
+    return n < 1000 ? String(n) : Math.min(Math.floor(n / 1000), 10) + "rb+";
+  }
+  // Label terjual untuk satu produk (dipakai di kartu, halaman review, dan tabel perbandingan)
   function terjualTeks(p) {
     if (p.terjual == null) return "";
-    return rupiah(p.terjual).slice(2) + (p.terjualPlus ? "+" : "");
+    return p.terjualLabel || rentangTerjual(p.terjual);
   }
 
   function bintang(r) {
@@ -106,14 +123,38 @@
       ((g.catatan || []).length ? '<ul class="catatan">' + g.catatan.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + "</ul>" : "");
   }
 
+  // Kartu produk (dipakai di beranda; bisa dipakai ulang untuk bagian lain, mis. "Top 10 Terlaris")
+  function kartu(p) {
+    var link = "review.html?id=" + encodeURIComponent(p.id);
+    return '<article class="card">' +
+      '<a class="card-img" href="' + link + '">' + gambar(p, false, true) + badgeContoh(p) +
+        (p.diskon >= 5 ? '<span class="badge-diskon">-' + p.diskon + "%</span>" : "") + "</a>" +
+      '<div class="card-body">' +
+        '<span class="cat">' + esc(p.jenisNama || p.kategori) + "</span>" +
+        '<h3><a href="' + link + '" title="' + esc(p.nama) + '">' + esc(p.nama) + "</a></h3>" +
+        '<div class="meta">' + bintang(p.rating) +
+          (p.terjual != null ? '<span class="sold">' + esc(terjualTeks(p)) + " terjual/bln</span>" : "") + "</div>" +
+        '<p class="price">' + hargaHtml(p) + "</p>" +
+        '<div class="lbls">' + label(p) + "</div>" +
+        '<a class="more" href="' + link + '">Baca review & perbandingan →</a>' +
+        '<div class="btns">' + tombolToko(p) + "</div>" +
+      "</div></article>";
+  }
+
+  // Urutan terlaris: angka terjual (numerik), lalu rating, lalu harga termurah
+  function urutTerlaris(x, y) {
+    return (y.terjual || 0) - (x.terjual || 0) || y.rating - x.rating || x.harga - y.harga;
+  }
+
   function grupDari(jenis) {
     return (window.GRUP || []).filter(function (g) { return g.id === jenis; })[0];
   }
 
   window.Situs = {
-    esc: esc, rupiah: rupiah, terjualTeks: terjualTeks, bintang: bintang, gambar: gambar, gagal: gagal,
+    esc: esc, rupiah: rupiah, terjualTeks: terjualTeks, rentangTerjual: rentangTerjual, angkaTerjual: angkaTerjual, bintang: bintang, gambar: gambar, gagal: gagal,
     tombolToko: tombolToko, badgeContoh: badgeContoh, label: label, hargaHtml: hargaHtml,
-    tabelGrup: tabelGrup, grupDari: grupDari, produkById: produkById
+    tabelGrup: tabelGrup, grupDari: grupDari, produkById: produkById,
+    kartu: kartu, urutTerlaris: urutTerlaris
   };
 
   document.addEventListener("DOMContentLoaded", function () {
