@@ -210,3 +210,8 @@ yang menyebut "Bandingin.id" ada di `tools/build_data.py`; setelah mengubahnya, 
   persis dengan yang ada di `.psv`. Lihat pesan dari generator.
 - **Harga sudah berubah** → wajar. Ambil data baru, perbarui `.psv`, lalu jalankan generator
   dengan `--tanggal` yang baru.
+
+## Slide show & Top 10 Terlaris (beranda)
+
+- **Slide show** (`js/slideshow.js`): slide 1 = hero, slide 2–5 = produk unggulan per kategori, dipilih otomatis oleh `Situs.produkUnggulan` di `js/common.js` (utamakan label "Paling seimbang", lalu rating, terjual/bln, diskon, harga termurah).
+- **Top 10 Terlaris** (`js/top10.js`): sumbernya `top10-kandidat.psv` di folder data (11 kolom: kategori | keyword | judul | harga | harga coret | rating | total terjual | terjual/bln | kota | link produk | link gambar). Link produknya harus sama dengan salah satu dari 80 produk. `tools/build_data.py` menambahkan `terjualTotal` ke produk tersebut dan menyusun `window.TOP10` per kategori: total terjual → terjual/bln → rating → harga termurah.

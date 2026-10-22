@@ -27,6 +27,7 @@
     (p.hargaAsli ? "<li><span>Harga coret</span><b><s>" + S.esc(S.rupiah(p.hargaAsli)) + "</s> (-" + p.diskon + "%)</b></li>" : "") +
     "<li><span>Rating</span><b>" + Number(p.rating).toFixed(1) + " / 5</b></li>" +
     (p.terjual != null ? "<li><span>Terjual</span><b>" + S.esc(S.terjualTeks(p)) + " / bulan</b></li>" : "") +
+    (p.terjualTotal != null ? "<li><span>Total terjual</span><b>" + S.esc(S.terjualTotalTeks(p)) + "</b></li>" : "") +
     (p.kota ? "<li><span>Dikirim dari</span><b>" + S.esc(p.kota) + "</b></li>" : "") +
     (p.contoh ? "" : "<li><span>Toko</span><b>Toko resmi (Shopee Mall)</b></li>") +
     "</ul>";

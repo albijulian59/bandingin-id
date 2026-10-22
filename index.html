@@ -47,8 +47,18 @@
       </div>
     </section>
 
-    <!-- Tempat bagian tambahan di atas daftar produk (mis. "Top 10 Terlaris").
-         Render kartunya dengan Situs.kartu(p) dan urutkan dengan Situs.urutTerlaris. -->
+    <!-- Top 10 Terlaris per kategori. Isi dibuat oleh js/top10.js dari window.TOP10 (data/produk.js,
+         sumber: top10-kandidat.psv). Bagian lain di atas daftar produk bisa ditambah di sini juga. -->
+    <section class="wrap" id="top10" aria-labelledby="top10-judul">
+      <div class="top10">
+        <div class="top10-head">
+          <h2 id="top10-judul">🏆 Top 10 Terlaris</h2>
+          <p class="top10-catatan">Diurutkan dari total terjual di toko resmi Shopee (data <span class="tanggal-data">22 Oktober 2026</span>). Shopee menampilkan maksimal 10rb+, jadi produk seri diurutkan dari penjualan bulanan lalu rating.</p>
+        </div>
+        <div class="top10-tabs" id="top10-tabs" role="tablist" aria-label="Kategori Top 10"></div>
+        <div id="top10-panel"></div>
+      </div>
+    </section>
 
     <section class="wrap" id="kategori">
       <div class="filter" id="filter" aria-label="Filter kategori"></div>
@@ -87,6 +97,7 @@
   <script src="data/produk.js"></script>
   <script src="js/common.js"></script>
   <script src="js/slideshow.js"></script>
+  <script src="js/top10.js"></script>
   <script src="js/beranda.js"></script>
 </body>
 </html>

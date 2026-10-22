@@ -38,6 +38,11 @@
     if (p.terjual == null) return "";
     return p.terjualLabel || rentangTerjual(p.terjual);
   }
+  // Total terjual (dari halaman produk, hanya untuk sebagian produk) -> "10rb+ terjual"
+  function terjualTotalTeks(p) {
+    if (p.terjualTotal == null) return "";
+    return (p.terjualTotalLabel || rentangTerjual(p.terjualTotal)) + " terjual";
+  }
 
   function bintang(r) {
     r = Math.max(0, Math.min(5, Number(r) || 0));
@@ -184,7 +189,7 @@
   }
 
   window.Situs = {
-    esc: esc, rupiah: rupiah, terjualTeks: terjualTeks, rentangTerjual: rentangTerjual, angkaTerjual: angkaTerjual, bintang: bintang, gambar: gambar, gagal: gagal,
+    esc: esc, rupiah: rupiah, terjualTeks: terjualTeks, terjualTotalTeks: terjualTotalTeks, rentangTerjual: rentangTerjual, angkaTerjual: angkaTerjual, bintang: bintang, gambar: gambar, gagal: gagal,
     tombolToko: tombolToko, badgeContoh: badgeContoh, label: label, hargaHtml: hargaHtml,
     tabelGrup: tabelGrup, grupDari: grupDari, produkById: produkById,
     kartu: kartu, urutTerlaris: urutTerlaris, judulPendek: judulPendek, linkShopee: linkShopee,

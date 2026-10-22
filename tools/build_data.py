@@ -16,6 +16,9 @@ Format tiap baris .psv (dipisah ' | '):
 
 File link affiliate (opsional) affiliate-links.psv di folder sumber:
     nomor | URL produk asli | link affiliate
+
+File kandidat Top 10 Terlaris (opsional) top10-kandidat.psv di folder sumber (11 kolom):
+    kategori | keyword | judul | harga | harga asli | rating | total terjual | terjual/bln | kota | URL produk | URL gambar
 """
 import argparse, json, math, os, re, sys
 from datetime import date
@@ -143,6 +146,42 @@ def baca_affiliate(path):
                 continue
             peta[normal_url(asli)] = aff
     return peta
+
+def baca_top10(path):
+    """top10-kandidat.psv (opsional), 11 kolom dipisah ' | ':
+    kategori | keyword | judul | harga | harga asli | rating | total terjual | terjual/bln | kota | URL produk | URL gambar
+    Hasil: {URL produk (dinormalkan): {"kategori", "total", "bulanan", "rating", "harga"}}"""
+    peta = {}
+    if not os.path.exists(path):
+        return peta
+    with open(path, encoding="utf-8") as f:
+        for no, baris in enumerate(f, 1):
+            if not baris.strip() or baris.startswith("#"):
+                continue
+            bag = [x.strip() for x in baris.rstrip("\n").split(" | ")]
+            if len(bag) != 11:
+                print(f"  ! top10-kandidat.psv baris {no} dilewati: ada {len(bag)} kolom, seharusnya 11")
+                continue
+            peta[normal_url(bag[9])] = {"kategori": bag[0], "total": terjual(bag[6])[0],
+                                        "bulanan": terjual(bag[7])[0], "rating": float(bag[5]),
+                                        "harga": angka(bag[3]), "no": no}
+    return peta
+
+def susun_top10(produk, kandidat, maks=10):
+    """Top 10 terlaris per kategori. Urutan: total terjual (Shopee maks. '10RB+'), lalu terjual/bln,
+    lalu rating, lalu harga termurah, lalu id (supaya selalu sama)."""
+    per_url = {normal_url(p["urlProduk"]): p for p in produk}
+    hasil = []
+    for _, kat, ikon in KATEGORI:
+        calon = []
+        for url, k in kandidat.items():
+            p = per_url.get(url)
+            if not p or p["kategori"] != kat:
+                continue
+            calon.append((-k["total"], -k["bulanan"], -k["rating"], p["harga"], p["id"], p["id"]))
+        calon.sort()
+        hasil.append({"kategori": kat, "ikon": ikon, "produk": [c[-1] for c in calon[:maks]]})
+    return hasil
 
 def baca_produk(sumber):
     produk = []
@@ -316,6 +355,16 @@ def main():
     print(f"Membaca data dari: {a.sumber}")
     produk = baca_produk(a.sumber)
     aff = baca_affiliate(os.path.join(a.sumber, "affiliate-links.psv"))
+    kandidat = baca_top10(os.path.join(a.sumber, "top10-kandidat.psv"))
+    per_url = {normal_url(p["urlProduk"]): p for p in produk}
+    for url, k in kandidat.items():
+        p = per_url.get(url)
+        if not p:
+            print(f"  ! top10-kandidat.psv baris {k['no']}: produk tidak ada di data 80 produk ({url})")
+        elif p["kategori"] != k["kategori"]:
+            print(f"  ! top10-kandidat.psv baris {k['no']}: kategori '{k['kategori']}' beda dengan '{p['kategori']}'")
+        else:
+            p["terjualTotal"] = k["total"]
     print(f"  {len(produk)} produk dibaca, {len(aff)} link affiliate ditemukan")
 
     urutan, grup = [], {}
@@ -344,6 +393,9 @@ def main():
             "harga": p["harga"], "hargaAsli": p["hargaAsli"], "diskon": p["diskon"],
             "rating": p["rating"], "terjual": p["terjual"], "terjualPlus": p["terjualPlus"],
             "terjualLabel": rentang_terjual(p["terjual"]),
+            # Total terjual (dari halaman produk) hanya ada untuk kandidat Top 10
+            **({"terjualTotal": p["terjualTotal"], "terjualTotalLabel": rentang_terjual(p["terjualTotal"])}
+               if "terjualTotal" in p else {}),
             "kota": p["kota"], "label": p["label"], "ringkasan": p["ringkasan"],
             "kelebihan": p["kelebihan"], "kekurangan": p["kekurangan"], "kesimpulan": p["kesimpulan"],
             "urlProduk": p["urlProduk"], "linkShopee": link or p["urlProduk"], "linkAffiliate": bool(link),
@@ -356,6 +408,7 @@ def main():
     tidak_dipakai = set(aff) - {normal_url(p["urlProduk"]) for p in produk}
 
     kat = [{"nama": n, "ikon": i} for _, n, i in KATEGORI]
+    top10 = susun_top10(produk, kandidat) if kandidat else []
     isi = (
         "/* =====================================================================\n"
         "   FILE INI DIBUAT OTOMATIS oleh tools/build_data.py — JANGAN DIEDIT MANUAL.\n"
@@ -367,7 +420,9 @@ def main():
         f"window.TANGGAL_DATA = {json.dumps(a.tanggal)};\n\n"
         f"window.KATEGORI = {json.dumps(kat, ensure_ascii=False, indent=2)};\n\n"
         f"window.GRUP = {json.dumps(daftar_grup, ensure_ascii=False, indent=2)};\n\n"
-        f"window.PRODUK = {json.dumps(keluar, ensure_ascii=False, indent=2)};\n"
+        f"window.PRODUK = {json.dumps(keluar, ensure_ascii=False, indent=2)};\n\n"
+        "// Top 10 terlaris per kategori (id produk, urutan peringkat). Sumber: top10-kandidat.psv\n"
+        f"window.TOP10 = {json.dumps(top10, ensure_ascii=False, indent=2)};\n"
     )
     out = os.path.join(SITE, "data", "produk.js")
     with open(out, "w", encoding="utf-8") as f:
@@ -375,6 +430,8 @@ def main():
     print(f"Selesai: {out}")
     print(f"  {len(keluar)} produk, {len(daftar_grup)} kelompok perbandingan")
     print(f"  {pakai_aff} produk memakai link affiliate, {len(keluar) - pakai_aff} masih memakai link biasa")
+    if top10:
+        print(f"  Top 10: {len(kandidat)} kandidat, " + ", ".join(f"{t['kategori']} {len(t['produk'])}" for t in top10))
     if tidak_dipakai:
         print(f"  ! {len(tidak_dipakai)} link di affiliate-links.psv tidak cocok dengan produk mana pun:")
         for u in sorted(tidak_dipakai):

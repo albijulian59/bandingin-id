@@ -293,7 +293,7 @@ window.GRUP = [
       "toys-kingdom-ultraman-minifigure-ultra-glowing-26401791858",
       "nodia-toys-dummy-13-action-figure-27377239489",
       "yoli-toys-figure-super-hero-tsr-41958783415",
-      "toys-kingdom-ultraman-minifigure-ultra-racing-26301791800"
+      "blokees-marvel-rivals-champion-class-cc06-57405266151"
     ],
     "catatan": []
   },
@@ -329,6 +329,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Utara",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 34%.",
@@ -364,6 +366,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Barat",
     "label": [
       "Paling murah"
@@ -477,6 +481,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Pusat",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 16%.",
@@ -551,6 +557,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
@@ -590,6 +598,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Utara",
     "label": [
       "Rating tertinggi",
@@ -629,6 +639,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Bogor",
     "label": [
       "Paling murah",
@@ -668,6 +680,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Pusat",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan.",
@@ -703,6 +717,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Pusat",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan.",
@@ -773,6 +789,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Tangerang",
     "label": [],
     "ringkasan": "Rating 5.0 dari 5, 1rb+ terjual per bulan. Diskon 25%.",
@@ -844,6 +862,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Tangerang",
     "label": [],
     "ringkasan": "Rating 5.0 dari 5, 1rb+ terjual per bulan. Diskon 22%.",
@@ -879,6 +899,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 6000,
+    "terjualTotalLabel": "6rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
@@ -956,6 +978,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 6000,
+    "terjualTotalLabel": "6rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
@@ -1064,6 +1088,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Tangerang",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 55%.",
@@ -1100,6 +1126,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Deli Serdang",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 43%.",
@@ -1136,6 +1164,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Semarang",
     "label": [
       "Paling murah",
@@ -1212,6 +1242,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Deli Serdang",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 50%.",
@@ -1249,6 +1281,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Deli Serdang",
     "label": [
       "Paling murah",
@@ -1287,6 +1321,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 65%.",
@@ -1359,6 +1395,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Deli Serdang",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 60%.",
@@ -1396,6 +1434,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Tangerang",
     "label": [
       "Paling murah",
@@ -1436,6 +1476,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Bogor",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 76%.",
@@ -1506,6 +1548,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Barat",
     "label": [
       "Rating tertinggi",
@@ -1545,6 +1589,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Utara",
     "label": [
       "Paling murah"
@@ -1619,6 +1665,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 5000,
+    "terjualTotalLabel": "5rb+",
     "kota": "Tangerang",
     "label": [],
     "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 68%.",
@@ -1656,6 +1704,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Bogor",
     "label": [
       "Rating tertinggi",
@@ -1693,6 +1743,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Depok",
     "label": [],
     "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 68%.",
@@ -1729,6 +1781,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Bogor",
     "label": [
       "Rating tertinggi"
@@ -1803,6 +1857,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling laris",
@@ -1917,6 +1973,8 @@ window.PRODUK = [
     "terjual": 847,
     "terjualPlus": false,
     "terjualLabel": "847",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Deli Serdang",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 847 terjual per bulan.",
@@ -1951,6 +2009,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
@@ -1990,6 +2050,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Bogor",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 1rb+ terjual per bulan. Diskon 14%.",
@@ -2060,6 +2122,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Utara",
     "label": [
       "Paling seimbang"
@@ -2096,6 +2160,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi",
@@ -2135,6 +2201,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [],
     "ringkasan": "Rating 4.7 dari 5, 1rb+ terjual per bulan. Diskon 39%.",
@@ -2170,6 +2238,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi"
@@ -2246,6 +2316,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [],
     "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 58%.",
@@ -2283,6 +2355,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 6000,
+    "terjualTotalLabel": "6rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi"
@@ -2321,6 +2395,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Tangerang",
     "label": [],
     "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 46%.",
@@ -2399,6 +2475,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi",
@@ -2474,6 +2552,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah"
@@ -2551,6 +2631,8 @@ window.PRODUK = [
     "terjual": 312,
     "terjualPlus": false,
     "terjualLabel": "312",
+    "terjualTotal": 8000,
+    "terjualTotalLabel": "8rb+",
     "kota": "Jakarta Utara",
     "label": [
       "Paling laris",
@@ -2587,6 +2669,8 @@ window.PRODUK = [
     "terjual": 222,
     "terjualPlus": false,
     "terjualLabel": "222",
+    "terjualTotal": 518,
+    "terjualTotalLabel": "518",
     "kota": "Jakarta Utara",
     "label": [],
     "ringkasan": "Rating 5.0 dari 5, 222 terjual per bulan.",
@@ -2620,6 +2704,8 @@ window.PRODUK = [
     "terjual": 222,
     "terjualPlus": false,
     "terjualLabel": "222",
+    "terjualTotal": 1000,
+    "terjualTotalLabel": "1rb+",
     "kota": "Jakarta Utara",
     "label": [
       "Paling murah"
@@ -2689,6 +2775,8 @@ window.PRODUK = [
     "terjual": 940,
     "terjualPlus": false,
     "terjualLabel": "940",
+    "terjualTotal": 1000,
+    "terjualTotalLabel": "1rb+",
     "kota": "",
     "label": [
       "Rating tertinggi",
@@ -2730,6 +2818,8 @@ window.PRODUK = [
     "terjual": 679,
     "terjualPlus": false,
     "terjualLabel": "679",
+    "terjualTotal": 1000,
+    "terjualTotalLabel": "1rb+",
     "kota": "Jakarta Barat",
     "label": [
       "Paling murah"
@@ -2767,6 +2857,8 @@ window.PRODUK = [
     "terjual": 653,
     "terjualPlus": false,
     "terjualLabel": "653",
+    "terjualTotal": 2000,
+    "terjualTotalLabel": "2rb+",
     "kota": "Tangerang",
     "label": [
       "Rating tertinggi"
@@ -2841,6 +2933,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Jakarta Barat",
     "label": [],
     "ringkasan": "Rating 4.8 dari 5, 1rb+ terjual per bulan. Diskon 58%.",
@@ -2878,6 +2972,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling murah",
@@ -2917,6 +3013,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Rating tertinggi"
@@ -3006,7 +3104,6 @@ window.PRODUK = [
     ],
     "kekurangan": [
       "Diskonnya sangat besar (90%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Toko yang sama juga menjual Toys Kingdom Ultraman Minifigure Ultra Racing… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
     "kesimpulan": "Dari 4 pilihan Action Figure yang dibandingkan di Bandingin.id, produk ini paling murah sekaligus rating tertinggi sekaligus paling laris sekaligus paling seimbang (harga, rating, dan penjualan). Harganya Rp12.990 (diskon 90%) dengan rating 5.0 dan 808 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
@@ -3030,6 +3127,8 @@ window.PRODUK = [
     "terjual": 594,
     "terjualPlus": false,
     "terjualLabel": "594",
+    "terjualTotal": 9000,
+    "terjualTotalLabel": "9rb+",
     "kota": "Kab. Tangerang",
     "label": [],
     "ringkasan": "Rating 4.7 dari 5, 594 terjual per bulan. Diskon 60%.",
@@ -3066,6 +3165,8 @@ window.PRODUK = [
     "terjual": 433,
     "terjualPlus": false,
     "terjualLabel": "433",
+    "terjualTotal": 2000,
+    "terjualTotalLabel": "2rb+",
     "kota": "Jakarta Utara",
     "label": [],
     "ringkasan": "Rating 4.9 dari 5, 433 terjual per bulan. Diskon 52%.",
@@ -3087,40 +3188,39 @@ window.PRODUK = [
     "tokopedia": ""
   },
   {
-    "id": "toys-kingdom-ultraman-minifigure-ultra-racing-26301791800",
+    "id": "blokees-marvel-rivals-champion-class-cc06-57405266151",
     "contoh": false,
-    "nama": "Toys Kingdom Ultraman Minifigure Ultra Racing Surprise Box",
+    "nama": "BLOKEES Marvel Rivals Champion Class - CC06 Spider-Man/CC07 Venom - Plastic Model Action Figure",
     "kategori": "Mainan & Hobi",
     "jenis": "action-figure",
     "jenisNama": "Action Figure",
-    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-825b2-mu810wdliyh2b0",
-    "harga": 12990,
-    "hargaAsli": 129900,
-    "diskon": 90,
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztc-mstthkrz5vyh69",
+    "harga": 214900,
+    "hargaAsli": 819000,
+    "diskon": 74,
     "rating": 4.9,
-    "terjual": 367,
+    "terjual": 382,
     "terjualPlus": false,
-    "terjualLabel": "367",
-    "kota": "Medan",
-    "label": [
-      "Paling murah"
-    ],
-    "ringkasan": "Paling murah di kelompok Action Figure. Rating 4.9, 367 terjual/bln. Diskon 90%.",
+    "terjualLabel": "382",
+    "terjualTotal": 3000,
+    "terjualTotalLabel": "3rb+",
+    "kota": "KOTA JAKARTA UTARA",
+    "label": [],
+    "ringkasan": "Rating 4.9 dari 5, 382 terjual per bulan. Diskon 74%.",
     "kelebihan": [
       "Dijual oleh toko resmi di Shopee (Shopee Mall).",
       "Rating tinggi: 4.9 dari 5 menurut pembeli di Shopee.",
-      "Sedang diskon 90% dari harga coret Rp129.900.",
-      "Harga paling murah di antara 4 pilihan Action Figure yang dibandingkan di Bandingin.id."
+      "Sedang diskon 74% dari harga coret Rp819.000."
     ],
     "kekurangan": [
-      "Diskonnya sangat besar (90%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
-      "Penjualannya (367 per bulan) paling sedikit di kelompok ini.",
-      "Toko yang sama juga menjual Toys Kingdom Ultraman Minifigure Ultra Glowing… dengan harga sama persis. Cek bedanya (model/varian) supaya tidak salah pilih.",
+      "Diskonnya sangat besar (74%). Harga coret belum tentu harga normal di pasaran, jadi lihat harga akhirnya saja.",
+      "Ada pilihan lebih murah di kelompok yang sama: Toys Kingdom Ultraman Minifigure Ultra Glowing… (Rp12.990).",
+      "Penjualannya (382 per bulan) paling sedikit di kelompok ini.",
       "Produk ini tidak diuji langsung oleh Bandingin.id. Baca deskripsi, pilihan varian, dan ulasan pembeli di Shopee sebelum membeli."
     ],
-    "kesimpulan": "Dari 4 pilihan Action Figure yang dibandingkan di Bandingin.id, produk ini paling murah. Harganya Rp12.990 (diskon 90%) dengan rating 4.9 dan 367 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
-    "urlProduk": "https://shopee.co.id/product/229181543/26301791800",
-    "linkShopee": "https://s.shopee.co.id/W7byixik5",
+    "kesimpulan": "Produk ini tidak unggul di satu hal tertentu dibanding 3 pilihan Action Figure lainnya, tapi tetap bisa jadi pilihan kalau kamu suka merek atau modelnya. Harganya Rp214.900 (diskon 74%) dengan rating 4.9 dan 382 terjual per bulan. Cek harga terbaru dan pilih varian yang sesuai kebutuhanmu di Shopee.",
+    "urlProduk": "https://shopee.co.id/product/1388608408/57405266151",
+    "linkShopee": "https://s.shopee.co.id/1BNItmRz7M",
     "linkAffiliate": true,
     "tokopedia": ""
   },
@@ -3139,6 +3239,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling laris"
@@ -3177,6 +3279,8 @@ window.PRODUK = [
     "terjual": 1000,
     "terjualPlus": true,
     "terjualLabel": "1rb+",
+    "terjualTotal": 2000,
+    "terjualTotalLabel": "2rb+",
     "kota": "Kab. Tangerang",
     "label": [
       "Paling laris"
@@ -3213,6 +3317,8 @@ window.PRODUK = [
     "terjual": 755,
     "terjualPlus": false,
     "terjualLabel": "755",
+    "terjualTotal": 10000,
+    "terjualTotalLabel": "10rb+",
     "kota": "Kab. Bantul",
     "label": [
       "Paling murah",
@@ -3274,5 +3380,73 @@ window.PRODUK = [
     "linkShopee": "https://s.shopee.co.id/1BNIlwvBOH",
     "linkAffiliate": true,
     "tokopedia": ""
+  }
+];
+
+// Top 10 terlaris per kategori (id produk, urutan peringkat). Sumber: top10-kandidat.psv
+window.TOP10 = [
+  {
+    "kategori": "Gadget & HP",
+    "ikon": "📱",
+    "produk": [
+      "anker-zolo-portable-power-bank-3c-54200985823",
+      "huawei-band-11-series-1-62-50755623104",
+      "huawei-watch-fit-5-series-titanium-57259931145",
+      "robot-charger-single-port-quick-charging-40061004044",
+      "goojodoq-j201-earphone-bluetooth-tws-a6-24879062430",
+      "ugreen-kepala-charger-for-iphone-11-16192621075",
+      "robot-power-bank-ccc-rt180s-10000mah-7953106172",
+      "anker-soundcore-tws-true-wireless-earbuds-23431802281",
+      "ugreen-power-bank-slim-10-000mah-21785647904",
+      "ugreen-charger-mfi-iphone-11-12-23783277447"
+    ]
+  },
+  {
+    "kategori": "Fashion & Skincare",
+    "ikon": "👗",
+    "produk": [
+      "emina-sun-battle-bright-glow-spf-28862479028",
+      "wardah-facial-wash-all-series-acnederm-26720368293",
+      "glad2glow-facial-wash-all-series-pembersih-41101567247",
+      "facetology-panthenol-barrier-boost-moisturizer-series-40120679283",
+      "emina-gelato-cleanser-series-100-ml-56310901303",
+      "glowsophy-watermelon-brightening-moisturizer-gel-100ml-27755593773",
+      "wardah-sunscreen-uv-shield-all-series-28218154859",
+      "new-states-apparel-kaos-polos-pria-11356656903",
+      "emina-moisturizer-water-gel-series-multi-28169257360",
+      "scora-bright-me-up-sunscreen-40-42807278779"
+    ]
+  },
+  {
+    "kategori": "Rumah Tangga",
+    "ikon": "🏠",
+    "produk": [
+      "samono-blender-chopper-elektrik-mini-food-16893232845",
+      "han-river-vacuum-cleaner-5-in-22623016051",
+      "samono-hand-blender-stainless-304-dua-27979176423",
+      "han-river-air-fryer-hraf04-3-12719204055",
+      "philips-rice-cooker-1-8-liter-24486283103",
+      "philips-rice-cooker-1-8-l-29416117732",
+      "gm-rak-troli-susun-serbaguna-dengan-46512766425",
+      "e-tife-rak-besi-siku-5-24631613056",
+      "han-river-rice-cooker-2-2l-40956262281",
+      "vishal-blender-portable-mini-kapsul-serbaguna-28430394030"
+    ]
+  },
+  {
+    "kategori": "Mainan & Hobi",
+    "ikon": "🧸",
+    "produk": [
+      "satu-keluarga-puzzle-kayu-9pcs-karakter-24635387044",
+      "fivevoo-clay-mainan-anak-5-pack-44382744576",
+      "satu-keluarga-puzzle-kayu-3d-m313-23165993656",
+      "babytoys-puzzle-kayu-edukasi-3d-angka-18490527375",
+      "king-puzzle-edukasi-puzzle-kayu-macam-12904400018",
+      "nodia-toys-dummy-13-action-figure-27377239489",
+      "lego-creator-31134-space-shuttle-144-23832145469",
+      "blokees-marvel-rivals-champion-class-cc06-57405266151",
+      "skytime-puzzle-3d-capybara-diy-pg01-40983997992",
+      "weebitz-building-block-magnetic-set-puzzle-46309747147"
+    ]
   }
 ];
