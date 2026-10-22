@@ -146,6 +146,39 @@
     return (y.terjual || 0) - (x.terjual || 0) || y.rating - x.rating || x.harga - y.harga;
   }
 
+  // Judul pendek untuk tempat sempit: potong di pemisah (" - ", "|", ",", "(") lalu maks. 8 kata
+  function judulPendek(nama, maks) {
+    maks = maks || 8;
+    var t = String(nama || "").split(/\s[-|\u2013/]\s|\s\|\s?|,|\(|\sl\s/)[0].trim();
+    var kata = t.split(/\s+/);
+    if (kata.length < 3) kata = String(nama || "").split(/\s+/);
+    return kata.slice(0, maks).join(" ") + (kata.length > maks ? "…" : "");
+  }
+
+  // Produk unggulan per kategori (untuk slide show di beranda). Aturan (deterministik):
+  //  1. hanya produk yang punya gambar dan link Shopee;
+  //  2. utamakan yang berlabel "Paling seimbang" (skor gabungan harga, rating, penjualan di kelompoknya);
+  //  3. lalu rating tertinggi, 4. terjual terbanyak, 5. diskon terbesar, 6. harga termurah, 7. id (A-Z).
+  // Hasil ikut berubah otomatis saat data/produk.js dibuat ulang.
+  function produkUnggulan(kategori) {
+    var list = (window.PRODUK || []).filter(function (p) {
+      return p.kategori === kategori && p.gambar && linkShopee(p);
+    });
+    var seimbang = function (p) { return (p.label || []).indexOf("Paling seimbang") !== -1 ? 1 : 0; };
+    list.sort(function (x, y) {
+      return seimbang(y) - seimbang(x) || y.rating - x.rating || (y.terjual || 0) - (x.terjual || 0) ||
+        (y.diskon || 0) - (x.diskon || 0) || x.harga - y.harga || (x.id < y.id ? -1 : x.id > y.id ? 1 : 0);
+    });
+    return list[0] || null;
+  }
+  // Satu produk unggulan untuk tiap kategori di window.KATEGORI (urutan kategori tetap)
+  function daftarUnggulan() {
+    return (window.KATEGORI || []).map(function (k) {
+      var p = produkUnggulan(k.nama);
+      return p ? { kategori: k.nama, ikon: k.ikon, produk: p } : null;
+    }).filter(Boolean);
+  }
+
   function grupDari(jenis) {
     return (window.GRUP || []).filter(function (g) { return g.id === jenis; })[0];
   }
@@ -154,7 +187,8 @@
     esc: esc, rupiah: rupiah, terjualTeks: terjualTeks, rentangTerjual: rentangTerjual, angkaTerjual: angkaTerjual, bintang: bintang, gambar: gambar, gagal: gagal,
     tombolToko: tombolToko, badgeContoh: badgeContoh, label: label, hargaHtml: hargaHtml,
     tabelGrup: tabelGrup, grupDari: grupDari, produkById: produkById,
-    kartu: kartu, urutTerlaris: urutTerlaris
+    kartu: kartu, urutTerlaris: urutTerlaris, judulPendek: judulPendek, linkShopee: linkShopee,
+    produkUnggulan: produkUnggulan, daftarUnggulan: daftarUnggulan, REL: REL
   };
 
   document.addEventListener("DOMContentLoaded", function () {
