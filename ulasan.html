@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kasih Pendapat — Bandingin.id</title>
+  <meta name="description" content="Kasih pendapat tentang Bandingin.id: apakah perbandingannya membantu memilih produk, plus saran dan kritik.">
+  <meta name="theme-color" content="#f3efe7">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230c6b52'/><text x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='white'>vs</text></svg>">
+</head>
+<body>
+<a class="skip" href="index.html#daftar">Langsung ke perbandingan</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="mark" aria-hidden="true">vs</span>Bandingin<span class="tld">.id</span></a>
+    <nav class="nav-links" aria-label="Menu">
+      <a href="index.html#pelembab">Pelembab</a><a href="index.html#serum">Serum</a><a href="index.html#sunscreen">Sunscreen</a><a href="ulasan.html" class="aktif" aria-current="page">Kasih Pendapat</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap artikel">
+  <p class="crumbs"><a href="index.html">Beranda</a> / Kasih Pendapat</p>
+  <h1>Kasih pendapat</h1>
+  <p class="intro-form">Albi lagi kumpulin masukan. Yang wajib cuma pertanyaan pertama. Sisanya boleh dikosongkan.</p>
+  <form class="form-kartu" id="form-pendapat" action="#" method="post" novalidate>
+    <fieldset class="field">
+      <legend>Apakah website ini membantu kamu memutuskan produk mana yang dibeli?</legend>
+      <div class="pilihan">
+        <label><input type="radio" name="membantu" value="ya" required> Ya, sangat</label>
+        <label><input type="radio" name="membantu" value="lumayan" required> Lumayan</label>
+        <label><input type="radio" name="membantu" value="tidak" required> Tidak</label>
+      </div>
+    </fieldset>
+    <div class="field">
+      <label class="label" for="perbandingan">Perbandingan mana yang kamu baca? <span class="opsional">opsional</span></label>
+      <select id="perbandingan" name="perbandingan">
+        <option value="">Lewati saja</option><option value="originote-vs-illiyoon">Pelembab: The Originote Hyalucera vs ILLIYOON Ceramide Ato Cream</option><option value="kahf-vs-skin1004">Sunscreen: Kahf Bright Fresh Sunscreen SPF 50 vs SKIN1004 Hyalu-Cica Sun Serum</option><option value="glad2glow-vs-joseon">Serum: Glad2Glow 10% Niacinamide Serum vs Beauty of Joseon Rice Serum</option><option value="barber-vs-skin1004">Pelembab: Barber Daily Bright Radiance Moisturizer vs SKIN1004 Centella Soothing Cream</option><option value="omg-vs-joseon">Sunscreen: OMG UV Barrier Sunscreen SPF 50 vs Beauty of Joseon Aqua-Fresh</option><option value="kahf-vs-somebymi">Serum: Kahf Bright Intensifying Serum vs SOME BY MI Yuja Niacin Serum</option><option value="emina-vs-cosrx">Pelembab: Emina Water Gel vs COSRX Oil-Free Lotion</option><option value="scora-vs-roundlab">Sunscreen: SCORA Bright Me Up SPF 40 vs Round Lab Birch Juice Sunscreen</option><option value="wardah-vs-naturerepublic">Pelembab: Wardah Plump &amp; Firm Gel vs Nature Republic Aloe Vera Gel</option><option value="omg-vs-torriden">Serum: OMG Active Expert Serum vs Torriden DIVE-IN Serum</option><option value="wardah-vs-cosrx">Serum: Wardah C-Glow Serum vs COSRX Niacinamide 15 Serum</option><option value="wardah-vs-somebymi">Sunscreen: Wardah UV Shield vs SOME BY MI V10 Hyal Sunscreen</option>
+      </select>
+    </div>
+    <fieldset class="field">
+      <legend>Seberapa mudah dipahami? <span class="hint">1 susah, 5 gampang. Boleh dikosongkan.</span></legend>
+      <div class="pilihan pilihan-angka">
+        <label><input type="radio" name="mudah" value="1"> 1</label><label><input type="radio" name="mudah" value="2"> 2</label><label><input type="radio" name="mudah" value="3"> 3</label><label><input type="radio" name="mudah" value="4"> 4</label><label><input type="radio" name="mudah" value="5"> 5</label>
+      </div>
+    </fieldset>
+    <div class="field">
+      <label class="label" for="kurang">Apa yang kurang atau membingungkan? <span class="opsional">opsional</span></label>
+      <textarea id="kurang" name="kurang" maxlength="2000"></textarea>
+    </div>
+    <div class="field">
+      <label class="label" for="saran">Saran untuk website ini? <span class="opsional">opsional</span></label>
+      <textarea id="saran" name="saran" maxlength="2000"></textarea>
+    </div>
+    <div class="field">
+      <label class="label" for="berikutnya">Produk atau jenis skincare apa yang ingin dibandingkan berikutnya? <span class="opsional">opsional</span></label>
+      <textarea id="berikutnya" name="berikutnya" maxlength="2000"></textarea>
+    </div>
+    <div class="field">
+      <label class="label" for="kontak">Nama atau kontak <span class="opsional">opsional</span></label>
+      <input id="kontak" name="kontak" type="text" maxlength="200" autocomplete="name" placeholder="Nama, email, atau Instagram">
+    </div>
+    <button class="btn btn-kirim" type="submit">Kirim pendapat</button>
+  </form>
+  <section class="sukses" id="sukses" hidden aria-live="polite">
+    <h2 id="sukses-judul"></h2>
+    <p id="sukses-teks"></p>
+    <div id="salinan" hidden>
+      <label class="label" for="teks-salinan">Jawaban kamu</label>
+      <textarea id="teks-salinan" readonly></textarea>
+      <button class="btn btn-salin" id="salin" type="button">Salin jawaban</button>
+    </div>
+  </section>
+  <noscript><p class="catatan">Untuk mengirim pendapat, nyalakan JavaScript.</p></noscript>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footnote" id="disclosure">Ulasan disusun dari analisa kandungan dan informasi produk. Bandingin.id mendapat komisi dari link affiliate.</p>
+    <p class="footer-nav"><a href="ulasan.html">Kasih Pendapat</a></p>
+    <p class="copy">© 2026 Bandingin.id · Harga mengikuti listing Shopee per 22 Oktober 2026 dan bisa berubah.</p>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/ulasan.js"></script>
+</body>
+</html>

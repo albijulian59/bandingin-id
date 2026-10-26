@@ -246,11 +246,14 @@ def header(base, aktif=None):
         kelas = " class=\"aktif\"" if aktif == kunci else ""
         aria = " aria-current=\"true\"" if aktif == kunci else ""
         tautan.append(f'<a href="{href}"{kelas}{aria}>{esc(label)}</a>')
+    kelas_p = " class=\"aktif\"" if aktif == "pendapat" else ""
+    aria_p = " aria-current=\"page\"" if aktif == "pendapat" else ""
+    tautan.append(f'<a href="{base}ulasan.html"{kelas_p}{aria_p}>Kasih Pendapat</a>')
     return f"""<a class="skip" href="{base}index.html#daftar">Langsung ke perbandingan</a>
 <header class="site-header">
   <div class="wrap nav">
     <a class="logo" href="{base}index.html"><span class="mark" aria-hidden="true">vs</span>Bandingin<span class="tld">.id</span></a>
-    <nav class="nav-links" aria-label="Jenis produk">
+    <nav class="nav-links" aria-label="Menu">
       {''.join(tautan)}
     </nav>
   </div>
@@ -262,6 +265,7 @@ def footer(base, tanggal):
     return f"""<footer class="site-footer">
   <div class="wrap">
     <p class="footnote" id="disclosure">Ulasan disusun dari analisa kandungan dan informasi produk. Bandingin.id mendapat komisi dari link affiliate.</p>
+    <p class="footer-nav"><a href="{base}ulasan.html">Kasih Pendapat</a></p>
     <p class="copy">© 2026 Bandingin.id · Harga mengikuti listing Shopee per {esc(tanggal)} dan bisa berubah.</p>
   </div>
 </footer>
@@ -550,9 +554,90 @@ def render_pair(data, produk, pair):
       </article>
     </div>
   </section>
+  <aside class="ajak-pendapat">
+    <p>Membantu milih, atau masih ada yang membingungkan?</p>
+    <a class="more" href="../ulasan.html?baca={esc(pair["id"])}">Kasih pendapat</a>
+  </aside>
   <p class="kembali"><a href="../index.html#{esc(pair["jenis"])}">Semua {esc(JENIS_LABEL[pair["jenis"]].lower())}</a></p>
 </main>
 {footer(base, data["tanggal"])}
+</body>
+</html>
+"""
+    return html
+
+
+def render_ulasan(data, pasangan):
+    opsi = ['<option value="">Lewati saja</option>']
+    for pair in pasangan:
+        cl = pair["produk"][pair["lokal"]]["nama"]
+        ck = pair["produk"][pair["korea"]]["nama"]
+        label = f'{JENIS_LABEL[pair["jenis"]]}: {cl} vs {ck}'
+        opsi.append(f'<option value="{esc(pair["id"])}">{esc(label)}</option>')
+    angka = []
+    for n in range(1, 6):
+        angka.append(f'<label><input type="radio" name="mudah" value="{n}"> {n}</label>')
+    desk = "Kasih pendapat tentang Bandingin.id: apakah perbandingannya membantu memilih produk, plus saran dan kritik."
+    html = head("Kasih Pendapat — Bandingin.id", desk, "", "ulasan.html")
+    html += f"""<body>
+{header("", "pendapat")}
+<main class="wrap artikel">
+  <p class="crumbs"><a href="index.html">Beranda</a> / Kasih Pendapat</p>
+  <h1>Kasih pendapat</h1>
+  <p class="intro-form">Albi lagi kumpulin masukan. Yang wajib cuma pertanyaan pertama. Sisanya boleh dikosongkan.</p>
+  <form class="form-kartu" id="form-pendapat" action="#" method="post" novalidate>
+    <fieldset class="field">
+      <legend>Apakah website ini membantu kamu memutuskan produk mana yang dibeli?</legend>
+      <div class="pilihan">
+        <label><input type="radio" name="membantu" value="ya" required> Ya, sangat</label>
+        <label><input type="radio" name="membantu" value="lumayan" required> Lumayan</label>
+        <label><input type="radio" name="membantu" value="tidak" required> Tidak</label>
+      </div>
+    </fieldset>
+    <div class="field">
+      <label class="label" for="perbandingan">Perbandingan mana yang kamu baca? <span class="opsional">opsional</span></label>
+      <select id="perbandingan" name="perbandingan">
+        {''.join(opsi)}
+      </select>
+    </div>
+    <fieldset class="field">
+      <legend>Seberapa mudah dipahami? <span class="hint">1 susah, 5 gampang. Boleh dikosongkan.</span></legend>
+      <div class="pilihan pilihan-angka">
+        {''.join(angka)}
+      </div>
+    </fieldset>
+    <div class="field">
+      <label class="label" for="kurang">Apa yang kurang atau membingungkan? <span class="opsional">opsional</span></label>
+      <textarea id="kurang" name="kurang" maxlength="2000"></textarea>
+    </div>
+    <div class="field">
+      <label class="label" for="saran">Saran untuk website ini? <span class="opsional">opsional</span></label>
+      <textarea id="saran" name="saran" maxlength="2000"></textarea>
+    </div>
+    <div class="field">
+      <label class="label" for="berikutnya">Produk atau jenis skincare apa yang ingin dibandingkan berikutnya? <span class="opsional">opsional</span></label>
+      <textarea id="berikutnya" name="berikutnya" maxlength="2000"></textarea>
+    </div>
+    <div class="field">
+      <label class="label" for="kontak">Nama atau kontak <span class="opsional">opsional</span></label>
+      <input id="kontak" name="kontak" type="text" maxlength="200" autocomplete="name" placeholder="Nama, email, atau Instagram">
+    </div>
+    <button class="btn btn-kirim" type="submit">Kirim pendapat</button>
+  </form>
+  <section class="sukses" id="sukses" hidden aria-live="polite">
+    <h2 id="sukses-judul"></h2>
+    <p id="sukses-teks"></p>
+    <div id="salinan" hidden>
+      <label class="label" for="teks-salinan">Jawaban kamu</label>
+      <textarea id="teks-salinan" readonly></textarea>
+      <button class="btn btn-salin" id="salin" type="button">Salin jawaban</button>
+    </div>
+  </section>
+  <noscript><p class="catatan">Untuk mengirim pendapat, nyalakan JavaScript.</p></noscript>
+</main>
+{footer("", data["tanggal"])}
+<script src="js/config.js"></script>
+<script src="js/ulasan.js"></script>
 </body>
 </html>
 """
@@ -626,8 +711,11 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
                 continue
             if href.startswith("mailto:"):
                 raise SystemExit("mailto tidak dipakai")
-            # sisanya harus file lokal
-            tujuan = os.path.normpath(os.path.join(ROOT, os.path.dirname(path), href.split("#")[0]))
+            # sisanya harus file lokal (buang query dan hash)
+            bersih = href.split("#", 1)[0].split("?", 1)[0]
+            if not bersih:
+                continue
+            tujuan = os.path.normpath(os.path.join(ROOT, os.path.dirname(path), bersih))
             if not os.path.isfile(tujuan):
                 raise SystemExit(f"Tautan putus di {path}: {href} -> {tujuan}")
         for m in re.finditer(r'src="([^"]+)"', html):
@@ -637,8 +725,8 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
             tujuan = os.path.normpath(os.path.join(ROOT, os.path.dirname(path), src))
             if not os.path.isfile(tujuan):
                 raise SystemExit(f"Gambar putus di {path}: {src}")
-        # tombol beli hanya link pendek
-        if path != "index.html" and "Beli di Shopee" not in html:
+        # tombol beli hanya link pendek. Halaman pendapat tidak menjual produk.
+        if path not in ("index.html", "ulasan.html") and "Beli di Shopee" not in html:
             raise SystemExit("Tidak ada tombol beli di " + path)
 
     index = html_per_path["index.html"]
@@ -647,8 +735,19 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
     for path, html in html_per_path.items():
         if path != "index.html" and "lynk.id" in html:
             raise SystemExit("Panduan tidak boleh muncul di " + path)
-        if "s.shopee.co.id" not in html and path != "banding/index.html":
+        if path not in ("ulasan.html", "banding/index.html") and "s.shopee.co.id" not in html:
             raise SystemExit("Tidak ada link Shopee di " + path)
+
+    ulasan = html_per_path["ulasan.html"]
+    if "js/config.js" not in ulasan or "js/ulasan.js" not in ulasan:
+        raise SystemExit("ulasan.html tidak memuat skrip pendapat")
+    if "FEEDBACK_ENDPOINT" not in open(os.path.join(ROOT, "js/config.js"), encoding="utf-8").read():
+        raise SystemExit("js/config.js tidak punya FEEDBACK_ENDPOINT")
+    for pair in pasangan:
+        if f'value="{pair["id"]}"' not in ulasan:
+            raise SystemExit("Dropdown pendapat tidak memuat " + pair["id"])
+        if f'ulasan.html?baca={pair["id"]}' not in html_per_path[f"banding/{pair['id']}.html"]:
+            raise SystemExit("Ajakan pendapat hilang di " + pair["id"])
 
     # setiap tombol beli di situs memakai link yang ada di data
     aff_sah = {p["aff"] for p in produk.values()}
@@ -724,7 +823,10 @@ def main():
         if nama not in sah and nama.endswith(".html"):
             os.remove(os.path.join(BANDING, nama))
 
-    berkas = {"index.html": render_index(data, produk, pasangan)}
+    berkas = {
+        "index.html": render_index(data, produk, pasangan),
+        "ulasan.html": render_ulasan(data, pasangan),
+    }
     for pair in pasangan:
         berkas[f"banding/{pair['id']}.html"] = render_pair(data, produk, pair)
     for path, html in berkas.items():

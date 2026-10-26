@@ -16,6 +16,9 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `tools/build_site.py` | Generator. |
 | `tools/analisa.json` | Catatan kandungan. Acuan fakta, tidak ditampilkan mentah. |
 | `sumber/` | Data Shopee skincare, link affiliate, daftar merek Korea, pasangan yang sudah diposting. |
+| `ulasan.html` | Halaman Kasih Pendapat. Hasil generator (daftar perbandingan di dropdown ikut terbarui). |
+| `js/config.js` | **Satu tempat** untuk alamat pengiriman formulir: `FEEDBACK_ENDPOINT`. |
+| `js/ulasan.js` | Perilaku formulir. |
 
 `review.html` dan `perbandingan.html` hanya mengalihkan ke beranda, supaya tautan lama tidak buntu.
 
@@ -41,6 +44,8 @@ Generator gagal kalau ada link affiliate yang bukan `https://s.shopee.co.id/…`
 6. Jangan menampilkan rating atau jumlah terjual.
 7. Jalankan generator, lalu buka `index.html` lewat server lokal.
 
+Dropdown "perbandingan mana yang kamu baca" di halaman Kasih Pendapat terisi dari `pasangan.json`. Tidak perlu mengedit formulirnya. Kalau nanti ada pertanyaan baru, tambah kuncinya di `js/ulasan.js` (objek kiriman) dan di daftar `KOLOM` pada skrip Google di bawah.
+
 Tombol beli selalu memakai link affiliate pendek. Harga dan diskon diambil dari file `.psv`.
 
 ## Yang sengaja tidak masuk
@@ -49,6 +54,66 @@ Tombol beli selalu memakai link affiliate pendek. Harga dan diskon diambil dari 
 - Facial wash: tidak ada produk merek Korea di data, dan tidak ada analisa kandungan.
 - Garnier: bukan merek lokal dan bukan merek Korea.
 - Beberapa produk skincare lain tidak dipasangkan supaya setiap produk hanya muncul sekali, dengan prioritas penjualan di data. Daftarnya dicetak generator saat dijalankan.
+
+## Kasih Pendapat
+
+Halaman `ulasan.html` (tautan **Kasih Pendapat** di menu dan footer, plus ajakan di akhir tiap perbandingan). Formulir mengirim JSON ke alamat di `js/config.js`:
+
+```javascript
+var FEEDBACK_ENDPOINT = "";
+```
+
+Kalau string itu kosong, pengunjung tetap melihat ucapan terima kasih dan bisa menyalin jawabannya. Tidak ada pesan error.
+
+Isi dengan URL web app Google (berakhiran `/exec`) atau URL Formspree (`https://formspree.io/f/xxxxxxxx`).
+
+### Google Sheet
+
+1. Buat spreadsheet baru. Sheet pertama boleh dibiarkan, atau beri nama `Pendapat`.
+2. Menu **Extensions → Apps Script**. Hapus isi editor, tempel skrip di bawah, simpan.
+3. **Deploy → New deployment → Select type: Web app**.
+   - Execute as: **Me**
+   - Who has access: **Anyone**
+4. Salin URL yang berakhiran `/exec` ke `FEEDBACK_ENDPOINT` di `js/config.js`, lalu unggah file itu ke GitHub.
+5. Kalau skripnya diubah, buka **Deploy → Manage deployments → Edit → Version: New version → Deploy**. URL-nya tetap.
+
+Kolom yang ditulis: waktu, membantu, perbandingan, perbandingan_id, mudah, kurang, saran, berikutnya, kontak, halaman. Pertanyaan baru tinggal ditambah ke array `KOLOM`.
+
+```javascript
+var KOLOM = [
+  "waktu",
+  "membantu",
+  "perbandingan",
+  "perbandingan_id",
+  "mudah",
+  "kurang",
+  "saran",
+  "berikutnya",
+  "kontak",
+  "halaman"
+];
+
+function doPost(e) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName("Pendapat") || ss.getSheets()[0];
+  var data = {};
+  try {
+    data = JSON.parse(e.postData && e.postData.contents ? e.postData.contents : "{}");
+  } catch (err) {
+    data = e.parameter || {};
+  }
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(KOLOM);
+  }
+  var baris = KOLOM.map(function (kunci) {
+    return data[kunci] == null ? "" : String(data[kunci]);
+  });
+  sheet.appendRow(baris);
+  return ContentService
+    .createTextOutput(JSON.stringify({ ok: true }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+```
 
 ## Online
 
