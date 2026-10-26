@@ -1,5 +1,5 @@
 {
-  "tanggal": "22 Oktober 2026",
+  "tanggal": "22–26 Oktober 2026",
   "pasangan": [
     {
       "id": "originote-vs-illiyoon",
@@ -21,16 +21,29 @@
           "tekstur": "Gel ringan",
           "isi": "Cek di halaman produk",
           "bahan": [
-            {"nama": "Hyaluronic acid", "fungsi": "Sodium hyaluronate dan hydrolyzed hyaluronic acid, untuk menarik air ke kulit."},
-            {"nama": "Ceramide NP dan cholesterol", "fungsi": "Membantu menjaga skin barrier."},
-            {"nama": "Panthenol dan allantoin", "fungsi": "Umumnya dipakai untuk menenangkan kulit."}
+            {
+              "nama": "Hyaluronic acid",
+              "fungsi": "Sodium hyaluronate dan hydrolyzed hyaluronic acid, untuk menarik air ke kulit."
+            },
+            {
+              "nama": "Ceramide NP dan cholesterol",
+              "fungsi": "Membantu menjaga skin barrier."
+            },
+            {
+              "nama": "Panthenol dan allantoin",
+              "fungsi": "Umumnya dipakai untuk menenangkan kulit."
+            }
           ],
           "manfaat": [
             "Gel ringan, cepat meresap",
             "Bebas pewangi dan alkohol",
             "Harga listing terjangkau"
           ],
-          "kulit": ["Berminyak", "Normal", "Sensitif"],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Sensitif"
+          ],
           "catatan": "Judul listing menyebut Hyalucera, Cica B5, dan Brightening. Uraian kandungan di sini untuk Hyalucera. Cek varian sebelum beli. Ada juga ekstrak chlorella dan spirulina. Untuk kulit sangat kering, gel ini bisa terasa kurang mengunci kelembapan, dan tidak ada bahan aktif khusus untuk jerawat."
         },
         "25080136975": {
@@ -38,15 +51,24 @@
           "tekstur": "Krim kaya",
           "isi": "Cek di halaman produk",
           "bahan": [
-            {"nama": "Ceramide", "fungsi": "Ceramide PC-104 dan ceramide NP dalam bentuk kapsul. Umumnya membantu kulit menahan kelembapan."},
-            {"nama": "Cholesterol dan asam lemak", "fungsi": "Ikut membantu kulit menahan kelembapan, bersama ceramide."}
+            {
+              "nama": "Ceramide",
+              "fungsi": "Ceramide PC-104 dan ceramide NP dalam bentuk kapsul. Umumnya membantu kulit menahan kelembapan."
+            },
+            {
+              "nama": "Cholesterol dan asam lemak",
+              "fungsi": "Ikut membantu kulit menahan kelembapan, bersama ceramide."
+            }
           ],
           "manfaat": [
             "Tanpa pewangi",
             "Bisa untuk wajah dan badan",
             "Hasil akhirnya satin, tidak lengket"
           ],
-          "kulit": ["Kering", "Sensitif"],
+          "kulit": [
+            "Kering",
+            "Sensitif"
+          ],
           "catatan": "Di kulit berminyak atau yang gampang berjerawat, krim ini bisa terasa terlalu berat di area T. Teksturnya ada butiran kapsul halus yang pecah saat diratakan. Mereknya menyebut formula ini ringan iritasi."
         }
       }
@@ -71,15 +93,25 @@
           "tekstur": "Serum ringan",
           "isi": "40 ml atau 25 ml",
           "bahan": [
-            {"nama": "Filter UV", "fungsi": "Antara lain ethylhexyl triazone, Uvinul A Plus, dan Tinosorb S. Klaim di kemasan: SPF 50 PA++++."},
-            {"nama": "Bahan pendukung", "fungsi": "Yang tercantum: niacinamide, tranexamic acid, vitamin C stabil, allantoin, bisabolol, panthenol, dan squalane."}
+            {
+              "nama": "Filter UV",
+              "fungsi": "Antara lain ethylhexyl triazone, Uvinul A Plus, dan Tinosorb S. Klaim di kemasan: SPF 50 PA++++."
+            },
+            {
+              "nama": "Bahan pendukung",
+              "fungsi": "Yang tercantum: niacinamide, tranexamic acid, vitamin C stabil, allantoin, bisabolol, panthenol, dan squalane."
+            }
           ],
           "manfaat": [
             "Tekstur serum, cepat meresap",
             "Tanpa bekas putih",
             "Nyaman di cuaca panas"
           ],
-          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Berjerawat"
+          ],
           "catatan": "Listing ini mencakup 40 ml dan 25 ml. Cek ukuran sebelum bandingkan harga. Kulit yang sangat kering mungkin perlu pelembap di bawahnya."
         },
         "16581227588": {
@@ -87,15 +119,26 @@
           "tekstur": "Sun serum, hasil glowing",
           "isi": "50 ml",
           "bahan": [
-            {"nama": "Filter UV", "fungsi": "Antara lain Tinosorb S dan Uvinul A Plus. Klaimnya SPF50+ PA++++."},
-            {"nama": "Centella, hyaluronic acid, niacinamide", "fungsi": "Bahan yang disebut di formula. Teksturnya cair seperti serum, tanpa bekas putih, hasilnya sedikit glowing."}
+            {
+              "nama": "Filter UV",
+              "fungsi": "Antara lain Tinosorb S dan Uvinul A Plus. Klaimnya SPF50+ PA++++."
+            },
+            {
+              "nama": "Centella, hyaluronic acid, niacinamide",
+              "fungsi": "Bahan yang disebut di formula. Teksturnya cair seperti serum, tanpa bekas putih, hasilnya sedikit glowing."
+            }
           ],
           "manfaat": [
             "Sangat ringan dan tidak lengket",
             "Tanpa bekas putih",
             "Isi 50 ml"
           ],
-          "kulit": ["Normal", "Sensitif", "Kering", "Berminyak"],
+          "kulit": [
+            "Normal",
+            "Sensitif",
+            "Kering",
+            "Berminyak"
+          ],
           "catatan": "Hasilnya dewy. Kalau kamu suka tampilan matte, ini bisa terasa terlalu glowing di siang hari."
         }
       }
@@ -120,16 +163,29 @@
           "tekstur": "Serum ringan",
           "isi": "17 ml",
           "bahan": [
-            {"nama": "Niacinamide 10%", "fungsi": "Bahan utama. Dikenal membantu mengontrol minyak, dan di sini dipakai untuk kulit kusam serta warna yang kurang rata."},
-            {"nama": "Alpha arbutin dan tranexamic acid", "fungsi": "Dikenal untuk membantu menyamarkan noda gelap."},
-            {"nama": "Ceramide NP", "fungsi": "Mendukung skin barrier. Di formula juga ada hyaluronic acid, centella, dan ekstrak delima."}
+            {
+              "nama": "Niacinamide 10%",
+              "fungsi": "Bahan utama. Dikenal membantu mengontrol minyak, dan di sini dipakai untuk kulit kusam serta warna yang kurang rata."
+            },
+            {
+              "nama": "Alpha arbutin dan tranexamic acid",
+              "fungsi": "Dikenal untuk membantu menyamarkan noda gelap."
+            },
+            {
+              "nama": "Ceramide NP",
+              "fungsi": "Mendukung skin barrier. Di formula juga ada hyaluronic acid, centella, dan ekstrak delima."
+            }
           ],
           "manfaat": [
             "Kadar niacinamide-nya ditulis jelas",
             "Ringan dan cepat meresap",
             "Ada ceramide"
           ],
-          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Berjerawat"
+          ],
           "catatan": "Ada aroma buah yang lembut. Untuk kulit sensitif, 10% niacinamide plus pewangi bisa terasa kuat di awal, jadi mulai beberapa kali seminggu."
         },
         "42151404537": {
@@ -137,16 +193,29 @@
           "tekstur": "Serum agak kental",
           "isi": "20 ml",
           "bahan": [
-            {"nama": "Alpha arbutin 3%", "fungsi": "Dikenal untuk membantu meratakan warna kulit dan menyamarkan noda gelap secara bertahap."},
-            {"nama": "Air dedak beras dan vitamin C stabil", "fungsi": "3-O-ethyl ascorbic acid ikut mendukung fungsi pencerah."},
-            {"nama": "Sodium hyaluronate, ceramide NP, beta-glucan", "fungsi": "Membantu menjaga hidrasi."}
+            {
+              "nama": "Alpha arbutin 3%",
+              "fungsi": "Dikenal untuk membantu meratakan warna kulit dan menyamarkan noda gelap secara bertahap."
+            },
+            {
+              "nama": "Air dedak beras dan vitamin C stabil",
+              "fungsi": "3-O-ethyl ascorbic acid ikut mendukung fungsi pencerah."
+            },
+            {
+              "nama": "Sodium hyaluronate, ceramide NP, beta-glucan",
+              "fungsi": "Membantu menjaga hidrasi."
+            }
           ],
           "manfaat": [
             "Pencerah yang tetap menghidrasi",
             "Tanpa pewangi di daftar bahan",
             "Tidak lengket setelah meresap"
           ],
-          "kulit": ["Normal", "Kering", "Sensitif"],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Sensitif"
+          ],
           "catatan": "Ini versi dari Glow Deep Serum. Hasil pencerahan biasanya butuh pemakaian rutin beberapa minggu, plus sunscreen setiap hari."
         }
       }
@@ -171,16 +240,29 @@
           "tekstur": "Pelembap ringan",
           "isi": "30 ml",
           "bahan": [
-            {"nama": "Niacinamide 3%", "fungsi": "Dikenal membantu mengontrol minyak, memperkuat skin barrier, dan meratakan warna kulit."},
-            {"nama": "Alpha arbutin 0,5%", "fungsi": "Untuk membantu mencerahkan."},
-            {"nama": "Sodium hyaluronate, glycerin, panthenol", "fungsi": "Untuk hidrasi."}
+            {
+              "nama": "Niacinamide 3%",
+              "fungsi": "Dikenal membantu mengontrol minyak, memperkuat skin barrier, dan meratakan warna kulit."
+            },
+            {
+              "nama": "Alpha arbutin 0,5%",
+              "fungsi": "Untuk membantu mencerahkan."
+            },
+            {
+              "nama": "Sodium hyaluronate, glycerin, panthenol",
+              "fungsi": "Untuk hidrasi."
+            }
           ],
           "manfaat": [
             "Ringan, cepat meresap, tidak lengket",
             "Kadar niacinamide-nya jelas",
             "Harga listing terjangkau"
           ],
-          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Berjerawat"
+          ],
           "catatan": "Tidak ada SPF. Pagi tetap pakai sunscreen. Kulit yang sangat kering mungkin butuh krim yang lebih kaya. Mereknya menyebut produk ini cocok juga untuk kulit sensitif."
         },
         "14516182420": {
@@ -188,16 +270,29 @@
           "tekstur": "Gel-krim",
           "isi": "75 ml",
           "bahan": [
-            {"nama": "Ekstrak centella asiatica", "fungsi": "Dikenal untuk menenangkan kulit."},
-            {"nama": "Ceramide dan cholesterol", "fungsi": "Untuk mendukung skin barrier."},
-            {"nama": "Bahan lain yang tercantum", "fungsi": "Trehalose, sodium hyaluronate, beta-glucan, dan tranexamic acid."}
+            {
+              "nama": "Ekstrak centella asiatica",
+              "fungsi": "Dikenal untuk menenangkan kulit."
+            },
+            {
+              "nama": "Ceramide dan cholesterol",
+              "fungsi": "Untuk mendukung skin barrier."
+            },
+            {
+              "nama": "Bahan lain yang tercantum",
+              "fungsi": "Trehalose, sodium hyaluronate, beta-glucan, dan tranexamic acid."
+            }
           ],
           "manfaat": [
             "Gel-krim ringan dan sejuk",
             "Centella plus ceramide",
             "Isi 75 ml"
           ],
-          "kulit": ["Sensitif", "Berminyak", "Normal"],
+          "kulit": [
+            "Sensitif",
+            "Berminyak",
+            "Normal"
+          ],
           "catatan": "Kulit yang sangat kering mungkin perlu krim yang lebih tebal. Tidak ada SPF."
         }
       }
@@ -222,15 +317,24 @@
           "tekstur": "Lotion-gel, hasil matte",
           "isi": "Cek di halaman produk",
           "bahan": [
-            {"nama": "SPF 50 PA++++", "fungsi": "Angka yang tercantum di judul produk."},
-            {"nama": "Niacinamide, vitamin C, vitamin E", "fungsi": "Vitamin C-nya sodium ascorbyl phosphate. Formula ini dipakai untuk hasil matte dengan sedikit efek cerah."}
+            {
+              "nama": "SPF 50 PA++++",
+              "fungsi": "Angka yang tercantum di judul produk."
+            },
+            {
+              "nama": "Niacinamide, vitamin C, vitamin E",
+              "fungsi": "Vitamin C-nya sodium ascorbyl phosphate. Formula ini dipakai untuk hasil matte dengan sedikit efek cerah."
+            }
           ],
           "manfaat": [
             "Hasil matte, tidak mengilap",
             "Mudah diratakan dan cepat meresap",
             "Harga listing rendah"
           ],
-          "kulit": ["Berminyak", "Normal"],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
           "catatan": "Ukuran kemasan tidak tertulis di judul listing. Cek isi bersih di halaman produk. Kulit kering mungkin perlu pelembap yang lebih kaya di bawahnya."
         },
         "28673092386": {
@@ -238,15 +342,26 @@
           "tekstur": "Cair seperti serum",
           "isi": "50 ml",
           "bahan": [
-            {"nama": "Filter UV", "fungsi": "Sunscreen kimia, SPF50+ PA++++. Antara lain Uvinul A Plus dan Tinosorb S."},
-            {"nama": "Air beras, panthenol, ceramide NP, beta-glucan", "fungsi": "Bahan pendukung yang disebut di formula. Panthenol di sini adalah vitamin B5."}
+            {
+              "nama": "Filter UV",
+              "fungsi": "Sunscreen kimia, SPF50+ PA++++. Antara lain Uvinul A Plus dan Tinosorb S."
+            },
+            {
+              "nama": "Air beras, panthenol, ceramide NP, beta-glucan",
+              "fungsi": "Bahan pendukung yang disebut di formula. Panthenol di sini adalah vitamin B5."
+            }
           ],
           "manfaat": [
             "Sangat ringan, tanpa bekas putih",
             "Hasil natural sampai semi-matte",
             "Isi 50 ml"
           ],
-          "kulit": ["Berminyak", "Kombinasi", "Normal", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Kombinasi",
+            "Normal",
+            "Berjerawat"
+          ],
           "catatan": "Dibuat untuk kulit berminyak dan kombinasi. Bisa menggumpal saat pemakaian ulang di atas lapisan tertentu."
         }
       }
@@ -271,16 +386,29 @@
           "tekstur": "Serum",
           "isi": "25 ml",
           "bahan": [
-            {"nama": "Niacinamide, tranexamic acid, vitamin C stabil", "fungsi": "Vitamin C-nya 3-O-ethyl ascorbic acid. Kombinasi ini diarahkan untuk kulit kusam dan bekas jerawat yang gelap."},
-            {"nama": "Hydroxyresveratrol dan gluconolactone", "fungsi": "Gluconolactone adalah PHA, dikenal sebagai eksfolian yang lembut."},
-            {"nama": "Squalane dan hyaluronic acid", "fungsi": "Untuk kelembapan. Mereknya menyebut serum ini cukup melembapkan sampai bisa dipakai tanpa pelembap terpisah."}
+            {
+              "nama": "Niacinamide, tranexamic acid, vitamin C stabil",
+              "fungsi": "Vitamin C-nya 3-O-ethyl ascorbic acid. Kombinasi ini diarahkan untuk kulit kusam dan bekas jerawat yang gelap."
+            },
+            {
+              "nama": "Hydroxyresveratrol dan gluconolactone",
+              "fungsi": "Gluconolactone adalah PHA, dikenal sebagai eksfolian yang lembut."
+            },
+            {
+              "nama": "Squalane dan hyaluronic acid",
+              "fungsi": "Untuk kelembapan. Mereknya menyebut serum ini cukup melembapkan sampai bisa dipakai tanpa pelembap terpisah."
+            }
           ],
           "manfaat": [
             "Jenis bahan pencerahnya lengkap",
             "Ada eksfolian yang lembut",
             "Isi 25 ml"
           ],
-          "kulit": ["Normal", "Berminyak", "Berjerawat"],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Berjerawat"
+          ],
           "catatan": "Mengandung pewangi. Kulit sensitif sebaiknya coba sedikit dulu."
         },
         "11210228422": {
@@ -288,16 +416,29 @@
           "tekstur": "Gel cair",
           "isi": "Cek di halaman produk",
           "bahan": [
-            {"nama": "Ekstrak yuja", "fungsi": "Sekitar 83% di formula terbaru. Yuja adalah jeruk dari Korea."},
-            {"nama": "Niacinamide 10%", "fungsi": "Dikenal membantu mengontrol minyak. Kombinasi formulanya diarahkan untuk noda bekas jerawat, warna yang kurang rata, dan kulit kusam."},
-            {"nama": "Bahan lain yang tercantum", "fungsi": "Bisabolol, adenosine, licorice, turmeric, dan panthenol."}
+            {
+              "nama": "Ekstrak yuja",
+              "fungsi": "Sekitar 83% di formula terbaru. Yuja adalah jeruk dari Korea."
+            },
+            {
+              "nama": "Niacinamide 10%",
+              "fungsi": "Dikenal membantu mengontrol minyak. Kombinasi formulanya diarahkan untuk noda bekas jerawat, warna yang kurang rata, dan kulit kusam."
+            },
+            {
+              "nama": "Bahan lain yang tercantum",
+              "fungsi": "Bisabolol, adenosine, licorice, turmeric, dan panthenol."
+            }
           ],
           "manfaat": [
             "Kadar niacinamide dan yuja tertulis",
             "Ringan dan tidak lengket",
             "Mudah dilapis"
           ],
-          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Berjerawat"
+          ],
           "catatan": "Ada aroma citrus dari minyak kulit jeruk. Kulit yang reaktif terhadap pewangi sebaiknya coba sedikit dulu. Ukuran tidak tertulis di judul listing."
         }
       }
@@ -322,17 +463,33 @@
           "tekstur": "Watery gel",
           "isi": "30 g",
           "bahan": [
-            {"nama": "Niacinamide", "fungsi": "Ada di semua varian. Fungsi varian ditentukan bahan pendampingnya."},
-            {"nama": "Bright Glow", "fungsi": "Acetyl glucosamine, vitamin C, dan licorice, untuk kulit kusam. Varian ini mengandung pewangi."},
-            {"nama": "Barrier Balancing", "fungsi": "Ceramide, beta-glucan, dan hyaluronic acid, untuk kulit kering atau skin barrier yang lemah."},
-            {"nama": "Calming", "fungsi": "Centella, panthenol, dan salicylic acid, untuk kulit berjerawat dan kemerahan."}
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Ada di semua varian. Fungsi varian ditentukan bahan pendampingnya."
+            },
+            {
+              "nama": "Bright Glow",
+              "fungsi": "Acetyl glucosamine, vitamin C, dan licorice, untuk kulit kusam. Varian ini mengandung pewangi."
+            },
+            {
+              "nama": "Barrier Balancing",
+              "fungsi": "Ceramide, beta-glucan, dan hyaluronic acid, untuk kulit kering atau skin barrier yang lemah."
+            },
+            {
+              "nama": "Calming",
+              "fungsi": "Centella, panthenol, dan salicylic acid, untuk kulit berjerawat dan kemerahan."
+            }
           ],
           "manfaat": [
             "Gel ringan, cepat meresap, tidak lengket",
             "Ada varian untuk kusam, kering, dan berjerawat",
             "Harga listing rendah"
           ],
-          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Berjerawat"
+          ],
           "catatan": "Ini seri. Kandungan beda tiap varian, jadi pilih yang sesuai. Varian Bright Glow mengandung pewangi. Kulit yang sangat kering mungkin butuh lapisan yang lebih kaya."
         },
         "8657140008": {
@@ -340,15 +497,25 @@
           "tekstur": "Lotion ringan, bebas minyak",
           "isi": "100 ml",
           "bahan": [
-            {"nama": "Birch sap", "fungsi": "Sekitar 70% formula. Getah pohon birch, dipakai sebagai bahan utama."},
-            {"nama": "Glycerin, panthenol, allantoin, sodium hyaluronate", "fungsi": "Untuk hidrasi dan menenangkan kulit."}
+            {
+              "nama": "Birch sap",
+              "fungsi": "Sekitar 70% formula. Getah pohon birch, dipakai sebagai bahan utama."
+            },
+            {
+              "nama": "Glycerin, panthenol, allantoin, sodium hyaluronate",
+              "fungsi": "Untuk hidrasi dan menenangkan kulit."
+            }
           ],
           "manfaat": [
             "Bebas minyak, tidak terasa berat",
             "Cepat meresap",
             "Isi 100 ml"
           ],
-          "kulit": ["Berminyak", "Berjerawat", "Normal"],
+          "kulit": [
+            "Berminyak",
+            "Berjerawat",
+            "Normal"
+          ],
           "catatan": "Kulit kering umumnya perlu krim tambahan di atasnya. Formula merek Korea bisa berubah antar batch; cek daftar bahan di kemasan. Enak dipakai di bawah sunscreen."
         }
       }
@@ -373,15 +540,24 @@
           "tekstur": "Krim ringan, soft-matte",
           "isi": "40 g",
           "bahan": [
-            {"nama": "Filter UV hybrid", "fungsi": "Campuran filter kimia dan fisik. Klaim merek: SPF 40 PA++++."},
-            {"nama": "Niacinamide dan centella", "fungsi": "Centella disebut juga cica. Ada sedikit efek cerah seketika."}
+            {
+              "nama": "Filter UV hybrid",
+              "fungsi": "Campuran filter kimia dan fisik. Klaim merek: SPF 40 PA++++."
+            },
+            {
+              "nama": "Niacinamide dan centella",
+              "fungsi": "Centella disebut juga cica. Ada sedikit efek cerah seketika."
+            }
           ],
           "manfaat": [
             "Hasil soft-matte",
             "Cepat meresap",
             "Harga listing hemat"
           ],
-          "kulit": ["Berminyak", "Normal"],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
           "catatan": "Efek cerah seketika bisa terlihat agak keputihan di kulit sawo matang kalau tidak diratakan. Oleskan tipis, berlapis. SPF-nya 40, di bawah pilihan yang 50. Di luar ruangan, ikuti anjuran pemakaian ulang di kemasan."
         },
         "22161849050": {
@@ -389,15 +565,25 @@
           "tekstur": "Lotion yang melembapkan",
           "isi": "50 ml",
           "bahan": [
-            {"nama": "Filter UV", "fungsi": "Sunscreen kimia, SPF50+ PA++++. Termasuk Uvinul A Plus, Uvinul T 150, dan Tinosorb M."},
-            {"nama": "Birch juice, niacinamide, hyaluronic acid, allantoin, adenosine", "fungsi": "Bahan pendukung yang membuat teksturnya terasa seperti pelembap sekaligus sunscreen."}
+            {
+              "nama": "Filter UV",
+              "fungsi": "Sunscreen kimia, SPF50+ PA++++. Termasuk Uvinul A Plus, Uvinul T 150, dan Tinosorb M."
+            },
+            {
+              "nama": "Birch juice, niacinamide, hyaluronic acid, allantoin, adenosine",
+              "fungsi": "Bahan pendukung yang membuat teksturnya terasa seperti pelembap sekaligus sunscreen."
+            }
           ],
           "manfaat": [
             "Melembapkan, bisa jadi pelembap pagi",
             "Hasil sedikit dewy",
             "Isi 50 ml"
           ],
-          "kulit": ["Kering", "Normal", "Sensitif"],
+          "kulit": [
+            "Kering",
+            "Normal",
+            "Sensitif"
+          ],
           "catatan": "Tinosorb M kadang memberi kesan putih sesaat sebelum meresap. Kulit yang sangat berminyak mungkin lebih cocok dengan hasil yang lebih matte."
         }
       }
@@ -421,16 +607,29 @@
           "tekstur": "Gel watery",
           "isi": "30 g",
           "bahan": [
-            {"nama": "Recombinant collagen", "fungsi": "Vegan recombinant collagen, untuk fokus kekenyalan."},
-            {"nama": "Argireline 2%", "fungsi": "Acetyl hexapeptide-8. Peptida yang dikenal untuk membantu menyamarkan garis ekspresi."},
-            {"nama": "Niacinamide dan ceramide", "fungsi": "Kompleks ceramide dipakai untuk skin barrier."}
+            {
+              "nama": "Recombinant collagen",
+              "fungsi": "Vegan recombinant collagen, untuk fokus kekenyalan."
+            },
+            {
+              "nama": "Argireline 2%",
+              "fungsi": "Acetyl hexapeptide-8. Peptida yang dikenal untuk membantu menyamarkan garis ekspresi."
+            },
+            {
+              "nama": "Niacinamide dan ceramide",
+              "fungsi": "Kompleks ceramide dipakai untuk skin barrier."
+            }
           ],
           "manfaat": [
             "Gel ringan, cepat meresap",
             "Nyaman di iklim lembap",
             "Wardah menyebutnya hypoallergenic dan teruji dermatologis"
           ],
-          "kulit": ["Normal", "Kering", "Berminyak"],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Berminyak"
+          ],
           "catatan": "Mengandung pewangi. Kulit yang sangat reaktif sebaiknya coba di sedikit area dulu. Lebih masuk akal kalau kamu mulai peduli garis halus, bukan cuma cari pelembap dasar."
         },
         "1345373609": {
@@ -438,14 +637,20 @@
           "tekstur": "Gel bening",
           "isi": "300 ml",
           "bahan": [
-            {"nama": "Ekstrak lidah buaya", "fungsi": "Sekitar 92%. Dikenal memberi rasa sejuk dan lembap yang ringan."}
+            {
+              "nama": "Ekstrak lidah buaya",
+              "fungsi": "Sekitar 92%. Dikenal memberi rasa sejuk dan lembap yang ringan."
+            }
           ],
           "manfaat": [
             "Isi besar, 300 ml",
             "Cepat kering dan tidak berminyak",
             "Bisa untuk wajah dan badan"
           ],
-          "kulit": ["Berminyak", "Normal"],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
           "catatan": "Daftar bahannya mencantumkan alkohol dan pewangi, jadi kurang ideal untuk kulit sensitif atau kering. Hidrasinya ringan. Lebih cocok sebagai lapisan tambahan daripada satu-satunya pelembap."
         }
       }
@@ -469,18 +674,38 @@
           "tekstur": "Serum, beda tiap varian",
           "isi": "17 ml",
           "bahan": [
-            {"nama": "Mencerahkan (Brightening)", "fungsi": "Niacinamide dan tranexamic acid."},
-            {"nama": "Melembapkan (Hydrating)", "fungsi": "Hyaluronic acid dan ceramide."},
-            {"nama": "Menenangkan (Calming)", "fungsi": "Salicylic acid dan centella, untuk kulit berjerawat."},
-            {"nama": "Eksfoliasi (Exfoliating)", "fungsi": "Campuran AHA, BHA, PHA, plus centella."},
-            {"nama": "Retinol (Renew)", "fungsi": "Retinol dan centella."}
+            {
+              "nama": "Mencerahkan (Brightening)",
+              "fungsi": "Niacinamide dan tranexamic acid."
+            },
+            {
+              "nama": "Melembapkan (Hydrating)",
+              "fungsi": "Hyaluronic acid dan ceramide."
+            },
+            {
+              "nama": "Menenangkan (Calming)",
+              "fungsi": "Salicylic acid dan centella, untuk kulit berjerawat."
+            },
+            {
+              "nama": "Eksfoliasi (Exfoliating)",
+              "fungsi": "Campuran AHA, BHA, PHA, plus centella."
+            },
+            {
+              "nama": "Retinol (Renew)",
+              "fungsi": "Retinol dan centella."
+            }
           ],
           "manfaat": [
             "Ada varian untuk masalah yang berbeda",
             "Harga listing rendah",
             "Isi 17 ml"
           ],
-          "kulit": ["Berminyak", "Normal", "Kering", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Kering",
+            "Berjerawat"
+          ],
           "catatan": "Harus pilih varian. Konsentrasi bahan aktif tidak selalu tercantum di listing. Varian eksfoliasi dan retinol perlu adaptasi, dan sunscreen tetap dipakai."
         },
         "26268363527": {
@@ -488,15 +713,26 @@
           "tekstur": "Serum cair",
           "isi": "50 ml",
           "bahan": [
-            {"nama": "Hyaluronic acid", "fungsi": "Lima bentuk dengan ukuran molekul berbeda, untuk hidrasi."},
-            {"nama": "Panthenol, allantoin, madecassoside, ceramide NP, beta-glucan", "fungsi": "Umumnya dipakai untuk menenangkan kulit."}
+            {
+              "nama": "Hyaluronic acid",
+              "fungsi": "Lima bentuk dengan ukuran molekul berbeda, untuk hidrasi."
+            },
+            {
+              "nama": "Panthenol, allantoin, madecassoside, ceramide NP, beta-glucan",
+              "fungsi": "Umumnya dipakai untuk menenangkan kulit."
+            }
           ],
           "manfaat": [
             "Hidrasi tanpa rasa lengket",
             "Bebas pewangi dan vegan",
             "Isi 50 ml"
           ],
-          "kulit": ["Kering", "Sensitif", "Normal", "Berminyak"],
+          "kulit": [
+            "Kering",
+            "Sensitif",
+            "Normal",
+            "Berminyak"
+          ],
           "catatan": "Bukan serum pencerah atau anti-jerawat. Untuk noda, perlu bahan lain. Hasilnya segar, sedikit dewy."
         }
       }
@@ -520,16 +756,28 @@
           "tekstur": "Serum cair",
           "isi": "15 ml",
           "bahan": [
-            {"nama": "Niacinamide 5%", "fungsi": "Dikenal membantu meratakan warna kulit dan mengontrol minyak."},
-            {"nama": "Vitamin C stabil 1%", "fungsi": "3-O-ethyl ascorbic acid. Lebih stabil dan umumnya lebih ramah dibanding vitamin C murni."},
-            {"nama": "Perfectyl", "fungsi": "Untuk tampilan pori dan tekstur kulit yang lebih halus. Ada juga allantoin dan ekstrak chamomile."}
+            {
+              "nama": "Niacinamide 5%",
+              "fungsi": "Dikenal membantu meratakan warna kulit dan mengontrol minyak."
+            },
+            {
+              "nama": "Vitamin C stabil 1%",
+              "fungsi": "3-O-ethyl ascorbic acid. Lebih stabil dan umumnya lebih ramah dibanding vitamin C murni."
+            },
+            {
+              "nama": "Perfectyl",
+              "fungsi": "Untuk tampilan pori dan tekstur kulit yang lebih halus. Ada juga allantoin dan ekstrak chamomile."
+            }
           ],
           "manfaat": [
             "Fokus pori dan tekstur",
             "Serum cair yang ringan",
             "Harga listing rendah"
           ],
-          "kulit": ["Normal", "Berminyak"],
+          "kulit": [
+            "Normal",
+            "Berminyak"
+          ],
           "catatan": "Mengandung pewangi. Kulit sensitif sebaiknya coba sedikit dulu. Isi 15 ml cepat habis kalau dipakai pagi dan malam."
         },
         "23541411702": {
@@ -537,16 +785,28 @@
           "tekstur": "Serum cair",
           "isi": "20 ml",
           "bahan": [
-            {"nama": "Niacinamide 15%", "fungsi": "Kadar yang ditargetkan untuk kulit berminyak, pori, dan bekas jerawat."},
-            {"nama": "Acetyl glucosamine", "fungsi": "Sering dipadukan dengan niacinamide untuk noda gelap."},
-            {"nama": "Zinc PCA", "fungsi": "Dikenal membantu mengontrol minyak."}
+            {
+              "nama": "Niacinamide 15%",
+              "fungsi": "Kadar yang ditargetkan untuk kulit berminyak, pori, dan bekas jerawat."
+            },
+            {
+              "nama": "Acetyl glucosamine",
+              "fungsi": "Sering dipadukan dengan niacinamide untuk noda gelap."
+            },
+            {
+              "nama": "Zinc PCA",
+              "fungsi": "Dikenal membantu mengontrol minyak."
+            }
           ],
           "manfaat": [
             "Tanpa pewangi, daftar bahan pendek",
             "Cepat meresap, tanpa residu",
             "COSRX menyebutnya non-comedogenic tested"
           ],
-          "kulit": ["Berminyak", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Berjerawat"
+          ],
           "catatan": "Kadar 15% cukup tinggi. Kulit sensitif sebaiknya mulai pelan-pelan. Harga per ml-nya tinggi."
         }
       }
@@ -570,18 +830,39 @@
           "tekstur": "Beda tiap varian",
           "isi": "Beda tiap varian",
           "bahan": [
-            {"nama": "Airy Smooth", "fungsi": "SPF 50 PA++++, gel ringan, hasil matte, untuk kulit berminyak."},
-            {"nama": "Aqua Fresh", "fungsi": "SPF 50 PA++++, tekstur watery dan glowing, untuk kulit kering."},
-            {"nama": "Acne Calming", "fungsi": "SPF 50 PA++++, untuk kulit berjerawat."},
-            {"nama": "Tone Up", "fungsi": "SPF 35 PA+++, ada warna, untuk meratakan tampilan kulit."},
-            {"nama": "Physical", "fungsi": "SPF 50+ PA++++, filter mineral, umumnya lebih cocok untuk kulit sensitif."}
+            {
+              "nama": "Airy Smooth",
+              "fungsi": "SPF 50 PA++++, gel ringan, hasil matte, untuk kulit berminyak."
+            },
+            {
+              "nama": "Aqua Fresh",
+              "fungsi": "SPF 50 PA++++, tekstur watery dan glowing, untuk kulit kering."
+            },
+            {
+              "nama": "Acne Calming",
+              "fungsi": "SPF 50 PA++++, untuk kulit berjerawat."
+            },
+            {
+              "nama": "Tone Up",
+              "fungsi": "SPF 35 PA+++, ada warna, untuk meratakan tampilan kulit."
+            },
+            {
+              "nama": "Physical",
+              "fungsi": "SPF 50+ PA++++, filter mineral, umumnya lebih cocok untuk kulit sensitif."
+            }
           ],
           "manfaat": [
             "Varian untuk jenis kulit yang berbeda",
             "Ada pilihan filter mineral",
             "Harga listing terjangkau"
           ],
-          "kulit": ["Berminyak", "Kering", "Normal", "Sensitif", "Berjerawat"],
+          "kulit": [
+            "Berminyak",
+            "Kering",
+            "Normal",
+            "Sensitif",
+            "Berjerawat"
+          ],
           "catatan": "SPF dan hasil akhir beda tiap varian. Harga di listing bisa beda per varian dan ukuran. Cek varian sebelum checkout."
         },
         "29204771380": {
@@ -589,16 +870,826 @@
           "tekstur": "Krim yang melembapkan",
           "isi": "25 ml atau 50 ml",
           "bahan": [
-            {"nama": "SPF50+ PA++++", "fungsi": "Sunscreen kimia, angka yang tercantum untuk produk ini."},
-            {"nama": "Hyaluronic acid, niacinamide, centella, panthenol", "fungsi": "Beberapa bentuk hyaluronic acid plus bahan itu yang membuat krimnya melembapkan."}
+            {
+              "nama": "SPF50+ PA++++",
+              "fungsi": "Sunscreen kimia, angka yang tercantum untuk produk ini."
+            },
+            {
+              "nama": "Hyaluronic acid, niacinamide, centella, panthenol",
+              "fungsi": "Beberapa bentuk hyaluronic acid plus bahan itu yang membuat krimnya melembapkan."
+            }
           ],
           "manfaat": [
             "Melembapkan",
             "Tanpa bekas putih",
             "Satu formula, tidak perlu pilih varian"
           ],
-          "kulit": ["Kering", "Sensitif", "Normal"],
+          "kulit": [
+            "Kering",
+            "Sensitif",
+            "Normal"
+          ],
           "catatan": "Di kulit berminyak bisa terasa lebih berat atau sedikit lengket. Listing mencakup 25 ml dan 50 ml. Cek ukuran, karena harga bisa untuk ukuran tertentu."
+        }
+      }
+    },
+    {
+      "id": "somethinc-vs-cosrx-wash",
+      "jenis": "facial-wash",
+      "hook": "Facial wash lokal vs Korea, mending yang mana?",
+      "lokal": "3030299955",
+      "korea": "9957146544",
+      "lebihMurah": "lokal",
+      "ringkas": "Dua-duanya pembersih low pH. Somethinc bentuknya jelly dan jauh lebih hemat. COSRX gel 150 ml, daftar bahannya menyebut tea tree dan BHA, dan listing ini lagi harga coret.",
+      "verdict": {
+        "berminyak": "COSRX lebih terarah kalau kulitnya berminyak atau gampang berjerawat: listing menyebut tea tree leaf oil dan betaine salicylate (BHA), plus surfaktan yang umumnya dipilih karena lebih lembut. Somethinc juga mencantumkan tea tree, centella, mugwort, dan calendula, tapi tanpa BHA. Mau yang lebih sederhana, Somethinc. Mau ada BHA di pembersihnya, COSRX, dan mulai pelan kalau kulitmu reaktif.",
+        "kering": "Somethinc lebih aman dicoba dulu. Namanya Gentle Jelly, dan daftar bahannya tidak menyebut asam. COSRX namanya low pH dan ada BHA, jadi di kulit kering atau sensitif bisa terasa lebih kerja. Keduanya tetap pembersih, bukan pelembap.",
+        "budget": "Somethinc jauh lebih hemat di listing ini. COSRX isi 150 ml dan harganya lebih tinggi, dengan daftar surfaktan yang tertulis plus BHA. Ukuran Somethinc tidak tercantum di data, jadi cek botolnya sebelum membandingkan harga per ml. Yang mau pembersih low pH murah, Somethinc. Yang mau gel 150 ml dengan BHA tertulis, COSRX."
+      },
+      "produk": {
+        "3030299955": {
+          "nama": "SOMETHINC Low pH Gentle Jelly Cleanser",
+          "tekstur": "Jelly",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Calendula, centella, Japanese mugwort",
+              "fungsi": "Ekstrak tanaman yang tercantum di listing."
+            },
+            {
+              "nama": "Tea tree",
+              "fungsi": "Melaleuca alternifolia tercantum. Umumnya dipakai di pembersih untuk kulit yang gampang berjerawat."
+            }
+          ],
+          "manfaat": [
+            "Bentuk jelly, dari namanya low pH dan gentle",
+            "Tidak ada BHA di daftar bahan listing"
+          ],
+          "kulit": [
+            "Normal",
+            "Sensitif",
+            "Kering"
+          ],
+          "catatan": "Ukuran tidak tertulis di data ini. Low pH ada di nama produk, angkanya tidak dicantumkan. Bukan pembersih dengan asam."
+        },
+        "9957146544": {
+          "nama": "COSRX Low pH Good Morning Cleanser",
+          "tekstur": "Gel pembersih",
+          "isi": "150 ml",
+          "bahan": [
+            {
+              "nama": "Cocamidopropyl betaine dan sodium lauroyl methyl isethionate",
+              "fungsi": "Surfaktan yang tercantum. Keduanya umumnya dipilih supaya busanya tidak terlalu keras."
+            },
+            {
+              "nama": "Tea tree leaf oil dan betaine salicylate",
+              "fungsi": "Tea tree tercantum. Betaine salicylate adalah BHA yang tercantum di listing."
+            },
+            {
+              "nama": "Ekstrak styrax, ferment, dan ulmus davidiana",
+              "fungsi": "Ekstrak yang ikut tertulis, bersama polysorbate 20."
+            }
+          ],
+          "manfaat": [
+            "Isi 150 ml",
+            "BHA tertulis di daftar bahan",
+            "Listing ini punya harga coret"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Normal",
+            "Berjerawat"
+          ],
+          "catatan": "Nama produknya low pH, angkanya tidak ditulis di data. Ada BHA, jadi kulit sensitif sebaiknya coba sedikit dulu. Bukan obat jerawat."
+        }
+      }
+    },
+    {
+      "id": "emina-vs-skin1004-wash",
+      "jenis": "facial-wash",
+      "hook": "Facial wash lokal vs Korea, mending yang mana?",
+      "lokal": "29862006705",
+      "korea": "15516099411",
+      "lebihMurah": "lokal",
+      "ringkas": "Emina sabun muka dengan niacinamide, harganya rendah. SKIN1004 busa centella 125 ml, listingnya menyebut tanpa pewangi, dan juga menandai AHA.",
+      "verdict": {
+        "berminyak": "SKIN1004 lebih aktif: listing menandai AHA atau glycolic acid, plus centella. Itu pembersih yang ikut mengangkat sel kulit, bukan sabun muka biasa. Emina mencantumkan niacinamide dan hyaluronic acid, tanpa asam di data ini, jadi lebih ke pembersih harian yang ada bahan pencerahnya. Kulit berjerawat yang tidak kuat asam, jangan langsung ambil yang ada AHA.",
+        "kering": "Emina lebih mudah dipakai harian. Bahannya yang tertulis niacinamide, hyaluronic acid, dan mineral, tanpa AHA. SKIN1004 tanpa pewangi menurut listing dan ada centella, tapi glycolic acid bisa perih di kulit kering atau sensitif. Kalau tetap ingin centella, pakai sebentar dulu dan lihat kulitnya.",
+        "budget": "Emina jauh lebih hemat. Ukuran botolnya tidak tertulis di data, jadi cek sebelum checkout. SKIN1004 isi 125 ml, harganya beberapa kali lipat, dengan catatan centella, surfaktan sodium cocoyl isethionate, glycerine, dan penanda AHA. Mau sabun muka sederhana, Emina. Mau busa centella yang juga menandai asam, SKIN1004."
+      },
+      "produk": {
+        "29862006705": {
+          "nama": "Emina Bright Stuff Face Wash",
+          "tekstur": "Face wash",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Disebut sebagai zat aktif. Umumnya dipakai untuk warna kulit yang kurang rata dan minyak."
+            },
+            {
+              "nama": "Hyaluronic acid dan mineral",
+              "fungsi": "Keduanya tercantum di komposisi listing."
+            }
+          ],
+          "manfaat": [
+            "Harga listing rendah",
+            "Ada niacinamide, tanpa AHA di data ini"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak"
+          ],
+          "catatan": "Ukuran tidak tertulis di data. Bright Stuff nama lininya. Ini pembersih, bukan serum pencerah."
+        },
+        "15516099411": {
+          "nama": "SKIN1004 Centella Ampoule Foam",
+          "tekstur": "Busa",
+          "isi": "125 ml",
+          "bahan": [
+            {
+              "nama": "Centella extract",
+              "fungsi": "Disebut sebagai zat aktif di listing."
+            },
+            {
+              "nama": "Sodium cocoyl isethionate dan glycerine",
+              "fungsi": "Surfaktan dan humektan yang tercantum."
+            },
+            {
+              "nama": "AHA atau glycolic acid, dan hyaluronic acid",
+              "fungsi": "Ditandai di komposisi listing. Listing juga menyebut tanpa pewangi."
+            }
+          ],
+          "manfaat": [
+            "Busa 125 ml",
+            "Centella tertulis sebagai zat aktif",
+            "Listing menyebut tanpa pewangi"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak"
+          ],
+          "catatan": "Ada penanda AHA. Di kulit sensitif bisa terasa bekerja lebih dari sabun muka biasa. Nama ampoule foam ini pembersih, bukan ampoule yang dibiarkan di kulit."
+        }
+      }
+    },
+    {
+      "id": "avoskin-vs-anua",
+      "jenis": "facial-wash",
+      "hook": "Facial wash lokal vs Korea, mending yang mana?",
+      "lokal": "3765113010",
+      "korea": "24065010733",
+      "lebihMurah": "lokal",
+      "ringkas": "Avoskin 100 ml, listingnya lagi harga coret, dengan niacinamide dan beberapa ekstrak. Anua busa pori 150 ml dengan heartleaf dan quercetin. Selisih harga keranjangnya tipis.",
+      "verdict": {
+        "berminyak": "Anua yang namanya Pore Deep Cleansing Foam lebih pas kalau targetnya pori. Listingnya heartleaf, quercetin, dan beberapa ekstrak akar. Avoskin ada niacinamide, yang umumnya dipakai untuk minyak dan warna kulit, tapi juga ada marula oil. Minyak di pembersih bisa terasa terlalu kaya buat sebagian kulit berminyak.",
+        "kering": "Avoskin bacaannya lebih mengisi: air mawar, marula, cactus, kale, dan pentavitin, plus niacinamide. Anua pembersih pori. Kulit kering biasanya tidak butuh busa yang tugasnya mengangkat pori. Heartleaf sering dipilih untuk kulit yang gampang merah, tapi fungsi di listing tidak dijelaskan lebih jauh.",
+        "budget": "Avoskin lebih murah di keranjang, isi 100 ml, dan ada harga coret. Anua 150 ml dengan harga sedikit di atasnya, jadi per ml belum tentu Avoskin yang lebih hemat. Cek isi sebelum memutuskan. Avoskin menulis niacinamide. Anua menulis heartleaf dan quercetin, tanpa kadar."
+      },
+      "produk": {
+        "3765113010": {
+          "nama": "AVOSKIN Natural Sublime Facial Cleanser",
+          "tekstur": "Pembersih wajah",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Tercantum. Umumnya dipakai untuk minyak dan warna kulit yang kurang rata."
+            },
+            {
+              "nama": "Air mawar, marula, kale, cactus, pentavitin",
+              "fungsi": "Rosa damascena flower water, marula oil, kale extract, cactus extract, dan pentavitin tercantum di listing."
+            },
+            {
+              "nama": "Coconut acid",
+              "fungsi": "Bahan pembersih yang ikut tertulis."
+            }
+          ],
+          "manfaat": [
+            "Isi 100 ml",
+            "Ada niacinamide",
+            "Listing ini punya harga coret"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering"
+          ],
+          "catatan": "Ada marula oil. Kulit yang tidak cocok dengan minyak di pembersih sebaiknya cek teksturnya dulu di halaman produk."
+        },
+        "24065010733": {
+          "nama": "Anua Heartleaf Pore Cleansing Foam",
+          "tekstur": "Busa",
+          "isi": "150 ml",
+          "bahan": [
+            {
+              "nama": "Heartleaf",
+              "fungsi": "Ekstrak houttuynia cordata tercantum. Di nama produknya dipakai untuk busa pori."
+            },
+            {
+              "nama": "Quercetin",
+              "fungsi": "Tercantum di listing. Kadarnya tidak ditulis."
+            },
+            {
+              "nama": "Pueraria, ulmus davidiana, dan evening primrose",
+              "fungsi": "Ekstrak akar dan bunga yang ikut disebut."
+            }
+          ],
+          "manfaat": [
+            "Isi 150 ml",
+            "Diposisikan sebagai pembersih pori",
+            "Heartleaf tertulis di daftar bahan"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
+          "catatan": "Pore deep ada di nama. Listing tidak menulis kadar heartleaf atau quercetin. Bukan perawatan jerawat."
+        }
+      }
+    },
+    {
+      "id": "scarlett-vs-roundlab",
+      "jenis": "pelembab",
+      "hook": "Pelembab lokal vs Korea, mending yang mana?",
+      "lokal": "18264030060",
+      "korea": "21895521905",
+      "lebihMurah": "lokal",
+      "ringkas": "Scarlett pelembap ceramide, harga listingnya jauh lebih rendah, ukurannya tidak tertulis. Round Lab krim birch juice 80 ml, dengan daftar bahan yang lebih panjang.",
+      "verdict": {
+        "berminyak": "Keduanya pelembap, bukan gel yang dijelasin teksturnya sampai detail. Round Lab bentuknya krim 80 ml dengan jojoba esters, jadi bisa terasa lebih kaya di kulit berminyak. Tekstur Scarlett tidak dijelaskan di data, hanya bahwa ini moisturizer dengan ceramide dan hyaluronic acid. Cek teksturnya di halaman produk kalau kulitmu cepat lengket.",
+        "kering": "Round Lab lebih jelas untuk kulit kering: krim 80 ml, air birch 10.000 ppm, panthenol, hyaluronic acid, dan jojoba esters. Scarlett juga relevan, karena listingnya ceramides, hyaluronic acid, ekstrak camellia, dan hexapeptide-8, dengan harga yang jauh lebih rendah. Ukuran Scarlett tidak ada di data.",
+        "budget": "Scarlett jauh lebih hemat di keranjang. Angka 7X ada di nama produk; listingnya menulis ceramides, bukan tujuh nama ceramide yang terpisah. Round Lab 80 ml dan harganya tinggi, dengan birch juice yang kadarnya ditulis 10.000 ppm plus niacinamide. Mau pelembap ceramide murah, Scarlett, asal ukurannya sudah dicek. Mau krim 80 ml dengan daftar yang lebih rinci, Round Lab."
+      },
+      "produk": {
+        "18264030060": {
+          "nama": "SCARLETT 7X Ceramide Moisturizer",
+          "tekstur": "Pelembap",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Ceramides",
+              "fungsi": "Tercantum. Umumnya membantu kulit menahan lembap. Angka 7X ada di nama, daftarnya tidak mengurai tujuh ceramide."
+            },
+            {
+              "nama": "Hyaluronic acid dan ekstrak camellia",
+              "fungsi": "Keduanya tertulis di listing."
+            },
+            {
+              "nama": "Hexapeptide-8",
+              "fungsi": "Peptida yang tercantum. Listing tidak menjelaskan kadar atau fungsinya."
+            }
+          ],
+          "manfaat": [
+            "Ceramide tertulis di listing",
+            "Harga di listing ini rendah"
+          ],
+          "kulit": [
+            "Kering",
+            "Normal"
+          ],
+          "catatan": "Ukuran tidak tertulis. Tekstur krim atau gel juga tidak dijelaskan di data, jadi cek foto produk sebelum beli."
+        },
+        "21895521905": {
+          "nama": "Round Lab Birch Juice Cream",
+          "tekstur": "Krim",
+          "isi": "80 ml",
+          "bahan": [
+            {
+              "nama": "Birch juice",
+              "fungsi": "Betula platyphylla japonica juice, tertulis 10.000 ppm."
+            },
+            {
+              "nama": "Panthenol, glyceryl glucoside, hyaluronic acid",
+              "fungsi": "Sodium hyaluronate dan hyaluronic acid ikut tercantum, umumnya untuk hidrasi."
+            },
+            {
+              "nama": "Jojoba esters dan niacinamide",
+              "fungsi": "Jojoba esters bikin krim lebih kaya. Niacinamide tercantum tanpa kadar."
+            }
+          ],
+          "manfaat": [
+            "Krim 80 ml",
+            "Kadar birch juice tertulis",
+            "Ada panthenol dan hyaluronic acid"
+          ],
+          "kulit": [
+            "Kering",
+            "Normal"
+          ],
+          "catatan": "Krim 80 ml bisa terasa kaya di kulit berminyak. Harga listingnya jauh di atas pelembap lokal di pasangan ini."
+        }
+      }
+    },
+    {
+      "id": "whitelab-vs-joseon-cream",
+      "jenis": "pelembab",
+      "hook": "Pelembab lokal vs Korea, mending yang mana?",
+      "lokal": "55960719687",
+      "korea": "21470651286",
+      "lebihMurah": "lokal",
+      "ringkas": "Whitelab pelembap pencerah: niacinamide 5% dan tranexamic acid 2%, plus ceramide. Dynasty Cream 50 ml dengan air beras, ginseng, dan squalene, harganya lebih tinggi.",
+      "verdict": {
+        "berminyak": "Whitelab lebih cocok kalau yang dicari pelembap sekaligus pencerah. Niacinamide-nya 5% dan tranexamic acid-nya 2%, dua-duanya tertulis. Dynasty Cream ada niacinamide tanpa kadar, plus squalene yang bikin krim terasa lebih kaya. Listing Dynasty Cream juga menandai AHA dan BHA. Kalau penanda itu benar ada di formula, ini bukan krim kosong. Cek kemasan sebelum dipakai di kulit yang sedang berjerawat.",
+        "kering": "Dynasty Cream lebih masuk akal untuk kulit kering: krim 50 ml dengan air dedak beras, air akar ginseng, dan squalene. Whitelab fokusnya brightening, dengan multi-ceramide yang membantu menahan lembap, tapi tekstur krim atau gelnya tidak dijelaskan. Listing Dynasty Cream menandai tanpa pewangi, sekaligus AHA dan BHA. Penanda asam itu perlu dicek, karena bisa mengganggu kulit sensitif.",
+        "budget": "Whitelab jauh lebih hemat, dan kadarnya ditulis: 5% niacinamide, 2% tranexamic acid, plus multi-ceramide. Ukurannya tidak ada di data. Dynasty Cream 50 ml, lebih mahal, dengan beras, ginseng, squalene, dan niacinamide tanpa kadar. Mau pencerah yang angkanya jelas, Whitelab. Mau krim beras 50 ml, Dynasty Cream, setelah penanda AHA dan BHA di listing dicek."
+      },
+      "produk": {
+        "55960719687": {
+          "nama": "Whitelab Hyperbright Moisturizer",
+          "tekstur": "Pelembap",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Niacinamide 5%",
+              "fungsi": "Kadarnya tertulis. Umumnya dipakai untuk warna kulit dan minyak."
+            },
+            {
+              "nama": "Tranexamic acid 2%",
+              "fungsi": "Kadarnya tertulis. Umumnya dipakai untuk noda yang tampak gelap."
+            },
+            {
+              "nama": "Multi-ceramide",
+              "fungsi": "Tercantum. Umumnya membantu kulit menahan lembap."
+            }
+          ],
+          "manfaat": [
+            "Kadar niacinamide dan tranexamic acid tertulis",
+            "Ada ceramide",
+            "Harga listing lebih rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak"
+          ],
+          "catatan": "Ukuran dan tekstur tidak dijelaskan di data. Ini pelembap pencerah, bukan serum. Hasil warna kulit butuh pemakaian rutin, dan sunscreen tetap dipakai siang hari."
+        },
+        "21470651286": {
+          "nama": "Beauty of Joseon Dynasty Cream",
+          "tekstur": "Krim",
+          "isi": "50 ml",
+          "bahan": [
+            {
+              "nama": "Air dedak beras dan air akar ginseng",
+              "fungsi": "Rice bran water dan ginseng root water, dua bahan yang disebut namanya di listing."
+            },
+            {
+              "nama": "Squalene dan niacinamide",
+              "fungsi": "Squalene bikin krim terasa lebih kaya. Niacinamide tercantum tanpa kadar."
+            },
+            {
+              "nama": "Penanda lain di listing",
+              "fungsi": "Listing juga menandai AHA, BHA, ceramide, dan tanpa pewangi. Cek kemasan, karena penanda marketplace bisa lebih luas daripada formula."
+            }
+          ],
+          "manfaat": [
+            "Krim 50 ml",
+            "Beras dan ginseng disebut namanya",
+            "Listing menandai tanpa pewangi"
+          ],
+          "kulit": [
+            "Kering",
+            "Normal"
+          ],
+          "catatan": "Jangan anggap ini krim eksfoliasi hanya karena listing menandai AHA dan BHA. Cocokkan dengan kemasan. Squalene bisa terasa kaya di kulit berminyak."
+        }
+      }
+    },
+    {
+      "id": "somethinc-vs-cosrx-cream",
+      "jenis": "pelembab",
+      "hook": "Pelembab lokal vs Korea, mending yang mana?",
+      "lokal": "7579536745",
+      "korea": "1288153371",
+      "lebihMurah": "lokal",
+      "ringkas": "Daftar bahan dua-duanya tidak tercantum. Somethinc dari namanya pelembap gel. COSRX krim all-in-one, dijual jar atau tube, 100 ml atau 50 ml.",
+      "verdict": {
+        "berminyak": "Pilih Somethinc kalau yang dibutuhkan bentuk gel. Itu dari nama produknya, Ceramic Skin Saviour Moisturizer Gel, bukan dari daftar bahan, karena listing tidak menuliskan kandungan. COSRX krim. Di kulit berminyak, gel biasanya lebih ringan daripada krim, tapi tanpa daftar bahan ini tetap tebakan dari bentuknya.",
+        "kering": "COSRX lebih masuk akal kalau kulitnya kering dan mau krim. Namanya Advanced Snail 92 All In One Cream. Kata snail ada di nama, tapi daftar bahan tidak tercantum, jadi jangan menganggap ada kadar tertentu. Somethinc gel. Kulit yang sangat kering kadang butuh krim di atas gel.",
+        "budget": "Somethinc lebih murah di keranjang. Ukurannya tidak tertulis. COSRX lebih mahal, dan judul listingnya mencakup 100 ml (jar atau tube) dan 50 ml. Harga di situs ini untuk listing itu. Cek ukuran yang kena harga sebelum membandingkan. Isi kandungan tidak bisa dijadikan alasan memilih, karena dua-duanya tidak tercantum."
+      },
+      "produk": {
+        "7579536745": {
+          "nama": "SOMETHINC Ceramic Skin Saviour",
+          "tekstur": "Gel",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Daftar bahan tidak tercantum",
+              "fungsi": "Listing tidak menuliskan kandungan. Dari namanya ini pelembap gel."
+            }
+          ],
+          "manfaat": [
+            "Bentuknya gel, dari nama produk",
+            "Harga listing lebih rendah dari krim di pasangan ini"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
+          "catatan": "Bahan tidak tercantum. Ceramic Skin nama produk, bukan keterangan ceramide. Ukuran tidak tertulis. Jenis kulit yang paling pas susah dipastikan tanpa daftar bahan."
+        },
+        "1288153371": {
+          "nama": "COSRX Snail 92 All In One Cream",
+          "tekstur": "Krim (jar atau tube)",
+          "isi": "100 ml atau 50 ml",
+          "bahan": [
+            {
+              "nama": "Daftar bahan tidak tercantum",
+              "fungsi": "Listing tidak menuliskan kandungan. Namanya krim all-in-one. Kata snail ada di nama produk, kadarnya tidak ditulis di data ini."
+            }
+          ],
+          "manfaat": [
+            "Bentuknya krim, bukan gel",
+            "Ada pilihan jar atau tube"
+          ],
+          "kulit": [
+            "Kering",
+            "Normal"
+          ],
+          "catatan": "Bahan tidak tercantum, jadi kandungan snail tidak diuraikan di sini. Judul listing menyebut 100 ml (jar atau tube) dan 50 ml. Cek ukuran yang kena harga. Krim bisa terasa lebih berat di kulit berminyak."
+        }
+      }
+    },
+    {
+      "id": "somethinc-vs-joseon-glow",
+      "jenis": "serum",
+      "hook": "Serum lokal vs Korea, mending yang mana?",
+      "lokal": "43201106583",
+      "korea": "23416749294",
+      "lebihMurah": "lokal",
+      "ringkas": "Harganya hampir sama. Somethinc niacinamide plus alpha arbutin, ukurannya tidak tertulis. Joseon Glow Serum 30 ml: niacinamide 2%, propolis, dan BHA 0,5%.",
+      "verdict": {
+        "berminyak": "Joseon lebih relevan kalau porinya tersumbat, karena ada BHA 0,5%. Itu kadar rendah, bukan serum jerawat. Somethinc namanya Gentle Bright, dengan niacinamide dan alpha arbutin, tanpa BHA di daftar yang tertulis. Kulit berminyak yang kusam bisa memakai Somethinc. Yang mau sedikit eksfoliasi, Joseon, dan sunscreen tetap dipakai siang hari.",
+        "kering": "Somethinc lebih tenang untuk kulit kering atau sensitif: tidak ada BHA di listing, dan namanya gentle. Joseon ada propolis, yang sering dipakai di formula yang menenangkan, tapi BHA 0,5% tetap asam. Kulit sensitif yang belum terbiasa BHA sebaiknya mulai pelan, atau ambil yang tanpa asam.",
+        "budget": "Harga keranjangnya berdekatan, Somethinc sedikit lebih rendah. Joseon isi 30 ml dan kadarnya ditulis: niacinamide 2% serta BHA 0,5%, plus propolis. Ukuran Somethinc tidak tercantum, jadi belum tentu lebih hemat per ml. Cek botolnya. Mau kadar yang tertulis dan ada BHA, Joseon. Mau niacinamide plus alpha arbutin tanpa BHA di daftarnya, Somethinc."
+      },
+      "produk": {
+        "43201106583": {
+          "nama": "SOMETHINC Niacinamide + Alpha Arbutin Serum",
+          "tekstur": "Serum",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Niacinamide dan alpha arbutin",
+              "fungsi": "Keduanya tercantum, tanpa kadar. Umumnya dipakai untuk warna kulit yang kurang rata."
+            },
+            {
+              "nama": "Sodium palmitoyl proline",
+              "fungsi": "Tercantum di listing. Fungsinya tidak dijelaskan di sana."
+            },
+            {
+              "nama": "Ekstrak arisaema amurense",
+              "fungsi": "Ekstrak tanaman yang tercantum. Listing tidak menjelaskan fungsinya."
+            }
+          ],
+          "manfaat": [
+            "Niacinamide dan alpha arbutin tertulis",
+            "Tidak ada BHA di daftar listing",
+            "Nama produknya gentle bright"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Sensitif"
+          ],
+          "catatan": "Ukuran dan kadar tidak tertulis. Alpha arbutin butuh pemakaian rutin, dan sunscreen tetap dipakai siang hari."
+        },
+        "23416749294": {
+          "nama": "Beauty of Joseon Glow Serum",
+          "tekstur": "Serum",
+          "isi": "30 ml",
+          "bahan": [
+            {
+              "nama": "Propolis extract",
+              "fungsi": "Tercantum. Sering dipakai di formula yang menenangkan."
+            },
+            {
+              "nama": "Niacinamide 2%",
+              "fungsi": "Kadarnya tertulis. Umumnya dipakai untuk warna kulit dan minyak."
+            },
+            {
+              "nama": "BHA 0,5%",
+              "fungsi": "Kadarnya tertulis. Asam ini mengangkat sel kulit di pori. Pakai sunscreen siang hari."
+            }
+          ],
+          "manfaat": [
+            "Isi 30 ml",
+            "Kadar niacinamide dan BHA tertulis",
+            "Ada propolis"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
+          "catatan": "BHA 0,5% tetap asam. Kulit sensitif mulai dari pemakaian jarang. Bukan serum untuk jerawat meradang. Isi 30 ml habis lebih cepat kalau dipakai pagi dan malam."
+        }
+      }
+    },
+    {
+      "id": "whitelab-vs-skin1004-ampoule",
+      "jenis": "serum",
+      "hook": "Serum lokal vs Korea, mending yang mana?",
+      "lokal": "3173050187",
+      "korea": "14217578532",
+      "lebihMurah": "lokal",
+      "ringkas": "Whitelab serum pencerah, daftar bahannya tidak tercantum, harganya lebih rendah. SKIN1004 ini ampoule centella 100 ml, bukan botol serum kecil, dan listingnya menyebut tanpa pewangi.",
+      "verdict": {
+        "berminyak": "Whitelab yang namanya brightening face serum, kalau yang dicari langkah pencerah. Daftar bahannya tidak tercantum, jadi tidak ada kadar yang bisa dibandingkan. SKIN1004 ampoule centella. Centella biasanya dipilih untuk menenangkan, bukan untuk mengontrol minyak. Kulit berminyak tetap bisa memakainya karena bentuknya ampoule yang cair, tapi itu bukan serum minyak.",
+        "kering": "SKIN1004 lebih jelas. Ampoule 100 ml, bahan yang disebut centella, dan listing menandai tanpa pewangi, paraben, silikon, dan sulfat. Whitelab serum pencerah tanpa daftar bahan. Kulit kering atau sensitif yang mau formula yang tertulis, ambil yang centella. Yang mau produk pencerah murah, Whitelab, dengan catatan bahannya tidak bisa dicek dari data ini.",
+        "budget": "Whitelab jauh lebih hemat di keranjang. Kamu membeli serum pencerah yang daftar bahannya tidak tercantum, dan ukurannya juga tidak tertulis. SKIN1004 lebih mahal, isi 100 ml, bentuknya ampoule yang dipakai di langkah serum. Mau harga rendah, Whitelab. Mau botol besar dengan centella yang disebut namanya, SKIN1004."
+      },
+      "produk": {
+        "3173050187": {
+          "nama": "Whitelab Brightening Face Serum",
+          "tekstur": "Serum",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Daftar bahan tidak tercantum",
+              "fungsi": "Listing tidak menuliskan kandungan. Dari namanya ini serum pencerah."
+            }
+          ],
+          "manfaat": [
+            "Harga listing lebih rendah",
+            "Diposisikan sebagai serum pencerah"
+          ],
+          "kulit": [
+            "Normal"
+          ],
+          "catatan": "Bahan tidak tercantum. Ukuran juga tidak tertulis. Jenis kulit yang paling pas susah dipastikan tanpa daftar bahan. Sunscreen tetap dipakai siang hari kalau produknya memang untuk pencerah."
+        },
+        "14217578532": {
+          "nama": "SKIN1004 Centella Ampoule",
+          "tekstur": "Ampoule",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Madagascar centella asiatica",
+              "fungsi": "Bahan yang disebut di listing. Umumnya dipakai untuk menenangkan kulit."
+            },
+            {
+              "nama": "Penanda bebas",
+              "fungsi": "Listing menandai tanpa pewangi, paraben, silikon, dan sulfat."
+            }
+          ],
+          "manfaat": [
+            "Ampoule 100 ml, dipakai di langkah serum",
+            "Centella disebut namanya",
+            "Listing menandai tanpa pewangi"
+          ],
+          "kulit": [
+            "Sensitif",
+            "Kering",
+            "Normal"
+          ],
+          "catatan": "Ini ampoule, bukan serum botol kecil. Di situs ini dia dibandingin pada langkah serum. Bukan produk pencerah. Isi 100 ml jauh lebih besar dari serum 20 ml pada umumnya."
+        }
+      }
+    },
+    {
+      "id": "scarlett-vs-cosrx-essence",
+      "jenis": "serum",
+      "hook": "Serum lokal vs Korea, mending yang mana?",
+      "lokal": "6140350826",
+      "korea": "2957199164",
+      "lebihMurah": "lokal",
+      "ringkas": "Scarlett serum pencerah, bahan tidak tercantum, harga lebih rendah. COSRX ini essence 100 ml, bukan serum. Listingnya menuliskan snail secretion filtrate, hyaluronate, dan panthenol.",
+      "verdict": {
+        "berminyak": "Scarlett yang diposisikan sebagai serum pencerah, dari namanya Brightly Ever After. Daftar bahannya tidak tercantum, termasuk yang disebut formula baru, jadi tidak ada bahan minyak yang bisa dicek. COSRX essence dengan hyaluronate dan panthenol lebih ke hidrasi. Essence biasanya cair, jadi kulit berminyak sering masih nyaman, tapi ini bukan produk untuk mengontrol minyak.",
+        "kering": "COSRX lebih pas dan lebih jelas. Bentuknya essence 100 ml, bukan serum. Listing menulis snail secretion filtrate, sodium hyaluronate, panthenol, allantoin, dan arginine. Angka 96 ada di nama produk, kadarnya tidak ditulis di kolom bahan. Scarlett serum pencerah tanpa daftar bahan. Kulit kering yang butuh hidrasi, essence ini lebih mudah dipertanggungjawabkan.",
+        "budget": "Scarlett jauh lebih hemat. Yang dibeli serum pencerah tanpa daftar bahan di data ini, dan ukurannya tidak tertulis. COSRX lebih mahal, isi 100 ml, dengan daftar bahan yang tertulis. Mau harga rendah untuk langkah pencerah, Scarlett. Mau essence besar dengan bahan yang bisa dibaca, COSRX. Jangan membandingkan harga per ml sebelum ukuran Scarlett dicek."
+      },
+      "produk": {
+        "6140350826": {
+          "nama": "SCARLETT Brightly Ever After Serum",
+          "tekstur": "Serum",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Daftar bahan tidak tercantum",
+              "fungsi": "Listing tidak menuliskan kandungan, termasuk untuk yang disebut formula baru. Dari namanya ini serum pencerah."
+            }
+          ],
+          "manfaat": [
+            "Harga listing lebih rendah",
+            "Diposisikan sebagai serum pencerah"
+          ],
+          "kulit": [
+            "Normal"
+          ],
+          "catatan": "Bahan tidak tercantum. Formula baru ada di nama listing, isinya tidak bisa diuraikan dari data ini. Ukuran tidak tertulis."
+        },
+        "2957199164": {
+          "nama": "COSRX Snail Mucin 96 Essence",
+          "tekstur": "Essence, bukan serum",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Snail secretion filtrate",
+              "fungsi": "Tercantum di listing. Angka 96 ada di nama produk; kadarnya tidak ditulis di kolom bahan."
+            },
+            {
+              "nama": "Sodium hyaluronate, panthenol, allantoin",
+              "fungsi": "Tercantum. Umumnya dipakai untuk hidrasi dan rasa yang lebih nyaman."
+            },
+            {
+              "nama": "Betaine, arginine, butylene glycol, 1,2-hexanediol",
+              "fungsi": "Ikut tertulis di listing yang sama."
+            }
+          ],
+          "manfaat": [
+            "Essence 100 ml, dipakai di langkah serum",
+            "Daftar bahan tertulis",
+            "Ada hyaluronate dan panthenol"
+          ],
+          "kulit": [
+            "Kering",
+            "Normal",
+            "Sensitif"
+          ],
+          "catatan": "Ini essence, bukan serum. Dibandingkan di langkah serum karena teksturnya dipakai di urutan yang sama. Jangan membaca angka 96 sebagai kadar yang diukur di halaman ini. Listing yang dipakai tidak menulis pewangi, dan juga tidak menyatakan bebas pewangi."
+        }
+      }
+    },
+    {
+      "id": "emina-vs-somebymi-sun",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs Korea, mending yang mana?",
+      "lokal": "9647576834",
+      "korea": "11349352968",
+      "lebihMurah": "lokal",
+      "ringkas": "Emina SPF 35 PA+++, daftar bahannya tidak tercantum. SOME BY MI dari namanya sunscreen mineral yang tone-up. Angka SPF produk Korea itu tidak ada di data ini.",
+      "verdict": {
+        "berminyak": "Emina namanya Bright Glow, jadi hasilnya kemungkinan menyala, bukan matte. SOME BY MI namanya mineral calming tone-up. Tone-up biasanya meninggalkan warna tipis. Mineral kadang terasa lebih tebal daripada sunscreen kimia, tapi daftar bahannya tidak tercantum, jadi itu baru dari nama. Cek foto di halaman Shopee kalau kamu tidak mau warna di wajah.",
+        "kering": "Tanpa daftar bahan, susah bilang mana yang lebih melembapkan. Emina sunscreen dengan Bright Glow di nama. SOME BY MI suncream, dari namanya krim, bukan gel cair. Krim sering lebih nyaman di kulit kering, asal tone-up-nya tidak terlalu menutup. Dua-duanya tetap sunscreen, dan bahan pastinya ada di kemasan.",
+        "budget": "Emina jauh lebih hemat, dan SPF-nya tertulis: 35 PA+++. Itu di bawah sunscreen harian yang SPF-nya 50. SOME BY MI lebih mahal. Angka SPF dan PA-nya tidak tercantum di data ini, jadi jangan menganggap perlindungannya setara. Ukuran dua-duanya juga tidak tertulis. Cek kemasan sebelum memutuskan yang mana cukup untuk lama di luar."
+      },
+      "produk": {
+        "9647576834": {
+          "nama": "Emina Sun Battle SPF 35",
+          "tekstur": "Sunscreen",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Daftar bahan tidak tercantum",
+              "fungsi": "Listing tidak menuliskan kandungan. Yang tertulis di nama: SPF 35 PA+++ dan Bright Glow."
+            }
+          ],
+          "manfaat": [
+            "SPF 35 PA+++ tertulis di nama",
+            "Harga listing lebih rendah"
+          ],
+          "kulit": [
+            "Normal"
+          ],
+          "catatan": "Bahan tidak tercantum. Bright Glow di nama biasanya berarti hasilnya agak menyala. SPF 35 lebih rendah dari SPF 50. Ukuran tidak tertulis."
+        },
+        "11349352968": {
+          "nama": "SOME BY MI Truecica Tone-up Suncream",
+          "tekstur": "Suncream tone-up",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {
+              "nama": "Daftar bahan tidak tercantum",
+              "fungsi": "Listing tidak menuliskan kandungan. Dari namanya ini sunscreen mineral, calming, dan tone-up (Truecica). Angka SPF tidak ada di data ini."
+            }
+          ],
+          "manfaat": [
+            "Dari namanya sunscreen mineral",
+            "Tone-up, jadi ada efek meratakan warna"
+          ],
+          "kulit": [
+            "Normal"
+          ],
+          "catatan": "Bahan dan angka SPF tidak tercantum. Cek kemasan sebelum menganggap perlindungannya setara dengan SPF 50. Tone-up biasanya berwarna tipis. Truecica ada di nama, bukan di daftar bahan."
+        }
+      }
+    },
+    {
+      "id": "wardah-vs-isntree",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs Korea, mending yang mana?",
+      "lokal": "13817489878",
+      "korea": "57514028776",
+      "lebihMurah": "lokal",
+      "ringkas": "Wardah bentuknya stik 22 g, light matte, SPF 50++. ISNTREE sun gel watery 50 ml. Bahan dan angka SPF ISNTREE tidak tertulis di data ini.",
+      "verdict": {
+        "berminyak": "Wardah lebih mudah ditebak untuk kulit berminyak. Bentuknya stik, nama variannya light matte, SPF 50++. Stik gampang dipakai ulang di atas makeup, tapi isinya cuma 22 g. ISNTREE dari namanya sun gel watery. Gel watery sering terasa ringan, tapi bisa juga dewy. Daftar bahannya tidak tercantum, jadi hasil matte atau glowing tidak bisa dipastikan dari data ini.",
+        "kering": "ISNTREE lebih masuk akal kalau kamu mau sunscreen yang dioles seperti gel, isi 50 ml, dan hyaluronic acid ada di nama produk. Itu belum daftar bahan. Wardah stik light matte. Stik matte di kulit kering kadang terasa seret. Listing Wardah menyebut vitamin C, vitamin E, antioksidan, mineral, dan BHA. BHA di sunscreen perlu dicek kalau kulitmu sensitif.",
+        "budget": "Wardah jauh lebih murah di keranjang. Isinya 22 g, bukan botol 50 ml, jadi jangan langsung disebut lebih hemat per pemakaian. ISNTREE 50 ml dan harganya tinggi. Angka SPF ISNTREE tidak tercantum di data ini, sedangkan Wardah menulis SPF 50++ di nama. Mau stik matte yang angkanya ada, Wardah. Mau sun gel 50 ml, ISNTREE, setelah SPF di kemasan dicek."
+      },
+      "produk": {
+        "13817489878": {
+          "nama": "Wardah UV Shield Sun Stick",
+          "tekstur": "Sun stick",
+          "isi": "22 g",
+          "bahan": [
+            {
+              "nama": "Vitamin C, vitamin E, dan antioksidan",
+              "fungsi": "Disebut di komposisi listing. Bukan daftar INCI yang lengkap."
+            },
+            {
+              "nama": "Mineral dan BHA",
+              "fungsi": "Keduanya ditandai di listing. SPF 50++ dan light matte ada di nama produk."
+            }
+          ],
+          "manfaat": [
+            "Bentuk stik, gampang dibawa",
+            "SPF 50++ tertulis di nama",
+            "Nama variannya light matte"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
+          "catatan": "Ini stik 22 g, bukan lotion UV Shield yang variannya banyak. Light matte ada di nama. Listing menandai BHA. Kulit sensitif sebaiknya cek daftar lengkap di kemasan. Isi 22 g kecil kalau dipakai sekeluarga."
+        },
+        "57514028776": {
+          "nama": "ISNTREE Hyaluronic Acid Watery Sun Gel",
+          "tekstur": "Sun gel watery",
+          "isi": "50 ml",
+          "bahan": [
+            {
+              "nama": "Daftar bahan tidak tercantum",
+              "fungsi": "Listing tidak menuliskan kandungan. Hyaluronic acid ada di nama produk. Angka SPF tidak ada di data ini."
+            }
+          ],
+          "manfaat": [
+            "Sun gel 50 ml",
+            "Dari namanya teksturnya watery"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering"
+          ],
+          "catatan": "Bahan dan angka SPF tidak tercantum. Jangan menganggap perlindungannya sama dengan stik yang menulis SPF 50++. Hyaluronic acid baru dari nama, belum dari daftar bahan. Cek kemasan."
+        }
+      }
+    },
+    {
+      "id": "azarine-vs-joseon-sun",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs Korea, mending yang mana?",
+      "lokal": "57258414707",
+      "korea": "22643178287",
+      "lebihMurah": "lokal",
+      "ringkas": "Azarine pelembap sekaligus sunscreen, SPF 35 PA++, isi 40 ml. Joseon Relief Sun sunscreen SPF50+ PA++++, 50 ml, dengan ekstrak beras dan ferment biji-bijian.",
+      "verdict": {
+        "berminyak": "Azarine bentuknya sunscreen moisturiser. Pelembap plus sunscreen bisa terasa lebih lembap daripada sunscreen yang memang didesain ringan, dan SPF-nya 35 PA++, bukan 50. Joseon sunscreen SPF50+ PA++++, listingnya tanpa pewangi, dengan ekstrak beras. Kalau kulit berminyak dan kamu lama di luar, angka perlindungan Joseon lebih tinggi. Azarine masuk akal kalau kamu mau satu langkah saja dan tidak lama di bawah matahari.",
+        "kering": "Azarine memang pelembap yang membawa SPF: aloe vera, greentea, propolis, dan pomegranate tercantum, isi 40 ml, SPF 35 PA++. Kulit kering yang mau satu produk bisa mulai dari sini, dengan catatan perlindungannya lebih rendah. Joseon 50 ml, SPF50+ PA++++, ekstrak beras 30% dan ferment biji-bijian. Listingnya menandai tanpa pewangi. Untuk kulit kering yang tetap butuh SPF tinggi, Joseon, dan pelembap terpisah kalau kulitnya masih tertarik.",
+        "budget": "Azarine jauh lebih hemat, 40 ml, SPF 35 PA++. Itu pelembap sekaligus sunscreen, bukan pengganti sunscreen SPF 50 kalau kamu di luar lama. Joseon lebih mahal, 50 ml, SPF50+ PA++++, ekstrak beras 30% tertulis. Mau satu langkah yang murah dan SPF-nya sedang, Azarine. Mau sunscreen dengan angka PA yang lebih tinggi, Joseon."
+      },
+      "produk": {
+        "57258414707": {
+          "nama": "AZARINE Cicamide Sunscreen Moisturiser",
+          "tekstur": "Pelembap sekaligus sunscreen",
+          "isi": "40 ml",
+          "bahan": [
+            {
+              "nama": "Aloe vera dan greentea",
+              "fungsi": "Tercantum sebagai bahan utama di listing."
+            },
+            {
+              "nama": "Propolis dan pomegranate",
+              "fungsi": "Tercantum di listing yang sama. SPF 35 PA++ ada di nama produk."
+            }
+          ],
+          "manfaat": [
+            "Satu langkah: pelembap plus sunscreen",
+            "Isi 40 ml",
+            "Harga listing rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering"
+          ],
+          "catatan": "Ini sunscreen moisturiser, bukan sunscreen SPF 50. Angkanya SPF 35 PA++, lebih rendah dari SPF50+ PA++++. Cicamide ada di nama. Listing yang dipakai tidak mengurai daftar ceramide."
+        },
+        "22643178287": {
+          "nama": "Beauty of Joseon Relief Sun",
+          "tekstur": "Sunscreen",
+          "isi": "50 ml",
+          "bahan": [
+            {
+              "nama": "Ekstrak beras 30%",
+              "fungsi": "Kadarnya tertulis di listing, bersama ferment biji-bijian yang disebut probiotics."
+            },
+            {
+              "nama": "SPF50+ PA++++",
+              "fungsi": "Angka perlindungan yang tercantum untuk produk ini. Listing juga menandai tanpa pewangi."
+            }
+          ],
+          "manfaat": [
+            "SPF50+ PA++++",
+            "Isi 50 ml",
+            "Ekstrak beras yang kadarnya ditulis"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Sensitif"
+          ],
+          "catatan": "Ini sunscreen, bukan pelembap. Listing menandai tanpa pewangi. Tetap dioles ulang kalau lama di luar."
         }
       }
     }

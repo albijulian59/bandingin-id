@@ -4,10 +4,11 @@
     python3 tools/build_site.py            # pakai gambar yang sudah ada
     python3 tools/build_site.py --gambar   # unduh ulang gambar produk
 
-Sumber: sumber/*.psv, sumber/merek-korea.txt, sumber/posted.log, tools/pasangan.json
+Sumber: sumber/*.psv, sumber/tambahan-*.psv, sumber/merek-korea.txt,
+sumber/posted.log, tools/pasangan.json
 Hasil: index.html, banding/*.html, img/*.jpg
 """
-import argparse, json, os, re, sys, urllib.request
+import argparse, glob, json, os, re, sys, urllib.request
 from html import escape
 from io import BytesIO
 from PIL import Image
@@ -21,6 +22,7 @@ JENIS = [
     ("pelembab", "Pelembab"),
     ("serum", "Serum"),
     ("sunscreen", "Sunscreen"),
+    ("facial-wash", "Facial Wash"),
 ]
 JENIS_LABEL = dict(JENIS)
 
@@ -33,8 +35,8 @@ BANNED = re.compile(
 
 ALASAN_LEWAT = {
     "facial": (
-        "Tidak ada facial wash merek Korea di data, dan tidak ada analisa kandungan. "
-        "Perbandingan lokal vs Korea tidak dibuat supaya tidak mengarang produk atau daftar bahan."
+        "Facial wash dari data awal tidak dipasangkan: tidak ada analisa kandungan, "
+        "dan tidak ada pasangan Korea di batch itu. Yang tampil berasal dari file tambahan."
     ),
     "20774296730": "Garnier bukan merek lokal Indonesia dan tidak ada di daftar merek Korea, jadi tidak masuk sisi mana pun.",
     "24386158862": (
@@ -145,7 +147,59 @@ def muat_produk():
                     "gambar": p[9],
                     "aff": aff[iid],
                 }
+    muat_tambahan(produk)
     return produk
+
+
+def muat_tambahan(produk):
+    """File tambahan-*.psv: produk baru dengan link pendek dan catatan bahan.
+
+    Kolomnya tetap: type, brand, origin, name, price, original price,
+    product URL, image URL, short link, key ingredients.
+    Batch baru cukup ditambah sebagai file baru di sumber/.
+    """
+    wajib = [
+        "type", "brand", "origin", "name", "price", "original price",
+        "product url", "image url", "short link", "key ingredients",
+    ]
+    paths = sorted(glob.glob(os.path.join(SUMBER, "tambahan-*.psv")))
+    for path in paths:
+        with open(path, encoding="utf-8") as f:
+            lines = [ln.strip() for ln in f if ln.strip()]
+        if not lines:
+            continue
+        header = [h.strip().lower() for h in lines[0].split(" | ")]
+        if header != wajib:
+            raise SystemExit(os.path.basename(path) + ": header tidak dikenali")
+        for n, line in enumerate(lines[1:], 2):
+            kolom = [x.strip() for x in line.split(" | ")]
+            if len(kolom) != len(header):
+                raise SystemExit(f"{os.path.basename(path)} baris {n} bukan {len(header)} kolom")
+            row = dict(zip(header, kolom))
+            iid = item_id(row["product url"])
+            if iid in produk:
+                raise SystemExit(f"{iid} bentrok dengan produk yang sudah ada")
+            aff = row["short link"]
+            if not aff.startswith("https://s.shopee.co.id/"):
+                raise SystemExit("Bukan link pendek: " + aff)
+            if row["origin"] not in ("lokal", "korea"):
+                raise SystemExit(f"origin tidak dikenal: {row['origin']}")
+            harga = parse_rp(row["price"])
+            if not harga:
+                raise SystemExit(f"harga kosong: {iid}")
+            produk[iid] = {
+                "id": iid,
+                "keyword": row["type"],
+                "judul": row["name"],
+                "harga": harga,
+                "asli": parse_rp(row["original price"]),
+                "url": row["product url"],
+                "gambar": row["image url"],
+                "aff": aff,
+                "asal": row["origin"],
+                "merek": row["brand"],
+                "bahan_mentah": row["key ingredients"],
+            }
 
 
 def muat_posted():
@@ -331,11 +385,11 @@ def render_index(data, produk, pasangan):
         )
 
     desk = (
-        "Bandingin pelembab, serum, dan sunscreen. Satu merek lokal dibanding satu merek Korea "
-        "yang sejenis: kandungan, harga, dan cocok untuk kulit yang mana."
+        "Bandingin facial wash, pelembab, serum, dan sunscreen. Satu merek lokal dibanding "
+        "satu merek Korea yang sejenis: kandungan, harga, dan cocok untuk kulit yang mana."
     )
     html = head(
-        "Bandingin.id — Pelembab, Serum, dan Sunscreen Lokal vs Korea",
+        "Bandingin.id — Facial Wash, Pelembab, Serum, Sunscreen Lokal vs Korea",
         desk,
         "",
         "index.html",
@@ -347,7 +401,7 @@ def render_index(data, produk, pasangan):
     <div class="wrap">
       <p class="kicker kicker-terang">Skincare lokal vs Korea</p>
       <h1>Lokal vs Korea, mending yang mana?</h1>
-      <p>Pelembab, serum, dan sunscreen. Satu merek lokal, satu merek Korea, jenis yang sama. Lihat kandungan, harga, dan cocok untuk kulit yang mana.</p>
+      <p>Facial wash, pelembab, serum, dan sunscreen. Satu merek lokal, satu merek Korea, jenis yang sama. Lihat kandungan, harga, dan cocok untuk kulit yang mana.</p>
       <form class="search" id="form-cari" role="search">
         <label class="sr" for="q">Cari perbandingan</label>
         <input id="q" type="search" placeholder="Cari merek atau bahan, misalnya niacinamide" autocomplete="off">
@@ -376,7 +430,7 @@ def render_index(data, produk, pasangan):
   var kartu = Array.prototype.slice.call(document.querySelectorAll(".duel"));
   var hasil = document.getElementById("hasil");
   var kosong = document.getElementById("kosong");
-  var sah = {{ pelembab: 1, serum: 1, sunscreen: 1, semua: 1 }};
+  var sah = {{ pelembab: 1, serum: 1, sunscreen: 1, "facial-wash": 1, semua: 1 }};
 
   function terapkan() {{
     var s = (q.value || "").toLowerCase().trim();
@@ -664,12 +718,25 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
             p = produk[iid]
             if not p["aff"].startswith("https://s.shopee.co.id/"):
                 raise SystemExit("Link affiliate salah " + iid)
+            if p.get("merek"):
+                terdaftar = any(p["merek"].lower() == m.lower() for m in merek)
+                if p.get("asal") == "korea" and not terdaftar:
+                    raise SystemExit(f"Merek Korea belum didaftarkan: {p['merek']}")
+                if p.get("asal") == "lokal" and terdaftar:
+                    raise SystemExit(f"Merek lokal ada di daftar Korea: {p['merek']}")
+            if p.get("asal") and p["asal"] != sisi:
+                raise SystemExit(f"{iid} asal {p['asal']} dipakai sebagai {sisi}")
             korea = judul_korea(p["judul"], merek)
             if sisi == "korea" and not korea:
                 raise SystemExit(f"{iid} bukan merek Korea: {p['judul'][:80]}")
             if sisi == "lokal" and korea:
                 raise SystemExit(f"{iid} terdeteksi merek Korea, dipakai sebagai lokal")
             copy = pair["produk"][iid]
+            mentah = (p.get("bahan_mentah") or "").strip().lower()
+            if mentah == "tidak tercantum":
+                teks_copy = json.dumps(copy, ensure_ascii=False).lower()
+                if "tidak tercantum" not in teks_copy and "tidak menuliskan" not in teks_copy:
+                    raise SystemExit(f"{pair['id']} {iid}: bahan tidak tercantum, teks jangan mengarang daftar")
             for kunci in ("nama", "tekstur", "isi", "catatan", "bahan", "manfaat", "kulit"):
                 if not copy.get(kunci):
                     raise SystemExit(f"{pair['id']} {iid} kosong: {kunci}")

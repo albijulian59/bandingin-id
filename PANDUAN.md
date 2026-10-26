@@ -1,6 +1,6 @@
 # Panduan Bandingin.id
 
-Bandingin.id membandingkan **skincare**: satu produk merek lokal dan satu produk merek Korea, jenis yang sama. Isinya pelembab, serum, dan sunscreen. Tidak ada pembagian perempuan / pria. Facial wash tidak ditampilkan karena di data tidak ada facial wash merek Korea.
+Bandingin.id membandingkan **skincare**: satu produk merek lokal dan satu produk merek Korea, jenis yang sama. Isinya facial wash, pelembab, serum, dan sunscreen. Tidak ada pembagian perempuan / pria.
 
 Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 
@@ -16,6 +16,7 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `tools/build_site.py` | Generator. |
 | `tools/analisa.json` | Catatan kandungan. Acuan fakta, tidak ditampilkan mentah. |
 | `sumber/` | Data Shopee skincare, link affiliate, daftar merek Korea, pasangan yang sudah diposting. |
+| `sumber/tambahan-*.psv` | Batch produk baru. Kolom: type, brand, origin, name, price, original price, product URL, image URL, short link, key ingredients. |
 | `ulasan.html` | Halaman Kasih Pendapat. Hasil generator (daftar perbandingan di dropdown ikut terbarui). |
 | `js/config.js` | **Satu tempat** untuk alamat pengiriman formulir: `FEEDBACK_ENDPOINT`. |
 | `js/ulasan.js` | Perilaku formulir. |
@@ -36,10 +37,10 @@ Generator gagal kalau ada link affiliate yang bukan `https://s.shopee.co.id/…`
 
 ## Menambah perbandingan
 
-1. Produk harus ada di `sumber/perempuan.psv` atau `sumber/pria.psv`, dan punya link pendek di `sumber/affiliate-links.psv`.
-2. Merek Korea hanya yang tercantum di `sumber/merek-korea.txt`. Sisi lokal tidak boleh merek dari daftar itu.
-3. Tambah objek di `tools/pasangan.json`. Pasangan yang sudah diposting (urutan di `sumber/posted.log`) harus tetap di awal.
-4. Tulis kandungan hanya dari `tools/analisa.json` atau dari nama produk. Jangan mengarang bahan, jangan mengaku sudah mencoba, jangan membuat klaim medis.
+1. Produk harus ada di `sumber/perempuan.psv`, `sumber/pria.psv` (plus `affiliate-links.psv`), atau di `sumber/tambahan-*.psv` (link pendeknya sudah di kolom short link).
+2. Merek Korea hanya yang tercantum di `sumber/merek-korea.txt`. Sisi lokal tidak boleh merek dari daftar itu. Anua dan ISNTREE masuk daftar itu lewat batch tambahan.
+3. Tambah objek di `tools/pasangan.json`. Pasangan yang sudah diposting (urutan di `sumber/posted.log`) harus tetap di awal. Tiap produk hanya sekali.
+4. Tulis kandungan dari `tools/analisa.json`, dari kolom key ingredients di file tambahan, atau dari nama produk. Kalau kolomnya `tidak tercantum`, jangan karang daftar bahan: jelaskan dari jenis dan nama, dan tulis bahwa bahan tidak tercantum. Bentuk yang longgar (essence, stik, pelembap sekaligus sunscreen) disebut apa adanya. Jangan mengaku sudah mencoba, jangan membuat klaim medis.
 5. Bahasa untuk semua orang. Jangan menulis pria, wanita, cowok, atau sejenisnya.
 6. Jangan menampilkan rating atau jumlah terjual.
 7. Jalankan generator, lalu buka `index.html` lewat server lokal.
@@ -51,7 +52,7 @@ Tombol beli selalu memakai link affiliate pendek. Harga dan diskon diambil dari 
 ## Yang sengaja tidak masuk
 
 - Sabun, sampo, baju, tas, kaos, dan produk balita: bukan skincare.
-- Facial wash: tidak ada produk merek Korea di data, dan tidak ada analisa kandungan.
+- Facial wash dari data awal: tidak ada analisa kandungan dan tidak ada pasangan Korea di batch itu. Facial wash yang tampil berasal dari `tambahan-*.psv`.
 - Garnier: bukan merek lokal dan bukan merek Korea.
 - Beberapa produk skincare lain tidak dipasangkan supaya setiap produk hanya muncul sekali, dengan prioritas penjualan di data. Daftarnya dicetak generator saat dijalankan.
 
