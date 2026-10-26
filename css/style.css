@@ -55,18 +55,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
   font-family: var(--serif); font-size: .95rem; font-style: italic;
 }
 .tld { color: var(--teal); }
-.nav {
-  display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-.nav::-webkit-scrollbar { display: none; }
+.nav { display: flex; flex-direction: column; gap: 2px; }
+.nav-row { display: flex; flex-wrap: wrap; gap: 2px; }
 .nav a {
-  flex: none; text-decoration: none; color: var(--muted);
-  font-size: .88rem; font-weight: 650; padding: 6px 10px; border-radius: 999px;
+  text-decoration: none; color: var(--muted);
+  font-size: .84rem; font-weight: 650; padding: 5px 8px; border-radius: 999px;
 }
 .nav a:hover { color: var(--ink); background: #fff; }
 .nav a[aria-current="page"] { background: var(--teal); color: #fff; }
-.nav-pisah { margin-left: 8px; }
 
 .hero { padding: 28px 0 8px; }
 .hero h1 { font-size: clamp(2.05rem, 8vw, 3.4rem); margin: 8px 0 12px; max-width: 11em; }
@@ -79,10 +75,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
 
 .daftar-wrap { padding-bottom: 28px; }
 .filter { display: grid; gap: 8px; margin: 22px 0 8px; }
-.filter-baris { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
-.filter-baris::-webkit-scrollbar { display: none; }
+.filter-baris { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter button {
-  flex: none; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  border: 1px solid var(--line); background: var(--card); color: var(--ink);
   border-radius: 999px; padding: 8px 14px; font: inherit; font-size: .92rem; font-weight: 650;
   cursor: pointer;
 }
@@ -239,8 +234,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
 .lain-grid a:hover { border-color: var(--teal); }
 
 @media (min-width: 760px) {
-  .bar { flex-direction: row; align-items: center; justify-content: space-between; padding: 0; min-height: 68px; }
-  .nav { overflow: visible; }
+  .bar { flex-direction: row; align-items: center; justify-content: space-between; padding: 8px 0; min-height: 68px; }
+  .nav { flex-direction: row; align-items: center; }
+  .nav-row { display: contents; }
   .grid { grid-template-columns: 1fr 1fr; gap: 18px; }
   .ebook { flex-direction: row; align-items: center; justify-content: space-between; padding: 22px 24px; }
   .rinci, .tiga { grid-template-columns: 1fr 1fr; }

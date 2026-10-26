@@ -208,13 +208,18 @@ def nav(prefix, aktif=None):
         ("sunscreen", "Sunscreen"),
         ("facial-wash", "Facial Wash"),
     ]
-    tautan = []
+    jenis_tautan = []
     for slug, label in jenis:
         cur = ' aria-current="page"' if aktif == slug else ""
-        tautan.append(f'<a href="{prefix}index.html?jenis={slug}"{cur}>{label}</a>')
-    tautan.append('<a class="nav-pisah" href="%sindex.html?untuk=perempuan">Perempuan</a>' % prefix)
-    tautan.append('<a href="%sindex.html?untuk=pria">Pria</a>' % prefix)
-    return "\n        ".join(tautan)
+        jenis_tautan.append(f'<a href="{prefix}index.html?jenis={slug}"{cur}>{label}</a>')
+    untuk = (
+        f'<a href="{prefix}index.html?untuk=perempuan">Perempuan</a>'
+        f'<a href="{prefix}index.html?untuk=pria">Pria</a>'
+    )
+    return (
+        '<div class="nav-row">' + "".join(jenis_tautan) + "</div>"
+        + '<div class="nav-row">' + untuk + "</div>"
+    )
 
 
 FAVICON = (
