@@ -3,100 +3,404 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bandingin.id — Pelembab, Serum, dan Sunscreen Lokal vs Korea</title>
+  <meta name="description" content="Bandingin pelembab, serum, dan sunscreen. Satu merek lokal dibanding satu merek Korea yang sejenis: kandungan, harga, dan cocok untuk kulit yang mana.">
+  <meta name="theme-color" content="#f3efe7">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
-  <title>Bandingin.id — Bandingkan Perawatan Diri, Skincare &amp; Fashion dari Toko Resmi Sebelum Beli</title>
-  <meta name="description" content="Bandingin.id membandingkan produk perawatan diri dan fashion untuk perempuan, pria, dan balita dari toko resmi Shopee: sabun mandi, sampo, facial wash, skincare (pelembab, serum, sunscreen), baju, kaos, tas, serta sabun dan sampo bayi. Lengkap dengan analisa kandungan skincare.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230c6b52'/><text x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='white'>vs</text></svg>">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="logo" href="index.html" aria-label="Bandingin.id, ke beranda"><span class="logo-mark" aria-hidden="true">⇄</span>Bandingin<span class="logo-tld">.id</span></a>
-      <nav class="nav-links">
-        <a href="index.html#produk">Produk</a>
-        <a href="perbandingan.html">Perbandingan</a>
-        <a href="#disclosure" class="nav-extra">Info</a>
-      </nav>
-    </div>
-  </header>
+<a class="skip" href="index.html#daftar">Langsung ke perbandingan</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="mark" aria-hidden="true">vs</span>Bandingin<span class="tld">.id</span></a>
+    <nav class="nav-links" aria-label="Jenis produk">
+      <a href="index.html#pelembab">Pelembab</a><a href="index.html#serum">Serum</a><a href="index.html#sunscreen">Sunscreen</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <!-- Slide show di bagian atas. Slide 1 = hero (statis); slide berikutnya = produk unggulan per kategori,
-         dibuat otomatis oleh js/slideshow.js dari data/produk.js (aturan pilihan: Situs.produkUnggulan). -->
-    <section class="hero hs" id="slideshow" aria-roledescription="carousel" aria-label="Sorotan Bandingin.id">
-      <div class="wrap">
-        <div class="hs-stage">
-          <div class="hs-track" id="hs-track" aria-live="polite">
-            <div class="hs-slide hs-intro" role="group" aria-roledescription="slide" aria-label="1 dari 1">
-              <h1>Bandingin dulu, <br>baru beli.</h1>
-              <p>Bandingin.id membandingkan <span class="jumlah-produk">85</span> produk perawatan diri, skincare &amp; fashion untuk perempuan, pria, dan balita dari toko resmi Shopee. Lihat analisa kandungan, kelebihan, kekurangan, dan pilihan terbaik per jenis kulit dengan bahasa yang mudah dipahami.</p>
-              <form class="search" id="form-cari" role="search">
-                <input id="cari" type="search" placeholder="Cari produk, misalnya: sunscreen, serum, sampo…" aria-label="Cari produk" autocomplete="off">
-                <button type="submit">Cari</button>
-              </form>
-              <p class="hero-note">Data per <span class="tanggal-data">22 Oktober 2026</span> · <a href="perbandingan.html">Lihat tabel perbandingan →</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="hs-kontrol" id="hs-kontrol" hidden>
-          <button type="button" class="hs-panah" id="hs-prev" aria-label="Slide sebelumnya">‹</button>
-          <div class="hs-dots" id="hs-dots" role="group" aria-label="Pilih slide"></div>
-          <button type="button" class="hs-panah" id="hs-next" aria-label="Slide berikutnya">›</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Top 10 Terlaris per kategori. Isi dibuat oleh js/top10.js dari window.TOP10 (data/produk.js,
-         disusun dari produk tiap kategori). Bagian lain di atas daftar produk bisa ditambah di sini juga. -->
-    <section class="wrap" id="top10" aria-labelledby="top10-judul">
-      <div class="top10">
-        <div class="top10-head">
-          <h2 id="top10-judul">🏆 Top 10 Terlaris</h2>
-          <p class="top10-catatan">Diurutkan dari total terjual di toko resmi Shopee (data <span class="tanggal-data">22 Oktober 2026</span>). Shopee menampilkan maksimal 10rb+, jadi produk seri diurutkan dari penjualan bulanan lalu rating.</p>
-        </div>
-        <div class="top10-tabs" id="top10-tabs" role="tablist" aria-label="Kategori Top 10"></div>
-        <div id="top10-panel"></div>
-      </div>
-    </section>
-
-    <section class="wrap" id="kategori">
-      <div class="filter" id="filter" aria-label="Filter kategori"></div>
-      <div class="subfilter" id="subfilter" aria-label="Filter jenis produk" hidden></div>
-    </section>
-
-    <section class="wrap" id="produk">
-      <div class="section-head">
-        <div>
-          <h2>Semua Produk</h2>
-          <p class="muted" id="info-hasil"></p>
-        </div>
-        <label class="urut">Urutkan:
-          <select id="urut">
-            <option value="default">Sesuai kelompok</option>
-            <option value="murah">Termurah</option>
-            <option value="rating">Rating tertinggi</option>
-            <option value="laris">Terlaris</option>
-          </select>
-        </label>
-      </div>
-      <div id="pilihan-grup"></div>
-      <div class="grid" id="grid"></div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
+<main>
+  <section class="hero">
     <div class="wrap">
-      <div class="disclosure" id="disclosure">
-        <p class="footnote">Ulasan disusun dari analisa kandungan dan informasi produk. Bandingin.id mendapat komisi dari link affiliate.</p>
-      </div>
-      <p class="copy">© <span id="tahun">2026</span> Bandingin.id · Bandingkan produk dari toko resmi sebelum membeli</p>
+      <p class="kicker kicker-terang">Skincare lokal vs Korea</p>
+      <h1>Lokal vs Korea, mending yang mana?</h1>
+      <p>Pelembab, serum, dan sunscreen. Satu merek lokal, satu merek Korea, jenis yang sama. Lihat kandungan, harga, dan cocok untuk kulit yang mana.</p>
+      <form class="search" id="form-cari" role="search">
+        <label class="sr" for="q">Cari perbandingan</label>
+        <input id="q" type="search" placeholder="Cari merek atau bahan, misalnya niacinamide" autocomplete="off">
+      </form>
     </div>
-  </footer>
+  </section>
+  <div class="wrap" id="daftar">
+    <div class="filter" role="group" aria-label="Filter jenis"><button type="button" class="chip aktif" data-filter="semua" aria-pressed="true">Semua</button><button type="button" class="chip" data-filter="pelembab" aria-pressed="false">Pelembab <span class="count">4</span></button><button type="button" class="chip" data-filter="serum" aria-pressed="false">Serum <span class="count">4</span></button><button type="button" class="chip" data-filter="sunscreen" aria-pressed="false">Sunscreen <span class="count">4</span></button></div>
+    <p class="hasil" id="hasil" aria-live="polite">12 perbandingan</p>
+    <div class="list" id="list">
+      <article class="duel" data-jenis="pelembab" data-cari="pelembab lokal vs korea, mending yang mana? kulit berminyak atau sensitif yang mau gel ringan: the originote. kulit kering yang butuh krim pengunci lembap: illiyoon. the originote hyalucera illiyoon ceramide ato cream pelembab hyaluronic acid ceramide np dan cholesterol panthenol dan allantoin ceramide cholesterol dan asam lemak">
+  <p class="kicker">Pelembab</p>
+  <h2><a href="banding/originote-vs-illiyoon.html">Pelembab lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">The Originote Hyalucera <span>vs</span> ILLIYOON Ceramide Ato Cream</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/originote-vs-illiyoon.html"><img src="img/20803489571.jpg" alt="The Originote Hyalucera" width="720" height="720" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/originote-vs-illiyoon.html"><img src="img/25080136975.jpg" alt="ILLIYOON Ceramide Ato Cream" width="720" height="720" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/originote-vs-illiyoon.html">The Originote Hyalucera</a></h3>
+      <p class="harga"><span class="now">Rp47.500</span> <s>Rp82.000</s> <span class="off">−42%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/LoBztzIPg" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli The Originote Hyalucera di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/originote-vs-illiyoon.html">ILLIYOON Ceramide Ato Cream</a></h3>
+      <p class="harga"><span class="now">Rp116.100</span> <s>Rp129.000</s> <span class="off">−10%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/BUlnazvkh" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli ILLIYOON Ceramide Ato Cream di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Kulit berminyak atau sensitif yang mau gel ringan: The Originote. Kulit kering yang butuh krim pengunci lembap: ILLIYOON.</p>
+  <a class="more" href="banding/originote-vs-illiyoon.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="sunscreen" data-cari="sunscreen lokal vs korea, mending yang mana? dua-duanya sunscreen serum yang ringan. kahf lebih hemat untuk kulit berminyak. skin1004 hasilnya sedikit glowing dan lebih pas di kulit kering atau sensitif. kahf bright fresh sunscreen spf 50 skin1004 hyalu-cica sun serum sunscreen filter uv bahan pendukung filter uv centella, hyaluronic acid, niacinamide">
+  <p class="kicker">Sunscreen</p>
+  <h2><a href="banding/kahf-vs-skin1004.html">Sunscreen lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Kahf Bright Fresh Sunscreen SPF 50 <span>vs</span> SKIN1004 Hyalu-Cica Sun Serum</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/kahf-vs-skin1004.html"><img src="img/56059310616.jpg" alt="Kahf Bright Fresh Sunscreen SPF 50" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/kahf-vs-skin1004.html"><img src="img/16581227588.jpg" alt="SKIN1004 Hyalu-Cica Sun Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/kahf-vs-skin1004.html">Kahf Bright Fresh Sunscreen SPF 50</a></h3>
+      <p class="harga"><span class="now">Rp45.000</span> <s>Rp88.000</s> <span class="off">−49%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/2LZGNbHOws" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Kahf Bright Fresh Sunscreen SPF 50 di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/kahf-vs-skin1004.html">SKIN1004 Hyalu-Cica Sun Serum</a></h3>
+      <p class="harga"><span class="now">Rp129.600</span></p>
+      <a class="btn" href="https://s.shopee.co.id/40hUMfJvOS" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli SKIN1004 Hyalu-Cica Sun Serum di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Dua-duanya sunscreen serum yang ringan. Kahf lebih hemat untuk kulit berminyak. SKIN1004 hasilnya sedikit glowing dan lebih pas di kulit kering atau sensitif.</p>
+  <a class="more" href="banding/kahf-vs-skin1004.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="serum" data-cari="serum lokal vs korea, mending yang mana? glad2glow niacinamide 10% untuk kulit berminyak dan noda gelap. beauty of joseon lebih lembut: alpha arbutin 3%, tetap menghidrasi, tanpa pewangi di daftar bahannya. glad2glow 10% niacinamide serum beauty of joseon rice serum serum niacinamide 10% alpha arbutin dan tranexamic acid ceramide np alpha arbutin 3% air dedak beras dan vitamin c stabil sodium hyaluronate, ceramide np, beta-glucan">
+  <p class="kicker">Serum</p>
+  <h2><a href="banding/glad2glow-vs-joseon.html">Serum lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Glad2Glow 10% Niacinamide Serum <span>vs</span> Beauty of Joseon Rice Serum</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/glad2glow-vs-joseon.html"><img src="img/24507405136.jpg" alt="Glad2Glow 10% Niacinamide Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/glad2glow-vs-joseon.html"><img src="img/42151404537.jpg" alt="Beauty of Joseon Rice Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/glad2glow-vs-joseon.html">Glad2Glow 10% Niacinamide Serum</a></h3>
+      <p class="harga"><span class="now">Rp62.000</span></p>
+      <a class="btn" href="https://s.shopee.co.id/8pmk7XCAhV" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Glad2Glow 10% Niacinamide Serum di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/glad2glow-vs-joseon.html">Beauty of Joseon Rice Serum</a></h3>
+      <p class="harga"><span class="now">Rp119.400</span> <s>Rp199.000</s> <span class="off">−40%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/9APaW9Au1b" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Beauty of Joseon Rice Serum di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Glad2Glow niacinamide 10% untuk kulit berminyak dan noda gelap. Beauty of Joseon lebih lembut: alpha arbutin 3%, tetap menghidrasi, tanpa pewangi di daftar bahannya.</p>
+  <a class="more" href="banding/glad2glow-vs-joseon.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="pelembab" data-cari="pelembab lokal vs korea, mending yang mana? barber daily ringan, niacinamide 3%, untuk kulit berminyak. skin1004 gel-krim centella yang menenangkan, lebih pas di kulit sensitif. barber daily bright radiance moisturizer skin1004 centella soothing cream pelembab niacinamide 3% alpha arbutin 0,5% sodium hyaluronate, glycerin, panthenol ekstrak centella asiatica ceramide dan cholesterol bahan lain yang tercantum">
+  <p class="kicker">Pelembab</p>
+  <h2><a href="banding/barber-vs-skin1004.html">Pelembab lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Barber Daily Bright Radiance Moisturizer <span>vs</span> SKIN1004 Centella Soothing Cream</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/barber-vs-skin1004.html"><img src="img/41827149473.jpg" alt="Barber Daily Bright Radiance Moisturizer" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/barber-vs-skin1004.html"><img src="img/14516182420.jpg" alt="SKIN1004 Centella Soothing Cream" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/barber-vs-skin1004.html">Barber Daily Bright Radiance Moisturizer</a></h3>
+      <p class="harga"><span class="now">Rp39.800</span> <s>Rp65.000</s> <span class="off">−39%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/6fiFXYsiwz" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Barber Daily Bright Radiance Moisturizer di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/barber-vs-skin1004.html">SKIN1004 Centella Soothing Cream</a></h3>
+      <p class="harga"><span class="now">Rp120.000</span></p>
+      <a class="btn" href="https://s.shopee.co.id/7AeW8Tqow6" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli SKIN1004 Centella Soothing Cream di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Barber Daily ringan, niacinamide 3%, untuk kulit berminyak. SKIN1004 gel-krim centella yang menenangkan, lebih pas di kulit sensitif.</p>
+  <a class="more" href="banding/barber-vs-skin1004.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="sunscreen" data-cari="sunscreen lokal vs korea, mending yang mana? omg hemat dan hasilnya matte, untuk kulit berminyak. beauty of joseon sangat cair, tanpa bekas putih, juga untuk kulit berminyak, dengan harga yang jauh lebih tinggi. omg uv barrier sunscreen spf 50 beauty of joseon aqua-fresh sunscreen spf 50 pa++++ niacinamide, vitamin c, vitamin e filter uv air beras, panthenol, ceramide np, beta-glucan">
+  <p class="kicker">Sunscreen</p>
+  <h2><a href="banding/omg-vs-joseon.html">Sunscreen lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">OMG UV Barrier Sunscreen SPF 50 <span>vs</span> Beauty of Joseon Aqua-Fresh</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/omg-vs-joseon.html"><img src="img/26384227268.jpg" alt="OMG UV Barrier Sunscreen SPF 50" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/omg-vs-joseon.html"><img src="img/28673092386.jpg" alt="Beauty of Joseon Aqua-Fresh" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/omg-vs-joseon.html">OMG UV Barrier Sunscreen SPF 50</a></h3>
+      <p class="harga"><span class="now">Rp29.000</span> <s>Rp51.200</s> <span class="off">−43%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/80Dd80FLOO" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli OMG UV Barrier Sunscreen SPF 50 di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/omg-vs-joseon.html">Beauty of Joseon Aqua-Fresh</a></h3>
+      <p class="harga"><span class="now">Rp200.000</span> <s>Rp250.000</s> <span class="off">−20%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/4VdkxZt4Cd" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Beauty of Joseon Aqua-Fresh di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">OMG hemat dan hasilnya matte, untuk kulit berminyak. Beauty of Joseon sangat cair, tanpa bekas putih, juga untuk kulit berminyak, dengan harga yang jauh lebih tinggi.</p>
+  <a class="more" href="banding/omg-vs-joseon.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="serum" data-cari="serum lokal vs korea, mending yang mana? dua-duanya untuk noda dan kulit kusam. kahf bahannya lebih banyak jenisnya, ada pewangi. some by mi niacinamide 10% plus ekstrak yuja, aromanya citrus. kahf bright intensifying serum some by mi yuja niacin serum serum niacinamide, tranexamic acid, vitamin c stabil hydroxyresveratrol dan gluconolactone squalane dan hyaluronic acid ekstrak yuja niacinamide 10% bahan lain yang tercantum">
+  <p class="kicker">Serum</p>
+  <h2><a href="banding/kahf-vs-somebymi.html">Serum lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Kahf Bright Intensifying Serum <span>vs</span> SOME BY MI Yuja Niacin Serum</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/kahf-vs-somebymi.html"><img src="img/51901773332.jpg" alt="Kahf Bright Intensifying Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/kahf-vs-somebymi.html"><img src="img/11210228422.jpg" alt="SOME BY MI Yuja Niacin Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/kahf-vs-somebymi.html">Kahf Bright Intensifying Serum</a></h3>
+      <p class="harga"><span class="now">Rp109.500</span></p>
+      <a class="btn" href="https://s.shopee.co.id/7VHMX5pYGC" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Kahf Bright Intensifying Serum di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/kahf-vs-somebymi.html">SOME BY MI Yuja Niacin Serum</a></h3>
+      <p class="harga"><span class="now">Rp143.040</span> <s>Rp238.400</s> <span class="off">−40%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/20wPyzIfcm" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli SOME BY MI Yuja Niacin Serum di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Dua-duanya untuk noda dan kulit kusam. Kahf bahannya lebih banyak jenisnya, ada pewangi. SOME BY MI niacinamide 10% plus ekstrak yuja, aromanya citrus.</p>
+  <a class="more" href="banding/kahf-vs-somebymi.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="pelembab" data-cari="pelembab lokal vs korea, mending yang mana? emina gel niacinamide yang hemat, variannya beda-beda. cosrx lotion bebas minyak dengan birch sap, isi lebih besar, untuk kulit berminyak yang tidak suka rasa berat. emina water gel cosrx oil-free lotion pelembab niacinamide bright glow barrier balancing calming birch sap glycerin, panthenol, allantoin, sodium hyaluronate">
+  <p class="kicker">Pelembab</p>
+  <h2><a href="banding/emina-vs-cosrx.html">Pelembab lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Emina Water Gel <span>vs</span> COSRX Oil-Free Lotion</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/emina-vs-cosrx.html"><img src="img/28169257360.jpg" alt="Emina Water Gel" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/emina-vs-cosrx.html"><img src="img/8657140008.jpg" alt="COSRX Oil-Free Lotion" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/emina-vs-cosrx.html">Emina Water Gel</a></h3>
+      <p class="harga"><span class="now">Rp42.500</span> <s>Rp107.100</s> <span class="off">−60%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/1gJZMoYQKp" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Emina Water Gel di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/emina-vs-cosrx.html">COSRX Oil-Free Lotion</a></h3>
+      <p class="harga"><span class="now">Rp209.930</span> <s>Rp299.900</s> <span class="off">−30%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/1BLbI0Z5e" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli COSRX Oil-Free Lotion di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Emina gel niacinamide yang hemat, variannya beda-beda. COSRX lotion bebas minyak dengan birch sap, isi lebih besar, untuk kulit berminyak yang tidak suka rasa berat.</p>
+  <a class="more" href="banding/emina-vs-cosrx.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="sunscreen" data-cari="sunscreen lokal vs korea, mending yang mana? scora hemat, hasilnya soft-matte, ada sedikit efek cerah seketika. round lab lebih melembapkan, hasilnya sedikit glowing, klaim spf-nya 50+. scora bright me up spf 40 round lab birch juice sunscreen sunscreen filter uv hybrid niacinamide dan centella filter uv birch juice, niacinamide, hyaluronic acid, allantoin, adenosine">
+  <p class="kicker">Sunscreen</p>
+  <h2><a href="banding/scora-vs-roundlab.html">Sunscreen lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">SCORA Bright Me Up SPF 40 <span>vs</span> Round Lab Birch Juice Sunscreen</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/scora-vs-roundlab.html"><img src="img/42807278779.jpg" alt="SCORA Bright Me Up SPF 40" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/scora-vs-roundlab.html"><img src="img/22161849050.jpg" alt="Round Lab Birch Juice Sunscreen" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/scora-vs-roundlab.html">SCORA Bright Me Up SPF 40</a></h3>
+      <p class="harga"><span class="now">Rp43.900</span> <s>Rp96.580</s> <span class="off">−55%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/4Vdkk2whqr" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli SCORA Bright Me Up SPF 40 di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/scora-vs-roundlab.html">Round Lab Birch Juice Sunscreen</a></h3>
+      <p class="harga"><span class="now">Rp312.000</span> <s>Rp529.000</s> <span class="off">−41%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/3LRnZQxVZQ" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Round Lab Birch Juice Sunscreen di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">SCORA hemat, hasilnya soft-matte, ada sedikit efek cerah seketika. Round Lab lebih melembapkan, hasilnya sedikit glowing, klaim SPF-nya 50+.</p>
+  <a class="more" href="banding/scora-vs-roundlab.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="pelembab" data-cari="pelembab lokal vs korea, mending yang mana? wardah gel dengan collagen, peptida, niacinamide, dan ceramide, untuk yang peduli kekenyalan. nature republic gel lidah buaya isi besar dan sejuk, tapi ada alkohol serta pewangi. wardah plump &amp; firm gel nature republic aloe vera gel pelembab recombinant collagen argireline 2% niacinamide dan ceramide ekstrak lidah buaya">
+  <p class="kicker">Pelembab</p>
+  <h2><a href="banding/wardah-vs-naturerepublic.html">Pelembab lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Wardah Plump &amp; Firm Gel <span>vs</span> Nature Republic Aloe Vera Gel</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/wardah-vs-naturerepublic.html"><img src="img/40401770290.jpg" alt="Wardah Plump &amp; Firm Gel" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/wardah-vs-naturerepublic.html"><img src="img/1345373609.jpg" alt="Nature Republic Aloe Vera Gel" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/wardah-vs-naturerepublic.html">Wardah Plump &amp; Firm Gel</a></h3>
+      <p class="harga"><span class="now">Rp132.770</span> <s>Rp254.600</s> <span class="off">−48%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/W7cCCyf4j" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Wardah Plump &amp; Firm Gel di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/wardah-vs-naturerepublic.html">Nature Republic Aloe Vera Gel</a></h3>
+      <p class="harga"><span class="now">Rp95.060</span> <s>Rp108.000</s> <span class="off">−12%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/70L5wArSH5" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Nature Republic Aloe Vera Gel di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Wardah gel dengan collagen, peptida, niacinamide, dan ceramide, untuk yang peduli kekenyalan. Nature Republic gel lidah buaya isi besar dan sejuk, tapi ada alkohol serta pewangi.</p>
+  <a class="more" href="banding/wardah-vs-naturerepublic.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="serum" data-cari="serum lokal vs korea, mending yang mana? omg murah dan variannya banyak, harus dipilih yang pas. torriden satu serum hidrasi, bebas pewangi, isi 50 ml, lebih jelas untuk kulit kering atau sensitif. omg active expert serum torriden dive-in serum serum mencerahkan (brightening) melembapkan (hydrating) menenangkan (calming) eksfoliasi (exfoliating) retinol (renew) hyaluronic acid panthenol, allantoin, madecassoside, ceramide np, beta-glucan">
+  <p class="kicker">Serum</p>
+  <h2><a href="banding/omg-vs-torriden.html">Serum lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">OMG Active Expert Serum <span>vs</span> Torriden DIVE-IN Serum</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/omg-vs-torriden.html"><img src="img/42528194882.jpg" alt="OMG Active Expert Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/omg-vs-torriden.html"><img src="img/26268363527.jpg" alt="Torriden DIVE-IN Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/omg-vs-torriden.html">OMG Active Expert Serum</a></h3>
+      <p class="harga"><span class="now">Rp29.500</span> <s>Rp59.900</s> <span class="off">−51%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/8fTJvECo2S" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli OMG Active Expert Serum di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/omg-vs-torriden.html">Torriden DIVE-IN Serum</a></h3>
+      <p class="harga"><span class="now">Rp186.000</span> <s>Rp310.000</s> <span class="off">−40%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/906AJqBXMY" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Torriden DIVE-IN Serum di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">OMG murah dan variannya banyak, harus dipilih yang pas. Torriden satu serum hidrasi, bebas pewangi, isi 50 ml, lebih jelas untuk kulit kering atau sensitif.</p>
+  <a class="more" href="banding/omg-vs-torriden.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="serum" data-cari="serum lokal vs korea, mending yang mana? wardah 5% niacinamide plus vitamin c, hemat, untuk kulit kusam. cosrx 15% niacinamide plus zinc, bebas pewangi, lebih terarah ke minyak dan jerawat, tapi jauh lebih mahal. wardah c-glow serum cosrx niacinamide 15 serum serum niacinamide 5% vitamin c stabil 1% perfectyl niacinamide 15% acetyl glucosamine zinc pca">
+  <p class="kicker">Serum</p>
+  <h2><a href="banding/wardah-vs-cosrx.html">Serum lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Wardah C-Glow Serum <span>vs</span> COSRX Niacinamide 15 Serum</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/wardah-vs-cosrx.html"><img src="img/24990995014.jpg" alt="Wardah C-Glow Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/wardah-vs-cosrx.html"><img src="img/23541411702.jpg" alt="COSRX Niacinamide 15 Serum" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/wardah-vs-cosrx.html">Wardah C-Glow Serum</a></h3>
+      <p class="harga"><span class="now">Rp38.000</span> <s>Rp68.000</s> <span class="off">−44%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/113sn7wl3s" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Wardah C-Glow Serum di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/wardah-vs-cosrx.html">COSRX Niacinamide 15 Serum</a></h3>
+      <p class="harga"><span class="now">Rp270.215</span> <s>Rp289.000</s> <span class="off">−6%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/2BFqBII2Hp" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli COSRX Niacinamide 15 Serum di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Wardah 5% niacinamide plus vitamin C, hemat, untuk kulit kusam. COSRX 15% niacinamide plus zinc, bebas pewangi, lebih terarah ke minyak dan jerawat, tapi jauh lebih mahal.</p>
+  <a class="more" href="banding/wardah-vs-cosrx.html">Lihat perbandingan</a>
+</article><article class="duel" data-jenis="sunscreen" data-cari="sunscreen lokal vs korea, mending yang mana? wardah variannya banyak dan harganya lebih rendah. some by mi satu krim yang melembapkan, lebih enak di kulit kering, dan bisa terasa berat di kulit berminyak. wardah uv shield some by mi v10 hyal sunscreen sunscreen airy smooth aqua fresh acne calming tone up physical spf50+ pa++++ hyaluronic acid, niacinamide, centella, panthenol">
+  <p class="kicker">Sunscreen</p>
+  <h2><a href="banding/wardah-vs-somebymi.html">Sunscreen lokal vs Korea, mending yang mana?</a></h2>
+  <p class="lawan">Wardah UV Shield <span>vs</span> SOME BY MI V10 Hyal Sunscreen</p>
+  <div class="duo">
+    <a class="photo photo-lokal" href="banding/wardah-vs-somebymi.html"><img src="img/28218154859.jpg" alt="Wardah UV Shield" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="vs" aria-hidden="true">vs</div>
+    <a class="photo photo-korea" href="banding/wardah-vs-somebymi.html"><img src="img/29204771380.jpg" alt="SOME BY MI V10 Hyal Sunscreen" width="720" height="720" loading="lazy" decoding="async"></a>
+    <div class="sisi sisi-lokal">
+      <p class="asal asal-lokal">Lokal</p>
+      <h3><a href="banding/wardah-vs-somebymi.html">Wardah UV Shield</a></h3>
+      <p class="harga"><span class="now">Rp40.180</span> <s>Rp71.100</s> <span class="off">−43%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/40hU97ybrm" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli Wardah UV Shield di Shopee">Beli di Shopee</a>
+    </div>
+    <div class="sisi sisi-korea">
+      <p class="asal asal-korea">Korea</p>
+      <h3><a href="banding/wardah-vs-somebymi.html">SOME BY MI V10 Hyal Sunscreen</a></h3>
+      <p class="harga"><span class="now">Rp93.000</span> <s>Rp155.000</s> <span class="off">−40%</span></p>
+      <a class="btn" href="https://s.shopee.co.id/4B0uYyJI3V" target="_blank" rel="sponsored noopener noreferrer" aria-label="Beli SOME BY MI V10 Hyal Sunscreen di Shopee">Beli di Shopee</a>
+    </div>
+  </div>
+  <p class="ringkas">Wardah variannya banyak dan harganya lebih rendah. SOME BY MI satu krim yang melembapkan, lebih enak di kulit kering, dan bisa terasa berat di kulit berminyak.</p>
+  <a class="more" href="banding/wardah-vs-somebymi.html">Lihat perbandingan</a>
+</article>
+    </div>
+    <p class="kosong" id="kosong" hidden>Tidak ada perbandingan yang cocok.</p>
+    <aside class="panduan">
+      <p>Mau urutan pakai yang lebih lengkap?</p>
+      <a href="https://lynk.id/albijulian">Panduan skincare lengkap</a>
+    </aside>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footnote" id="disclosure">Ulasan disusun dari analisa kandungan dan informasi produk. Bandingin.id mendapat komisi dari link affiliate.</p>
+    <p class="copy">© 2026 Bandingin.id · Harga mengikuti listing Shopee per 22 Oktober 2026 dan bisa berubah.</p>
+  </div>
+</footer>
 
-  <script src="data/produk.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/slideshow.js"></script>
-  <script src="js/top10.js"></script>
-  <script src="js/beranda.js"></script>
+<script>
+(function () {
+  var jenis = "semua";
+  var q = document.getElementById("q");
+  var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+  var kartu = Array.prototype.slice.call(document.querySelectorAll(".duel"));
+  var hasil = document.getElementById("hasil");
+  var kosong = document.getElementById("kosong");
+  var sah = { pelembab: 1, serum: 1, sunscreen: 1, semua: 1 };
+
+  function terapkan() {
+    var s = (q.value || "").toLowerCase().trim();
+    var n = 0;
+    kartu.forEach(function (el) {
+      var okJ = jenis === "semua" || el.getAttribute("data-jenis") === jenis;
+      var okS = !s || el.getAttribute("data-cari").indexOf(s) !== -1;
+      var tampil = okJ && okS;
+      el.hidden = !tampil;
+      if (tampil) n++;
+    });
+    var kata = n === 1 ? "perbandingan" : "perbandingan";
+    hasil.textContent = n + " " + kata;
+    kosong.hidden = n !== 0;
+  }
+
+  function setJenis(nilai, dariHash) {
+    if (!sah[nilai]) nilai = "semua";
+    jenis = nilai;
+    chips.forEach(function (c) {
+      var aktif = c.getAttribute("data-filter") === jenis;
+      c.classList.toggle("aktif", aktif);
+      c.setAttribute("aria-pressed", aktif ? "true" : "false");
+    });
+    document.querySelectorAll(".nav-links a").forEach(function (a) {
+      var href = a.getAttribute("href") || "";
+      var kunci = href.split("#")[1] || "";
+      var aktif = kunci === jenis;
+      a.classList.toggle("aktif", aktif);
+      if (aktif) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+    if (!dariHash) {
+      var url = lokasiTanpaHash() + (jenis === "semua" ? "" : "#" + jenis);
+      history.replaceState(null, "", url);
+    }
+    terapkan();
+  }
+
+  function lokasiTanpaHash() {
+    return location.pathname + location.search;
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () { setJenis(c.getAttribute("data-filter"), false); });
+  });
+  q.addEventListener("input", terapkan);
+  document.getElementById("form-cari").addEventListener("submit", function (e) {
+    e.preventDefault();
+    terapkan();
+  });
+  document.querySelectorAll(".nav-links a").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var kunci = (a.getAttribute("href") || "").split("#")[1];
+      if (!kunci) return;
+      e.preventDefault();
+      setJenis(kunci, false);
+      document.getElementById("daftar").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  var hash = (location.hash || "").replace("#", "");
+  if (sah[hash]) setJenis(hash, true);
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,606 @@
+{
+  "tanggal": "22 Oktober 2026",
+  "pasangan": [
+    {
+      "id": "originote-vs-illiyoon",
+      "jenis": "pelembab",
+      "hook": "Pelembab lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2113989687802994935",
+      "lokal": "20803489571",
+      "korea": "25080136975",
+      "lebihMurah": "lokal",
+      "ringkas": "Kulit berminyak atau sensitif yang mau gel ringan: The Originote. Kulit kering yang butuh krim pengunci lembap: ILLIYOON.",
+      "verdict": {
+        "berminyak": "Ambil The Originote. Gelnya ringan, bebas pewangi, dan bebas alkohol, jadi lebih nyaman di kulit berminyak. ILLIYOON krimnya kaya dan bisa terasa berat di area T, apalagi kalau kulit lagi berjerawat.",
+        "kering": "Ambil ILLIYOON. Ceramide, cholesterol, dan asam lemaknya dipakai untuk bantu kulit menahan lembap, dan formulanya tanpa pewangi. The Originote tetap nyaman untuk kulit sensitif, tapi gelnya bisa kurang mengunci kalau kulitnya sangat kering.",
+        "budget": "The Originote jauh lebih hemat di listing ini: hyaluronic acid plus ceramide dalam gel. ILLIYOON lebih mahal, dengan krim ceramide berkapsul, cholesterol, dan asam lemak. Budget tipis, pilih Originote. Kulit kering yang butuh krim lebih kaya, pilih ILLIYOON."
+      },
+      "produk": {
+        "20803489571": {
+          "nama": "The Originote Hyalucera",
+          "tekstur": "Gel ringan",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {"nama": "Hyaluronic acid", "fungsi": "Sodium hyaluronate dan hydrolyzed hyaluronic acid, untuk menarik air ke kulit."},
+            {"nama": "Ceramide NP dan cholesterol", "fungsi": "Membantu menjaga skin barrier."},
+            {"nama": "Panthenol dan allantoin", "fungsi": "Umumnya dipakai untuk menenangkan kulit."}
+          ],
+          "manfaat": [
+            "Gel ringan, cepat meresap",
+            "Bebas pewangi dan alkohol",
+            "Harga listing terjangkau"
+          ],
+          "kulit": ["Berminyak", "Normal", "Sensitif"],
+          "catatan": "Judul listing menyebut Hyalucera, Cica B5, dan Brightening. Uraian kandungan di sini untuk Hyalucera. Cek varian sebelum beli. Ada juga ekstrak chlorella dan spirulina. Untuk kulit sangat kering, gel ini bisa terasa kurang mengunci kelembapan, dan tidak ada bahan aktif khusus untuk jerawat."
+        },
+        "25080136975": {
+          "nama": "ILLIYOON Ceramide Ato Cream",
+          "tekstur": "Krim kaya",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {"nama": "Ceramide", "fungsi": "Ceramide PC-104 dan ceramide NP dalam bentuk kapsul. Umumnya membantu kulit menahan kelembapan."},
+            {"nama": "Cholesterol dan asam lemak", "fungsi": "Ikut membantu kulit menahan kelembapan, bersama ceramide."}
+          ],
+          "manfaat": [
+            "Tanpa pewangi",
+            "Bisa untuk wajah dan badan",
+            "Hasil akhirnya satin, tidak lengket"
+          ],
+          "kulit": ["Kering", "Sensitif"],
+          "catatan": "Di kulit berminyak atau yang gampang berjerawat, krim ini bisa terasa terlalu berat di area T. Teksturnya ada butiran kapsul halus yang pecah saat diratakan. Mereknya menyebut formula ini ringan iritasi."
+        }
+      }
+    },
+    {
+      "id": "kahf-vs-skin1004",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2114177845383532826",
+      "lokal": "56059310616",
+      "korea": "16581227588",
+      "lebihMurah": "lokal",
+      "ringkas": "Dua-duanya sunscreen serum yang ringan. Kahf lebih hemat untuk kulit berminyak. SKIN1004 hasilnya sedikit glowing dan lebih pas di kulit kering atau sensitif.",
+      "verdict": {
+        "berminyak": "Kahf lebih pas kalau kamu suka hasil yang tidak mengilap. Teksturnya serum, tanpa bekas putih, dan diarahkan ke kulit berminyak, normal, serta berjerawat. SKIN1004 juga ringan, tapi hasilnya sedikit glowing dan bisa terasa terlalu dewy untuk yang suka tampilan matte.",
+        "kering": "SKIN1004 lebih pas. Teksturnya cair, tidak lengket, hasilnya sedikit glowing, dan memang masuk daftar yang cocok untuk kulit kering serta sensitif. Kahf tetap ringan, tapi kulit yang sangat kering mungkin perlu pelembap di bawahnya.",
+        "budget": "Kahf lebih murah di listing ini, dengan klaim SPF 50 PA++++ dan filter UV modern. Ukurannya ada dua, 40 ml dan 25 ml, jadi cek yang mana sebelum checkout. SKIN1004 isi 50 ml, SPF50+ PA++++, dengan centella, hyaluronic acid, dan niacinamide di formulanya. Yang mau hemat, Kahf. Yang mau sun serum isi lebih besar dengan hasil glowing, SKIN1004."
+      },
+      "produk": {
+        "56059310616": {
+          "nama": "Kahf Bright Fresh Sunscreen SPF 50",
+          "tekstur": "Serum ringan",
+          "isi": "40 ml atau 25 ml",
+          "bahan": [
+            {"nama": "Filter UV", "fungsi": "Antara lain ethylhexyl triazone, Uvinul A Plus, dan Tinosorb S. Klaim di kemasan: SPF 50 PA++++."},
+            {"nama": "Bahan pendukung", "fungsi": "Yang tercantum: niacinamide, tranexamic acid, vitamin C stabil, allantoin, bisabolol, panthenol, dan squalane."}
+          ],
+          "manfaat": [
+            "Tekstur serum, cepat meresap",
+            "Tanpa bekas putih",
+            "Nyaman di cuaca panas"
+          ],
+          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "catatan": "Listing ini mencakup 40 ml dan 25 ml. Cek ukuran sebelum bandingkan harga. Kulit yang sangat kering mungkin perlu pelembap di bawahnya."
+        },
+        "16581227588": {
+          "nama": "SKIN1004 Hyalu-Cica Sun Serum",
+          "tekstur": "Sun serum, hasil glowing",
+          "isi": "50 ml",
+          "bahan": [
+            {"nama": "Filter UV", "fungsi": "Antara lain Tinosorb S dan Uvinul A Plus. Klaimnya SPF50+ PA++++."},
+            {"nama": "Centella, hyaluronic acid, niacinamide", "fungsi": "Bahan yang disebut di formula. Teksturnya cair seperti serum, tanpa bekas putih, hasilnya sedikit glowing."}
+          ],
+          "manfaat": [
+            "Sangat ringan dan tidak lengket",
+            "Tanpa bekas putih",
+            "Isi 50 ml"
+          ],
+          "kulit": ["Normal", "Sensitif", "Kering", "Berminyak"],
+          "catatan": "Hasilnya dewy. Kalau kamu suka tampilan matte, ini bisa terasa terlalu glowing di siang hari."
+        }
+      }
+    },
+    {
+      "id": "glad2glow-vs-joseon",
+      "jenis": "serum",
+      "hook": "Serum lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2114222880665805205",
+      "lokal": "24507405136",
+      "korea": "42151404537",
+      "lebihMurah": "lokal",
+      "ringkas": "Glad2Glow niacinamide 10% untuk kulit berminyak dan noda gelap. Beauty of Joseon lebih lembut: alpha arbutin 3%, tetap menghidrasi, tanpa pewangi di daftar bahannya.",
+      "verdict": {
+        "berminyak": "Glad2Glow lebih terarah. Niacinamide 10% dikenal membantu mengontrol minyak, ditambah alpha arbutin dan tranexamic acid untuk noda gelap. Beauty of Joseon tetap bisa dipakai, tapi fokusnya pencerah yang lebih lembut, bukan kontrol minyak.",
+        "kering": "Beauty of Joseon lebih pas. Selain alpha arbutin 3%, ada air dedak beras, hyaluronate, dan ceramide yang membantu menjaga hidrasi, dan daftar bahannya tanpa pewangi. Glad2Glow ada aroma buah; di kulit sensitif, 10% niacinamide plus pewangi bisa terasa kuat di awal.",
+        "budget": "Glad2Glow lebih murah, isi 17 ml, dengan 10% niacinamide plus alpha arbutin dan tranexamic acid, serta ceramide. Beauty of Joseon isi 20 ml, dengan alpha arbutin 3% dan vitamin C stabil. Kadar niacinamide yang tinggi dengan harga lebih rendah: Glad2Glow. Pencerah yang lebih lembut dan tetap lembap: Beauty of Joseon. Efek cerahnya bertahap, bukan instan, dan sunscreen tetap dipakai setiap hari."
+      },
+      "produk": {
+        "24507405136": {
+          "nama": "Glad2Glow 10% Niacinamide Serum",
+          "tekstur": "Serum ringan",
+          "isi": "17 ml",
+          "bahan": [
+            {"nama": "Niacinamide 10%", "fungsi": "Bahan utama. Dikenal membantu mengontrol minyak, dan di sini dipakai untuk kulit kusam serta warna yang kurang rata."},
+            {"nama": "Alpha arbutin dan tranexamic acid", "fungsi": "Dikenal untuk membantu menyamarkan noda gelap."},
+            {"nama": "Ceramide NP", "fungsi": "Mendukung skin barrier. Di formula juga ada hyaluronic acid, centella, dan ekstrak delima."}
+          ],
+          "manfaat": [
+            "Kadar niacinamide-nya ditulis jelas",
+            "Ringan dan cepat meresap",
+            "Ada ceramide"
+          ],
+          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "catatan": "Ada aroma buah yang lembut. Untuk kulit sensitif, 10% niacinamide plus pewangi bisa terasa kuat di awal, jadi mulai beberapa kali seminggu."
+        },
+        "42151404537": {
+          "nama": "Beauty of Joseon Rice Serum",
+          "tekstur": "Serum agak kental",
+          "isi": "20 ml",
+          "bahan": [
+            {"nama": "Alpha arbutin 3%", "fungsi": "Dikenal untuk membantu meratakan warna kulit dan menyamarkan noda gelap secara bertahap."},
+            {"nama": "Air dedak beras dan vitamin C stabil", "fungsi": "3-O-ethyl ascorbic acid ikut mendukung fungsi pencerah."},
+            {"nama": "Sodium hyaluronate, ceramide NP, beta-glucan", "fungsi": "Membantu menjaga hidrasi."}
+          ],
+          "manfaat": [
+            "Pencerah yang tetap menghidrasi",
+            "Tanpa pewangi di daftar bahan",
+            "Tidak lengket setelah meresap"
+          ],
+          "kulit": ["Normal", "Kering", "Sensitif"],
+          "catatan": "Ini versi dari Glow Deep Serum. Hasil pencerahan biasanya butuh pemakaian rutin beberapa minggu, plus sunscreen setiap hari."
+        }
+      }
+    },
+    {
+      "id": "barber-vs-skin1004",
+      "jenis": "pelembab",
+      "hook": "Pelembab lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2114281702181007384",
+      "lokal": "41827149473",
+      "korea": "14516182420",
+      "lebihMurah": "lokal",
+      "ringkas": "Barber Daily ringan, niacinamide 3%, untuk kulit berminyak. SKIN1004 gel-krim centella yang menenangkan, lebih pas di kulit sensitif.",
+      "verdict": {
+        "berminyak": "Kalau masalah utamanya minyak, Barber Daily lebih terarah: niacinamide 3% dikenal membantu mengontrol minyak, teksturnya ringan, dan ada alpha arbutin 0,5%. SKIN1004 juga ringan untuk kulit berminyak, dan lebih masuk kalau kulitnya sekaligus gampang merah.",
+        "kering": "Dua-duanya bukan krim tebal. Kulit yang sangat kering mungkin kurang. Di antara dua ini, SKIN1004 lebih pas untuk kulit sensitif: centella-nya dikenal menenangkan, plus ceramide dan cholesterol untuk skin barrier. Merek Barber Daily juga menyebut produknya cocok untuk kulit sensitif, tapi formulasinya lebih condong ke kulit berminyak.",
+        "budget": "Barber Daily jauh lebih hemat, isi 30 ml, dan tidak ada SPF, jadi pagi tetap butuh sunscreen. SKIN1004 isi 75 ml dengan centella, beberapa ceramide, dan cholesterol. Yang mau pelembap ringan harga rendah, Barber Daily. Yang mau bahan menenangkan dan kemasan lebih besar, SKIN1004."
+      },
+      "produk": {
+        "41827149473": {
+          "nama": "Barber Daily Bright Radiance Moisturizer",
+          "tekstur": "Pelembap ringan",
+          "isi": "30 ml",
+          "bahan": [
+            {"nama": "Niacinamide 3%", "fungsi": "Dikenal membantu mengontrol minyak, memperkuat skin barrier, dan meratakan warna kulit."},
+            {"nama": "Alpha arbutin 0,5%", "fungsi": "Untuk membantu mencerahkan."},
+            {"nama": "Sodium hyaluronate, glycerin, panthenol", "fungsi": "Untuk hidrasi."}
+          ],
+          "manfaat": [
+            "Ringan, cepat meresap, tidak lengket",
+            "Kadar niacinamide-nya jelas",
+            "Harga listing terjangkau"
+          ],
+          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "catatan": "Tidak ada SPF. Pagi tetap pakai sunscreen. Kulit yang sangat kering mungkin butuh krim yang lebih kaya. Mereknya menyebut produk ini cocok juga untuk kulit sensitif."
+        },
+        "14516182420": {
+          "nama": "SKIN1004 Centella Soothing Cream",
+          "tekstur": "Gel-krim",
+          "isi": "75 ml",
+          "bahan": [
+            {"nama": "Ekstrak centella asiatica", "fungsi": "Dikenal untuk menenangkan kulit."},
+            {"nama": "Ceramide dan cholesterol", "fungsi": "Untuk mendukung skin barrier."},
+            {"nama": "Bahan lain yang tercantum", "fungsi": "Trehalose, sodium hyaluronate, beta-glucan, dan tranexamic acid."}
+          ],
+          "manfaat": [
+            "Gel-krim ringan dan sejuk",
+            "Centella plus ceramide",
+            "Isi 75 ml"
+          ],
+          "kulit": ["Sensitif", "Berminyak", "Normal"],
+          "catatan": "Kulit yang sangat kering mungkin perlu krim yang lebih tebal. Tidak ada SPF."
+        }
+      }
+    },
+    {
+      "id": "omg-vs-joseon",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2114342010802827368",
+      "lokal": "26384227268",
+      "korea": "28673092386",
+      "lebihMurah": "lokal",
+      "ringkas": "OMG hemat dan hasilnya matte, untuk kulit berminyak. Beauty of Joseon sangat cair, tanpa bekas putih, juga untuk kulit berminyak, dengan harga yang jauh lebih tinggi.",
+      "verdict": {
+        "berminyak": "Dua-duanya untuk kulit berminyak. OMG hasilnya matte dan harganya kecil. Beauty of Joseon teksturnya sangat cair, hasilnya natural sampai semi-matte, tanpa bekas putih, dan dibuat untuk kulit berminyak serta kombinasi. Kulit berjerawat yang mau tekstur serum tanpa rasa berat lebih pas ke Beauty of Joseon. Yang mau matte dan hemat, OMG.",
+        "kering": "Dua ini bukan pilihan utama untuk kulit kering. OMG mungkin perlu pelembap yang lebih kaya di bawahnya. Beauty of Joseon sengaja cair untuk kulit berminyak dan kombinasi, bukan krim lembap yang tebal.",
+        "budget": "OMG jauh lebih murah, klaimnya SPF 50 PA++++, dengan niacinamide, vitamin C (sodium ascorbyl phosphate), dan vitamin E. Ukuran tidak tertulis di judul, jadi cek isi sebelum hitung harga per ml. Beauty of Joseon isi 50 ml, SPF50+ PA++++, filter UV modern, plus air beras, panthenol, dan ceramide. Kandungannya lebih lengkap di tulisannya, tapi harganya jauh di atas. Sebagian pemakaian bisa menggumpal saat diulang di atas produk tertentu."
+      },
+      "produk": {
+        "26384227268": {
+          "nama": "OMG UV Barrier Sunscreen SPF 50",
+          "tekstur": "Lotion-gel, hasil matte",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {"nama": "SPF 50 PA++++", "fungsi": "Angka yang tercantum di judul produk."},
+            {"nama": "Niacinamide, vitamin C, vitamin E", "fungsi": "Vitamin C-nya sodium ascorbyl phosphate. Formula ini dipakai untuk hasil matte dengan sedikit efek cerah."}
+          ],
+          "manfaat": [
+            "Hasil matte, tidak mengilap",
+            "Mudah diratakan dan cepat meresap",
+            "Harga listing rendah"
+          ],
+          "kulit": ["Berminyak", "Normal"],
+          "catatan": "Ukuran kemasan tidak tertulis di judul listing. Cek isi bersih di halaman produk. Kulit kering mungkin perlu pelembap yang lebih kaya di bawahnya."
+        },
+        "28673092386": {
+          "nama": "Beauty of Joseon Aqua-Fresh",
+          "tekstur": "Cair seperti serum",
+          "isi": "50 ml",
+          "bahan": [
+            {"nama": "Filter UV", "fungsi": "Sunscreen kimia, SPF50+ PA++++. Antara lain Uvinul A Plus dan Tinosorb S."},
+            {"nama": "Air beras, panthenol, ceramide NP, beta-glucan", "fungsi": "Bahan pendukung yang disebut di formula. Panthenol di sini adalah vitamin B5."}
+          ],
+          "manfaat": [
+            "Sangat ringan, tanpa bekas putih",
+            "Hasil natural sampai semi-matte",
+            "Isi 50 ml"
+          ],
+          "kulit": ["Berminyak", "Kombinasi", "Normal", "Berjerawat"],
+          "catatan": "Dibuat untuk kulit berminyak dan kombinasi. Bisa menggumpal saat pemakaian ulang di atas lapisan tertentu."
+        }
+      }
+    },
+    {
+      "id": "kahf-vs-somebymi",
+      "jenis": "serum",
+      "hook": "Serum lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2114538890262622325",
+      "lokal": "51901773332",
+      "korea": "11210228422",
+      "lebihMurah": "lokal",
+      "ringkas": "Dua-duanya untuk noda dan kulit kusam. Kahf bahannya lebih banyak jenisnya, ada pewangi. SOME BY MI niacinamide 10% plus ekstrak yuja, aromanya citrus.",
+      "verdict": {
+        "berminyak": "Dua-duanya cocok untuk kulit berminyak dan bekas jerawat yang gelap. SOME BY MI niacinamide-nya 10% dan dikenal membantu mengontrol minyak, teksturnya gel cair. Kahf menggabungkan niacinamide, tranexamic acid, vitamin C stabil, dan PHA yang lembut. Mau kombinasi bahan yang lebih banyak, Kahf. Mau kadar niacinamide yang ditulis jelas, SOME BY MI.",
+        "kering": "Dua-duanya bukan serum khusus kulit kering. Kahf menyebut formulanya cukup melembapkan sampai bisa dipakai tanpa pelembap terpisah, tapi ada pewangi, jadi kulit sensitif sebaiknya coba dulu di sedikit area. SOME BY MI aromanya citrus dari minyak kulit jeruk. Kulit yang reaktif terhadap pewangi juga sebaiknya coba sedikit dulu.",
+        "budget": "Harga listing Kahf lebih rendah, isinya 25 ml, dengan lebih banyak jenis bahan pencerah. Ukuran SOME BY MI tidak tertulis di judul, jadi jangan putuskan yang mana lebih hemat per ml sebelum cek isinya. SOME BY MI unggul karena kadarnya ditulis jelas: sekitar 83% ekstrak yuja dan 10% niacinamide."
+      },
+      "produk": {
+        "51901773332": {
+          "nama": "Kahf Bright Intensifying Serum",
+          "tekstur": "Serum",
+          "isi": "25 ml",
+          "bahan": [
+            {"nama": "Niacinamide, tranexamic acid, vitamin C stabil", "fungsi": "Vitamin C-nya 3-O-ethyl ascorbic acid. Kombinasi ini diarahkan untuk kulit kusam dan bekas jerawat yang gelap."},
+            {"nama": "Hydroxyresveratrol dan gluconolactone", "fungsi": "Gluconolactone adalah PHA, dikenal sebagai eksfolian yang lembut."},
+            {"nama": "Squalane dan hyaluronic acid", "fungsi": "Untuk kelembapan. Mereknya menyebut serum ini cukup melembapkan sampai bisa dipakai tanpa pelembap terpisah."}
+          ],
+          "manfaat": [
+            "Jenis bahan pencerahnya lengkap",
+            "Ada eksfolian yang lembut",
+            "Isi 25 ml"
+          ],
+          "kulit": ["Normal", "Berminyak", "Berjerawat"],
+          "catatan": "Mengandung pewangi. Kulit sensitif sebaiknya coba sedikit dulu."
+        },
+        "11210228422": {
+          "nama": "SOME BY MI Yuja Niacin Serum",
+          "tekstur": "Gel cair",
+          "isi": "Cek di halaman produk",
+          "bahan": [
+            {"nama": "Ekstrak yuja", "fungsi": "Sekitar 83% di formula terbaru. Yuja adalah jeruk dari Korea."},
+            {"nama": "Niacinamide 10%", "fungsi": "Dikenal membantu mengontrol minyak. Kombinasi formulanya diarahkan untuk noda bekas jerawat, warna yang kurang rata, dan kulit kusam."},
+            {"nama": "Bahan lain yang tercantum", "fungsi": "Bisabolol, adenosine, licorice, turmeric, dan panthenol."}
+          ],
+          "manfaat": [
+            "Kadar niacinamide dan yuja tertulis",
+            "Ringan dan tidak lengket",
+            "Mudah dilapis"
+          ],
+          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "catatan": "Ada aroma citrus dari minyak kulit jeruk. Kulit yang reaktif terhadap pewangi sebaiknya coba sedikit dulu. Ukuran tidak tertulis di judul listing."
+        }
+      }
+    },
+    {
+      "id": "emina-vs-cosrx",
+      "jenis": "pelembab",
+      "hook": "Pelembab lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2114585256242118980",
+      "lokal": "28169257360",
+      "korea": "8657140008",
+      "lebihMurah": "lokal",
+      "ringkas": "Emina gel niacinamide yang hemat, variannya beda-beda. COSRX lotion bebas minyak dengan birch sap, isi lebih besar, untuk kulit berminyak yang tidak suka rasa berat.",
+      "verdict": {
+        "berminyak": "COSRX lebih terarah kalau kamu mau satu lotion bebas minyak yang ringan. Bahan utamanya birch sap sekitar 70%. Emina juga ringan. Untuk jerawat, pilih varian Calming (centella, panthenol, salicylic acid), jangan asal varian.",
+        "kering": "Emina varian Barrier Balancing lebih relevan: ada ceramide, beta-glucan, dan hyaluronic acid untuk kulit kering atau skin barrier yang lemah. COSRX umumnya kurang untuk kulit kering dan biasanya perlu krim tambahan di atasnya. Kulit yang sangat kering tetap mungkin butuh yang lebih kaya daripada gel Emina.",
+        "budget": "Emina jauh lebih hemat, isi 30 g, dan semua variannya berbasis niacinamide. COSRX isi 100 ml, jadi kemasannya lebih awet, tapi harga awalnya lebih tinggi. Mau coba varian dengan uang kecil, Emina. Mau lotion bebas minyak isi besar, COSRX."
+      },
+      "produk": {
+        "28169257360": {
+          "nama": "Emina Water Gel",
+          "tekstur": "Watery gel",
+          "isi": "30 g",
+          "bahan": [
+            {"nama": "Niacinamide", "fungsi": "Ada di semua varian. Fungsi varian ditentukan bahan pendampingnya."},
+            {"nama": "Bright Glow", "fungsi": "Acetyl glucosamine, vitamin C, dan licorice, untuk kulit kusam. Varian ini mengandung pewangi."},
+            {"nama": "Barrier Balancing", "fungsi": "Ceramide, beta-glucan, dan hyaluronic acid, untuk kulit kering atau skin barrier yang lemah."},
+            {"nama": "Calming", "fungsi": "Centella, panthenol, dan salicylic acid, untuk kulit berjerawat dan kemerahan."}
+          ],
+          "manfaat": [
+            "Gel ringan, cepat meresap, tidak lengket",
+            "Ada varian untuk kusam, kering, dan berjerawat",
+            "Harga listing rendah"
+          ],
+          "kulit": ["Berminyak", "Normal", "Berjerawat"],
+          "catatan": "Ini seri. Kandungan beda tiap varian, jadi pilih yang sesuai. Varian Bright Glow mengandung pewangi. Kulit yang sangat kering mungkin butuh lapisan yang lebih kaya."
+        },
+        "8657140008": {
+          "nama": "COSRX Oil-Free Lotion",
+          "tekstur": "Lotion ringan, bebas minyak",
+          "isi": "100 ml",
+          "bahan": [
+            {"nama": "Birch sap", "fungsi": "Sekitar 70% formula. Getah pohon birch, dipakai sebagai bahan utama."},
+            {"nama": "Glycerin, panthenol, allantoin, sodium hyaluronate", "fungsi": "Untuk hidrasi dan menenangkan kulit."}
+          ],
+          "manfaat": [
+            "Bebas minyak, tidak terasa berat",
+            "Cepat meresap",
+            "Isi 100 ml"
+          ],
+          "kulit": ["Berminyak", "Berjerawat", "Normal"],
+          "catatan": "Kulit kering umumnya perlu krim tambahan di atasnya. Formula merek Korea bisa berubah antar batch; cek daftar bahan di kemasan. Enak dipakai di bawah sunscreen."
+        }
+      }
+    },
+    {
+      "id": "scora-vs-roundlab",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs Korea, mending yang mana?",
+      "x": "https://x.com/AlbiJulian59/status/2114644187471593708",
+      "lokal": "42807278779",
+      "korea": "22161849050",
+      "lebihMurah": "lokal",
+      "ringkas": "SCORA hemat, hasilnya soft-matte, ada sedikit efek cerah seketika. Round Lab lebih melembapkan, hasilnya sedikit glowing, klaim SPF-nya 50+.",
+      "verdict": {
+        "berminyak": "SCORA lebih pas. Hasilnya soft-matte dan diarahkan ke kulit berminyak serta normal. Round Lab hasilnya sedikit dewy. Kulit yang sangat berminyak biasanya lebih nyaman dengan yang lebih matte.",
+        "kering": "Round Lab lebih pas. Teksturnya seperti pelembap sekaligus sunscreen, dengan birch juice, niacinamide, hyaluronic acid, allantoin, dan adenosine. Bisa dipakai sebagai pelembap pagi. SCORA lebih condong ke hasil matte, bukan sunscreen yang sekaligus pelembap. Round Lab juga masuk untuk kulit sensitif.",
+        "budget": "SCORA jauh lebih hemat, isi 40 g, SPF 40 PA++++ menurut merek, dengan niacinamide dan cica. Round Lab isi 50 ml, SPF50+ PA++++, dengan filter UV modern, dan harganya lebih tinggi. Efek cerah seketika di SCORA bisa kelihatan agak putih di kulit sawo matang kalau tidak diratakan. Round Lab juga bisa terlihat putih sesaat karena Tinosorb M, lalu meresap."
+      },
+      "produk": {
+        "42807278779": {
+          "nama": "SCORA Bright Me Up SPF 40",
+          "tekstur": "Krim ringan, soft-matte",
+          "isi": "40 g",
+          "bahan": [
+            {"nama": "Filter UV hybrid", "fungsi": "Campuran filter kimia dan fisik. Klaim merek: SPF 40 PA++++."},
+            {"nama": "Niacinamide dan centella", "fungsi": "Centella disebut juga cica. Ada sedikit efek cerah seketika."}
+          ],
+          "manfaat": [
+            "Hasil soft-matte",
+            "Cepat meresap",
+            "Harga listing hemat"
+          ],
+          "kulit": ["Berminyak", "Normal"],
+          "catatan": "Efek cerah seketika bisa terlihat agak keputihan di kulit sawo matang kalau tidak diratakan. Oleskan tipis, berlapis. SPF-nya 40, di bawah pilihan yang 50. Di luar ruangan, ikuti anjuran pemakaian ulang di kemasan."
+        },
+        "22161849050": {
+          "nama": "Round Lab Birch Juice Sunscreen",
+          "tekstur": "Lotion yang melembapkan",
+          "isi": "50 ml",
+          "bahan": [
+            {"nama": "Filter UV", "fungsi": "Sunscreen kimia, SPF50+ PA++++. Termasuk Uvinul A Plus, Uvinul T 150, dan Tinosorb M."},
+            {"nama": "Birch juice, niacinamide, hyaluronic acid, allantoin, adenosine", "fungsi": "Bahan pendukung yang membuat teksturnya terasa seperti pelembap sekaligus sunscreen."}
+          ],
+          "manfaat": [
+            "Melembapkan, bisa jadi pelembap pagi",
+            "Hasil sedikit dewy",
+            "Isi 50 ml"
+          ],
+          "kulit": ["Kering", "Normal", "Sensitif"],
+          "catatan": "Tinosorb M kadang memberi kesan putih sesaat sebelum meresap. Kulit yang sangat berminyak mungkin lebih cocok dengan hasil yang lebih matte."
+        }
+      }
+    },
+    {
+      "id": "wardah-vs-naturerepublic",
+      "jenis": "pelembab",
+      "hook": "Pelembab lokal vs Korea, mending yang mana?",
+      "lokal": "40401770290",
+      "korea": "1345373609",
+      "lebihMurah": "korea",
+      "ringkas": "Wardah gel dengan collagen, peptida, niacinamide, dan ceramide, untuk yang peduli kekenyalan. Nature Republic gel lidah buaya isi besar dan sejuk, tapi ada alkohol serta pewangi.",
+      "verdict": {
+        "berminyak": "Nature Republic lebih praktis kalau kulit berminyak, mau rasa sejuk, dan tidak sensitif. Gelnya cepat kering dan tidak berminyak. Ada alkohol dan pewangi, jadi jangan pilih ini kalau kulit gampang perih. Wardah juga gel ringan, dan lebih masuk kalau kamu sekaligus mau niacinamide plus ceramide.",
+        "kering": "Dua-duanya bukan krim tebal. Nature Republic hidrasinya ringan, kurang cukup sebagai pelembap utama kulit kering, dan ada alkohol serta pewangi. Wardah tetap gel, tapi ada ceramide, dan mereknya menyebutnya hypoallergenic. Di antara dua ini, kulit kering lebih bisa mempertimbangkan Wardah. Kulit sensitif sebaiknya tidak mengambil Nature Republic.",
+        "budget": "Nature Republic jauh lebih hemat untuk isinya: 300 ml, harga listing-nya di bawah Wardah yang cuma 30 g. Yang dibeli dari Wardah adalah kandungannya: recombinant collagen, 2% argireline, niacinamide, dan ceramide, dengan fokus garis halus dan kekenyalan. Mau gel sejuk isi besar, Nature Republic. Mau bahan yang lebih lengkap, Wardah. Wardah juga mengandung pewangi."
+      },
+      "produk": {
+        "40401770290": {
+          "nama": "Wardah Plump & Firm Gel",
+          "tekstur": "Gel watery",
+          "isi": "30 g",
+          "bahan": [
+            {"nama": "Recombinant collagen", "fungsi": "Vegan recombinant collagen, untuk fokus kekenyalan."},
+            {"nama": "Argireline 2%", "fungsi": "Acetyl hexapeptide-8. Peptida yang dikenal untuk membantu menyamarkan garis ekspresi."},
+            {"nama": "Niacinamide dan ceramide", "fungsi": "Kompleks ceramide dipakai untuk skin barrier."}
+          ],
+          "manfaat": [
+            "Gel ringan, cepat meresap",
+            "Nyaman di iklim lembap",
+            "Wardah menyebutnya hypoallergenic dan teruji dermatologis"
+          ],
+          "kulit": ["Normal", "Kering", "Berminyak"],
+          "catatan": "Mengandung pewangi. Kulit yang sangat reaktif sebaiknya coba di sedikit area dulu. Lebih masuk akal kalau kamu mulai peduli garis halus, bukan cuma cari pelembap dasar."
+        },
+        "1345373609": {
+          "nama": "Nature Republic Aloe Vera Gel",
+          "tekstur": "Gel bening",
+          "isi": "300 ml",
+          "bahan": [
+            {"nama": "Ekstrak lidah buaya", "fungsi": "Sekitar 92%. Dikenal memberi rasa sejuk dan lembap yang ringan."}
+          ],
+          "manfaat": [
+            "Isi besar, 300 ml",
+            "Cepat kering dan tidak berminyak",
+            "Bisa untuk wajah dan badan"
+          ],
+          "kulit": ["Berminyak", "Normal"],
+          "catatan": "Daftar bahannya mencantumkan alkohol dan pewangi, jadi kurang ideal untuk kulit sensitif atau kering. Hidrasinya ringan. Lebih cocok sebagai lapisan tambahan daripada satu-satunya pelembap."
+        }
+      }
+    },
+    {
+      "id": "omg-vs-torriden",
+      "jenis": "serum",
+      "hook": "Serum lokal vs Korea, mending yang mana?",
+      "lokal": "42528194882",
+      "korea": "26268363527",
+      "lebihMurah": "lokal",
+      "ringkas": "OMG murah dan variannya banyak, harus dipilih yang pas. Torriden satu serum hidrasi, bebas pewangi, isi 50 ml, lebih jelas untuk kulit kering atau sensitif.",
+      "verdict": {
+        "berminyak": "Kalau lagi berjerawat, lihat varian Menenangkan (Calming) OMG: salicylic acid dan centella. Torriden bukan serum jerawat. Kulit berminyak yang cuma terasa haus tetap bisa pakai Torriden karena teksturnya sangat ringan. Varian Eksfoliasi dan Renew OMG untuk yang sudah terbiasa bahan aktif, dan sunscreen tetap dipakai.",
+        "kering": "Torriden lebih pas dan lebih jelas. Lima bentuk hyaluronic acid, plus panthenol, allantoin, madecassoside, ceramide, dan beta-glucan yang umumnya dipakai untuk menenangkan. Bebas pewangi. OMG punya varian Melembapkan (Hydrating) dengan hyaluronic acid dan ceramide, tapi konsentrasinya tidak selalu ditulis.",
+        "budget": "OMG jauh lebih murah, isi 17 ml, asal variannya tepat. Torriden isi 50 ml, jadi lebih awet, dengan satu formula hidrasi yang jelas. Mau coba bahan aktif dengan uang kecil, OMG. Mau hidrasi tanpa pewangi dan tidak mau nebak varian, Torriden."
+      },
+      "produk": {
+        "42528194882": {
+          "nama": "OMG Active Expert Serum",
+          "tekstur": "Serum, beda tiap varian",
+          "isi": "17 ml",
+          "bahan": [
+            {"nama": "Mencerahkan (Brightening)", "fungsi": "Niacinamide dan tranexamic acid."},
+            {"nama": "Melembapkan (Hydrating)", "fungsi": "Hyaluronic acid dan ceramide."},
+            {"nama": "Menenangkan (Calming)", "fungsi": "Salicylic acid dan centella, untuk kulit berjerawat."},
+            {"nama": "Eksfoliasi (Exfoliating)", "fungsi": "Campuran AHA, BHA, PHA, plus centella."},
+            {"nama": "Retinol (Renew)", "fungsi": "Retinol dan centella."}
+          ],
+          "manfaat": [
+            "Ada varian untuk masalah yang berbeda",
+            "Harga listing rendah",
+            "Isi 17 ml"
+          ],
+          "kulit": ["Berminyak", "Normal", "Kering", "Berjerawat"],
+          "catatan": "Harus pilih varian. Konsentrasi bahan aktif tidak selalu tercantum di listing. Varian eksfoliasi dan retinol perlu adaptasi, dan sunscreen tetap dipakai."
+        },
+        "26268363527": {
+          "nama": "Torriden DIVE-IN Serum",
+          "tekstur": "Serum cair",
+          "isi": "50 ml",
+          "bahan": [
+            {"nama": "Hyaluronic acid", "fungsi": "Lima bentuk dengan ukuran molekul berbeda, untuk hidrasi."},
+            {"nama": "Panthenol, allantoin, madecassoside, ceramide NP, beta-glucan", "fungsi": "Umumnya dipakai untuk menenangkan kulit."}
+          ],
+          "manfaat": [
+            "Hidrasi tanpa rasa lengket",
+            "Bebas pewangi dan vegan",
+            "Isi 50 ml"
+          ],
+          "kulit": ["Kering", "Sensitif", "Normal", "Berminyak"],
+          "catatan": "Bukan serum pencerah atau anti-jerawat. Untuk noda, perlu bahan lain. Hasilnya segar, sedikit dewy."
+        }
+      }
+    },
+    {
+      "id": "wardah-vs-cosrx",
+      "jenis": "serum",
+      "hook": "Serum lokal vs Korea, mending yang mana?",
+      "lokal": "24990995014",
+      "korea": "23541411702",
+      "lebihMurah": "lokal",
+      "ringkas": "Wardah 5% niacinamide plus vitamin C, hemat, untuk kulit kusam. COSRX 15% niacinamide plus zinc, bebas pewangi, lebih terarah ke minyak dan jerawat, tapi jauh lebih mahal.",
+      "verdict": {
+        "berminyak": "COSRX lebih terarah untuk minyak, pori, dan jerawat: 15% niacinamide, zinc PCA, dan acetyl glucosamine, tanpa pewangi. COSRX menyebutnya non-comedogenic tested. Wardah 5% niacinamide plus 1% vitamin C stabil juga untuk kulit berminyak yang kusam dan porinya kelihatan besar, tapi ada pewangi dan bukan serum untuk jerawat aktif.",
+        "kering": "Dua-duanya bukan serum untuk kulit kering. Wardah untuk kulit normal sampai berminyak. COSRX untuk kulit berminyak dan berjerawat, dan kadar 15% bisa terasa kuat di kulit sensitif. Kalau tetap ingin mencoba, mulai pelan. Wardah kadarnya lebih rendah tapi mengandung pewangi. COSRX bebas pewangi tapi lebih pekat.",
+        "budget": "Wardah jauh lebih hemat, isi 15 ml. COSRX isi 20 ml dengan harga listing yang jauh di atas, karena kadar niacinamide-nya 15% plus zinc. Mau pencerah harian yang murah, Wardah. Mau kadar tinggi untuk minyak dan jerawat, dan budget-nya longgar, COSRX."
+      },
+      "produk": {
+        "24990995014": {
+          "nama": "Wardah C-Glow Serum",
+          "tekstur": "Serum cair",
+          "isi": "15 ml",
+          "bahan": [
+            {"nama": "Niacinamide 5%", "fungsi": "Dikenal membantu meratakan warna kulit dan mengontrol minyak."},
+            {"nama": "Vitamin C stabil 1%", "fungsi": "3-O-ethyl ascorbic acid. Lebih stabil dan umumnya lebih ramah dibanding vitamin C murni."},
+            {"nama": "Perfectyl", "fungsi": "Untuk tampilan pori dan tekstur kulit yang lebih halus. Ada juga allantoin dan ekstrak chamomile."}
+          ],
+          "manfaat": [
+            "Fokus pori dan tekstur",
+            "Serum cair yang ringan",
+            "Harga listing rendah"
+          ],
+          "kulit": ["Normal", "Berminyak"],
+          "catatan": "Mengandung pewangi. Kulit sensitif sebaiknya coba sedikit dulu. Isi 15 ml cepat habis kalau dipakai pagi dan malam."
+        },
+        "23541411702": {
+          "nama": "COSRX Niacinamide 15 Serum",
+          "tekstur": "Serum cair",
+          "isi": "20 ml",
+          "bahan": [
+            {"nama": "Niacinamide 15%", "fungsi": "Kadar yang ditargetkan untuk kulit berminyak, pori, dan bekas jerawat."},
+            {"nama": "Acetyl glucosamine", "fungsi": "Sering dipadukan dengan niacinamide untuk noda gelap."},
+            {"nama": "Zinc PCA", "fungsi": "Dikenal membantu mengontrol minyak."}
+          ],
+          "manfaat": [
+            "Tanpa pewangi, daftar bahan pendek",
+            "Cepat meresap, tanpa residu",
+            "COSRX menyebutnya non-comedogenic tested"
+          ],
+          "kulit": ["Berminyak", "Berjerawat"],
+          "catatan": "Kadar 15% cukup tinggi. Kulit sensitif sebaiknya mulai pelan-pelan. Harga per ml-nya tinggi."
+        }
+      }
+    },
+    {
+      "id": "wardah-vs-somebymi",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs Korea, mending yang mana?",
+      "lokal": "28218154859",
+      "korea": "29204771380",
+      "lebihMurah": "lokal",
+      "ringkas": "Wardah variannya banyak dan harganya lebih rendah. SOME BY MI satu krim yang melembapkan, lebih enak di kulit kering, dan bisa terasa berat di kulit berminyak.",
+      "verdict": {
+        "berminyak": "Pilih Wardah, varian Airy Smooth yang gelnya matte, atau Acne Calming kalau lagi berjerawat. Keduanya SPF 50 PA++++ menurut Wardah. SOME BY MI teksturnya krim yang melembapkan dan di kulit berminyak bisa terasa lebih berat atau sedikit lengket.",
+        "kering": "SOME BY MI lebih pas: hyaluronic acid, niacinamide, centella, dan panthenol dalam krim yang melembapkan, tanpa bekas putih. Wardah varian Aqua Fresh juga diarahkan ke kulit kering, tapi variannya harus yang itu. Untuk kulit sensitif, Wardah punya varian Physical dengan filter mineral.",
+        "budget": "Wardah jauh lebih murah, asal variannya dicek, karena SPF, hasil akhir, dan harga bisa beda. Tone Up misalnya SPF-nya 35, bukan 50. SOME BY MI SPF50+ PA++++. Listingnya mencakup 25 ml dan 50 ml, jadi cek ukuran yang kena harga itu. Mau sunscreen harian hemat, Wardah. Mau satu krim melembapkan tanpa pilih varian, SOME BY MI."
+      },
+      "produk": {
+        "28218154859": {
+          "nama": "Wardah UV Shield",
+          "tekstur": "Beda tiap varian",
+          "isi": "Beda tiap varian",
+          "bahan": [
+            {"nama": "Airy Smooth", "fungsi": "SPF 50 PA++++, gel ringan, hasil matte, untuk kulit berminyak."},
+            {"nama": "Aqua Fresh", "fungsi": "SPF 50 PA++++, tekstur watery dan glowing, untuk kulit kering."},
+            {"nama": "Acne Calming", "fungsi": "SPF 50 PA++++, untuk kulit berjerawat."},
+            {"nama": "Tone Up", "fungsi": "SPF 35 PA+++, ada warna, untuk meratakan tampilan kulit."},
+            {"nama": "Physical", "fungsi": "SPF 50+ PA++++, filter mineral, umumnya lebih cocok untuk kulit sensitif."}
+          ],
+          "manfaat": [
+            "Varian untuk jenis kulit yang berbeda",
+            "Ada pilihan filter mineral",
+            "Harga listing terjangkau"
+          ],
+          "kulit": ["Berminyak", "Kering", "Normal", "Sensitif", "Berjerawat"],
+          "catatan": "SPF dan hasil akhir beda tiap varian. Harga di listing bisa beda per varian dan ukuran. Cek varian sebelum checkout."
+        },
+        "29204771380": {
+          "nama": "SOME BY MI V10 Hyal Sunscreen",
+          "tekstur": "Krim yang melembapkan",
+          "isi": "25 ml atau 50 ml",
+          "bahan": [
+            {"nama": "SPF50+ PA++++", "fungsi": "Sunscreen kimia, angka yang tercantum untuk produk ini."},
+            {"nama": "Hyaluronic acid, niacinamide, centella, panthenol", "fungsi": "Beberapa bentuk hyaluronic acid plus bahan itu yang membuat krimnya melembapkan."}
+          ],
+          "manfaat": [
+            "Melembapkan",
+            "Tanpa bekas putih",
+            "Satu formula, tidak perlu pilih varian"
+          ],
+          "kulit": ["Kering", "Sensitif", "Normal"],
+          "catatan": "Di kulit berminyak bisa terasa lebih berat atau sedikit lengket. Listing mencakup 25 ml dan 50 ml. Cek ukuran, karena harga bisa untuk ukuran tertentu."
+        }
+      }
+    }
+  ]
+}
