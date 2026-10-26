@@ -92,7 +92,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
 .chip.aktif .count { color: rgba(255,255,255,.75); }
 .hasil { margin: 8px 0 12px; color: var(--muted); font-size: .9rem; }
 
-#daftar { scroll-margin-top: 118px; }
+#daftar { scroll-margin-top: 148px; }
 .list { display: grid; gap: 14px; }
 .duel {
   background: var(--card); border: 1px solid var(--line); border-radius: 18px;
