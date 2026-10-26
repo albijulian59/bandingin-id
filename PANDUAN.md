@@ -1,6 +1,6 @@
-# Panduan Bandingin.id
+# Panduan PilihYuk
 
-Bandingin.id membandingkan **skincare**: satu produk merek lokal dan satu produk merek Korea, jenis yang sama. Isinya facial wash, pelembab, serum, dan sunscreen. Tidak ada pembagian perempuan / pria.
+PilihYuk membandingkan **skincare**: satu produk merek lokal dan satu produk merek Korea, jenis yang sama. Isinya facial wash, pelembab, serum, dan sunscreen. Tidak ada pembagian perempuan / pria.
 
 Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 
@@ -118,6 +118,6 @@ function doPost(e) {
 
 ## Online
 
-Repository GitHub `bandingin-id`, branch `main`, folder root. Alamatnya `https://albijulian59.github.io/bandingin-id/`.
+Nama yang tampil ke pengunjung adalah PilihYuk. Repository GitHub tetap `bandingin-id`, branch `main`, folder root. Alamat yang hidup sekarang `https://albijulian59.github.io/bandingin-id/`.
 
 Tautan panduan (`https://lynk.id/albijulian`) hanya ada sekali, di beranda. Catatan affiliate hanya di footer.

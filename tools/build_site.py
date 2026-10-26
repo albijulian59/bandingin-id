@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bangun situs statis Bandingin.id: perbandingan skincare lokal vs Korea.
+"""Bangun situs statis PilihYuk: perbandingan skincare lokal vs Korea.
 
     python3 tools/build_site.py            # pakai gambar yang sudah ada
     python3 tools/build_site.py --gambar   # unduh ulang gambar produk
@@ -25,6 +25,13 @@ JENIS = [
     ("facial-wash", "Facial Wash"),
 ]
 JENIS_LABEL = dict(JENIS)
+MEREK = "PilihYuk"
+FAVICON = (
+    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>"
+    "<rect width='64' height='64' rx='14' fill='%230c6b52'/>"
+    "<text x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='white'>P</text>"
+    "</svg>"
+)
 
 BANNED = re.compile(
     r"\b(pria|wanita|cowok|cewek|perempuan|laki-laki|for men|terjual|rating|"
@@ -287,8 +294,12 @@ def head(title, description, base, canonical_path):
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(description)}">
   <meta name="theme-color" content="#f3efe7">
+  <meta property="og:site_name" content="{MEREK}">
+  <meta property="og:title" content="{esc(title)}">
+  <meta property="og:description" content="{esc(description)}">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="{base}css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230c6b52'/><text x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='white'>vs</text></svg>">
+  <link rel="icon" href="{FAVICON}">
 </head>
 """
 
@@ -306,7 +317,7 @@ def header(base, aktif=None):
     return f"""<a class="skip" href="{base}index.html#daftar">Langsung ke perbandingan</a>
 <header class="site-header">
   <div class="wrap nav">
-    <a class="logo" href="{base}index.html"><span class="mark" aria-hidden="true">vs</span>Bandingin<span class="tld">.id</span></a>
+    <a class="logo" href="{base}index.html"><span class="mark" aria-hidden="true">P</span><span class="logo-pilih">Pilih</span><span class="logo-yuk">Yuk</span></a>
     <nav class="nav-links" aria-label="Menu">
       {''.join(tautan)}
     </nav>
@@ -318,9 +329,9 @@ def header(base, aktif=None):
 def footer(base, tanggal):
     return f"""<footer class="site-footer">
   <div class="wrap">
-    <p class="footnote" id="disclosure">Ulasan disusun dari analisa kandungan dan informasi produk. Bandingin.id mendapat komisi dari link affiliate.</p>
+    <p class="footnote" id="disclosure">Ulasan disusun dari analisa kandungan dan informasi produk. {MEREK} mendapat komisi dari link affiliate.</p>
     <p class="footer-nav"><a href="{base}ulasan.html">Kasih Pendapat</a></p>
-    <p class="copy">© 2026 Bandingin.id · Harga mengikuti listing Shopee per {esc(tanggal)} dan bisa berubah.</p>
+    <p class="copy">© 2026 {MEREK} · Harga mengikuti listing Shopee per {esc(tanggal)} dan bisa berubah.</p>
   </div>
 </footer>
 """
@@ -385,11 +396,11 @@ def render_index(data, produk, pasangan):
         )
 
     desk = (
-        "Bandingin facial wash, pelembab, serum, dan sunscreen. Satu merek lokal dibanding "
+        "PilihYuk membandingkan facial wash, pelembab, serum, dan sunscreen. Satu merek lokal dibanding "
         "satu merek Korea yang sejenis: kandungan, harga, dan cocok untuk kulit yang mana."
     )
     html = head(
-        "Bandingin.id — Facial Wash, Pelembab, Serum, Sunscreen Lokal vs Korea",
+        "PilihYuk — Facial Wash, Pelembab, Serum, Sunscreen Lokal vs Korea",
         desk,
         "",
         "index.html",
@@ -568,7 +579,7 @@ def render_pair(data, produk, pair):
     v = pair["verdict"]
     foto_l, meta_l = blok_atas(lok, cl, "lokal")
     foto_k, meta_k = blok_atas(kor, ck, "korea")
-    html = head(judul + " — Bandingin.id", desk, base, "")
+    html = head(judul + " — " + MEREK, desk, base, "")
     html += f"""<body>
 {header(base, pair["jenis"])}
 <main class="wrap artikel">
@@ -631,8 +642,8 @@ def render_ulasan(data, pasangan):
     angka = []
     for n in range(1, 6):
         angka.append(f'<label><input type="radio" name="mudah" value="{n}"> {n}</label>')
-    desk = "Kasih pendapat tentang Bandingin.id: apakah perbandingannya membantu memilih produk, plus saran dan kritik."
-    html = head("Kasih Pendapat — Bandingin.id", desk, "", "ulasan.html")
+    desk = "Kasih pendapat tentang PilihYuk: apakah perbandingannya membantu memilih produk, plus saran dan kritik."
+    html = head("Kasih Pendapat — " + MEREK, desk, "", "ulasan.html")
     html += f"""<body>
 {header("", "pendapat")}
 <main class="wrap artikel">
@@ -850,12 +861,12 @@ def tulis_redirect():
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="0; url=index.html">
-  <title>Bandingin.id</title>
+  <title>PilihYuk</title>
   <link rel="canonical" href="index.html">
   <script>location.replace("index.html");</script>
 </head>
 <body>
-  <p><a href="index.html">Ke beranda Bandingin.id</a></p>
+  <p><a href="index.html">Ke beranda PilihYuk</a></p>
 </body>
 </html>
 """
