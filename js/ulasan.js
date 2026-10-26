@@ -60,7 +60,7 @@
 
   function teksJawaban(data) {
     return [
-      "Pendapat untuk Bandingin.id",
+      "Pendapat untuk PilihYuk",
       "Membantu memutuskan: " + (bantuan[data.membantu] || "-"),
       "Perbandingan: " + (data.perbandingan || "-"),
       "Mudah dipahami (1-5): " + (data.mudah || "-"),
