@@ -996,14 +996,21 @@ def render_tentang(data, pasangan):
 
 
 def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
-    if len(posted) < 1:
-        raise SystemExit("posted.log kosong")
-    for i, (a, b, xurl) in enumerate(posted):
-        pair = pasangan[i]
-        if jenis_banding(pair) != "lokal-korea" or pair["lokal"] != a or pair["korea"] != b:
-            raise SystemExit(f"Urutan posting tidak cocok di indeks {i}: {pair['id']}")
-        if pair.get("x") != xurl:
-            raise SystemExit(f"Link X tidak cocok untuk {pair['id']}")
+    # posted.log tetap disimpan sebagai arsip. Posting affiliate di X/Threads sudah berhenti,
+    # jadi pasangan yang pernah diposting boleh dirombak. Yang dicek: kalau pasangan itu masih
+    # ada, link X-nya harus sama; dan link X hanya boleh menempel di pasangan yang memang diposting.
+    xsah = {}
+    for a, b, xurl in posted:
+        xsah[frozenset((a, b))] = xurl
+    for pair in pasangan:
+        kunci = frozenset(id_pair(pair))
+        if pair.get("x"):
+            if kunci not in xsah:
+                raise SystemExit(f"{pair['id']}: link X ada, tapi pasangan ini tidak ada di posted.log")
+            if pair["x"] != xsah[kunci]:
+                raise SystemExit(f"Link X tidak cocok untuk {pair['id']}")
+        elif kunci in xsah:
+            raise SystemExit(f"{pair['id']} ada di posted.log, link X-nya hilang")
 
     sumber_sah = {u for urls in (sumber or {}).values() for u in urls}
     terpakai = []
@@ -1248,6 +1255,48 @@ def tulis_redirect():
         f.write(html.replace("index.html", "../index.html"))
 
 
+def muat_redirect_banding(pasangan):
+    """id lama -> id baru. Halaman lama jadi redirect ke perbandingan pengganti."""
+    path = os.path.join(ROOT, "tools", "redirect_banding.json")
+    if not os.path.isfile(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        peta = json.load(f)
+    ada = {pair["id"] for pair in pasangan}
+    for lama, baru in peta.items():
+        if lama in ada:
+            raise SystemExit(f"Redirect {lama}: id ini masih dipakai pasangan aktif")
+        if baru not in ada:
+            raise SystemExit(f"Redirect {lama} menuju {baru}, tapi {baru} tidak ada")
+    return peta
+
+
+def tulis_redirect_banding(peta):
+    """Satu HTML per id lama: noindex, meta refresh, canonical, dan location.replace.
+    Tidak masuk sitemap.xml."""
+    for lama, baru in sorted(peta.items()):
+        tujuan = f"{baru}.html"
+        kanonik = url_absolut(f"banding/{baru}.html")
+        html = f"""<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="0; url={esc(tujuan)}">
+  <title>Perbandingan ini sudah dipindah | PilihYuk</title>
+  <link rel="canonical" href="{esc(kanonik)}">
+  <script>location.replace("{tujuan}" + location.search + location.hash);</script>
+</head>
+<body>
+  <p>Perbandingan ini sudah diperbarui. <a href="{esc(tujuan)}">Buka perbandingan yang baru</a>.</p>
+</body>
+</html>
+"""
+        with open(os.path.join(BANDING, f"{lama}.html"), "w", encoding="utf-8") as f:
+            f.write(html)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--gambar", action="store_true", help="unduh ulang gambar")
@@ -1272,11 +1321,13 @@ def main():
                 raise SystemExit(f"{iid} tidak ada di data, atau tidak punya link affiliate")
     pastikan_gambar(produk, pasangan, args.gambar)
     os.makedirs(BANDING, exist_ok=True)
-    # bersihkan halaman lama yang tidak lagi ada
-    sah = {pair["id"] + ".html" for pair in pasangan} | {"index.html"}
+    # halaman lama tidak dihapus lagi: pasangan yang dirombak diganti halaman redirect
+    # (lihat tools/redirect_banding.json), supaya link lama tetap jalan.
+    redirect = muat_redirect_banding(pasangan)
+    sah = {pair["id"] + ".html" for pair in pasangan} | {"index.html"} | {i + ".html" for i in redirect}
     for nama in os.listdir(BANDING):
         if nama not in sah and nama.endswith(".html"):
-            os.remove(os.path.join(BANDING, nama))
+            print(f"PERINGATAN: banding/{nama} tidak dikenal (bukan pasangan dan bukan redirect). Dibiarkan.")
 
     berkas = {
         "index.html": render_index(data, produk, pasangan),
@@ -1291,6 +1342,7 @@ def main():
         with open(tujuan, "w", encoding="utf-8") as f:
             f.write(html)
     tulis_redirect()
+    tulis_redirect_banding(redirect)
     # redirect tidak ikut pemeriksaan kata (hampir kosong) tapi tautannya diperiksa lewat berkas
     periksa(berkas, produk, pasangan, posted, merek, sumber)
     for path, html in berkas.items():
