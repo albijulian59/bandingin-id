@@ -856,7 +856,7 @@ def render_pair(data, produk, pair, sumber=None):
         <p>{esc(v["kering"])}</p>
       </article>
       <article>
-        <h3>Budget atau kandungan</h3>
+        <h3>Soal harga</h3>
         <p>{esc(v["budget"])}</p>
       </article>
     </div>
