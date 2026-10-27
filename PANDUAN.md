@@ -1,6 +1,6 @@
 # Panduan PilihYuk
 
-PilihYuk membandingkan **skincare**: satu produk merek lokal dan satu produk merek Korea, jenis yang sama. Isinya facial wash, pelembab, serum, dan sunscreen. Tidak ada pembagian perempuan / pria.
+PilihYuk membandingkan **skincare** dari jenis yang sama, dalam dua bentuk: **Lokal vs Korea** (satu merek lokal, satu merek Korea) dan **Lokal vs Lokal** (dua merek lokal). Isinya facial wash, pelembab, serum, dan sunscreen. Tidak ada pembagian perempuan / pria.
 
 Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 
@@ -15,6 +15,7 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `tools/pasangan.json` | Teks perbandingan: kandungan, manfaat, jenis kulit, verdict. |
 | `tools/build_site.py` | Generator. |
 | `tools/analisa.json` | Catatan kandungan. Acuan fakta, tidak ditampilkan mentah. |
+| `sumber/kandungan-batch2.json` | Catatan kandungan batch 27 Oktober 2026 (per produk, per varian kalau ada), lengkap dengan sumbernya. |
 | `sumber/` | Data Shopee skincare, link affiliate, daftar merek Korea, pasangan yang sudah diposting. |
 | `sumber/tambahan-*.psv` | Batch produk baru. Kolom: type, brand, origin, name, price, original price, product URL, image URL, short link, key ingredients. |
 | `ulasan.html` | Halaman Kasih Pendapat. Hasil generator (daftar perbandingan di dropdown ikut terbarui). |
@@ -33,6 +34,16 @@ python3 tools/build_site.py
 
 Gambar yang sudah ada tidak diunduh lagi. Untuk mengunduh ulang: `python3 tools/build_site.py --gambar`.
 
+### Pratinjau sebelum link pendek ada (`--draft`)
+
+```
+python3 tools/build_site.py --draft
+```
+
+Dengan `--draft`, produk di `tambahan-*.psv` yang kolom short link-nya masih kosong tetap ikut dibangun. Tombolnya jadi **Link menyusul** (abu-abu, tidak bisa diklik). Generator mencetak daftar id produk + URL Shopee yang masih butuh link pendek. Hasil draft **jangan dipublikasikan**.
+
+Tanpa `--draft`, build tetap gagal kalau ada short link kosong atau bukan `https://s.shopee.co.id/…`. Setelah semua link diisi, jalankan build biasa lalu commit hasilnya.
+
 Generator gagal kalau ada link affiliate yang bukan `https://s.shopee.co.id/…`, produk Korea/lokal tertukar, pasangan di `posted.log` tidak berada di urutan teratas, atau teks memakai kata yang tidak boleh tampil (rating, terjual, pria, wanita, dan sejenisnya).
 
 ## Menambah perbandingan
@@ -43,7 +54,25 @@ Generator gagal kalau ada link affiliate yang bukan `https://s.shopee.co.id/…`
 4. Tulis kandungan dari `tools/analisa.json`, dari kolom key ingredients di file tambahan, atau dari nama produk. Kalau kolomnya `tidak tercantum`, jangan karang daftar bahan: jelaskan dari jenis dan nama, dan tulis bahwa bahan tidak tercantum. Bentuk yang longgar (essence, stik, pelembap sekaligus sunscreen) disebut apa adanya. Jangan mengaku sudah mencoba, jangan membuat klaim medis.
 5. Bahasa untuk semua orang. Jangan menulis pria, wanita, cowok, atau sejenisnya.
 6. Jangan menampilkan rating atau jumlah terjual.
-7. Jalankan generator, lalu buka `index.html` lewat server lokal.
+7. Jalankan generator, lalu buka `index.html` lewat server lokal (`python3 -m http.server`).
+
+### Lokal vs Korea dan Lokal vs Lokal
+
+Setiap objek di `pasangan.json` punya kunci `banding`:
+
+- `"lokal-korea"` (bawaan kalau tidak ditulis): sisi produk memakai kunci `lokal` dan `korea`. `lebihMurah` berisi `lokal` atau `korea`. Pasangan di `posted.log` selalu jenis ini.
+- `"lokal-lokal"`: sisi produk memakai kunci `a` dan `b`, keduanya merek lokal (bukan dari `merek-korea.txt`). Tiap sisi boleh punya `label` (misalnya nama merek) untuk judul kolom tabel. `lebihMurah` berisi `a` atau `b`.
+
+Beranda punya dua baris filter: jenis produk (facial wash, pelembab, serum, sunscreen) dan jenis perbandingan. Keduanya bisa digabung, angka di chip terhitung otomatis. Tiap kartu dan halaman memberi badge jenis perbandingan.
+
+### Listing "Series" / banyak varian
+
+Listing yang berisi beberapa varian (All Series, 3 in 1, dan sejenisnya) masuk **Lokal vs Lokal**. Isi di sisi produknya:
+
+- `varian`: daftar `{ "nama", "kandungan", "cocok": [...], "catatan" }`, satu per varian. Jangan karang bahan; kalau belum ketemu, tulis begitu.
+- Di level pasangan: `varianIntro` (penjelasan singkat, misalnya bahwa varian diambil dari judul listing) dan `adu`: daftar `{ "kebutuhan", "a", "b", "pilih" }` untuk membandingkan varian berdampingan dengan verdict per kebutuhan.
+
+Generator gagal kalau ada varian yang tidak muncul di kolom `adu` sisinya, atau kalau isi `adu` kosong. Halaman menampilkan bagian **Varian satu per satu** di bawah detail produk.
 
 Dropdown "perbandingan mana yang kamu baca" di halaman Kasih Pendapat terisi dari `pasangan.json`. Tidak perlu mengedit formulirnya. Kalau nanti ada pertanyaan baru, tambah kuncinya di `js/ulasan.js` (objek kiriman) dan di daftar `KOLOM` pada skrip Google di bawah.
 
@@ -53,7 +82,8 @@ Tombol beli selalu memakai link affiliate pendek. Harga dan diskon diambil dari 
 
 - Sabun, sampo, baju, tas, kaos, dan produk balita: bukan skincare.
 - Facial wash dari data awal: tidak ada analisa kandungan dan tidak ada pasangan Korea di batch itu. Facial wash yang tampil berasal dari `tambahan-*.psv`.
-- Garnier: bukan merek lokal dan bukan merek Korea.
+- Garnier dan Nivea: bukan merek lokal dan bukan merek Korea.
+- Batch 27 Oktober 2026: Scarlett Moisturizer Series (bahan tidak tercantum, varian tidak bisa dicek, dan jumlah pelembab ganjil), Scarlett Glowtening Serum (sudah jadi varian di listing Scarlett Face Serum), dan Scarlett Ultra Light Sunscreen dari toko lain (produk sama dengan listing toko resmi yang dipakai).
 - Beberapa produk skincare lain tidak dipasangkan supaya setiap produk hanya muncul sekali, dengan prioritas penjualan di data. Daftarnya dicetak generator saat dijalankan.
 
 ## Kasih Pendapat
