@@ -931,7 +931,7 @@ def render_tentang(data, pasangan):
 
   <section id="pengelola">
     <h2 class="bagian">Siapa yang mengelola</h2>
-    <p>PilihYuk dikelola secara independen oleh Albi. Albi bukan ahli skincare atau tenaga medis; perbandingan di sini disusun dari data produk yang bisa dicek (harga Shopee, daftar kandungan dari situs resmi merek dan database kandungan). Ini bukan saran medis — kalau ragu, konsultasikan ke dokter kulit.</p>
+    <p>PilihYuk dikelola secara independen oleh Albi. Perbandingan disusun dari data produk yang bisa dicek (harga Shopee, daftar kandungan dari situs resmi merek dan database kandungan). Isinya informasi umum, bukan saran medis — kalau ragu, konsultasikan ke dokter kulit.</p>
     <p>Ini proyek pribadi, bukan toko dan bukan bagian dari merek mana pun.</p>
   </section>
 
