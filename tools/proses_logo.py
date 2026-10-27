@@ -1,6 +1,11 @@
+#!/usr/bin/env python3
+"""Buat img/logo.png, img/logo.webp, favicon.ico, img/favicon-32.png, img/apple-touch-icon.png
+dari img/logo-asli.jpg. Warna terracotta -> #0c6b52 (--lokal), sage -> #1a4f86 (--korea).
+Jalankan dari folder situs: python3 tools/proses_logo.py
+"""
 from PIL import Image
 import numpy as np
-src = Image.open('/tmp/logo-src.jpg').convert('RGB')
+src = Image.open('img/logo-asli.jpg').convert('RGB')
 im = np.asarray(src).astype(float)
 d = np.sqrt(((255 - im) ** 2).sum(2))
 mask = d > 40
@@ -81,10 +86,10 @@ at = Image.new('RGBA', (180, 180), (255, 252, 248, 255))
 ic = resize_rgba(sq, (150, 150))
 at.alpha_composite(ic, (15, 15))
 at.convert('RGB').save('img/apple-touch-icon.png', optimize=True)
-big.save('/workspace/pilihyuk-logo/icon-256.png')
-src.save('img/logo-asli.jpg', quality=95)
+big.save('/tmp/icon-256.png')
+# img/logo-asli.jpg adalah sumbernya (tidak ditimpa)
 prev = Image.new('RGBA', (logo.width + 80, logo.height + 80), (255, 252, 248, 255))
 prev.alpha_composite(logo, (40, 40))
 prev2 = Image.new('RGBA', prev.size, (31, 26, 23, 255)); prev2.alpha_composite(logo, (40, 40))
 both = Image.new('RGB', (prev.width, prev.height * 2)); both.paste(prev.convert('RGB'), (0, 0)); both.paste(prev2.convert('RGB'), (0, prev.height))
-both.save('/workspace/pilihyuk-logo/shots/logo-preview.png')
+both.save('/tmp/logo-preview.png')
