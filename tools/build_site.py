@@ -240,6 +240,8 @@ def muat_tambahan(produk):
             aff = row["short link"]
             if not aff and DRAFT:
                 aff = None  # pratinjau: tombol "Link menyusul"
+            elif not aff and iid in ALASAN_LEWAT:
+                aff = None  # sengaja dilewati, tidak pernah tampil
             elif not aff.startswith("https://s.shopee.co.id/"):
                 raise SystemExit(
                     f"Bukan link pendek di {os.path.basename(path)} ({iid}): {aff or '(kosong)'}"
