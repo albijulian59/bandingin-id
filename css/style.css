@@ -254,6 +254,41 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
 #teks-salinan { width: 100%; min-height: 160px; font: inherit; padding: 12px; border-radius: 12px; border: 1px solid var(--line); }
 .intro-form { margin: 8px 0 16px; max-width: 38rem; }
 
+/* Jenis perbandingan: Lokal vs Korea / Lokal vs Lokal */
+.kicker-baris { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.tipe {
+  display: inline-block; border-radius: 999px; padding: 2px 9px; font-size: .68rem; font-weight: 800;
+  letter-spacing: .04em; text-transform: uppercase; border: 1px solid transparent;
+}
+.tipe-lokal-korea { background: var(--korea-soft); color: var(--korea); border-color: #c9dcef; }
+.tipe-lokal-lokal { background: var(--lokal-soft); color: var(--lokal); border-color: #bfe3d4; }
+.duel[data-banding="lokal-lokal"] { border-top: 4px solid var(--lokal); }
+.duel[data-banding="lokal-korea"] { border-top: 4px solid var(--korea); }
+.duo .pos-1 { grid-column: 1; }
+.duo .pos-2 { grid-column: 3; }
+.filter-banding { padding-top: 6px; align-items: center; flex-wrap: wrap; }
+.filter-label { color: var(--muted); font-size: .85rem; font-weight: 700; white-space: nowrap; margin-right: 2px; }
+
+/* Pratinjau --draft: link pendek belum ada */
+.btn-menyusul, .btn-menyusul:hover {
+  width: 100%; border: 1px dashed #b9ada0; background: #efe9e1; color: var(--muted);
+  cursor: not-allowed; font: inherit; font-weight: 700; filter: none;
+}
+.btn-menyusul.btn-sm { font-size: .8rem; }
+
+/* Varian satu per satu */
+.varian-intro { margin: 0 0 12px; color: #3f3832; max-width: 46rem; }
+.varian-sisi { margin: 0 0 16px; }
+.varian-sisi h3, .adu-judul { font-family: var(--sans); font-size: 1rem; margin: 14px 0 8px; letter-spacing: 0; }
+.varian-n {
+  display: inline-block; margin-left: 6px; background: #f6f1ea; border: 1px solid var(--line); border-radius: 999px;
+  padding: 1px 8px; font-size: .72rem; font-weight: 700; color: var(--muted); vertical-align: 2px;
+}
+.varian .tabel-wrap { overflow-x: auto; }
+.cmp-varian, .cmp-adu { min-width: 620px; }
+.cmp-varian tbody th, .cmp-adu tbody th { color: var(--ink); width: 20%; }
+.cmp-adu td.pilih { background: #fffaf2; width: 38%; }
+
 :focus-visible { outline: 3px solid #8fbfae; outline-offset: 2px; }
 
 @media (min-width: 800px) {

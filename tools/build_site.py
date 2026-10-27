@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Bangun situs statis PilihYuk: perbandingan skincare lokal vs Korea.
+"""Bangun situs statis PilihYuk: perbandingan skincare lokal vs Korea dan lokal vs lokal.
 
     python3 tools/build_site.py            # pakai gambar yang sudah ada
     python3 tools/build_site.py --gambar   # unduh ulang gambar produk
+    python3 tools/build_site.py --draft    # pratinjau: link pendek boleh kosong
+                                           # (tombol jadi "Link menyusul", nonaktif)
 
 Sumber: sumber/*.psv, sumber/tambahan-*.psv, sumber/merek-korea.txt,
 sumber/posted.log, tools/pasangan.json
@@ -25,6 +27,13 @@ JENIS = [
     ("facial-wash", "Facial Wash"),
 ]
 JENIS_LABEL = dict(JENIS)
+# Jenis perbandingan. Pasangan lama tanpa kunci "banding" dianggap lokal-korea.
+BANDING_JENIS = [
+    ("lokal-korea", "Lokal vs Korea"),
+    ("lokal-lokal", "Lokal vs Lokal"),
+]
+BANDING_LABEL = dict(BANDING_JENIS)
+DRAFT = False
 MEREK = "PilihYuk"
 FAVICON = (
     "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>"
@@ -41,30 +50,22 @@ BANNED = re.compile(
 )
 
 ALASAN_LEWAT = {
-    "facial": (
-        "Facial wash dari data awal tidak dipasangkan: tidak ada analisa kandungan, "
-        "dan tidak ada pasangan Korea di batch itu. Yang tampil berasal dari file tambahan."
-    ),
+    "facial": "Facial wash yang tidak punya pasangan sejenis di data.",
     "20774296730": "Garnier bukan merek lokal Indonesia dan tidak ada di daftar merek Korea, jadi tidak masuk sisi mana pun.",
-    "24386158862": (
-        "Pelembap Korea yang belum terpakai hanya Nature Republic, dan itu dipasangkan dengan Wardah Plump & Firm. "
-        "Kahf ini gabungan pelembap dan sunscreen SPF 35, dan setiap produk hanya dipakai sekali."
+    "41107048405": "Garnier bukan merek lokal Indonesia dan tidak ada di daftar merek Korea, jadi tidak masuk sisi mana pun.",
+    "27221469602": "Garnier bukan merek lokal Indonesia dan tidak ada di daftar merek Korea, jadi tidak masuk sisi mana pun.",
+    "28870869761": "Nivea bukan merek lokal Indonesia dan tidak ada di daftar merek Korea, jadi tidak masuk sisi mana pun.",
+    "3059551066": (
+        "Scarlett Glowtening Serum sudah jadi salah satu varian di listing SCARLETT Face Serum "
+        "(19311657068), yang dibahas varian per varian. Supaya produk yang sama tidak muncul dua kali."
     ),
-    "29319814911": (
-        "Slot pelembap Korea yang tersisa sudah dipakai Wardah vs Nature Republic. "
-        "Analisa juga menyebut informasi bahan lengkapnya terbatas."
+    "58055792468": (
+        "Produk yang sama dengan Scarlett Ultra Light Daily Sunscreen 27220208261 (toko resmi), "
+        "hanya beda toko. Yang dipakai listing toko resmi."
     ),
-    "28471442468": (
-        "Penjualan bulanan di data lebih rendah daripada Wardah C-Glow dan OMG serum, "
-        "yang mengisi slot serum Korea tersisa. Konsentrasi bahannya juga tidak dipublikasikan."
-    ),
-    "25142085435": (
-        "Penjualan bulanan di data lebih rendah daripada serum lokal yang dipasangkan "
-        "(Wardah C-Glow dan OMG, sama-sama 1rb+ per bulan di data)."
-    ),
-    "5276988352": (
-        "Sunscreen Korea yang tersisa (SOME BY MI V10) dipasangkan dengan Wardah UV Shield, "
-        "yang penjualan bulanannya lebih tinggi di data."
+    "29458576491": (
+        "SCARLETT Moisturizer Series: bahan tidak tercantum dan daftar varian di listing tidak bisa dipastikan "
+        "(halaman Shopee minta login). Jumlah pelembap lokal juga ganjil, jadi ini yang dilewati."
     ),
 }
 
@@ -99,6 +100,34 @@ def item_id(url):
     if not m:
         raise SystemExit(f"URL tanpa item id: {url}")
     return m.group(1)
+
+
+def jenis_banding(pair):
+    return pair.get("banding", "lokal-korea")
+
+
+def sisi_pair(pair):
+    """Daftar (kunci, item id, asal) untuk dua sisi pasangan, urut kiri ke kanan."""
+    if jenis_banding(pair) == "lokal-lokal":
+        return [("a", pair["a"], "lokal"), ("b", pair["b"], "lokal")]
+    return [("lokal", pair["lokal"], "lokal"), ("korea", pair["korea"], "korea")]
+
+
+def id_pair(pair):
+    return [iid for _, iid, _ in sisi_pair(pair)]
+
+
+def label_sisi(pair, kunci):
+    """Judul kolom tabel: Lokal/Korea, atau nama singkat untuk lokal vs lokal."""
+    if jenis_banding(pair) != "lokal-lokal":
+        return "Lokal" if kunci == "lokal" else "Korea"
+    copy = pair["produk"][pair[kunci]]
+    return copy.get("label") or copy["nama"]
+
+
+def badge_banding(pair):
+    b = jenis_banding(pair)
+    return f'<span class="tipe tipe-{b}">{esc(BANDING_LABEL[b])}</span>'
 
 
 def muat_merek():
@@ -187,8 +216,13 @@ def muat_tambahan(produk):
             if iid in produk:
                 raise SystemExit(f"{iid} bentrok dengan produk yang sudah ada")
             aff = row["short link"]
-            if not aff.startswith("https://s.shopee.co.id/"):
-                raise SystemExit("Bukan link pendek: " + aff)
+            if not aff and DRAFT:
+                aff = None  # pratinjau: tombol "Link menyusul"
+            elif not aff.startswith("https://s.shopee.co.id/"):
+                raise SystemExit(
+                    f"Bukan link pendek di {os.path.basename(path)} ({iid}): {aff or '(kosong)'}"
+                    + ("" if aff else ". Isi kolom short link, atau bangun pratinjau dengan --draft.")
+                )
             if row["origin"] not in ("lokal", "korea"):
                 raise SystemExit(f"origin tidak dikenal: {row['origin']}")
             harga = parse_rp(row["price"])
@@ -225,8 +259,7 @@ def pastikan_gambar(produk, pasangan, ulang):
     os.makedirs(IMG, exist_ok=True)
     butuh = []
     for pair in pasangan:
-        butuh.append(pair["lokal"])
-        butuh.append(pair["korea"])
+        butuh.extend(id_pair(pair))
     for iid in butuh:
         tujuan = os.path.join(IMG, iid + ".jpg")
         if os.path.exists(tujuan) and os.path.getsize(tujuan) > 1000 and not ulang:
@@ -338,20 +371,26 @@ def footer(base, tanggal):
 
 
 def beli(p, nama, kelas="btn"):
+    if not p.get("aff"):
+        # hanya terjadi di --draft: link pendek belum ada
+        return (
+            f'<button class="{kelas} btn-menyusul" type="button" disabled'
+            f' aria-label="Link {esc(nama)} menyusul">Link menyusul</button>'
+        )
     return (
         f'<a class="{kelas}" href="{esc(p["aff"])}" target="_blank" rel="sponsored noopener noreferrer"'
         f' aria-label="Beli {esc(nama)} di Shopee">Beli di Shopee</a>'
     )
 
 
-def foto_tautan(p, copy, asal, eager, href, base):
+def foto_tautan(p, copy, asal, eager, href, base, pos):
     foto_html = foto(p["id"], copy["nama"], eager).replace("{base}", base)
-    return f'<a class="photo photo-{asal}" href="{esc(href)}">{foto_html}</a>'
+    return f'<a class="photo photo-{asal} pos-{pos}" href="{esc(href)}">{foto_html}</a>'
 
 
-def meta_kartu(p, copy, asal, href):
+def meta_kartu(p, copy, asal, href, pos):
     badge = "Lokal" if asal == "lokal" else "Korea"
-    return f"""<div class="sisi sisi-{asal}">
+    return f"""<div class="sisi sisi-{asal} pos-{pos}">
       <p class="asal asal-{asal}">{badge}</p>
       <h3><a href="{esc(href)}">{esc(copy["nama"])}</a></h3>
       <p class="harga">{harga_html(p)}</p>
@@ -362,27 +401,31 @@ def meta_kartu(p, copy, asal, href):
 def render_index(data, produk, pasangan):
     kartu = []
     for i, pair in enumerate(pasangan):
-        lok = produk[pair["lokal"]]
-        kor = produk[pair["korea"]]
-        cl = pair["produk"][pair["lokal"]]
-        ck = pair["produk"][pair["korea"]]
+        (_, ia, asal_a), (_, ib, asal_b) = sisi_pair(pair)
+        lok = produk[ia]
+        kor = produk[ib]
+        cl = pair["produk"][ia]
+        ck = pair["produk"][ib]
         href = f"banding/{pair['id']}.html"
+        b = jenis_banding(pair)
         cari = " ".join([
             pair["hook"], pair["ringkas"], cl["nama"], ck["nama"],
-            JENIS_LABEL[pair["jenis"]],
-            " ".join(b["nama"] for b in cl["bahan"]),
-            " ".join(b["nama"] for b in ck["bahan"]),
+            JENIS_LABEL[pair["jenis"]], BANDING_LABEL[b],
+            " ".join(x["nama"] for x in cl["bahan"]),
+            " ".join(x["nama"] for x in ck["bahan"]),
+            " ".join(v["nama"] for v in cl.get("varian", [])),
+            " ".join(v["nama"] for v in ck.get("varian", [])),
         ]).lower()
-        kartu.append(f"""<article class="duel" data-jenis="{esc(pair["jenis"])}" data-cari="{esc(cari)}">
-  <p class="kicker">{esc(JENIS_LABEL[pair["jenis"]])}</p>
+        kartu.append(f"""<article class="duel" data-jenis="{esc(pair["jenis"])}" data-banding="{esc(b)}" data-cari="{esc(cari)}">
+  <div class="kicker-baris"><p class="kicker">{esc(JENIS_LABEL[pair["jenis"]])}</p>{badge_banding(pair)}</div>
   <h2><a href="{href}">{esc(pair["hook"])}</a></h2>
   <p class="lawan">{esc(cl["nama"])} <span>vs</span> {esc(ck["nama"])}</p>
   <div class="duo">
-    {foto_tautan(lok, cl, "lokal", i == 0, href, "")}
+    {foto_tautan(lok, cl, asal_a, i == 0, href, "", 1)}
     <div class="vs" aria-hidden="true">vs</div>
-    {foto_tautan(kor, ck, "korea", i == 0, href, "")}
-    {meta_kartu(lok, cl, "lokal", href)}
-    {meta_kartu(kor, ck, "korea", href)}
+    {foto_tautan(kor, ck, asal_b, i == 0, href, "", 2)}
+    {meta_kartu(lok, cl, asal_a, href, 1)}
+    {meta_kartu(kor, ck, asal_b, href, 2)}
   </div>
   <p class="ringkas">{esc(pair["ringkas"])}</p>
   <a class="more" href="{href}">Lihat perbandingan</a>
@@ -395,9 +438,16 @@ def render_index(data, produk, pasangan):
             f'<button type="button" class="chip" data-filter="{kunci}" aria-pressed="false">{esc(label)} <span class="count">{n}</span></button>'
         )
 
+    chips_b = ['<button type="button" class="chip aktif" data-banding-filter="semua" aria-pressed="true">Semua</button>']
+    for kunci, label in BANDING_JENIS:
+        n = sum(1 for p in pasangan if jenis_banding(p) == kunci)
+        chips_b.append(
+            f'<button type="button" class="chip" data-banding-filter="{kunci}" aria-pressed="false">{esc(label)} <span class="count">{n}</span></button>'
+        )
+
     desk = (
-        "PilihYuk membandingkan facial wash, pelembab, serum, dan sunscreen. Satu merek lokal dibanding "
-        "satu merek Korea yang sejenis: kandungan, harga, dan cocok untuk kulit yang mana."
+        "PilihYuk membandingkan facial wash, pelembab, serum, dan sunscreen. Lokal vs Korea, atau lokal vs lokal, "
+        "jenisnya sama: kandungan, harga, dan cocok untuk kulit yang mana."
     )
     html = head(
         "PilihYuk — Facial Wash, Pelembab, Serum, Sunscreen Lokal vs Korea",
@@ -410,9 +460,9 @@ def render_index(data, produk, pasangan):
 <main>
   <section class="hero">
     <div class="wrap">
-      <p class="kicker kicker-terang">Skincare lokal vs Korea</p>
-      <h1>Lokal vs Korea, mending yang mana?</h1>
-      <p>Facial wash, pelembab, serum, dan sunscreen. Satu merek lokal, satu merek Korea, jenis yang sama. Lihat kandungan, harga, dan cocok untuk kulit yang mana.</p>
+      <p class="kicker kicker-terang">Lokal vs Korea · Lokal vs Lokal</p>
+      <h1>Skincare mana yang mending?</h1>
+      <p>Facial wash, pelembab, serum, dan sunscreen. Lokal dibanding Korea, atau lokal dibanding lokal, jenisnya sama. Lihat kandungan, harga, dan cocok untuk kulit yang mana.</p>
       <form class="search" id="form-cari" role="search">
         <label class="sr" for="q">Cari perbandingan</label>
         <input id="q" type="search" placeholder="Cari merek atau bahan, misalnya niacinamide" autocomplete="off">
@@ -421,6 +471,7 @@ def render_index(data, produk, pasangan):
   </section>
   <div class="wrap" id="daftar">
     <div class="filter" role="group" aria-label="Filter jenis">{''.join(chips)}</div>
+    <div class="filter filter-banding" role="group" aria-label="Filter perbandingan"><span class="filter-label">Perbandingan:</span>{''.join(chips_b)}</div>
     <p class="hasil" id="hasil" aria-live="polite">{len(pasangan)} perbandingan</p>
     <div class="list" id="list">
       {''.join(kartu)}
@@ -436,8 +487,10 @@ def render_index(data, produk, pasangan):
 <script>
 (function () {{
   var jenis = "semua";
+  var banding = "semua";
   var q = document.getElementById("q");
   var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+  var chipsB = Array.prototype.slice.call(document.querySelectorAll("[data-banding-filter]"));
   var kartu = Array.prototype.slice.call(document.querySelectorAll(".duel"));
   var hasil = document.getElementById("hasil");
   var kosong = document.getElementById("kosong");
@@ -448,8 +501,9 @@ def render_index(data, produk, pasangan):
     var n = 0;
     kartu.forEach(function (el) {{
       var okJ = jenis === "semua" || el.getAttribute("data-jenis") === jenis;
+      var okB = banding === "semua" || el.getAttribute("data-banding") === banding;
       var okS = !s || el.getAttribute("data-cari").indexOf(s) !== -1;
-      var tampil = okJ && okS;
+      var tampil = okJ && okB && okS;
       el.hidden = !tampil;
       if (tampil) n++;
     }});
@@ -488,6 +542,17 @@ def render_index(data, produk, pasangan):
   chips.forEach(function (c) {{
     c.addEventListener("click", function () {{ setJenis(c.getAttribute("data-filter"), false); }});
   }});
+  chipsB.forEach(function (c) {{
+    c.addEventListener("click", function () {{
+      banding = c.getAttribute("data-banding-filter");
+      chipsB.forEach(function (d) {{
+        var aktif = d === c;
+        d.classList.toggle("aktif", aktif);
+        d.setAttribute("aria-pressed", aktif ? "true" : "false");
+      }});
+      terapkan();
+    }});
+  }});
   q.addEventListener("input", terapkan);
   document.getElementById("form-cari").addEventListener("submit", function (e) {{
     e.preventDefault();
@@ -513,11 +578,58 @@ def render_index(data, produk, pasangan):
     return html
 
 
+def tabel_varian(pair, kunci, iid, copy):
+    baris = []
+    for v in copy["varian"]:
+        baris.append(
+            f'<tr><th scope="row">{esc(v["nama"])}</th><td>{esc(v["bahan"])}</td>'
+            f'<td>{esc(", ".join(v["kulit"]))}</td><td>{esc(v.get("catatan", ""))}</td></tr>'
+        )
+    return f"""<div class="varian-sisi">
+      <h3>{esc(copy["nama"])} <span class="varian-n">{len(copy["varian"])} varian</span></h3>
+      <div class="tabel-wrap">
+        <table class="cmp cmp-varian">
+          <caption class="sr">Varian {esc(copy["nama"])}</caption>
+          <thead><tr><th scope="col">Varian</th><th scope="col">Kandungan kunci</th><th scope="col">Cocok untuk</th><th scope="col">Catatan</th></tr></thead>
+          <tbody>{''.join(baris)}</tbody>
+        </table>
+      </div>
+    </div>"""
+
+
+def bagian_varian(pair):
+    sisi = [(k, iid, pair["produk"][iid]) for k, iid, _ in sisi_pair(pair) if pair["produk"][iid].get("varian")]
+    if not sisi:
+        return ""
+    html = '\n  <section class="varian" id="varian">\n  <h2 class="bagian">Varian satu per satu</h2>\n'
+    html += f'  <p class="varian-intro">{esc(pair.get("varianIntro", "Link ini berisi beberapa varian. Pilih varian saat checkout."))}</p>\n'
+    html += "".join(tabel_varian(pair, k, iid, c) for k, iid, c in sisi)
+    if pair.get("adu"):
+        (ka, _, _), (kb, _, _) = sisi_pair(pair)
+        baris = []
+        for a in pair["adu"]:
+            baris.append(
+                f'<tr><th scope="row">{esc(a["kebutuhan"])}</th><td>{esc(a[ka])}</td><td>{esc(a[kb])}</td>'
+                f'<td class="pilih">{esc(a["pilih"])}</td></tr>'
+            )
+        html += f"""<h3 class="adu-judul">Adu varian: kebutuhan yang sama, dua pilihan</h3>
+    <div class="tabel-wrap">
+      <table class="cmp cmp-adu">
+        <caption class="sr">Adu varian {esc(label_sisi(pair, ka))} dan {esc(label_sisi(pair, kb))}</caption>
+        <thead><tr><th scope="col">Kebutuhan</th><th scope="col">{esc(label_sisi(pair, ka))}</th><th scope="col">{esc(label_sisi(pair, kb))}</th><th scope="col">Pilih yang mana</th></tr></thead>
+        <tbody>{''.join(baris)}</tbody>
+      </table>
+    </div>"""
+    return html + "\n</section>"
+
+
 def render_pair(data, produk, pair):
-    lok = produk[pair["lokal"]]
-    kor = produk[pair["korea"]]
-    cl = pair["produk"][pair["lokal"]]
-    ck = pair["produk"][pair["korea"]]
+    (ka, ia, asal_a), (kb, ib, asal_b) = sisi_pair(pair)
+    lok = produk[ia]
+    kor = produk[ib]
+    cl = pair["produk"][ia]
+    ck = pair["produk"][ib]
+    lokal_lokal = jenis_banding(pair) == "lokal-lokal"
     base = "../"
     judul = f"{pair['hook']} {cl['nama']} vs {ck['nama']}"
     desk = pair["ringkas"]
@@ -525,12 +637,12 @@ def render_pair(data, produk, pair):
     if pair.get("x"):
         x = f'<p class="lihat-x"><a href="{esc(pair["x"])}" target="_blank" rel="noopener noreferrer">Lihat di X</a></p>'
 
-    def blok_atas(p, copy, asal):
+    def blok_atas(p, copy, asal, pos):
         badge = "Lokal" if asal == "lokal" else "Korea"
         foto_html = foto(p["id"], copy["nama"], True).replace("{base}", base)
         return (
-            f'<div class="photo photo-{asal}">{foto_html}</div>',
-            f"""<div class="sisi sisi-{asal}">
+            f'<div class="photo photo-{asal} pos-{pos}">{foto_html}</div>',
+            f"""<div class="sisi sisi-{asal} pos-{pos}">
       <p class="asal asal-{asal}">{badge}</p>
       <h2>{esc(copy["nama"])}</h2>
       <p class="tekstur">{esc(copy["tekstur"])}</p>
@@ -540,9 +652,10 @@ def render_pair(data, produk, pair):
     </div>""",
         )
 
-    def blok_detail(p, copy, asal):
+    def blok_detail(p, copy, asal, kunci):
         badge = "Lokal" if asal == "lokal" else "Korea"
-        return f"""<article class="detail sisi-{asal}" id="{asal}">
+        anchor = f"lokal-{kunci}" if lokal_lokal else asal
+        return f"""<article class="detail sisi-{asal}" id="{anchor}">
       <p class="asal asal-{asal}">{badge}</p>
       <h2>{esc(copy["nama"])}</h2>
       <p class="tekstur">{esc(copy["tekstur"])} · {esc(copy["isi"])}</p>
@@ -564,7 +677,7 @@ def render_pair(data, produk, pair):
       <table class="cmp">
         <caption class="sr">Perbandingan {esc(cl["nama"])} dan {esc(ck["nama"])}</caption>
         <thead>
-          <tr><th scope="col"> </th><th scope="col">Lokal</th><th scope="col">Korea</th></tr>
+          <tr><th scope="col"> </th><th scope="col">{esc(label_sisi(pair, ka))}</th><th scope="col">{esc(label_sisi(pair, kb))}</th></tr>
         </thead>
         <tbody>
           <tr><th scope="row">Tekstur</th><td>{esc(cl["tekstur"])}</td><td>{esc(ck["tekstur"])}</td></tr>
@@ -577,14 +690,14 @@ def render_pair(data, produk, pair):
     </div>"""
 
     v = pair["verdict"]
-    foto_l, meta_l = blok_atas(lok, cl, "lokal")
-    foto_k, meta_k = blok_atas(kor, ck, "korea")
+    foto_l, meta_l = blok_atas(lok, cl, asal_a, 1)
+    foto_k, meta_k = blok_atas(kor, ck, asal_b, 2)
     html = head(judul + " — " + MEREK, desk, base, "")
     html += f"""<body>
 {header(base, pair["jenis"])}
 <main class="wrap artikel">
   <p class="crumbs"><a href="../index.html">Beranda</a> / <a href="../index.html#{esc(pair["jenis"])}">{esc(JENIS_LABEL[pair["jenis"]])}</a></p>
-  <p class="kicker">{esc(JENIS_LABEL[pair["jenis"]])}</p>
+  <div class="kicker-baris"><p class="kicker">{esc(JENIS_LABEL[pair["jenis"]])}</p>{badge_banding(pair)}</div>
   <h1>{esc(pair["hook"])}</h1>
   <p class="lawan lawan-besar">{esc(cl["nama"])} <span>vs</span> {esc(ck["nama"])}</p>
   {x}
@@ -599,9 +712,9 @@ def render_pair(data, produk, pair):
   {tabel}
   <h2 class="bagian">Kandungan dan manfaat</h2>
   <div class="detail-grid">
-    {blok_detail(lok, cl, "lokal")}
-    {blok_detail(kor, ck, "korea")}
-  </div>
+    {blok_detail(lok, cl, asal_a, ka)}
+    {blok_detail(kor, ck, asal_b, kb)}
+  </div>{bagian_varian(pair)}
   <section class="verdict">
     <h2>Jadi, mending yang mana?</h2>
     <div class="v-grid">
@@ -635,8 +748,9 @@ def render_pair(data, produk, pair):
 def render_ulasan(data, pasangan):
     opsi = ['<option value="">Lewati saja</option>']
     for pair in pasangan:
-        cl = pair["produk"][pair["lokal"]]["nama"]
-        ck = pair["produk"][pair["korea"]]["nama"]
+        ia, ib = id_pair(pair)
+        cl = pair["produk"][ia]["nama"]
+        ck = pair["produk"][ib]["nama"]
         label = f'{JENIS_LABEL[pair["jenis"]]}: {cl} vs {ck}'
         opsi.append(f'<option value="{esc(pair["id"])}">{esc(label)}</option>')
     angka = []
@@ -714,7 +828,7 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
         raise SystemExit("posted.log kosong")
     for i, (a, b, xurl) in enumerate(posted):
         pair = pasangan[i]
-        if pair["lokal"] != a or pair["korea"] != b:
+        if jenis_banding(pair) != "lokal-korea" or pair["lokal"] != a or pair["korea"] != b:
             raise SystemExit(f"Urutan posting tidak cocok di indeks {i}: {pair['id']}")
         if pair.get("x") != xurl:
             raise SystemExit(f"Link X tidak cocok untuk {pair['id']}")
@@ -723,11 +837,19 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
     for pair in pasangan:
         if pair["jenis"] not in JENIS_LABEL:
             raise SystemExit("Jenis tidak dikenal: " + pair["jenis"])
-        for sisi, iid in (("lokal", pair["lokal"]), ("korea", pair["korea"])):
+        b = jenis_banding(pair)
+        if b not in BANDING_LABEL:
+            raise SystemExit("Jenis perbandingan tidak dikenal: " + b)
+        if b == "lokal-lokal" and ("lokal" in pair or "korea" in pair):
+            raise SystemExit(f"{pair['id']}: lokal vs lokal memakai kunci a dan b")
+        for kunci_sisi_ini, iid, sisi in sisi_pair(pair):
             if iid not in pair["produk"]:
                 raise SystemExit(f"{pair['id']} tanpa teks {iid}")
             p = produk[iid]
-            if not p["aff"].startswith("https://s.shopee.co.id/"):
+            if p["aff"] is None:
+                if not DRAFT:
+                    raise SystemExit("Link affiliate kosong " + iid)
+            elif not p["aff"].startswith("https://s.shopee.co.id/"):
                 raise SystemExit("Link affiliate salah " + iid)
             if p.get("merek"):
                 terdaftar = any(p["merek"].lower() == m.lower() for m in merek)
@@ -753,18 +875,35 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
                     raise SystemExit(f"{pair['id']} {iid} kosong: {kunci}")
             if len(copy["bahan"]) < 1 or len(copy["manfaat"]) < 2 or len(copy["kulit"]) < 1:
                 raise SystemExit(f"{pair['id']} {iid} isi kurang")
-        if pair["lebihMurah"] not in ("lokal", "korea"):
+            for v in copy.get("varian", []):
+                for k in ("nama", "bahan", "kulit"):
+                    if not v.get(k):
+                        raise SystemExit(f"{pair['id']} {iid} varian {v.get('nama')} kosong: {k}")
+            if copy.get("varian"):
+                if b == "lokal-lokal":
+                    # setiap varian wajib diadu berdampingan, lengkap dengan pilihan
+                    disebut = " ".join(a.get(kunci_sisi_ini, "") for a in pair.get("adu", []))
+                    for v in copy["varian"]:
+                        if v["nama"] not in disebut:
+                            raise SystemExit(f"{pair['id']}: varian {v['nama']} belum diadu")
+                elif "varian lain" not in copy["catatan"].lower():
+                    raise SystemExit(f"{pair['id']} {iid}: tulis bahwa link berisi varian lain")
+        for a in pair.get("adu", []):
+            for k in ("kebutuhan", "pilih") + tuple(k for k, _, _ in sisi_pair(pair)):
+                if not a.get(k):
+                    raise SystemExit(f"{pair['id']}: adu varian kosong: {k}")
+        kunci_sisi = [k for k, _, _ in sisi_pair(pair)]
+        if pair["lebihMurah"] not in kunci_sisi:
             raise SystemExit("lebihMurah salah " + pair["id"])
-        hl = produk[pair["lokal"]]["harga"]
-        hk = produk[pair["korea"]]["harga"]
-        if pair["lebihMurah"] == "lokal" and not (hl < hk):
-            raise SystemExit(f"{pair['id']} lokal tidak lebih murah")
-        if pair["lebihMurah"] == "korea" and not (hk < hl):
-            raise SystemExit(f"{pair['id']} Korea tidak lebih murah")
+        (k1, i1, _), (k2, i2, _) = sisi_pair(pair)
+        harga = {k1: produk[i1]["harga"], k2: produk[i2]["harga"]}
+        lain = k2 if pair["lebihMurah"] == k1 else k1
+        if not harga[pair["lebihMurah"]] < harga[lain]:
+            raise SystemExit(f"{pair['id']} {pair['lebihMurah']} tidak lebih murah")
         for kunci in ("berminyak", "kering", "budget"):
             if not pair["verdict"].get(kunci):
                 raise SystemExit(f"verdict {kunci} kosong {pair['id']}")
-        terpakai.extend([pair["lokal"], pair["korea"]])
+        terpakai.extend(id_pair(pair))
     if len(terpakai) != len(set(terpakai)):
         raise SystemExit("Ada produk yang dipakai lebih dari sekali")
 
@@ -805,7 +944,10 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
                 raise SystemExit(f"Gambar putus di {path}: {src}")
         # tombol beli hanya link pendek. Halaman pendapat tidak menjual produk.
         if path not in ("index.html", "ulasan.html") and "Beli di Shopee" not in html:
-            raise SystemExit("Tidak ada tombol beli di " + path)
+            if not (DRAFT and "Link menyusul" in html):
+                raise SystemExit("Tidak ada tombol beli di " + path)
+        if "Link menyusul" in html and not DRAFT:
+            raise SystemExit("Tombol Link menyusul hanya boleh di --draft: " + path)
 
     index = html_per_path["index.html"]
     if index.count("https://lynk.id/albijulian") != 1:
@@ -814,7 +956,8 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
         if path != "index.html" and "lynk.id" in html:
             raise SystemExit("Panduan tidak boleh muncul di " + path)
         if path not in ("ulasan.html", "banding/index.html") and "s.shopee.co.id" not in html:
-            raise SystemExit("Tidak ada link Shopee di " + path)
+            if not (DRAFT and "Link menyusul" in html):
+                raise SystemExit("Tidak ada link Shopee di " + path)
 
     ulasan = html_per_path["ulasan.html"]
     if "js/config.js" not in ulasan or "js/ulasan.js" not in ulasan:
@@ -828,7 +971,7 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
             raise SystemExit("Ajakan pendapat hilang di " + pair["id"])
 
     # setiap tombol beli di situs memakai link yang ada di data
-    aff_sah = {p["aff"] for p in produk.values()}
+    aff_sah = {p["aff"] for p in produk.values() if p["aff"]}
     for path, html in html_per_path.items():
         for m in re.finditer(r'https://s\.shopee\.co\.id/[A-Za-z0-9]+', html):
             if m.group(0) not in aff_sah:
@@ -836,20 +979,25 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
 
 
 def laporan(produk, pasangan):
-    terpakai = {p["lokal"] for p in pasangan} | {p["korea"] for p in pasangan}
+    terpakai = {iid for p in pasangan for iid in id_pair(p)}
     print("\nPerbandingan:")
-    hitung = {}
-    for pair in pasangan:
-        hitung[pair["jenis"]] = hitung.get(pair["jenis"], 0) + 1
-    for jenis, label in JENIS:
-        print(f"  {label}: {hitung.get(jenis, 0)}")
+    for b, blabel in BANDING_JENIS:
+        sub = [p for p in pasangan if jenis_banding(p) == b]
+        print(f"  {blabel}: {len(sub)}")
+        for jenis, label in JENIS:
+            print(f"    {label}: {sum(1 for p in sub if p['jenis'] == jenis)}")
+    kosong = [iid for iid in sorted(terpakai) if not produk[iid]["aff"]]
+    if kosong:
+        print("Belum punya link pendek (tombol 'Link menyusul'):")
+        for iid in kosong:
+            print(f"  - {iid} | {produk[iid]['url']}")
     print("Dilewati:")
     for iid, p in produk.items():
         if iid in terpakai:
             continue
-        alasan = ALASAN_LEWAT.get(iid) or ALASAN_LEWAT.get(p["keyword"].split()[0], "Tidak dipasangkan.")
-        if p["keyword"].startswith("facial"):
-            alasan = ALASAN_LEWAT["facial"]
+        alasan = ALASAN_LEWAT.get(iid)
+        if not alasan:
+            alasan = ALASAN_LEWAT["facial"] if p["keyword"].startswith("facial") else "Tidak dipasangkan."
         print(f"  - {iid} | {p['judul'][:90]}")
         print(f"    {alasan}")
 
@@ -881,7 +1029,13 @@ def tulis_redirect():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--gambar", action="store_true", help="unduh ulang gambar")
+    ap.add_argument(
+        "--draft", action="store_true",
+        help="pratinjau: produk tanpa link pendek boleh tampil, tombolnya 'Link menyusul' (nonaktif)",
+    )
     args = ap.parse_args()
+    global DRAFT
+    DRAFT = args.draft
     os.chdir(ROOT)
     with open(os.path.join(ROOT, "tools", "pasangan.json"), encoding="utf-8") as f:
         data = json.load(f)
@@ -890,7 +1044,7 @@ def main():
     posted = muat_posted()
     pasangan = data["pasangan"]
     for pair in pasangan:
-        for iid in (pair["lokal"], pair["korea"]):
+        for iid in id_pair(pair):
             if iid not in produk:
                 raise SystemExit(f"{iid} tidak ada di data, atau tidak punya link affiliate")
     pastikan_gambar(produk, pasangan, args.gambar)
@@ -916,13 +1070,13 @@ def main():
     # redirect tidak ikut pemeriksaan kata (hampir kosong) tapi tautannya diperiksa lewat berkas
     periksa(berkas, produk, pasangan, posted, merek)
     # gambar yang tidak terpakai
-    terpakai = {pair["lokal"] + ".jpg" for pair in pasangan} | {pair["korea"] + ".jpg" for pair in pasangan}
+    terpakai = {iid + ".jpg" for pair in pasangan for iid in id_pair(pair)}
     if os.path.isdir(IMG):
         for nama in os.listdir(IMG):
             if nama not in terpakai:
                 os.remove(os.path.join(IMG, nama))
     laporan(produk, pasangan)
-    print(f"\nSelesai: {len(pasangan)} perbandingan")
+    print(f"\nSelesai: {len(pasangan)} perbandingan" + (" (DRAFT: jangan dipublikasikan sebelum link lengkap)" if DRAFT else ""))
 
 
 if __name__ == "__main__":

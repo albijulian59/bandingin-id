@@ -1,5 +1,5 @@
 {
-  "tanggal": "22–26 Oktober 2026",
+  "tanggal": "22–27 Oktober 2026",
   "pasangan": [
     {
       "id": "originote-vs-illiyoon",
@@ -1692,6 +1692,1731 @@
           "catatan": "Ini sunscreen, bukan pelembap. Listing menandai tanpa pewangi. Tetap dioles ulang kalau lama di luar."
         }
       }
+    },
+    {
+      "id": "originote-vs-anua-niacinamide",
+      "jenis": "serum",
+      "hook": "Serum niacinamide 10%: lokal vs Korea, mending yang mana?",
+      "lokal": "10489363768",
+      "korea": "43103184759",
+      "lebihMurah": "lokal",
+      "ringkas": "Dua-duanya serum niacinamide 10% untuk kulit kusam dan noda. Originote menambah glutathione dan citrus blend. Anua menambah tranexamic acid dan arbutin, harganya jauh di atas.",
+      "verdict": {
+        "berminyak": "Untuk kulit berminyak, niacinamide 10% di dua serum ini sama-sama membantu tampilan minyak dan pori. Anua punya tambahan betaine salicylate dalam jumlah kecil. Kalau fokusnya minyak saja, Originote sudah cukup.",
+        "kering": "Dua-duanya punya hyaluronic acid. Anua menambah ceramide NP dan panthenol, dan situs resminya menulis tanpa pewangi. Kulit kering atau sensitif lebih aman mulai dari Anua, atau pakai Originote dengan pelembap yang cukup. Niacinamide 10% bisa terasa kuat di awal, jadi coba sedikit dulu.",
+        "budget": "Originote Rp37.000 untuk 20 ml, Anua Rp157.000 (harga di data, bisa berubah). Mau cerah dan noda dengan budget kecil, Originote. Mau kombinasi niacinamide, tranexamic acid, dan arbutin dalam satu botol, Anua."
+      },
+      "produk": {
+        "10489363768": {
+          "nama": "The Originote Gluta Bright B3 (Niacinamide 10%)",
+          "tekstur": "Serum cair",
+          "isi": "20 ml",
+          "bahan": [
+            {
+              "nama": "Niacinamide 10%",
+              "fungsi": "Membantu meratakan warna kulit dan tampilan pori."
+            },
+            {
+              "nama": "Glutathione",
+              "fungsi": "Antioksidan yang sering dipakai di produk pencerah."
+            },
+            {
+              "nama": "Citrus blend",
+              "fungsi": "Grapefruit, jeju hallabong, bergamot, tercantum di situs resmi."
+            },
+            {
+              "nama": "Hyaluronic acid",
+              "fungsi": "Menarik air supaya kulit terasa lembap."
+            }
+          ],
+          "manfaat": [
+            "Membantu kulit tampak lebih cerah dan rata",
+            "Membantu tampilan pori dan minyak",
+            "Harga terjangkau"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Kusam"
+          ],
+          "catatan": "Listing menulis tanpa pewangi. Bahan dari situs resmi The Originote. Niacinamide 10% cukup tinggi, jadi mulai pelan kalau kulit gampang kemerahan."
+        },
+        "43103184759": {
+          "nama": "ANUA Niacinamide 10% + TXA Serum",
+          "tekstur": "Serum cair",
+          "isi": "Tidak tercantum di judul listing",
+          "bahan": [
+            {
+              "nama": "Niacinamide 10%",
+              "fungsi": "Membantu meratakan warna kulit dan tampilan pori."
+            },
+            {
+              "nama": "Tranexamic acid (TXA)",
+              "fungsi": "Sering dipakai untuk noda gelap dan bekas jerawat."
+            },
+            {
+              "nama": "Arbutin dan alpha-arbutin",
+              "fungsi": "Bahan pencerah untuk noda."
+            },
+            {
+              "nama": "Ceramide NP dan panthenol",
+              "fungsi": "Membantu menjaga skin barrier."
+            }
+          ],
+          "manfaat": [
+            "Tiga bahan pencerah dalam satu serum",
+            "Ada bahan penjaga barrier",
+            "Tanpa pewangi menurut situs resmi"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Kombinasi",
+            "Kusam"
+          ],
+          "catatan": "Nama listing menulis TXA 3%, situs resmi Anua menulis TXA 4%. Cek kemasan saat datang. Bahan dari situs resmi Anua."
+        }
+      }
+    },
+    {
+      "id": "somethinc-vs-anua-pdrn",
+      "jenis": "serum",
+      "hook": "Serum hidrasi PDRN: lokal vs Korea, mending yang mana?",
+      "lokal": "50565412201",
+      "korea": "26187205409",
+      "lebihMurah": "lokal",
+      "ringkas": "Dua serum hidrasi yang sama-sama memuat sodium DNA (PDRN) dan banyak jenis hyaluronic acid. Somethinc fokus ke peptide dan B5. Anua menambah niacinamide, glutathione, dan kolagen.",
+      "verdict": {
+        "berminyak": "Dua-duanya serum ringan berbasis hyaluronic acid, jadi umumnya aman untuk kulit berminyak. Anua punya niacinamide yang membantu tampilan minyak. Somethinc tidak fokus ke minyak, tapi ke hidrasi dan peptide.",
+        "kering": "Somethinc punya panthenol (B5), squalane, polyglutamic acid, dan peptide. Untuk kulit kering yang terasa ketarik, Somethinc lebih terarah. Anua juga melembapkan dengan banyak jenis HA, plus adenosine.",
+        "budget": "Somethinc Rp118.000 untuk 20 ml. Anua Rp314.000 untuk 30 ml (harga di data, bisa berubah). Per ml Somethinc tetap lebih murah. Mau coba PDRN dan hidrasi dengan harga lebih rendah, Somethinc."
+      },
+      "produk": {
+        "50565412201": {
+          "nama": "SOMETHINC HyaluPeptide B5 HydraLift Serum",
+          "tekstur": "Serum gel cair",
+          "isi": "20 ml",
+          "bahan": [
+            {
+              "nama": "Hyaluronic acid (banyak jenis)",
+              "fungsi": "Menarik air ke kulit di beberapa lapisan."
+            },
+            {
+              "nama": "Tripeptide-1 dan hexapeptide-9",
+              "fungsi": "Peptide yang dipakai untuk tampilan kulit lebih kenyal."
+            },
+            {
+              "nama": "Sodium DNA (PDRN)",
+              "fungsi": "Bahan yang sedang populer di serum hidrasi."
+            },
+            {
+              "nama": "Panthenol (B5) dan squalane",
+              "fungsi": "Melembapkan dan menenangkan."
+            }
+          ],
+          "manfaat": [
+            "Hidrasi berlapis",
+            "Ada peptide dan PDRN",
+            "Harga lebih rendah dari serum PDRN Korea"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Dehidrasi"
+          ],
+          "catatan": "Kolom data menulis 9 tipe hyaluronic, halaman retailer resmi menulis 11. Mengandung pewarna (CI 19140, CI 16255)."
+        },
+        "26187205409": {
+          "nama": "ANUA PDRN Hyaluronic Acid Capsule 100 Serum",
+          "tekstur": "Serum dengan kapsul",
+          "isi": "30 ml",
+          "bahan": [
+            {
+              "nama": "Sodium DNA (PDRN)",
+              "fungsi": "Bahan utama di nama produk."
+            },
+            {
+              "nama": "Hyaluronic acid (beberapa jenis)",
+              "fungsi": "Menarik air supaya kulit terasa lembap."
+            },
+            {
+              "nama": "Niacinamide dan glutathione",
+              "fungsi": "Membantu kulit tampak lebih cerah."
+            },
+            {
+              "nama": "Hydrolyzed collagen dan adenosine",
+              "fungsi": "Dipakai untuk tampilan kulit lebih kenyal."
+            }
+          ],
+          "manfaat": [
+            "Hidrasi plus bahan pencerah",
+            "Isi 30 ml",
+            "Ada kapsul di dalam serum"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Kombinasi"
+          ],
+          "catatan": "Bahan dari situs resmi Anua. Harganya paling tinggi di batch serum ini."
+        }
+      }
+    },
+    {
+      "id": "scarlett-vs-joseon-sunstick",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen untuk kulit berminyak: lokal vs Korea, mending yang mana?",
+      "lokal": "27220208261",
+      "korea": "24052923016",
+      "lebihMurah": "lokal",
+      "ringkas": "Scarlett Ultra Light itu sunscreen cair ringan SPF 50+ PA++++, 50 ml. Joseon Matte Sun Stick itu sunscreen stik 18 g dengan hasil matte. Bentuknya beda, tujuannya mirip: tidak bikin wajah makin berkilap.",
+      "verdict": {
+        "berminyak": "Dua-duanya memang diarahkan ke kulit berminyak. Joseon berbentuk stik dengan silica, enak untuk oles ulang di atas makeup. Scarlett lebih praktis untuk lapisan pertama di pagi hari karena bentuknya cair dan isinya lebih banyak.",
+        "kering": "Scarlett punya ceramide, hyaluronic acid, dan panthenol, jadi lebih bersahabat untuk kulit normal yang agak kering. Stik matte Joseon bisa terasa kering di kulit kering. Untuk kulit kering, Scarlett lebih masuk akal.",
+        "budget": "Scarlett Rp39.900 untuk 50 ml. Joseon Rp166.496 untuk 18 g (harga di data, bisa berubah). Untuk pemakaian harian, Scarlett jauh lebih hemat. Joseon bagus sebagai sunscreen kedua untuk oles ulang."
+      },
+      "produk": {
+        "27220208261": {
+          "nama": "Scarlett Ultra Light Daily Sunscreen SPF 50+ PA++++",
+          "tekstur": "Sunscreen cair, water-based",
+          "isi": "50 ml",
+          "bahan": [
+            {
+              "nama": "Filter UV",
+              "fungsi": "Ethylhexyl methoxycinnamate, butyl methoxydibenzoylmethane, octocrylene, titanium dioxide."
+            },
+            {
+              "nama": "Niacinamide dan panthenol",
+              "fungsi": "Membantu menenangkan dan meratakan warna kulit."
+            },
+            {
+              "nama": "Ceramide dan hyaluronic acid",
+              "fungsi": "Situs resmi menyebut 7x ceramide dan 9x hyaluronic acid."
+            }
+          ],
+          "manfaat": [
+            "SPF 50+ PA++++",
+            "Ringan dan cepat meresap",
+            "Isi 50 ml dengan harga rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Kombinasi"
+          ],
+          "catatan": "Listing tidak menuliskan bahan. Daftar di sini dari situs resmi Scarlett dan INCIDecoder. Situs resmi menyebut untuk kulit normal sampai berminyak."
+        },
+        "24052923016": {
+          "nama": "Beauty of Joseon Matte Sun Stick: Mugwort + Camelia",
+          "tekstur": "Sunscreen stik, hasil matte",
+          "isi": "18 g",
+          "bahan": [
+            {
+              "nama": "Filter UV kimia",
+              "fungsi": "Empat filter, termasuk Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine."
+            },
+            {
+              "nama": "Silica",
+              "fungsi": "Membantu hasil akhir matte."
+            },
+            {
+              "nama": "Mugwort, green tea, minyak camellia",
+              "fungsi": "Bahan pendamping yang menenangkan."
+            }
+          ],
+          "manfaat": [
+            "Praktis untuk oles ulang",
+            "Hasil matte",
+            "Tanpa pewangi dan alkohol menurut situs resmi"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Kombinasi"
+          ],
+          "catatan": "Listing tidak menuliskan bahan. Daftar di sini dari situs resmi Beauty of Joseon. Situs resmi menyarankan oles ulang tiap 2–3 jam."
+        }
+      }
+    },
+    {
+      "id": "azarine-vs-cosrx-salicylic-wash",
+      "jenis": "facial-wash",
+      "hook": "Facial wash salicylic acid: lokal vs Korea, mending yang mana?",
+      "lokal": "1889291042",
+      "korea": "2958551486",
+      "lebihMurah": "lokal",
+      "ringkas": "Dua facial wash dengan salicylic acid untuk kulit berjerawat. Azarine berbasis surfaktan lembut dengan aloe dan witch hazel. COSRX berbasis sabun dengan tea tree, untuk kulit berminyak dan kombinasi.",
+      "verdict": {
+        "berminyak": "COSRX berbasis sabun, busanya padat dan terasa sangat bersih. Ini cocok untuk kulit yang sangat berminyak. Azarine lebih lembut, cukup untuk berminyak ringan sampai sedang.",
+        "kering": "Untuk kulit kering atau sensitif yang berjerawat, Azarine lebih aman karena basisnya bukan sabun. Tapi ada alkohol dan pewangi di daftarnya. COSRX punya minyak tea tree dan kulit lemon yang bisa mengganggu kulit sensitif.",
+        "budget": "Azarine Rp32.750 untuk 75 ml. COSRX Rp119.350 untuk 150 ml (harga di data, bisa berubah). Per ml Azarine masih lebih murah. Mau hemat dan lembut, Azarine."
+      },
+      "produk": {
+        "1889291042": {
+          "nama": "Azarine Acne Gentle Cleansing Foam",
+          "tekstur": "Foam",
+          "isi": "75 ml",
+          "bahan": [
+            {
+              "nama": "Salicylic acid",
+              "fungsi": "BHA yang membantu membersihkan pori."
+            },
+            {
+              "nama": "Aloe vera dan witch hazel",
+              "fungsi": "Menenangkan dan membantu tampilan minyak."
+            },
+            {
+              "nama": "Madu, allantoin, purslane",
+              "fungsi": "Bahan pendamping yang menenangkan."
+            }
+          ],
+          "manfaat": [
+            "Lembut, basisnya bukan sabun",
+            "Untuk kulit berjerawat",
+            "Harga rendah"
+          ],
+          "kulit": [
+            "Berjerawat",
+            "Berminyak",
+            "Kombinasi"
+          ],
+          "catatan": "Daftar bahan lengkap dari situs resmi Azarine dan Skinsort. Ada alkohol dan pewangi di daftarnya."
+        },
+        "2958551486": {
+          "nama": "COSRX Salicylic Acid Daily Gentle Cleanser",
+          "tekstur": "Cream to foam",
+          "isi": "150 ml",
+          "bahan": [
+            {
+              "nama": "Salicylic acid",
+              "fungsi": "BHA yang membantu membersihkan pori."
+            },
+            {
+              "nama": "Willow bark water",
+              "fungsi": "Sumber alami salicylate."
+            },
+            {
+              "nama": "Minyak tea tree",
+              "fungsi": "Sering dipakai di produk untuk kulit berjerawat."
+            },
+            {
+              "nama": "Basis sabun",
+              "fungsi": "Myristic acid, stearic acid, dan potassium hydroxide."
+            }
+          ],
+          "manfaat": [
+            "Busa padat, terasa sangat bersih",
+            "Isi 150 ml",
+            "Untuk kulit berminyak dan kombinasi menurut situs resmi"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Kombinasi",
+            "Berjerawat"
+          ],
+          "catatan": "Listing tidak menuliskan bahan. Daftar di sini dari situs resmi COSRX Korea. Ada minyak kulit lemon dan limonene."
+        }
+      }
+    },
+    {
+      "id": "hanasui-vs-cosrx-ha-cream",
+      "jenis": "pelembab",
+      "hook": "Pelembap hidrasi: lokal vs Korea, mending yang mana?",
+      "lokal": "28234426003",
+      "korea": "22581600583",
+      "lebihMurah": "lokal",
+      "ringkas": "Hanasui gel 100 ml dengan ceramide, hyaluronic acid, niacinamide, dan probiotik. COSRX krim 100 ml dengan hyaluronic acid 3.000 ppm dan air sea buckthorn. Gel vs krim, sama-sama untuk hidrasi.",
+      "verdict": {
+        "berminyak": "Hanasui berbentuk gel, lebih ringan untuk kulit berminyak. Ada niacinamide untuk tampilan minyak dan pori. COSRX krim dengan minyak bunga matahari dan macadamia, bisa terasa berat di kulit berminyak.",
+        "kering": "COSRX lebih kaya: hyaluronic acid, minyak, panthenol, dan allantoin. Untuk kulit kering yang butuh lapisan lebih tebal, COSRX. Hanasui bisa jadi pilihan kalau kulit keringnya ringan.",
+        "budget": "Hanasui Rp49.779 dan COSRX Rp197.340, isi sama-sama 100 ml (harga di data, bisa berubah). Hanasui jauh lebih hemat. Pilih COSRX kalau kulit kering dan mau tekstur krim."
+      },
+      "produk": {
+        "28234426003": {
+          "nama": "HANASUI Ceramide Probiotics Moisturizer Gel",
+          "tekstur": "Gel",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Ceramide",
+              "fungsi": "Membantu menjaga skin barrier."
+            },
+            {
+              "nama": "Hyaluronic acid",
+              "fungsi": "Menarik air supaya kulit terasa lembap."
+            },
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu tampilan minyak dan warna kulit."
+            }
+          ],
+          "manfaat": [
+            "Gel ringan",
+            "Isi besar, 100 ml",
+            "Harga rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Kombinasi"
+          ],
+          "catatan": "Bahan dari kolom data listing. Probiotik ada di nama produk, jenisnya tidak tercantum. Daftar lengkap belum ditemukan di situs resmi."
+        },
+        "22581600583": {
+          "nama": "COSRX Hyaluronic Acid Intensive Cream",
+          "tekstur": "Krim",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Air sea buckthorn 57,8%",
+              "fungsi": "Basis krim, menggantikan sebagian air."
+            },
+            {
+              "nama": "Sodium hyaluronate 3.000 ppm",
+              "fungsi": "Menarik air ke kulit."
+            },
+            {
+              "nama": "Minyak bunga matahari dan macadamia",
+              "fungsi": "Membantu mengunci kelembapan."
+            },
+            {
+              "nama": "Panthenol dan allantoin",
+              "fungsi": "Menenangkan."
+            }
+          ],
+          "manfaat": [
+            "Lebih melembapkan untuk kulit kering",
+            "Kadar HA tertulis",
+            "Ada minyak penutup"
+          ],
+          "kulit": [
+            "Kering",
+            "Dehidrasi",
+            "Normal"
+          ],
+          "catatan": "Listing tidak menuliskan bahan. Daftar di sini dari situs resmi COSRX."
+        }
+      }
+    },
+    {
+      "id": "somethinc-vs-torriden-cream",
+      "jenis": "pelembab",
+      "hook": "Pelembap ceramide untuk skin barrier: lokal vs Korea, mending yang mana?",
+      "lokal": "23824435470",
+      "korea": "53958222689",
+      "lebihMurah": "lokal",
+      "ringkas": "Somethinc Calm Down Skinpair krim dengan ceramide, mugwort, centella, dan murumuru butter. Torriden Solid-In krim dengan 5 jenis ceramide dan cholesterol. Dua-duanya untuk skin barrier.",
+      "verdict": {
+        "berminyak": "Dua-duanya krim, bukan gel. Torriden biasanya terasa lebih ringan. Somethinc punya murumuru butter, jadi bisa lebih berat. Untuk kulit berminyak, pakai tipis-tipis, atau pilih Torriden.",
+        "kering": "Torriden punya 5 ceramide plus cholesterol, pasangan klasik untuk kulit kering. Somethinc punya madecassoside dan mugwort, lebih ke kulit sensitif yang gampang merah. Kering, Torriden. Sensitif dan merah, Somethinc.",
+        "budget": "Somethinc Rp110.000 untuk varian yang tampil di data (ada 25 ml, 50 ml, dan refill). Torriden Rp140.400 untuk 70 ml (harga di data, bisa berubah). Cek ukuran saat checkout sebelum membandingkan harga per ml."
+      },
+      "produk": {
+        "23824435470": {
+          "nama": "SOMETHINC Calm Down! Skinpair R-Cover Cream",
+          "tekstur": "Krim",
+          "isi": "25 ml, 50 ml, atau refill 50 ml",
+          "bahan": [
+            {
+              "nama": "Ceramide NP (terenkapsulasi)",
+              "fungsi": "Membantu menjaga skin barrier."
+            },
+            {
+              "nama": "Madecassoside dan centella",
+              "fungsi": "Menenangkan kulit."
+            },
+            {
+              "nama": "Mugwort",
+              "fungsi": "Ekstrak yang sering dipakai untuk kulit sensitif."
+            },
+            {
+              "nama": "Murumuru butter dan panthenol",
+              "fungsi": "Melembapkan."
+            }
+          ],
+          "manfaat": [
+            "Untuk kulit sensitif yang gampang merah",
+            "Tanpa pewangi menurut situs resmi",
+            "Ada pilihan refill"
+          ],
+          "kulit": [
+            "Sensitif",
+            "Normal",
+            "Kering"
+          ],
+          "catatan": "Varian di listing hanya ukuran. Bahan dari situs resmi Somethinc dan Skinsort. Varian Calm Down ini juga ada di listing Somethinc Moisturizer Series yang dibahas terpisah."
+        },
+        "53958222689": {
+          "nama": "Torriden Solid-In Cream",
+          "tekstur": "Krim",
+          "isi": "70 ml",
+          "bahan": [
+            {
+              "nama": "5 jenis ceramide",
+              "fungsi": "NP, NS, AS, EOP, AP, untuk skin barrier."
+            },
+            {
+              "nama": "Cholesterol",
+              "fungsi": "Pendamping ceramide di lapisan kulit."
+            },
+            {
+              "nama": "Panthenol dan allantoin",
+              "fungsi": "Menenangkan."
+            },
+            {
+              "nama": "Minyak jojoba",
+              "fungsi": "Membantu mengunci kelembapan."
+            }
+          ],
+          "manfaat": [
+            "Ceramide lengkap",
+            "Isi 70 ml",
+            "Untuk kulit kering dan barrier lemah"
+          ],
+          "kulit": [
+            "Kering",
+            "Normal",
+            "Sensitif"
+          ],
+          "catatan": "Listing tidak menuliskan bahan. Daftar di sini dari situs resmi Torriden. Torriden punya formula lama dan baru, jadi isi kemasan bisa beda."
+        }
+      }
+    },
+    {
+      "id": "somethinc-series-vs-wardah-symradiance",
+      "jenis": "pelembab",
+      "hook": "Pelembap lokal vs lokal: tiga varian Somethinc atau satu gel Wardah?",
+      "a": "22832352282",
+      "b": "27873333504",
+      "lebihMurah": "b",
+      "ringkas": "Satu link Somethinc berisi tiga pelembap: Calm Down, Skinglow, Ceraplump. Wardah Symradiance gel dengan niacinamide 5% dan SymRadiance 399. Varian Somethinc diadu satu per satu.",
+      "varianIntro": "Link Somethinc berisi tiga pelembap yang beda fungsi. Wardah cuma satu produk, jadi tiap baris membandingkan satu varian Somethinc dengan gel Wardah.",
+      "adu": [
+        {
+          "kebutuhan": "Kulit sensitif, gampang merah",
+          "a": "Calm Down",
+          "b": "Symradiance gel",
+          "pilih": "Somethinc Calm Down. Ada madecassoside, mugwort, ceramide, dan tanpa pewangi. Wardah fokus ke cerah, bukan menenangkan."
+        },
+        {
+          "kebutuhan": "Kusam, mau tampak cerah",
+          "a": "Skinglow",
+          "b": "Symradiance gel",
+          "pilih": "Wardah. Niacinamide 5% dan SymRadiance 399 tertulis jelas, harganya lebih rendah. Skinglow lebih ke glow dan hidrasi."
+        },
+        {
+          "kebutuhan": "Kering atau dehidrasi",
+          "a": "Ceraplump",
+          "b": "Symradiance gel",
+          "pilih": "Somethinc Ceraplump. Ada ceramide, hyaluronic acid, dan peptide. Wardah berbentuk gel ringan, kurang untuk kulit yang sangat kering."
+        }
+      ],
+      "verdict": {
+        "berminyak": "Wardah berbentuk gel, tanpa silikon menurut listing, enak untuk kulit berminyak. Dari Somethinc, Skinglow paling ringan di antara tiga varian.",
+        "kering": "Ambil Somethinc Ceraplump untuk kering, atau Calm Down untuk kering yang juga sensitif. Gel Wardah lebih cocok untuk kulit normal.",
+        "budget": "Wardah Rp57.820. Somethinc mulai Rp91.000 untuk varian yang tampil di data, ukuran lain beda harga (harga di data, bisa berubah). Mau cerah dengan budget kecil, Wardah."
+      },
+      "produk": {
+        "22832352282": {
+          "nama": "SOMETHINC Moisturizer Series",
+          "label": "Somethinc (3 varian)",
+          "tekstur": "Krim atau gel, tergantung varian",
+          "isi": "25 ml, 50 ml, atau refill",
+          "bahan": [
+            {
+              "nama": "Ceramide",
+              "fungsi": "Ada di Calm Down dan Ceraplump."
+            },
+            {
+              "nama": "Centella dan madecassoside",
+              "fungsi": "Ada di Calm Down."
+            },
+            {
+              "nama": "Peptide dan sodium DNA",
+              "fungsi": "Ada di Ceraplump."
+            }
+          ],
+          "manfaat": [
+            "Satu link, tiga kebutuhan berbeda",
+            "Ada pilihan refill",
+            "Varian Calm Down tanpa pewangi"
+          ],
+          "kulit": [
+            "Sensitif",
+            "Kering",
+            "Normal",
+            "Kusam"
+          ],
+          "catatan": "Pilih varian saat checkout. Harga data untuk varian yang tampil di data. Bahan dari situs resmi Somethinc dan retailer resmi Beautyhaul.",
+          "varian": [
+            {
+              "nama": "Calm Down",
+              "bahan": "Panthenol, madecassoside, ceramide NP, mugwort, centella, murumuru butter, aloe, allantoin",
+              "kulit": [
+                "Sensitif",
+                "Kemerahan",
+                "Kering"
+              ],
+              "catatan": "Tanpa pewangi menurut situs resmi."
+            },
+            {
+              "nama": "Skinglow",
+              "bahan": "GlowBrightCell, bisabolol, adenosine, 3D Aqua Seal (xylitylglucoside, anhydroxylitol, xylitol), ekstrak kakao dan tomat",
+              "kulit": [
+                "Kusam",
+                "Normal",
+                "Semua jenis kulit"
+              ],
+              "catatan": "Retailer resmi menulis non-comedogenic."
+            },
+            {
+              "nama": "Ceraplump",
+              "bahan": "Tripeptide-1, hexapeptide-9, sodium DNA, ceramide, hydrolyzed sodium hyaluronate, panthenol, adenosine, goji",
+              "kulit": [
+                "Kering",
+                "Dehidrasi"
+              ],
+              "catatan": "Bentuknya gel."
+            }
+          ]
+        },
+        "27873333504": {
+          "nama": "WARDAH Symradiance 399 Bright & Barrier Boost Moisture Gel",
+          "label": "Wardah Symradiance",
+          "tekstur": "Gel",
+          "isi": "Tidak tercantum di judul listing",
+          "bahan": [
+            {
+              "nama": "Niacinamide 5%",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "SymRadiance 399",
+              "fungsi": "Bahan pencerah yang ada di nama produk."
+            },
+            {
+              "nama": "Vitamin C",
+              "fungsi": "Antioksidan, tercantum di kolom data."
+            }
+          ],
+          "manfaat": [
+            "Gel ringan",
+            "Tanpa silikon dan sulfat menurut listing",
+            "Harga paling rendah di pasangan ini"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Kusam"
+          ],
+          "catatan": "Bahan dari kolom data listing. Daftar lengkap belum ditemukan di situs resmi Wardah."
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "wardah-crystal-vs-msglow-dual",
+      "jenis": "pelembab",
+      "hook": "Pelembap pagi ber-SPF: Wardah atau MS Glow?",
+      "a": "1080210042",
+      "b": "29319814911",
+      "lebihMurah": "b",
+      "ringkas": "Wardah Crystal Secret pelembap pagi SPF 35 PA+++ dengan alpha arbutin dan niacinamide. MS Glow Dual Cream berisi dua krim: pagi SPF 50 PA++++ dan malam brightening, total 30 g.",
+      "verdict": {
+        "berminyak": "Dua-duanya krim pelembap yang membawa SPF, bisa terasa lebih berat dari sunscreen gel. Kulit berminyak pakai tipis-tipis. Data teksturnya tidak cukup untuk memilih salah satu.",
+        "kering": "Wardah satu krim untuk pagi, jadi malam butuh pelembap lain. MS Glow sudah termasuk krim malam. Untuk kulit kering yang mau rutinitas simpel, MS Glow lebih lengkap.",
+        "budget": "MS Glow Rp40.000 untuk dua krim, total 30 g. Wardah Rp59.780 (harga di data, bisa berubah). Mau fokus noda dengan bahan yang tertulis jelas, Wardah. Mau paket pagi-malam yang murah, MS Glow."
+      },
+      "produk": {
+        "1080210042": {
+          "nama": "WARDAH Crystal Secret Hyperpigmentation Expert Day Moisturizer SPF 35 PA+++",
+          "label": "Wardah Crystal Secret",
+          "tekstur": "Krim pagi ber-SPF",
+          "isi": "Tidak tercantum di judul listing",
+          "bahan": [
+            {
+              "nama": "Alpha arbutin",
+              "fungsi": "Bahan pencerah untuk noda."
+            },
+            {
+              "nama": "Niacinamide 5%",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Ekstrak edelweiss",
+              "fungsi": "Ekstrak tanaman, tercantum di kolom data."
+            }
+          ],
+          "manfaat": [
+            "Untuk noda gelap",
+            "SPF 35 PA+++",
+            "Satu langkah untuk pagi"
+          ],
+          "kulit": [
+            "Normal",
+            "Kusam",
+            "Kombinasi"
+          ],
+          "catatan": "Bahan dari kolom data dan nama produk. Filter UV tidak tercantum. SPF 35 di pelembap bukan pengganti sunscreen kalau lama di luar."
+        },
+        "29319814911": {
+          "nama": "MS Glow Dual Cream",
+          "label": "MS Glow Dual Cream",
+          "tekstur": "Dua krim: pagi dan malam",
+          "isi": "30 g total",
+          "bahan": [
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "L-ascorbic acid",
+              "fungsi": "Vitamin C."
+            },
+            {
+              "nama": "Sodium hyaluronate",
+              "fungsi": "Menarik air ke kulit."
+            }
+          ],
+          "manfaat": [
+            "Krim pagi SPF 50 PA++++",
+            "Ada krim malam",
+            "Harga rendah untuk dua krim"
+          ],
+          "kulit": [
+            "Normal",
+            "Kusam"
+          ],
+          "catatan": "Informasi bahan lengkap dan filter UV terbatas, menurut situs resmi MS Glow. Isi 30 g dibagi dua krim."
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "scarlett-vs-originote-serum",
+      "jenis": "serum",
+      "hook": "Serum lokal vs lokal: 7 varian Scarlett atau 3 varian Originote?",
+      "a": "19311657068",
+      "b": "18177707878",
+      "lebihMurah": "b",
+      "ringkas": "Dua link serum yang masing-masing berisi beberapa varian. Scarlett punya 7: Brightly, Brightly Advance, Acne, NEW Acne, Glowtening, Red Exfo, Blue Hydra. Originote punya 3: Brightening, Glowing, Acne. Semua varian diadu sesuai kebutuhan.",
+      "varianIntro": "Dua link ini sama-sama berisi beberapa serum. Pilih varian saat checkout. Untuk Originote, nama varian kami cocokkan ke produk di situs resminya, jadi pastikan lagi nama varian di halaman Shopee.",
+      "adu": [
+        {
+          "kebutuhan": "Kusam, mau cerah (ringan)",
+          "a": "Brightly Serum",
+          "b": "Brightening",
+          "pilih": "Originote Brightening. Niacinamide 10% plus glutathione, harga lebih rendah. Brightly Serum niacinamide 3% plus vitamin C, cocok kalau kulit gampang iritasi dengan niacinamide tinggi."
+        },
+        {
+          "kebutuhan": "Kusam, mau cerah (lebih kuat)",
+          "a": "Brightly Advance Serum",
+          "b": "Brightening",
+          "pilih": "Seimbang. Dua-duanya niacinamide 10%. Scarlett menambah alpha arbutin, Originote menambah glutathione. Pilih yang lebih murah saat checkout."
+        },
+        {
+          "kebutuhan": "Noda dan bekas jerawat",
+          "a": "Glowtening Serum",
+          "b": "Brightening",
+          "pilih": "Scarlett Glowtening, karena ada tranexamic acid yang memang dipakai untuk noda. Originote tidak punya varian TXA."
+        },
+        {
+          "kebutuhan": "Kulit berjerawat",
+          "a": "Acne Serum / NEW Acne Serum",
+          "b": "Acne",
+          "pilih": "Originote Acne: salicylic acid, panthenol, tamanu oil, harga lebih rendah. Scarlett NEW Acne Serum menambah azeclair dan niacinamide, tapi sumber bahannya artikel media, bukan situs resmi."
+        },
+        {
+          "kebutuhan": "Eksfoliasi",
+          "a": "Red Exfo",
+          "b": "Tidak ada varian sejenis",
+          "pilih": "Hanya Scarlett Red Exfo. Ini peeling bilas dengan AHA BHA PHA 15%, dipakai 2–3x seminggu, jangan dicampur dengan eksfoliasi lain."
+        },
+        {
+          "kebutuhan": "Hidrasi dan skin barrier",
+          "a": "Blue Hydra",
+          "b": "Glowing",
+          "pilih": "Originote Glowing (Ceratides): 5 ceramide, cholesterol, dan peptide tertulis di situs resmi. Bahan Blue Hydra yang kami temukan baru azulene dan allantoin."
+        }
+      ],
+      "verdict": {
+        "berminyak": "Untuk kulit berminyak dan berjerawat, mulai dari varian Acne di salah satu merek. Originote Acne lebih murah dan bahannya dari situs resmi. Red Exfo Scarlett bisa jadi tambahan seminggu dua kali, bukan untuk tiap hari.",
+        "kering": "Untuk kering atau barrier lemah, Originote Glowing (Ceratides) paling jelas bahannya. Hindari Red Exfo dan serum niacinamide 10% kalau kulit sedang perih.",
+        "budget": "Originote Rp37.000, Scarlett Rp45.000 untuk varian yang tampil di data (harga di data, bisa berubah). Dua-duanya murah. Pilih dari kebutuhan, lalu cek harga varian saat checkout."
+      },
+      "produk": {
+        "19311657068": {
+          "nama": "SCARLETT Face Serum",
+          "label": "Scarlett (7 varian)",
+          "tekstur": "Serum, tergantung varian",
+          "isi": "Tergantung varian. Di situs resmi, Brightly Advance dan Red Exfo 15 ml.",
+          "bahan": [
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Ada di Brightly, Brightly Advance, Red Exfo, dan NEW Acne."
+            },
+            {
+              "nama": "Salicylic acid",
+              "fungsi": "Ada di Acne Serum dan NEW Acne Serum."
+            },
+            {
+              "nama": "Tranexamic acid",
+              "fungsi": "Ada di Glowtening."
+            },
+            {
+              "nama": "AHA BHA PHA 15%",
+              "fungsi": "Ada di Red Exfo."
+            }
+          ],
+          "manfaat": [
+            "Tujuh pilihan dalam satu link",
+            "Ada varian untuk noda (TXA) dan eksfoliasi",
+            "Harga rendah"
+          ],
+          "kulit": [
+            "Kusam",
+            "Berjerawat",
+            "Berminyak",
+            "Normal"
+          ],
+          "catatan": "Nama varian dari judul listing. Bahan per varian dari situs dan akun resmi Scarlett. NEW Acne Serum dari artikel media. Scarlett Glowtening juga dijual di listing terpisah, yang tidak kami pakai supaya tidak dobel.",
+          "varian": [
+            {
+              "nama": "Brightly Serum",
+              "bahan": "Niacinamide 3%, vitamin C, glutathione, Melazero",
+              "kulit": [
+                "Kusam",
+                "Normal",
+                "Sensitif ringan"
+              ],
+              "catatan": "Kami cocokkan ke Brightly Ever After di situs resmi."
+            },
+            {
+              "nama": "Brightly Advance Serum",
+              "bahan": "Niacinamide 10%, alpha arbutin, Synovea",
+              "kulit": [
+                "Kusam",
+                "Noda",
+                "Berminyak"
+              ],
+              "catatan": "15 ml di situs resmi."
+            },
+            {
+              "nama": "Acne Serum",
+              "bahan": "Salicylic acid 2% terenkapsulasi, tea tree water, licorice",
+              "kulit": [
+                "Berjerawat",
+                "Berminyak"
+              ]
+            },
+            {
+              "nama": "NEW Acne Serum",
+              "bahan": "Azeclair, salicylic acid, tea tree water, niacinamide, centella",
+              "kulit": [
+                "Berjerawat",
+                "Berminyak"
+              ],
+              "catatan": "Sumber artikel media, belum dari situs resmi."
+            },
+            {
+              "nama": "Glowtening Serum",
+              "bahan": "Tranexamic acid, calendula oil, olive oil, allantoin, licorice, aloe",
+              "kulit": [
+                "Noda",
+                "Bekas jerawat",
+                "Normal"
+              ]
+            },
+            {
+              "nama": "Red Exfo",
+              "bahan": "AHA BHA PHA 15%, niacinamide 5%, Seven Berries",
+              "kulit": [
+                "Berminyak",
+                "Kulit kasar",
+                "Pori tersumbat"
+              ],
+              "catatan": "Peeling bilas, 2–3x seminggu."
+            },
+            {
+              "nama": "Blue Hydra",
+              "bahan": "Azulene, allantoin. Daftar lengkap belum ditemukan.",
+              "kulit": [
+                "Kering",
+                "Sensitif"
+              ]
+            }
+          ]
+        },
+        "18177707878": {
+          "nama": "The Originote Serum",
+          "label": "Originote (3 varian)",
+          "tekstur": "Serum cair",
+          "isi": "Tidak tercantum di judul listing",
+          "bahan": [
+            {
+              "nama": "Niacinamide 10%",
+              "fungsi": "Varian Brightening."
+            },
+            {
+              "nama": "Ceramide dan peptide",
+              "fungsi": "Varian Glowing."
+            },
+            {
+              "nama": "Salicylic acid",
+              "fungsi": "Varian Acne."
+            }
+          ],
+          "manfaat": [
+            "Tiga kebutuhan utama dalam satu link",
+            "Bahan per varian ada di situs resmi",
+            "Harga paling rendah di pasangan ini"
+          ],
+          "kulit": [
+            "Kusam",
+            "Kering",
+            "Berjerawat",
+            "Normal"
+          ],
+          "catatan": "Pemetaan varian kami simpulkan dari kolom bahan listing: Brightening = Gluta Bright B3, Glowing = Ceratides Barrier, Acne = Acne B5. Cocokkan nama varian saat checkout.",
+          "varian": [
+            {
+              "nama": "Brightening",
+              "bahan": "Gluta Bright B3: niacinamide 10%, glutathione, citrus blend",
+              "kulit": [
+                "Kusam",
+                "Normal",
+                "Berminyak"
+              ]
+            },
+            {
+              "nama": "Glowing",
+              "bahan": "Ceratides Barrier: 5 ceramide, cholesterol, peptide, propolis, madu",
+              "kulit": [
+                "Kering",
+                "Sensitif",
+                "Barrier lemah"
+              ]
+            },
+            {
+              "nama": "Acne",
+              "bahan": "Acne B5: salicylic acid, panthenol, tamanu oil",
+              "kulit": [
+                "Berjerawat",
+                "Berminyak"
+              ]
+            }
+          ]
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "hanasui-vs-barber-niacinamide",
+      "jenis": "serum",
+      "hook": "Serum niacinamide lokal vs lokal: Hanasui atau Barber?",
+      "a": "20628506418",
+      "b": "25142085435",
+      "lebihMurah": "a",
+      "ringkas": "Hanasui Power Bright 20 ml dengan niacinamide 10%, Chromabright, dan licorice. Barber Daily Bright 40 ml dengan niacinamide 5%, alpha arbutin 1%, dan kolagen. Dua serum pencerah dengan kadar yang beda.",
+      "verdict": {
+        "berminyak": "Niacinamide Hanasui lebih tinggi (10%), bisa membantu tampilan minyak dan pori lebih banyak. Barber 5% lebih ringan. Kulit berminyak yang sudah biasa niacinamide bisa ambil Hanasui.",
+        "kering": "Barber lebih aman untuk kulit sensitif: 5% niacinamide, ada panthenol dan allantoin, dan daftar bahannya tidak memuat pewangi atau alkohol. Kadar 10% Hanasui bisa terasa kuat di awal.",
+        "budget": "Hanasui Rp34.287 untuk 20 ml. Barber Rp103.800 untuk 40 ml (harga di data, bisa berubah). Per ml Hanasui tetap lebih murah. Mau hemat, Hanasui. Mau kadar lebih lembut dan isi lebih banyak, Barber."
+      },
+      "produk": {
+        "20628506418": {
+          "nama": "HANASUI Power Bright Expert Serum",
+          "label": "Hanasui Power Bright",
+          "tekstur": "Serum cair",
+          "isi": "20 ml",
+          "bahan": [
+            {
+              "nama": "Niacinamide 10%",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Chromabright",
+              "fungsi": "Bahan pencerah, tercantum di kolom data."
+            },
+            {
+              "nama": "Licorice",
+              "fungsi": "Sering dipakai untuk noda."
+            },
+            {
+              "nama": "Vitamin E",
+              "fungsi": "Antioksidan, ada di nama produk."
+            }
+          ],
+          "manfaat": [
+            "Niacinamide 10%",
+            "Beberapa bahan pencerah",
+            "Harga sangat rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Kusam"
+          ],
+          "catatan": "Bahan dari kolom data dan nama produk. Daftar lengkap belum ditemukan di situs resmi Hanasui."
+        },
+        "25142085435": {
+          "nama": "Barber Daily Bright Radiance Serum",
+          "label": "Barber Daily Bright",
+          "tekstur": "Serum cair",
+          "isi": "40 ml",
+          "bahan": [
+            {
+              "nama": "Niacinamide 5%",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Alpha arbutin 1%",
+              "fungsi": "Bahan pencerah untuk noda."
+            },
+            {
+              "nama": "Hydrolyzed collagen 1%",
+              "fungsi": "Melembapkan."
+            },
+            {
+              "nama": "Panthenol dan allantoin",
+              "fungsi": "Menenangkan."
+            }
+          ],
+          "manfaat": [
+            "Kadar bahan tertulis jelas",
+            "Isi 40 ml",
+            "Lebih lembut untuk pemula"
+          ],
+          "kulit": [
+            "Normal",
+            "Sensitif",
+            "Kusam"
+          ],
+          "catatan": "Daftar bahan lengkap dari retailer Beautyhaul dan Skinsort."
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "hanasui-vitc-vs-msglow-maxi",
+      "jenis": "serum",
+      "hook": "Serum vitamin C lokal vs lokal: Hanasui atau MS Glow?",
+      "a": "2334973164",
+      "b": "28471442468",
+      "lebihMurah": "a",
+      "ringkas": "Hanasui Serum Vitamin C dengan niacinamide, betaine, dan polyglutamic acid. MS Glow Maxi Bright 20 ml dengan niacinamide, L-ascorbic acid, dan panthenol. Dua serum cerah murah, kadar bahannya sama-sama tidak tercantum.",
+      "verdict": {
+        "berminyak": "Dua-duanya punya niacinamide, jadi sama-sama membantu tampilan minyak. Data teksturnya tidak cukup untuk memilih. Pilih dari harga.",
+        "kering": "Hanasui menambah betaine dan polyglutamic acid yang menarik air. MS Glow menambah panthenol. Dua-duanya bisa untuk kulit kering ringan, tetap pakai pelembap.",
+        "budget": "Hanasui Rp31.226, MS Glow Rp40.000 untuk 20 ml (harga di data, bisa berubah). Isi Hanasui tidak tercantum di judul, cek saat checkout. Mau paling murah, Hanasui."
+      },
+      "produk": {
+        "2334973164": {
+          "nama": "HANASUI Serum Vitamin C",
+          "label": "Hanasui Vitamin C",
+          "tekstur": "Serum cair",
+          "isi": "Tidak tercantum di judul listing",
+          "bahan": [
+            {
+              "nama": "Vitamin C",
+              "fungsi": "Antioksidan. Jenis dan kadarnya tidak tercantum."
+            },
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Betaine dan sodium polyglutamate",
+              "fungsi": "Menarik air ke kulit."
+            }
+          ],
+          "manfaat": [
+            "Vitamin C plus niacinamide",
+            "Ada bahan pelembap",
+            "Harga paling rendah di batch serum"
+          ],
+          "kulit": [
+            "Normal",
+            "Kusam"
+          ],
+          "catatan": "Bahan dari kolom data listing. Daftar lengkap belum ditemukan di situs resmi Hanasui."
+        },
+        "28471442468": {
+          "nama": "MS Glow Maxi Bright Serum",
+          "label": "MS Glow Maxi Bright",
+          "tekstur": "Serum cair",
+          "isi": "20 ml",
+          "bahan": [
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "L-ascorbic acid",
+              "fungsi": "Vitamin C."
+            },
+            {
+              "nama": "Panthenol",
+              "fungsi": "Melembapkan dan menenangkan."
+            }
+          ],
+          "manfaat": [
+            "Vitamin C plus niacinamide",
+            "Ada panthenol",
+            "Harga rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Kusam"
+          ],
+          "catatan": "Kadar bahan tidak dipublikasikan, menurut situs resmi MS Glow."
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "azarine-vs-glad2glow-sunscreen",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs lokal: Azarine Hydrasoothe atau Glad2Glow Lychee?",
+      "a": "26624969696",
+      "b": "43918564949",
+      "lebihMurah": "a",
+      "ringkas": "Azarine Hydrasoothe sunscreen gel SPF45 PA++++ dengan aloe, niacinamide, dan hyaluronic acid. Glad2Glow Lychee sunscreen krim 30 g dengan vitamin C, niacinamide, panthenol, dan squalane.",
+      "verdict": {
+        "berminyak": "Azarine berbentuk gel, umumnya lebih ringan untuk kulit berminyak. Glad2Glow berbentuk krim dengan squalane. Kulit berminyak lebih cocok Azarine.",
+        "kering": "Glad2Glow krim dengan squalane dan panthenol, lebih nyaman untuk kulit kering. Azarine juga punya hyaluronic acid dan aloe. Kering, Glad2Glow. Normal, dua-duanya oke.",
+        "budget": "Azarine Rp45.000 untuk ukuran yang tampil di data (ada 30, 50, dan 110 ml). Glad2Glow Rp57.000 untuk 30 g (harga di data, bisa berubah). SPF Glad2Glow tidak ada di data kami, cek di kemasan."
+      },
+      "produk": {
+        "26624969696": {
+          "nama": "Azarine Hydrasoothe Sunscreen Gel SPF45 PA++++",
+          "label": "Azarine Hydrasoothe",
+          "tekstur": "Sunscreen gel",
+          "isi": "30, 50, atau 110 ml (pilih saat checkout)",
+          "bahan": [
+            {
+              "nama": "Filter UV",
+              "fungsi": "Ethylhexyl methoxycinnamate, butyl methoxydibenzoylmethane, octocrylene."
+            },
+            {
+              "nama": "Aloe vera dan purslane",
+              "fungsi": "Menenangkan."
+            },
+            {
+              "nama": "Niacinamide dan hyaluronic acid",
+              "fungsi": "Meratakan warna kulit dan menarik air."
+            }
+          ],
+          "manfaat": [
+            "SPF45 PA++++",
+            "Gel ringan",
+            "Ada ukuran besar 110 ml"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak",
+            "Kombinasi"
+          ],
+          "catatan": "Listing tidak menuliskan bahan. Daftar di sini dari situs resmi Azarine."
+        },
+        "43918564949": {
+          "nama": "Glad2Glow Lychee Vitamin Water Sunscreen Cream",
+          "label": "Glad2Glow Lychee",
+          "tekstur": "Sunscreen krim",
+          "isi": "30 g (varian listing: 1, 2, atau 3 pcs)",
+          "bahan": [
+            {
+              "nama": "Vitamin C (ascorbic acid)",
+              "fungsi": "Antioksidan."
+            },
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Panthenol dan squalane",
+              "fungsi": "Melembapkan."
+            }
+          ],
+          "manfaat": [
+            "Ada bahan pelembap",
+            "Bisa beli paket 2 atau 3 pcs",
+            "Ada potongan harga di data"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering"
+          ],
+          "catatan": "Bahan dari kolom data listing. Nilai SPF tidak ada di data kami, cek di kemasan."
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "kahf-vs-elvicto-sunscreen",
+      "jenis": "sunscreen",
+      "hook": "Sunscreen lokal vs lokal: Kahf Triple+ atau ELVICTO?",
+      "a": "24386158862",
+      "b": "5276988352",
+      "lebihMurah": "a",
+      "ringkas": "Kahf Triple+ pelembap sekaligus sunscreen 30 ml dengan aloe, panthenol, dan mugwort. ELVICTO Sunscreen Expert hybrid SPF 50+ PA++++, 30 g, dengan 5 ceramide. Pelembap ber-SPF vs sunscreen murni.",
+      "verdict": {
+        "berminyak": "Kahf ringan, tapi ada ethanol di daftarnya yang bisa perih di kulit sensitif. ELVICTO punya kaolin yang membantu tampilan minyak. Untuk aktivitas lama di luar, ELVICTO karena SPF lebih tinggi.",
+        "kering": "ELVICTO punya 5 ceramide dan hyaluronic acid, lebih bersahabat untuk kulit kering. Kahf ada ethanol dan pewangi, kurang cocok untuk kulit kering atau sensitif.",
+        "budget": "Kahf Rp35.600 untuk 30 ml, ELVICTO Rp125.000 untuk 30 g (harga di data, bisa berubah). Kahf murah dan praktis untuk dalam ruangan. ELVICTO untuk perlindungan lebih tinggi."
+      },
+      "produk": {
+        "24386158862": {
+          "nama": "Kahf Triple+ Protection Sunscreen Moisturizer",
+          "label": "Kahf Triple+",
+          "tekstur": "Pelembap sekaligus sunscreen",
+          "isi": "30 ml",
+          "bahan": [
+            {
+              "nama": "Filter UV kimia",
+              "fungsi": "Ethylhexyl methoxycinnamate dan diethylamino hydroxybenzoyl hexyl benzoate."
+            },
+            {
+              "nama": "Aloe vera dan panthenol",
+              "fungsi": "Melembapkan dan menenangkan."
+            },
+            {
+              "nama": "Mugwort (Artemisia capillaris)",
+              "fungsi": "Ekstrak pendamping."
+            }
+          ],
+          "manfaat": [
+            "Satu langkah: pelembap plus SPF",
+            "Harga rendah",
+            "Ringan"
+          ],
+          "kulit": [
+            "Normal",
+            "Berminyak"
+          ],
+          "catatan": "Nama listing menulis SPF35 PA+++, halaman resmi Kahf menulis SPF 30. Cek kemasan. Ada ethanol dan pewangi. Bahan dari situs resmi Kahf."
+        },
+        "5276988352": {
+          "nama": "ELVICTO Sunscreen Expert SPF 50+ PA++++",
+          "label": "ELVICTO",
+          "tekstur": "Sunscreen hybrid",
+          "isi": "30 g",
+          "bahan": [
+            {
+              "nama": "Filter UV",
+              "fungsi": "Hybrid. Yang disebut: ethylhexyl methoxycinnamate dan diethylamino hydroxybenzoyl hexyl benzoate."
+            },
+            {
+              "nama": "5 ceramide",
+              "fungsi": "Membantu menjaga skin barrier."
+            },
+            {
+              "nama": "Licorice, cica, hyaluronic acid",
+              "fungsi": "Menenangkan dan melembapkan."
+            }
+          ],
+          "manfaat": [
+            "SPF 50+ PA++++",
+            "Ada ceramide",
+            "Untuk aktivitas di luar"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Kombinasi"
+          ],
+          "catatan": "Daftar INCI lengkap tidak ditemukan di situs resmi. Bahan dari retailer Beautyhaul."
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "wardah-vs-glad2glow-wash-series",
+      "jenis": "facial-wash",
+      "hook": "Facial wash lokal vs lokal: semua varian Wardah atau Glad2Glow?",
+      "a": "26720368293",
+      "b": "41101567247",
+      "lebihMurah": "a",
+      "ringkas": "Dua link facial wash dengan banyak varian. Wardah: Acnederm, C-Defense, Lightening, Nature Daily. Glad2Glow low pH: Blueberry Ceramide, Centella Salicylic Acid, Tremella Vita B5, Milk Amino Acid. Semua varian diadu sesuai kebutuhan.",
+      "varianIntro": "Dua link ini berisi beberapa facial wash. Pilih varian saat checkout. Daftar varian di halaman Shopee tidak bisa kami buka, jadi varian di bawah diambil dari judul listing (Wardah) dan dari toko lain (Glad2Glow). Pastikan lagi saat checkout.",
+      "adu": [
+        {
+          "kebutuhan": "Kulit berjerawat",
+          "a": "Acnederm",
+          "b": "Centella Salicylic Acid",
+          "pilih": "Dua-duanya punya salicylic acid. Wardah Acnederm menambah zinc dan low pH, tapi ada SLS dan pewangi. Glad2Glow lebih lembut dengan centella. Kulit sensitif yang berjerawat, Glad2Glow."
+        },
+        {
+          "kebutuhan": "Kusam, mau cerah",
+          "a": "Lightening",
+          "b": "Milk Amino Acid",
+          "pilih": "Wardah Lightening dengan licorice dan niacinamide, harga lebih rendah. Glad2Glow Milk Amino juga ada niacinamide, plus amino acid yang lembut."
+        },
+        {
+          "kebutuhan": "Kering, mau tetap lembap",
+          "a": "C-Defense",
+          "b": "Blueberry Ceramide",
+          "pilih": "Glad2Glow Blueberry Ceramide: low pH dengan 5 ceramide. Wardah C-Defense berupa creamy wash dengan vitamin C, lebih ke cerah daripada barrier."
+        },
+        {
+          "kebutuhan": "Sensitif, gampang merah",
+          "a": "Nature Daily",
+          "b": "Tremella Vita B5",
+          "pilih": "Glad2Glow Tremella Vita B5, dengan panthenol. Wardah Nature Daily punya beberapa sub-varian (aloe atau seaweed), cek mana yang ada di link."
+        }
+      ],
+      "verdict": {
+        "berminyak": "Untuk kulit berminyak dan berjerawat, Wardah Acnederm terasa lebih bersih karena ada SLS. Glad2Glow Centella Salicylic Acid lebih lembut. Pilih dari seberapa sensitif kulitmu.",
+        "kering": "Glad2Glow lebih unggul untuk kering dan sensitif: seluruh serinya low pH, ada Blueberry Ceramide dan Tremella Vita B5.",
+        "budget": "Wardah Rp23.500, Glad2Glow Rp34.560 untuk varian yang tampil di data (harga di data, bisa berubah). Dua-duanya murah. Paling hemat, Wardah."
+      },
+      "produk": {
+        "26720368293": {
+          "nama": "Wardah Facial Wash All Series",
+          "label": "Wardah (4 varian)",
+          "tekstur": "Foam atau creamy wash, tergantung varian",
+          "isi": "Tergantung varian",
+          "bahan": [
+            {
+              "nama": "Salicylic acid dan zinc",
+              "fungsi": "Varian Acnederm."
+            },
+            {
+              "nama": "Vitamin C",
+              "fungsi": "Varian C-Defense."
+            },
+            {
+              "nama": "Licorice dan niacinamide",
+              "fungsi": "Varian Lightening."
+            }
+          ],
+          "manfaat": [
+            "Empat kebutuhan dalam satu link",
+            "Harga paling rendah",
+            "Ada varian low pH (Acnederm)"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Berjerawat",
+            "Kusam",
+            "Normal"
+          ],
+          "catatan": "Nama varian dari judul listing. Bahan dari situs resmi Wardah dan INCIDecoder.",
+          "varian": [
+            {
+              "nama": "Acnederm",
+              "bahan": "Salicylic acid, zinc gluconate, allantoin; low pH; ada SLS dan pewangi",
+              "kulit": [
+                "Berjerawat",
+                "Berminyak"
+              ]
+            },
+            {
+              "nama": "C-Defense",
+              "bahan": "Vitamin C, Active Moist Complex",
+              "kulit": [
+                "Kusam",
+                "Normal",
+                "Kering"
+              ],
+              "catatan": "Creamy wash."
+            },
+            {
+              "nama": "Lightening",
+              "bahan": "Licorice, niacinamide",
+              "kulit": [
+                "Kusam",
+                "Normal"
+              ],
+              "catatan": "Gentle wash."
+            },
+            {
+              "nama": "Nature Daily",
+              "bahan": "Aloe vera (Aloe Hydramild) atau seaweed (Seaweed Balancing)",
+              "kulit": [
+                "Normal",
+                "Sensitif"
+              ],
+              "catatan": "Sub-varian di link belum bisa dipastikan."
+            }
+          ]
+        },
+        "41101567247": {
+          "nama": "Glad2Glow Facial Wash All Series Low pH",
+          "label": "Glad2Glow (4 varian)",
+          "tekstur": "Gel cleanser",
+          "isi": "Tergantung varian",
+          "bahan": [
+            {
+              "nama": "Ceramide",
+              "fungsi": "Varian Blueberry Ceramide dan Milk Amino Acid."
+            },
+            {
+              "nama": "Salicylic acid terenkapsulasi",
+              "fungsi": "Varian Centella Salicylic Acid."
+            },
+            {
+              "nama": "Panthenol (B5)",
+              "fungsi": "Varian Tremella Vita B5."
+            }
+          ],
+          "manfaat": [
+            "Seluruh seri low pH",
+            "Ada varian untuk kulit sensitif",
+            "Harga rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Sensitif",
+            "Berjerawat"
+          ],
+          "catatan": "Daftar varian di listing tidak bisa kami buka. Empat varian ini yang konsisten muncul di toko lain. Seri ini juga pernah punya Yuzu Blackhead dan Volcanic Ash + BHA.",
+          "varian": [
+            {
+              "nama": "Blueberry Ceramide",
+              "bahan": "Ekstrak blueberry, 5 ceramide, centella",
+              "kulit": [
+                "Kering",
+                "Normal"
+              ]
+            },
+            {
+              "nama": "Centella Salicylic Acid",
+              "bahan": "Centella, salicylic acid terenkapsulasi",
+              "kulit": [
+                "Berjerawat",
+                "Berminyak"
+              ]
+            },
+            {
+              "nama": "Tremella Vita B5",
+              "bahan": "Tremella, panthenol",
+              "kulit": [
+                "Sensitif",
+                "Kering"
+              ]
+            },
+            {
+              "nama": "Milk Amino Acid",
+              "bahan": "Amino acid, milk protein extract, niacinamide, ceramide",
+              "kulit": [
+                "Kusam",
+                "Normal",
+                "Sensitif"
+              ]
+            }
+          ]
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "emina-vs-nextprime-wash-series",
+      "jenis": "facial-wash",
+      "hook": "Facial wash lokal vs lokal: Emina Gelato atau NEXTPRIME?",
+      "a": "56310901303",
+      "b": "57857445714",
+      "lebihMurah": "b",
+      "ringkas": "Emina Gelato punya dua varian: Strawberry Cheesecake (cerah) dan Matcha Latte (menenangkan). NEXTPRIME punya varian Brightening, Acne Care, dan Deep Clean untuk kontrol minyak. Semua varian diadu.",
+      "varianIntro": "Dua link ini berisi beberapa varian. Pilih varian saat checkout. NEXTPRIME punya enam varian facial wash, judul listing ini menyebut tiga kebutuhan, jadi kami bahas tiga varian itu.",
+      "adu": [
+        {
+          "kebutuhan": "Kusam, mau cerah",
+          "a": "Strawberry Cheesecake (Brightening)",
+          "b": "Brightening",
+          "pilih": "Emina Strawberry Cheesecake: niacinamide, vitamin C, dan licorice. NEXTPRIME Brightening punya niacinamide, BHA, dan kaolin, lebih cocok kalau kulitnya juga berminyak."
+        },
+        {
+          "kebutuhan": "Kulit berjerawat",
+          "a": "Matcha Latte (Soothing)",
+          "b": "Acne Care",
+          "pilih": "Dua-duanya punya salicylic acid. Emina menambah panthenol dan green tea yang menenangkan. Kulit sensitif yang berjerawat, Emina."
+        },
+        {
+          "kebutuhan": "Sangat berminyak",
+          "a": "Matcha Latte (Soothing)",
+          "b": "Deep Clean (kontrol minyak)",
+          "pilih": "NEXTPRIME Deep Clean: charcoal, zinc PCA, dan salicylic acid. Emina tidak punya varian khusus kontrol minyak."
+        }
+      ],
+      "verdict": {
+        "berminyak": "NEXTPRIME lebih lengkap untuk berminyak: Deep Clean untuk minyak, Brightening dengan kaolin. Emina Matcha Latte cukup untuk berminyak ringan.",
+        "kering": "Emina lebih lembut, dan Matcha Latte punya panthenol. NEXTPRIME tidak punya varian untuk kulit kering di judul listing ini.",
+        "budget": "NEXTPRIME Rp35.200 untuk 100 g, Emina Rp39.000 untuk 100 ml (harga di data, bisa berubah). Selisihnya kecil. Pilih dari kebutuhan."
+      },
+      "produk": {
+        "56310901303": {
+          "nama": "Emina Gelato Cleanser Series",
+          "label": "Emina Gelato (2 varian)",
+          "tekstur": "Gel cleanser, bisa jadi masker",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Niacinamide dan vitamin C",
+              "fungsi": "Varian Strawberry Cheesecake."
+            },
+            {
+              "nama": "Salicylic acid dan panthenol",
+              "fungsi": "Varian Matcha Latte."
+            }
+          ],
+          "manfaat": [
+            "Dua pilihan: cerah atau menenangkan",
+            "Bisa dipakai sebagai masker",
+            "Isi 100 ml"
+          ],
+          "kulit": [
+            "Normal",
+            "Kusam",
+            "Berjerawat",
+            "Sensitif"
+          ],
+          "catatan": "Bahan per varian dari Watsons Indonesia.",
+          "varian": [
+            {
+              "nama": "Strawberry Cheesecake (Brightening)",
+              "bahan": "Niacinamide, 3-O-ethyl ascorbic acid (vitamin C), ekstrak strawberry, licorice",
+              "kulit": [
+                "Kusam",
+                "Normal"
+              ]
+            },
+            {
+              "nama": "Matcha Latte (Soothing)",
+              "bahan": "Salicylic acid, panthenol, ekstrak green tea",
+              "kulit": [
+                "Berjerawat",
+                "Berminyak",
+                "Sensitif"
+              ]
+            }
+          ]
+        },
+        "57857445714": {
+          "nama": "NEXTPRIME Facial Wash All Variant",
+          "label": "NEXTPRIME (3 varian)",
+          "tekstur": "Facial wash",
+          "isi": "100 g",
+          "bahan": [
+            {
+              "nama": "Niacinamide dan kaolin",
+              "fungsi": "Varian Brightening."
+            },
+            {
+              "nama": "Salicylic acid",
+              "fungsi": "Varian Acne Care dan Deep Clean."
+            },
+            {
+              "nama": "Charcoal dan zinc PCA",
+              "fungsi": "Varian Deep Clean."
+            }
+          ],
+          "manfaat": [
+            "Ada varian khusus kontrol minyak",
+            "Isi 100 g",
+            "Harga sedikit lebih rendah"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Berjerawat",
+            "Kusam"
+          ],
+          "catatan": "Judul listing menyebut tiga kebutuhan. Bahan dari Watsons dan toko lain. Mereknya punya enam varian, jadi link ini mungkin berisi lebih dari tiga.",
+          "varian": [
+            {
+              "nama": "Brightening",
+              "bahan": "Niacinamide, BHA, kaolin",
+              "kulit": [
+                "Kusam",
+                "Berminyak"
+              ]
+            },
+            {
+              "nama": "Acne Care",
+              "bahan": "Salicylic acid, ekstrak dendrobium",
+              "kulit": [
+                "Berjerawat",
+                "Berminyak"
+              ]
+            },
+            {
+              "nama": "Deep Clean (kontrol minyak)",
+              "bahan": "Activated charcoal, zinc PCA, salicylic acid",
+              "kulit": [
+                "Sangat berminyak",
+                "Pori tersumbat"
+              ]
+            }
+          ]
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "azarine-vs-kahf-bright-wash",
+      "jenis": "facial-wash",
+      "hook": "Facial wash pencerah lokal vs lokal: Azarine atau Kahf?",
+      "a": "7714028393",
+      "b": "5358717104",
+      "lebihMurah": "a",
+      "ringkas": "Azarine Brightening Glow dengan SymRadiance 399, niacinamide, dan aloe, pembersihnya lembut. Kahf Energizing & Brightening 100 ml dengan niacinamide, kaolin, dan menthol, berbasis sabun yang terasa segar.",
+      "verdict": {
+        "berminyak": "Kahf berbasis sabun dengan kaolin dan menthol, terasa bersih dan dingin. Cocok untuk kulit berminyak yang suka sensasi segar. Azarine lebih lembut.",
+        "kering": "Azarine memakai pembersih lembut (sodium cocoyl alaninate) dengan aloe dan vitamin E. Kahf ada menthol dan pewangi yang bisa mengganggu kulit kering atau sensitif. Pilih Azarine.",
+        "budget": "Azarine Rp32.750, Kahf Rp42.500 untuk 100 ml (harga di data, bisa berubah). Isi Azarine tidak tercantum di judul. Paling hemat, Azarine."
+      },
+      "produk": {
+        "7714028393": {
+          "nama": "Azarine Brightening Glow Facial Cleanser with SymRadiance 399",
+          "label": "Azarine Brightening",
+          "tekstur": "Gel cleanser lembut",
+          "isi": "Tidak tercantum di judul listing",
+          "bahan": [
+            {
+              "nama": "SymRadiance 399",
+              "fungsi": "Bahan pencerah di nama produk."
+            },
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Aloe vera dan tocopherol",
+              "fungsi": "Menenangkan, antioksidan."
+            },
+            {
+              "nama": "Sodium cocoyl alaninate",
+              "fungsi": "Pembersih berbasis asam amino yang lembut."
+            }
+          ],
+          "manfaat": [
+            "Pembersih lembut",
+            "Ada bahan pencerah",
+            "Harga rendah"
+          ],
+          "kulit": [
+            "Normal",
+            "Kering",
+            "Kusam",
+            "Sensitif"
+          ],
+          "catatan": "Listing tidak menuliskan bahan. Daftar di sini dari situs resmi Azarine dan CosDNA."
+        },
+        "5358717104": {
+          "nama": "Kahf Skin Energizing and Brightening Face Wash",
+          "label": "Kahf Energizing",
+          "tekstur": "Foam, basis sabun",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Kaolin",
+              "fungsi": "Membantu menyerap minyak."
+            },
+            {
+              "nama": "Menthol dan spearmint",
+              "fungsi": "Memberi rasa dingin dan segar."
+            },
+            {
+              "nama": "Basis sabun",
+              "fungsi": "Myristic acid, stearic acid, potassium hydroxide."
+            }
+          ],
+          "manfaat": [
+            "Terasa segar",
+            "Membantu tampilan minyak",
+            "Isi 100 ml"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Normal"
+          ],
+          "catatan": "Bahan dari situs resmi Kahf. Nama listing menyebut Symradiance, tapi daftar di situs resmi tidak memuatnya; bisa jadi formula baru. Ada pewangi."
+        }
+      },
+      "banding": "lokal-lokal"
+    },
+    {
+      "id": "gloowbe-vs-msglow-hydra-wash",
+      "jenis": "facial-wash",
+      "hook": "Facial wash lembut lokal vs lokal: Gloow&be atau MS Glow Hydra Boost?",
+      "a": "43358097567",
+      "b": "25989145906",
+      "lebihMurah": "a",
+      "ringkas": "Gloow&be Low pH Bright dengan niacinamide, centella, dan green tea, untuk kulit berminyak dan kombinasi. MS Glow Hydra Boost 100 ml dengan Hyalu Complex, ceramide, dan ectoin, untuk kulit kering.",
+      "verdict": {
+        "berminyak": "Gloow&be memang diarahkan ke kulit berminyak dan kombinasi: low pH, ada niacinamide dan centella. Pilih Gloow&be.",
+        "kering": "MS Glow Hydra Boost dibuat untuk kulit kering: Hyalu Complex, ceramide, dan ectoin. Pilih MS Glow.",
+        "budget": "Gloow&be Rp31.300, MS Glow Rp35.000 untuk 100 ml (harga di data, bisa berubah). Selisihnya kecil, jadi pilih dari jenis kulit."
+      },
+      "produk": {
+        "43358097567": {
+          "nama": "Gloow&be Low pH Bright Facial Wash",
+          "label": "Gloow&be",
+          "tekstur": "Gel cleanser low pH",
+          "isi": "Tidak tercantum di judul listing",
+          "bahan": [
+            {
+              "nama": "Niacinamide",
+              "fungsi": "Membantu meratakan warna kulit."
+            },
+            {
+              "nama": "Centella dan green tea",
+              "fungsi": "Menenangkan."
+            },
+            {
+              "nama": "Potassium cocoyl glycinate",
+              "fungsi": "Pembersih berbasis asam amino."
+            }
+          ],
+          "manfaat": [
+            "Low pH",
+            "Ada bahan pencerah",
+            "Harga rendah"
+          ],
+          "kulit": [
+            "Berminyak",
+            "Kombinasi",
+            "Kusam"
+          ],
+          "catatan": "Daftar bahan dari INCIDecoder dan Skincarisma. Ada pewangi (parfum)."
+        },
+        "25989145906": {
+          "nama": "MS Glow Hydra Boost Facial Wash",
+          "label": "MS Glow Hydra Boost",
+          "tekstur": "Facial wash",
+          "isi": "100 ml",
+          "bahan": [
+            {
+              "nama": "Hyalu Complex",
+              "fungsi": "Hyaluronic acid untuk hidrasi."
+            },
+            {
+              "nama": "Ceramide",
+              "fungsi": "Membantu menjaga skin barrier."
+            },
+            {
+              "nama": "Ectoin",
+              "fungsi": "Bahan yang sering dipakai untuk kulit sensitif."
+            }
+          ],
+          "manfaat": [
+            "Untuk kulit kering",
+            "Ada ceramide",
+            "Isi 100 ml"
+          ],
+          "kulit": [
+            "Kering",
+            "Sensitif",
+            "Normal"
+          ],
+          "catatan": "Bahan dari Watsons Indonesia. Daftar INCI lengkap tidak ditemukan."
+        }
+      },
+      "banding": "lokal-lokal"
     }
   ]
 }
