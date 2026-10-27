@@ -50,10 +50,10 @@ CATATAN_STATIS = "Situs statis tanpa login dan tanpa pembayaran."
 # formulir Kasih Pendapat. Kalau memakai mailto:, sesuaikan juga pemeriksaan di periksa().
 KONTAK_LAIN = []
 
-# Sumber kandungan yang tidak ditampilkan sebagai tautan walau ada di data.
-# inkeedecoder.com mirip nama INCIDecoder (incidecoder.com) tapi bukan situs yang sama;
-# cek dulu sebelum dipakai. Data di sumber/ tidak diubah.
-SUMBER_DILEWATI = ("inkeedecoder.com",)
+# Sumber kandungan yang tidak ditampilkan sebagai tautan walau ada di data (domain, tanpa www).
+# Kosong: semua URL dari data tampil. Catatan: inkeedecoder.com adalah nama baru resmi
+# INCIDecoder (incidecoder.com dialihkan ke sana, lihat https://inkeedecoder.com/new-name).
+SUMBER_DILEWATI = ()
 FAVICON = (
     "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>"
     "<rect width='64' height='64' rx='14' fill='%230c6b52'/>"
@@ -945,7 +945,7 @@ def render_tentang(data, pasangan):
     <h2 class="bagian">Cara perbandingan dibuat</h2>
     <ul class="daftar-tentang">
       <li><strong>Harga</strong> diambil dari listing Shopee per {esc(data["tanggal"])}. Harga dan diskon bisa berubah sewaktu-waktu, jadi cek lagi harga terakhir di Shopee.</li>
-      <li><strong>Kandungan</strong> diambil dari informasi produk di Shopee, website resmi merek, dan database bahan seperti INCIDecoder dan Skinsort. Kalau sumbernya tercatat, tautannya ada di bagian <em>Sumber kandungan</em> di halaman perbandingan.</li>
+      <li><strong>Kandungan</strong> diambil dari informasi produk di Shopee, website resmi merek, dan database bahan seperti INKEEDecoder (dulu INCIDecoder) dan Skinsort. Kalau sumbernya tercatat, tautannya ada di bagian <em>Sumber kandungan</em> di halaman perbandingan.</li>
       <li>Kalau daftar bahan tidak tercantum, kami tulis apa adanya dan tidak mengarang.</li>
       <li><strong>Tidak ada klaim medis.</strong> Isi situs ini informasi umum, bukan pengganti saran dokter. Kalau kulitmu bermasalah atau sensitif, konsultasikan ke dokter kulit.</li>
     </ul>

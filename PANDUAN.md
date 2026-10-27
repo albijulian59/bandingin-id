@@ -160,5 +160,5 @@ Teksnya ada di bagian atas `tools/build_site.py` (`CATATAN_AFFILIATE`, `CATATAN_
 - Catatan affiliate Shopee tampil di footer semua halaman, di dekat tombol beli (beranda dan tiap perbandingan), dan di Tentang Kami (`tentang.html#affiliate`).
 - Di dekat tombol beli ada catatan bahwa pengunjung diarahkan ke Shopee resmi dan PilihYuk tidak meminta data pribadi atau pembayaran.
 - Tombol beli memakai `target="_blank"` dan `rel="sponsored noopener noreferrer"`. Generator gagal kalau ada link Shopee tanpa itu.
-- **Sumber kandungan**: URL di kolom `sumber` pada `sumber/kandungan-batch2.json` tampil sebagai tautan di kartu produk. Hanya URL dari data. Domain di `SUMBER_DILEWATI` tidak ditampilkan (saat ini `inkeedecoder.com`, yang mirip INCIDecoder tapi bukan situs yang sama).
+- **Sumber kandungan**: URL di kolom `sumber` pada `sumber/kandungan-batch2.json` tampil sebagai tautan di kartu produk. Hanya URL dari data. Domain yang dimasukkan ke `SUMBER_DILEWATI` di `tools/build_site.py` tidak ditampilkan; saat ini kosong. `inkeedecoder.com` adalah nama baru resmi INCIDecoder (`incidecoder.com` dialihkan ke sana), jadi tautannya asli.
 - **Kontak**: belum ditentukan. Tentang Kami mengarahkan ke formulir Kasih Pendapat. Kalau email atau akun media sosial sudah dipilih, isi `KONTAK_LAIN` di `tools/build_site.py` lalu bangun ulang. Jangan isi alamat karangan.
