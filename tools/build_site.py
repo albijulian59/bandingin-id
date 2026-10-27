@@ -8,7 +8,7 @@
 
 Sumber: sumber/*.psv, sumber/tambahan-*.psv, sumber/merek-korea.txt,
 sumber/posted.log, tools/pasangan.json
-Hasil: index.html, banding/*.html, img/*.jpg
+Hasil: index.html, banding/*.html, ulasan.html, tentang.html, img/*.jpg
 """
 import argparse, glob, json, os, re, sys, urllib.request
 from html import escape
@@ -35,6 +35,25 @@ BANDING_JENIS = [
 BANDING_LABEL = dict(BANDING_JENIS)
 DRAFT = False
 MEREK = "PilihYuk"
+
+# Teks kepercayaan: dipakai di footer, dekat tombol beli, dan di Tentang Kami.
+CATATAN_AFFILIATE = (
+    "Link di situs ini adalah link affiliate Shopee. Kamu tetap membeli di Shopee resmi "
+    "dengan harga yang sama, dan PilihYuk mendapat komisi kecil."
+)
+CATATAN_AMAN = "Kamu akan diarahkan ke Shopee resmi. PilihYuk tidak meminta data pribadi atau pembayaran."
+CATATAN_STATIS = "Situs statis tanpa login dan tanpa pembayaran."
+
+# KONTAK (PLACEHOLDER): email atau akun media sosial resmi PilihYuk belum ditentukan.
+# Isi daftar ini nanti dengan pasangan (label, URL), misalnya ("Email", "mailto:...").
+# Jangan isi dengan alamat karangan. Selama kosong, Tentang Kami hanya mengarahkan ke
+# formulir Kasih Pendapat. Kalau memakai mailto:, sesuaikan juga pemeriksaan di periksa().
+KONTAK_LAIN = []
+
+# Sumber kandungan yang tidak ditampilkan sebagai tautan walau ada di data.
+# inkeedecoder.com mirip nama INCIDecoder (incidecoder.com) tapi bukan situs yang sama;
+# cek dulu sebelum dipakai. Data di sumber/ tidak diubah.
+SUMBER_DILEWATI = ("inkeedecoder.com",)
 FAVICON = (
     "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>"
     "<rect width='64' height='64' rx='14' fill='%230c6b52'/>"
@@ -243,6 +262,38 @@ def muat_tambahan(produk):
             }
 
 
+def muat_sumber_kandungan():
+    """sumber/kandungan-batch2.json: {item id: {"sumber": [URL, ...], ...}}.
+
+    Hanya URL http(s) dari data yang dipakai. Tidak ada URL tambahan.
+    """
+    path = os.path.join(SUMBER, "kandungan-batch2.json")
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    hasil = {}
+    for iid, isi in data.items():
+        urls = []
+        for u in (isi.get("sumber") or []) if isinstance(isi, dict) else []:
+            u = str(u).strip()
+            if not re.match(r"^https?://[^\s\"<>]+$", u):
+                continue
+            if domain(u) in SUMBER_DILEWATI:
+                continue
+            if u not in urls:
+                urls.append(u)
+        if urls:
+            hasil[iid] = urls
+    return hasil
+
+
+def domain(url):
+    m = re.match(r"^https?://([^/:?#]+)", url)
+    d = m.group(1).lower() if m else url
+    return d[4:] if d.startswith("www.") else d
+
+
 def muat_posted():
     pasangan = []
     with open(os.path.join(SUMBER, "posted.log"), encoding="utf-8") as f:
@@ -347,6 +398,9 @@ def header(base, aktif=None):
     kelas_p = " class=\"aktif\"" if aktif == "pendapat" else ""
     aria_p = " aria-current=\"page\"" if aktif == "pendapat" else ""
     tautan.append(f'<a href="{base}ulasan.html"{kelas_p}{aria_p}>Kasih Pendapat</a>')
+    kelas_t = " class=\"aktif\"" if aktif == "tentang" else ""
+    aria_t = " aria-current=\"page\"" if aktif == "tentang" else ""
+    tautan.append(f'<a href="{base}tentang.html"{kelas_t}{aria_t}>Tentang Kami</a>')
     return f"""<a class="skip" href="{base}index.html#daftar">Langsung ke perbandingan</a>
 <header class="site-header">
   <div class="wrap nav">
@@ -362,9 +416,10 @@ def header(base, aktif=None):
 def footer(base, tanggal):
     return f"""<footer class="site-footer">
   <div class="wrap">
-    <p class="footnote" id="disclosure">Ulasan disusun dari analisa kandungan dan informasi produk. {MEREK} mendapat komisi dari link affiliate.</p>
-    <p class="footer-nav"><a href="{base}ulasan.html">Kasih Pendapat</a></p>
-    <p class="copy">© 2026 {MEREK} · Harga mengikuti listing Shopee per {esc(tanggal)} dan bisa berubah.</p>
+    <p class="footnote" id="disclosure">{esc(CATATAN_AFFILIATE)}</p>
+    <p class="footnote">Ulasan disusun dari analisa kandungan dan informasi produk, bukan saran medis. {esc(CATATAN_STATIS)}</p>
+    <p class="footer-nav"><a href="{base}tentang.html">Tentang Kami</a> · <a href="{base}ulasan.html">Kasih Pendapat</a></p>
+    <p class="copy">© 2026 {MEREK} · Dikelola secara independen oleh Albi · Harga mengikuti listing Shopee per {esc(tanggal)} dan bisa berubah.</p>
   </div>
 </footer>
 """
@@ -381,6 +436,29 @@ def beli(p, nama, kelas="btn"):
         f'<a class="{kelas}" href="{esc(p["aff"])}" target="_blank" rel="sponsored noopener noreferrer"'
         f' aria-label="Beli {esc(nama)} di Shopee">Beli di Shopee</a>'
     )
+
+
+def catatan_beli(base, kelas=""):
+    """Catatan singkat di dekat tombol beli: affiliate + diarahkan ke Shopee resmi."""
+    return (
+        f'<div class="catatan-beli{(" " + kelas) if kelas else ""}" role="note">'
+        f'<p>{esc(CATATAN_AMAN)}</p>'
+        f'<p>{esc(CATATAN_AFFILIATE)} <a href="{base}tentang.html#affiliate">Selengkapnya</a></p>'
+        f'</div>'
+    )
+
+
+def sumber_html(urls):
+    if not urls:
+        return ""
+    item = "".join(
+        f'<li><a href="{esc(u)}" target="_blank" rel="noopener noreferrer nofollow">{esc(domain(u))}</a></li>'
+        for u in urls
+    )
+    return f"""<div class="sumber-kandungan">
+        <h3>Sumber kandungan</h3>
+        <ul>{item}</ul>
+      </div>"""
 
 
 def foto_tautan(p, copy, asal, eager, href, base, pos):
@@ -473,6 +551,7 @@ def render_index(data, produk, pasangan):
     <div class="filter" role="group" aria-label="Filter jenis">{''.join(chips)}</div>
     <div class="filter filter-banding" role="group" aria-label="Filter perbandingan"><span class="filter-label">Perbandingan:</span>{''.join(chips_b)}</div>
     <p class="hasil" id="hasil" aria-live="polite">{len(pasangan)} perbandingan</p>
+    {catatan_beli("", "catatan-beli-index")}
     <div class="list" id="list">
       {''.join(kartu)}
     </div>
@@ -623,7 +702,8 @@ def bagian_varian(pair):
     return html + "\n</section>"
 
 
-def render_pair(data, produk, pair):
+def render_pair(data, produk, pair, sumber=None):
+    sumber = sumber or {}
     (ka, ia, asal_a), (kb, ib, asal_b) = sisi_pair(pair)
     lok = produk[ia]
     kor = produk[ib]
@@ -666,6 +746,7 @@ def render_pair(data, produk, pair):
       <h3>Cocok untuk kulit</h3>
       <ul class="kulit">{kulit_html(copy)}</ul>
       <p class="catatan">{esc(copy["catatan"])}</p>
+      {sumber_html(sumber.get(p["id"]))}
       <p class="harga">{harga_html(p)}</p>
       {beli(p, copy["nama"])}
     </article>"""
@@ -708,13 +789,15 @@ def render_pair(data, produk, pair):
     {meta_l}
     {meta_k}
   </div>
+  {catatan_beli(base)}
   <h2 class="bagian">Perbandingan singkat</h2>
   {tabel}
   <h2 class="bagian">Kandungan dan manfaat</h2>
   <div class="detail-grid">
     {blok_detail(lok, cl, asal_a, ka)}
     {blok_detail(kor, ck, asal_b, kb)}
-  </div>{bagian_varian(pair)}
+  </div>
+  {catatan_beli(base)}{bagian_varian(pair)}
   <section class="verdict">
     <h2>Jadi, mending yang mana?</h2>
     <div class="v-grid">
@@ -823,7 +906,76 @@ def render_ulasan(data, pasangan):
     return html
 
 
-def periksa(html_per_path, produk, pasangan, posted, merek):
+def render_tentang(data, pasangan):
+    n_lk = sum(1 for p in pasangan if jenis_banding(p) == "lokal-korea")
+    n_ll = sum(1 for p in pasangan if jenis_banding(p) == "lokal-lokal")
+    if KONTAK_LAIN:
+        kontak_lain = "<p>Kontak lain: " + " · ".join(
+            f'<a href="{esc(u)}" target="_blank" rel="noopener noreferrer">{esc(l)}</a>' for l, u in KONTAK_LAIN
+        ) + "</p>"
+    else:
+        kontak_lain = (
+            "<!-- PLACEHOLDER KONTAK: email atau akun media sosial PilihYuk belum ditentukan.\n"
+            "       Isi KONTAK_LAIN di tools/build_site.py, lalu bangun ulang. Jangan isi alamat karangan. -->"
+        )
+    desk = (
+        "Tentang PilihYuk: siapa yang mengelola, kenapa situs ini dibuat, cara perbandingan disusun, "
+        "dan penjelasan link affiliate Shopee."
+    )
+    html = head("Tentang Kami — " + MEREK, desk, "", "tentang.html")
+    html += f"""<body>
+{header("", "tentang")}
+<main class="wrap artikel tentang">
+  <p class="crumbs"><a href="index.html">Beranda</a> / Tentang Kami</p>
+  <h1>Tentang PilihYuk</h1>
+
+  <section id="pengelola">
+    <h2 class="bagian">Siapa yang mengelola</h2>
+    <p>PilihYuk dikelola secara independen oleh Albi, pencinta skincare lokal dan Korea. Ini proyek pribadi, bukan toko dan bukan bagian dari merek mana pun.</p>
+  </section>
+
+  <section id="kenapa">
+    <h2 class="bagian">Kenapa situs ini ada</h2>
+    <p>Pilihan skincare banyak sekali dan sering bikin bingung. PilihYuk dibuat untuk membantu kamu memilih skincare lokal vs Korea, dan lokal vs lokal, secara jujur: produk dari jenis yang sama dibandingkan berdampingan supaya kamu bisa memutuskan sendiri.</p>
+    <p>Saat ini ada {len(pasangan)} perbandingan: {n_lk} Lokal vs Korea dan {n_ll} Lokal vs Lokal.</p>
+  </section>
+
+  <section id="cara">
+    <h2 class="bagian">Cara perbandingan dibuat</h2>
+    <ul class="daftar-tentang">
+      <li><strong>Harga</strong> diambil dari listing Shopee per {esc(data["tanggal"])}. Harga dan diskon bisa berubah sewaktu-waktu, jadi cek lagi harga terakhir di Shopee.</li>
+      <li><strong>Kandungan</strong> diambil dari informasi produk di Shopee, website resmi merek, dan database bahan seperti INCIDecoder dan Skinsort. Kalau sumbernya tercatat, tautannya ada di bagian <em>Sumber kandungan</em> di halaman perbandingan.</li>
+      <li>Kalau daftar bahan tidak tercantum, kami tulis apa adanya dan tidak mengarang.</li>
+      <li><strong>Tidak ada klaim medis.</strong> Isi situs ini informasi umum, bukan pengganti saran dokter. Kalau kulitmu bermasalah atau sensitif, konsultasikan ke dokter kulit.</li>
+    </ul>
+  </section>
+
+  <section id="affiliate">
+    <h2 class="bagian">Soal link affiliate</h2>
+    <p>{esc(CATATAN_AFFILIATE)}</p>
+    <p>{esc(CATATAN_AMAN)} Tombol <em>Beli di Shopee</em> membuka halaman produk di Shopee. Semua pembelian dan pembayaran terjadi di Shopee, bukan di PilihYuk.</p>
+    <p>Komisi tidak menentukan isi perbandingan. Produk yang lebih murah atau lebih cocok tetap ditulis apa adanya.</p>
+  </section>
+
+  <section id="aman">
+    <h2 class="bagian">Tanpa login, tanpa pembayaran</h2>
+    <p>{esc(CATATAN_STATIS)} Kamu tidak perlu membuat akun atau memasukkan data apa pun untuk membaca perbandingan.</p>
+  </section>
+
+  <section id="kontak">
+    <h2 class="bagian">Kontak</h2>
+    <p>Punya pertanyaan, koreksi, atau ide perbandingan berikutnya? Kirim lewat formulir <a href="ulasan.html">Kasih Pendapat</a>. Pesanmu langsung masuk ke catatan Albi. Kolom nama atau kontak di formulir boleh dikosongkan.</p>
+    {kontak_lain}
+  </section>
+</main>
+{footer("", data["tanggal"])}
+</body>
+</html>
+"""
+    return html
+
+
+def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
     if len(posted) < 1:
         raise SystemExit("posted.log kosong")
     for i, (a, b, xurl) in enumerate(posted):
@@ -833,6 +985,7 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
         if pair.get("x") != xurl:
             raise SystemExit(f"Link X tidak cocok untuk {pair['id']}")
 
+    sumber_sah = {u for urls in (sumber or {}).values() for u in urls}
     terpakai = []
     for pair in pasangan:
         if pair["jenis"] not in JENIS_LABEL:
@@ -924,6 +1077,8 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
                 continue
             if href.startswith("https://x.com/") or href.startswith("https://lynk.id/"):
                 continue
+            if href in sumber_sah:
+                continue
             if href.startswith("#") or href.startswith("data:"):
                 continue
             if href.startswith("mailto:"):
@@ -943,7 +1098,7 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
             if not os.path.isfile(tujuan):
                 raise SystemExit(f"Gambar putus di {path}: {src}")
         # tombol beli hanya link pendek. Halaman pendapat tidak menjual produk.
-        if path not in ("index.html", "ulasan.html") and "Beli di Shopee" not in html:
+        if path not in ("index.html", "ulasan.html", "tentang.html") and "Beli di Shopee" not in html:
             if not (DRAFT and "Link menyusul" in html):
                 raise SystemExit("Tidak ada tombol beli di " + path)
         if "Link menyusul" in html and not DRAFT:
@@ -955,7 +1110,7 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
     for path, html in html_per_path.items():
         if path != "index.html" and "lynk.id" in html:
             raise SystemExit("Panduan tidak boleh muncul di " + path)
-        if path not in ("ulasan.html", "banding/index.html") and "s.shopee.co.id" not in html:
+        if path not in ("ulasan.html", "tentang.html", "banding/index.html") and "s.shopee.co.id" not in html:
             if not (DRAFT and "Link menyusul" in html):
                 raise SystemExit("Tidak ada link Shopee di " + path)
 
@@ -969,6 +1124,27 @@ def periksa(html_per_path, produk, pasangan, posted, merek):
             raise SystemExit("Dropdown pendapat tidak memuat " + pair["id"])
         if f'ulasan.html?baca={pair["id"]}' not in html_per_path[f"banding/{pair['id']}.html"]:
             raise SystemExit("Ajakan pendapat hilang di " + pair["id"])
+
+    # kepercayaan: catatan affiliate di footer semua halaman, catatan dekat tombol beli,
+    # dan Tentang Kami tertaut dari header dan footer
+    for path, html in html_per_path.items():
+        if CATATAN_AFFILIATE not in html:
+            raise SystemExit("Catatan affiliate hilang di " + path)
+        if "tentang.html" not in html:
+            raise SystemExit("Tautan Tentang Kami hilang di " + path)
+        if path.startswith("banding/") and CATATAN_AMAN not in html:
+            raise SystemExit("Catatan Shopee resmi hilang di " + path)
+        for m in re.finditer(r'<a [^>]*href="https://s\.shopee\.co\.id/[^"]*"[^>]*>', html):
+            tag = m.group(0)
+            if 'rel="sponsored noopener' not in tag or 'target="_blank"' not in tag:
+                raise SystemExit(f"Tombol beli tanpa rel sponsored/noopener di {path}")
+    for iid, urls in (sumber or {}).items():
+        for pair in pasangan:
+            if iid in id_pair(pair) and not all(u in html_per_path[f"banding/{pair['id']}.html"] for u in urls):
+                raise SystemExit(f"Sumber kandungan {iid} tidak tampil di {pair['id']}")
+    tentang = html_per_path["tentang.html"]
+    if "ulasan.html" not in tentang or 'id="affiliate"' not in tentang:
+        raise SystemExit("Tentang Kami belum lengkap")
 
     # setiap tombol beli di situs memakai link yang ada di data
     aff_sah = {p["aff"] for p in produk.values() if p["aff"]}
@@ -1042,6 +1218,7 @@ def main():
     produk = muat_produk()
     merek = muat_merek()
     posted = muat_posted()
+    sumber = muat_sumber_kandungan()
     pasangan = data["pasangan"]
     for pair in pasangan:
         for iid in id_pair(pair):
@@ -1058,9 +1235,10 @@ def main():
     berkas = {
         "index.html": render_index(data, produk, pasangan),
         "ulasan.html": render_ulasan(data, pasangan),
+        "tentang.html": render_tentang(data, pasangan),
     }
     for pair in pasangan:
-        berkas[f"banding/{pair['id']}.html"] = render_pair(data, produk, pair)
+        berkas[f"banding/{pair['id']}.html"] = render_pair(data, produk, pair, sumber)
     for path, html in berkas.items():
         tujuan = os.path.join(ROOT, path)
         os.makedirs(os.path.dirname(tujuan), exist_ok=True)
@@ -1068,7 +1246,7 @@ def main():
             f.write(html)
     tulis_redirect()
     # redirect tidak ikut pemeriksaan kata (hampir kosong) tapi tautannya diperiksa lewat berkas
-    periksa(berkas, produk, pasangan, posted, merek)
+    periksa(berkas, produk, pasangan, posted, merek, sumber)
     # gambar yang tidak terpakai
     terpakai = {iid + ".jpg" for pair in pasangan for iid in id_pair(pair)}
     if os.path.isdir(IMG):

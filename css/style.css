@@ -309,3 +309,21 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
   .btn { font-size: .8rem; padding: 8px 6px; }
   .nav-links a { padding: 8px 7px; font-size: .84rem; }
 }
+
+/* Kepercayaan: catatan dekat tombol beli, sumber kandungan, Tentang Kami */
+.catatan-beli {
+  margin: 14px 0 6px; padding: 10px 14px; background: #fffaf2; border: 1px solid var(--line);
+  border-left: 4px solid var(--lokal); border-radius: 12px; font-size: .86rem; color: #3f3832;
+}
+.catatan-beli p { margin: 0; }
+.catatan-beli p + p { margin-top: 4px; color: var(--muted); }
+.catatan-beli a { font-weight: 700; }
+.catatan-beli-index { margin: 0 0 14px; }
+.sumber-kandungan { margin: 10px 0 12px; }
+.sumber-kandungan h3 { margin: 0 0 4px; }
+.sumber-kandungan ul { margin: 0; padding-left: 18px; font-size: .86rem; }
+.sumber-kandungan li { margin: 2px 0; overflow-wrap: anywhere; }
+.tentang section { max-width: 44rem; }
+.tentang p { margin: 0 0 12px; }
+.daftar-tentang { margin: 0 0 12px; padding-left: 20px; }
+.daftar-tentang li { margin: 0 0 8px; }
