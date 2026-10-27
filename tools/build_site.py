@@ -35,6 +35,11 @@ BANDING_JENIS = [
 BANDING_LABEL = dict(BANDING_JENIS)
 DRAFT = False
 MEREK = "PilihYuk"
+# Alamat situs yang hidup (custom domain, file CNAME). Satu tempat untuk URL absolut:
+# canonical, og:url, sitemap.xml, robots.txt. Tautan antar halaman tetap relatif.
+BASE_URL = "https://pilihyuk.id/"
+# Verifikasi Google Search Console (properti https://pilihyuk.id/).
+GOOGLE_SITE_VERIFICATION = "ygg-CttU-Raot4lAzh9pI1CV8HeUt5f1_sjWReFvTng"
 
 # Teks kepercayaan: dipakai di footer, dekat tombol beli, dan di Tentang Kami.
 CATATAN_AFFILIATE = (
@@ -366,8 +371,17 @@ def foto(iid, nama, eager=False):
     )
 
 
+def url_absolut(path):
+    path = (path or "").lstrip("/")
+    if path in ("", "index.html"):
+        path = ""
+    return BASE_URL + path
+
+
 def head(title, description, base, canonical_path):
-    # canonical_path unused; relative assets only, supaya GitHub Pages di subfolder tetap jalan.
+    # Aset dan tautan tetap relatif. canonical_path: path halaman dari root situs
+    # ("" atau "index.html" = beranda), dipakai untuk canonical dan og:url.
+    url = url_absolut(canonical_path)
     return f"""<!doctype html>
 <html lang="id">
 <head>
@@ -380,6 +394,9 @@ def head(title, description, base, canonical_path):
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="{esc(url)}">
+  <link rel="canonical" href="{esc(url)}">
+  <meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}" />
   <link rel="stylesheet" href="{base}css/style.css">
   <link rel="icon" href="{base}favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="{base}img/favicon-32.png">
@@ -773,7 +790,7 @@ def render_pair(data, produk, pair, sumber=None):
     v = pair["verdict"]
     foto_l, meta_l = blok_atas(lok, cl, asal_a, 1)
     foto_k, meta_k = blok_atas(kor, ck, asal_b, 2)
-    html = head(judul + " — " + MEREK, desk, base, "")
+    html = head(judul + " — " + MEREK, desk, base, f"banding/{pair['id']}.html")
     html += f"""<body>
 {header(base, pair["jenis"])}
 <main class="wrap artikel">
@@ -1078,6 +1095,11 @@ def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
                 continue
             if href.startswith("https://x.com/") or href.startswith("https://lynk.id/"):
                 continue
+            if href.startswith(BASE_URL):
+                bersih = href[len(BASE_URL):] or "index.html"
+                if not os.path.isfile(os.path.join(ROOT, bersih)):
+                    raise SystemExit(f"URL absolut putus di {path}: {href}")
+                continue
             if href in sumber_sah:
                 continue
             if href.startswith("#") or href.startswith("data:"):
@@ -1179,6 +1201,27 @@ def laporan(produk, pasangan):
         print(f"    {alasan}")
 
 
+def tulis_sitemap(paths):
+    """sitemap.xml dan robots.txt di root. paths: halaman publik (relatif ke root)."""
+    import datetime
+    hari = datetime.date.today().isoformat()
+    urut = sorted(paths, key=lambda p: (p != "index.html", p.startswith("banding/"), p))
+    baris = [
+        f"  <url><loc>{esc(url_absolut(p))}</loc><lastmod>{hari}</lastmod></url>"
+        for p in urut
+    ]
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(baris) + "\n</urlset>\n"
+    )
+    with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write(xml)
+    with open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8") as f:
+        f.write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}sitemap.xml\n")
+    return len(baris)
+
+
 def tulis_redirect():
     html = """<!doctype html>
 <html lang="id">
@@ -1248,6 +1291,13 @@ def main():
     tulis_redirect()
     # redirect tidak ikut pemeriksaan kata (hampir kosong) tapi tautannya diperiksa lewat berkas
     periksa(berkas, produk, pasangan, posted, merek, sumber)
+    for path, html in berkas.items():
+        if f'content="{GOOGLE_SITE_VERIFICATION}"' not in html:
+            raise SystemExit("Meta verifikasi Google hilang di " + path)
+    n_sitemap = tulis_sitemap(berkas.keys())
+    # CNAME (custom domain pilihyuk.id) tidak pernah ditulis atau dihapus generator.
+    if not os.path.isfile(os.path.join(ROOT, "CNAME")):
+        print("PERINGATAN: file CNAME tidak ada. Jangan hapus CNAME, domain pilihyuk.id memakainya.")
     # gambar yang tidak terpakai
     terpakai = {iid + ".jpg" for pair in pasangan for iid in id_pair(pair)}
     if os.path.isdir(IMG):
@@ -1255,6 +1305,7 @@ def main():
             if nama not in terpakai and nama not in ASET_MEREK:
                 os.remove(os.path.join(IMG, nama))
     laporan(produk, pasangan)
+    print(f"sitemap.xml: {n_sitemap} URL")
     print(f"\nSelesai: {len(pasangan)} perbandingan" + (" (DRAFT: jangan dipublikasikan sebelum link lengkap)" if DRAFT else ""))
 
 

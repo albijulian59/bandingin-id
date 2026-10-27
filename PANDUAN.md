@@ -151,7 +151,7 @@ function doPost(e) {
 
 ## Online
 
-Nama yang tampil ke pengunjung adalah PilihYuk. Repository GitHub tetap `bandingin-id`, branch `main`, folder root. Alamat yang hidup sekarang `https://albijulian59.github.io/bandingin-id/`.
+Nama yang tampil ke pengunjung adalah PilihYuk. Repository GitHub tetap `bandingin-id`, branch `main`, folder root. Alamat yang hidup sekarang `https://pilihyuk.id/` (file `CNAME`, jangan dihapus). URL absolut (canonical, og:url, sitemap) diambil dari `BASE_URL` di `tools/build_site.py`. Generator juga menulis `sitemap.xml` dan `robots.txt`, dan meta verifikasi Google Search Console (`GOOGLE_SITE_VERIFICATION`) di setiap halaman.
 
 Tautan panduan (`https://lynk.id/albijulian`) hanya ada sekali, di beranda.
 
