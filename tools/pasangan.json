@@ -69,7 +69,8 @@
             "Kering",
             "Sensitif"
           ],
-          "catatan": "Di kulit berminyak atau yang gampang berjerawat, krim ini bisa terasa terlalu berat di area T. Teksturnya ada butiran kapsul halus yang pecah saat diratakan. Mereknya menyebut formula ini ringan iritasi."
+          "catatan": "Di kulit berminyak atau yang gampang berjerawat, krim ini bisa terasa terlalu berat di area T. Teksturnya ada butiran kapsul halus yang pecah saat diratakan. Mereknya menyebut formula ini ringan iritasi.",
+          "catatan_pemakai": "Catatan: sebagian pemakai kulit berjerawat merasa muncul bruntusan setelah memakai krim ini."
         }
       }
     },
@@ -511,7 +512,8 @@
             "Semua jenis kulit",
             "Sensitif"
           ],
-          "catatan": "Ada aroma citrus dari minyak kulit jeruk. Kulit yang reaktif terhadap pewangi sebaiknya coba sedikit dulu. Ukuran tidak tertulis di judul listing."
+          "catatan": "Ada aroma citrus dari minyak kulit jeruk. Kulit yang reaktif terhadap pewangi sebaiknya coba sedikit dulu. Ukuran tidak tertulis di judul listing.",
+          "catatan_pemakai": "Catatan: sebagian pemakai kulit sensitif merasa tidak cocok, dan ada pemakai kulit kombinasi-kering yang merasa kulitnya makin kering."
         }
       }
     },
@@ -523,46 +525,43 @@
       "lokal": "28169257360",
       "korea": "8657140008",
       "lebihMurah": "lokal",
-      "ringkas": "Emina gel niacinamide yang hemat, variannya beda-beda. COSRX lotion bebas minyak dengan birch sap, isi lebih besar, untuk kulit berminyak yang tidak suka rasa berat.",
+      "ringkas": "Emina Water Calming Gel: gel niacinamide dengan centella, panthenol, dan salicylic acid, untuk kulit berminyak yang berjerawat atau kemerahan, harganya rendah. COSRX lotion bebas minyak dengan birch sap, isi lebih besar, untuk kulit berminyak yang tidak suka rasa berat.",
       "verdict": {
-        "berminyak": "COSRX lebih terarah kalau kamu mau satu lotion bebas minyak yang ringan. Bahan utamanya birch sap sekitar 70%. Emina juga ringan. Untuk jerawat, pilih varian Calming (centella, panthenol, salicylic acid), jangan asal varian.",
-        "kering": "Emina varian Barrier Balancing lebih relevan: ada ceramide, beta-glucan, dan hyaluronic acid untuk kulit kering atau skin barrier yang lemah. COSRX umumnya kurang untuk kulit kering dan biasanya perlu krim tambahan di atasnya. Kulit yang sangat kering tetap mungkin butuh yang lebih kaya daripada gel Emina.",
-        "budget": "Emina jauh lebih hemat, isi 30 g, dan semua variannya berbasis niacinamide. COSRX isi 100 ml, jadi kemasannya lebih awet, tapi harga awalnya lebih tinggi. Mau coba varian dengan uang kecil, Emina. Mau lotion bebas minyak isi besar, COSRX."
+        "berminyak": "Dua-duanya untuk kulit berminyak. Kalau lagi berjerawat atau kemerahan, Emina Calming lebih terarah karena ada salicylic acid dan centella. Mau lotion bebas minyak isi besar tanpa bahan jerawat, COSRX. Bahan utamanya birch sap sekitar 70%.",
+        "kering": "Tidak ada yang khusus kulit kering di pasangan ini. COSRX umumnya perlu krim tambahan di atasnya. Emina Calming gel ringan dengan salicylic acid, jadi kulit kering sebaiknya melihat pelembap lain.",
+        "budget": "Emina jauh lebih hemat, isi 30 g. Harga yang tampil adalah harga listing seri, jadi cek harga varian Calming saat checkout. COSRX isi 100 ml, lebih awet, tapi harga awalnya lebih tinggi."
       },
       "produk": {
         "28169257360": {
-          "nama": "Emina Water Gel",
+          "nama": "Emina Water Calming Gel",
+          "varianDipilih": "Calming",
           "tekstur": "Watery gel",
           "isi": "30 g",
           "bahan": [
             {
               "nama": "Niacinamide",
-              "fungsi": "Ada di semua varian. Fungsi varian ditentukan bahan pendampingnya."
+              "fungsi": "Bahan dasar seri Water Gel, juga ada di varian ini."
             },
             {
-              "nama": "Bright Glow",
-              "fungsi": "Acetyl glucosamine, vitamin C, dan licorice, untuk kulit kusam. Varian ini mengandung pewangi."
+              "nama": "Centella dan panthenol",
+              "fungsi": "Umumnya dipakai untuk menenangkan kulit kemerahan."
             },
             {
-              "nama": "Barrier Balancing",
-              "fungsi": "Ceramide, beta-glucan, dan hyaluronic acid, untuk kulit kering atau skin barrier yang lemah."
-            },
-            {
-              "nama": "Calming",
-              "fungsi": "Centella, panthenol, dan salicylic acid, untuk kulit berjerawat dan kemerahan."
+              "nama": "Salicylic acid",
+              "fungsi": "BHA yang sering dipakai untuk kulit berjerawat. Kadarnya tidak ditulis."
             }
           ],
           "manfaat": [
             "Gel ringan, cepat meresap, tidak lengket",
-            "Ada varian untuk kusam, kering, dan berjerawat",
+            "Varian untuk kulit berminyak yang berjerawat atau kemerahan",
             "Harga listing rendah"
           ],
           "kulit": [
             "Berminyak",
-            "Normal",
-            "Berjerawat"
+            "Berjerawat",
+            "Kemerahan"
           ],
-          "catatan": "Ini seri. Kandungan beda tiap varian, jadi pilih yang sesuai. Varian Bright Glow mengandung pewangi. Kulit yang sangat kering mungkin butuh lapisan yang lebih kaya."
+          "catatan": "Link ini juga berisi varian lain. Yang dibandingkan di sini hanya varian Calming, jadi pilih Calming saat checkout. Harga yang tampil adalah harga listing, harga varian ini bisa beda. Kulit yang sangat kering mungkin butuh lapisan yang lebih kaya."
         },
         "8657140008": {
           "nama": "COSRX Oil-Free Lotion",
@@ -854,7 +853,8 @@
             "Semua jenis kulit",
             "Sensitif"
           ],
-          "catatan": "Daftar bahannya mencantumkan alkohol dan pewangi, jadi kurang ideal untuk kulit sensitif atau kering. Hidrasinya ringan. Lebih cocok sebagai lapisan tambahan daripada satu-satunya pelembap."
+          "catatan": "Daftar bahannya mencantumkan alkohol dan pewangi, jadi kurang ideal untuk kulit sensitif atau kering. Hidrasinya ringan. Lebih cocok sebagai lapisan tambahan daripada satu-satunya pelembap.",
+          "catatan_pemakai": "Catatan: sebagian pemakai kulit berminyak merasa kulitnya ketarik dan lebih kering setelah pemakaian, dan ada yang merasa kulitnya merah dan panas."
         }
       }
     },
@@ -865,51 +865,37 @@
       "lokal": "42528194882",
       "korea": "26268363527",
       "lebihMurah": "lokal",
-      "ringkas": "OMG murah dan variannya banyak, harus dipilih yang pas. Torriden satu serum hidrasi, bebas pewangi, isi 50 ml, lebih jelas untuk kulit kering atau sensitif.",
+      "ringkas": "OMG Hydrating serum hidrasi murah dengan hyaluronic acid dan ceramide, isi 17 ml. Torriden satu serum hidrasi, bebas pewangi, isi 50 ml, dengan lima bentuk hyaluronic acid.",
       "verdict": {
-        "berminyak": "Kalau lagi berjerawat, lihat varian Menenangkan (Calming) OMG: salicylic acid dan centella. Torriden bukan serum jerawat. Kulit berminyak yang cuma terasa haus tetap bisa pakai Torriden karena teksturnya sangat ringan. Varian Eksfoliasi dan Renew OMG untuk yang sudah terbiasa bahan aktif, dan sunscreen tetap dipakai.",
-        "kering": "Torriden lebih pas dan lebih jelas. Lima bentuk hyaluronic acid, plus panthenol, allantoin, madecassoside, ceramide, dan beta-glucan yang umumnya dipakai untuk menenangkan. Bebas pewangi. OMG punya varian Melembapkan (Hydrating) dengan hyaluronic acid dan ceramide, tapi konsentrasinya tidak selalu ditulis.",
-        "budget": "OMG jauh lebih murah, isi 17 ml, asal variannya tepat. Torriden isi 50 ml, jadi lebih awet, dengan satu formula hidrasi yang jelas. Mau coba bahan aktif dengan uang kecil, OMG. Mau hidrasi tanpa pewangi dan tidak mau nebak varian, Torriden."
+        "berminyak": "Dua-duanya serum hidrasi, bukan serum jerawat. Kulit berminyak yang terasa haus bisa memakai salah satunya. Torriden teksturnya sangat ringan.",
+        "kering": "Torriden lebih lengkap dan lebih jelas: lima bentuk hyaluronic acid, plus panthenol, allantoin, madecassoside, ceramide, dan beta-glucan yang umumnya dipakai untuk menenangkan. Bebas pewangi. OMG Hydrating juga punya hyaluronic acid dan ceramide, tapi konsentrasinya tidak ditulis.",
+        "budget": "OMG jauh lebih murah, isi 17 ml. Harga yang tampil adalah harga listing seri, jadi cek harga varian Hydrating saat checkout. Torriden isi 50 ml, jadi lebih awet."
       },
       "produk": {
         "42528194882": {
-          "nama": "OMG Active Expert Serum",
-          "tekstur": "Serum, beda tiap varian",
+          "nama": "OMG Active Expert Serum Hydrating",
+          "varianDipilih": "Hydrating",
+          "tekstur": "Serum",
           "isi": "17 ml",
           "bahan": [
             {
-              "nama": "Mencerahkan (Brightening)",
-              "fungsi": "Niacinamide dan tranexamic acid."
+              "nama": "Hyaluronic acid",
+              "fungsi": "Untuk hidrasi."
             },
             {
-              "nama": "Melembapkan (Hydrating)",
-              "fungsi": "Hyaluronic acid dan ceramide."
-            },
-            {
-              "nama": "Menenangkan (Calming)",
-              "fungsi": "Salicylic acid dan centella, untuk kulit berjerawat."
-            },
-            {
-              "nama": "Eksfoliasi (Exfoliating)",
-              "fungsi": "Campuran AHA, BHA, PHA, plus centella."
-            },
-            {
-              "nama": "Retinol (Renew)",
-              "fungsi": "Retinol dan centella."
+              "nama": "Ceramide",
+              "fungsi": "Umumnya dipakai untuk membantu menjaga skin barrier."
             }
           ],
           "manfaat": [
-            "Ada varian untuk masalah yang berbeda",
+            "Varian hidrasi dengan hyaluronic acid dan ceramide",
             "Harga listing rendah",
             "Isi 17 ml"
           ],
           "kulit": [
-            "Berminyak",
-            "Normal",
-            "Kering",
-            "Berjerawat"
+            "Semua jenis kulit"
           ],
-          "catatan": "Harus pilih varian. Konsentrasi bahan aktif tidak selalu tercantum di listing. Varian eksfoliasi dan retinol perlu adaptasi, dan sunscreen tetap dipakai."
+          "catatan": "Link ini juga berisi varian lain. Yang dibandingkan di sini hanya varian Hydrating, jadi pilih Hydrating saat checkout. Konsentrasi bahan tidak tercantum di listing. Harga yang tampil adalah harga listing, harga varian ini bisa beda."
         },
         "26268363527": {
           "nama": "Torriden DIVE-IN Serum",
@@ -1022,52 +1008,33 @@
       "lokal": "28218154859",
       "korea": "29204771380",
       "lebihMurah": "lokal",
-      "ringkas": "Wardah variannya banyak dan harganya lebih rendah. SOME BY MI satu krim yang melembapkan, lebih enak di kulit kering, dan bisa terasa berat di kulit berminyak.",
+      "ringkas": "Dua-duanya sunscreen untuk kulit yang butuh lembap. Wardah UV Shield Aqua Fresh SPF 50 PA++++ bertekstur watery dengan hasil glowing, harganya lebih rendah. SOME BY MI krim yang melembapkan, SPF50+ PA++++, dan bisa terasa berat di kulit berminyak.",
       "verdict": {
-        "berminyak": "Pilih Wardah, varian Airy Smooth yang gelnya matte, atau Acne Calming kalau lagi berjerawat. Keduanya SPF 50 PA++++ menurut Wardah. SOME BY MI teksturnya krim yang melembapkan dan di kulit berminyak bisa terasa lebih berat atau sedikit lengket.",
-        "kering": "SOME BY MI lebih pas: hyaluronic acid, niacinamide, centella, dan panthenol dalam krim yang melembapkan, tanpa bekas putih. Wardah varian Aqua Fresh juga diarahkan ke kulit kering, tapi variannya harus yang itu. Untuk kulit sensitif, Wardah punya varian Physical dengan filter mineral.",
-        "budget": "Wardah jauh lebih murah, asal variannya dicek, karena SPF, hasil akhir, dan harga bisa beda. Tone Up misalnya SPF-nya 35, bukan 50. SOME BY MI SPF50+ PA++++. Listingnya mencakup 25 ml dan 50 ml, jadi cek ukuran yang kena harga itu. Mau sunscreen harian hemat, Wardah. Mau satu krim melembapkan tanpa pilih varian, SOME BY MI."
+        "berminyak": "Tidak ada yang khusus untuk kulit berminyak di pasangan ini. SOME BY MI krimnya bisa terasa lebih berat atau sedikit lengket. Wardah Aqua Fresh lebih ringan, tapi hasilnya glowing, bukan matte.",
+        "kering": "Dua-duanya bisa. Wardah menulis Aqua Fresh untuk kulit kering, dengan tekstur watery. SOME BY MI punya hyaluronic acid, niacinamide, centella, dan panthenol dalam krim yang melembapkan, tanpa bekas putih.",
+        "budget": "Wardah lebih murah, tapi harga yang tampil adalah harga listing seri, jadi cek harga dan ukuran varian Aqua Fresh saat checkout. SOME BY MI SPF50+ PA++++. Listingnya mencakup 25 ml dan 50 ml, jadi cek ukuran yang kena harga itu."
       },
       "produk": {
         "28218154859": {
-          "nama": "Wardah UV Shield",
-          "tekstur": "Beda tiap varian",
-          "isi": "Beda tiap varian",
+          "nama": "Wardah UV Shield Aqua Fresh",
+          "varianDipilih": "Aqua Fresh",
+          "tekstur": "Serum watery, hasil glowing",
+          "isi": "Ukuran tidak tercantum di data ini",
           "bahan": [
             {
-              "nama": "Airy Smooth",
-              "fungsi": "SPF 50 PA++++, gel ringan, hasil matte, untuk kulit berminyak."
-            },
-            {
-              "nama": "Aqua Fresh",
-              "fungsi": "SPF 50 PA++++, tekstur watery dan glowing, untuk kulit kering."
-            },
-            {
-              "nama": "Acne Calming",
-              "fungsi": "SPF 50 PA++++, untuk kulit berjerawat."
-            },
-            {
-              "nama": "Tone Up",
-              "fungsi": "SPF 35 PA+++, ada warna, untuk meratakan tampilan kulit."
-            },
-            {
-              "nama": "Physical",
-              "fungsi": "SPF 50+ PA++++, filter mineral, umumnya lebih cocok untuk kulit sensitif."
+              "nama": "SPF 50 PA++++",
+              "fungsi": "Angka dari Wardah untuk varian ini. Daftar bahan lengkap varian ini tidak tercantum di data kami."
             }
           ],
           "manfaat": [
-            "Varian untuk jenis kulit yang berbeda",
-            "Ada pilihan filter mineral",
+            "SPF 50 PA++++ menurut Wardah",
+            "Tekstur watery dengan hasil glowing",
             "Harga listing terjangkau"
           ],
           "kulit": [
-            "Berminyak",
-            "Kering",
-            "Normal",
-            "Sensitif",
-            "Berjerawat"
+            "Kering"
           ],
-          "catatan": "SPF dan hasil akhir beda tiap varian. Harga di listing bisa beda per varian dan ukuran. Cek varian sebelum checkout."
+          "catatan": "Link ini juga berisi varian lain. Yang dibandingkan di sini hanya varian Aqua Fresh, jadi pilih Aqua Fresh saat checkout. Harga yang tampil adalah harga listing, harga dan ukuran varian ini bisa beda. Cek daftar bahan di kemasan."
         },
         "29204771380": {
           "nama": "SOME BY MI V10 Hyal Sunscreen",
@@ -1161,7 +1128,8 @@
             "Kering",
             "Sensitif"
           ],
-          "catatan": "Nama produknya low pH, angkanya tidak ditulis di data. Ada BHA, jadi kulit sensitif sebaiknya coba sedikit dulu. Bukan obat jerawat."
+          "catatan": "Nama produknya low pH, angkanya tidak ditulis di data. Ada BHA, jadi kulit sensitif sebaiknya coba sedikit dulu. Bukan obat jerawat.",
+          "catatan_pemakai": "Catatan: sebagian pemakai merasa kulitnya makin kering setelah pemakaian rutin."
         }
       }
     },
@@ -1591,7 +1559,8 @@
             "Kombinasi",
             "Sensitif"
           ],
-          "catatan": "Krim 80 ml bisa terasa kaya di kulit berminyak. Harga listingnya jauh di atas pelembap lokal di pasangan ini."
+          "catatan": "Krim 80 ml bisa terasa kaya di kulit berminyak. Harga listingnya jauh di atas pelembap lokal di pasangan ini.",
+          "catatan_pemakai": "Catatan: selain kulit kering, sebagian pemakai kulit berminyak juga merasa nyaman memakai krim ini."
         }
       }
     },
@@ -2646,7 +2615,8 @@
             "Kering",
             "Kemerahan"
           ],
-          "catatan": "Varian di listing hanya ukuran. Bahan dari situs resmi Somethinc dan Skinsort. Varian Calm Down ini juga ada di listing Somethinc Moisturizer Series yang dibahas terpisah."
+          "catatan": "Varian di listing hanya ukuran. Bahan dari situs resmi Somethinc dan Skinsort. Varian Calm Down ini juga ada di listing Somethinc Moisturizer Series yang dibahas terpisah.",
+          "catatan_pemakai": "Catatan: cukup banyak pemakai kulit berjerawat merasa cocok. Di kulit kering hasilnya beragam, ada yang merasa cocok dan ada yang merasa kurang melembapkan."
         },
         "53958222689": {
           "nama": "Torriden Solid-In Cream",

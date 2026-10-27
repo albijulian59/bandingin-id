@@ -361,6 +361,28 @@ def list_manfaat(produk_copy):
     return "<ul class=\"manfaat\">" + "".join(f"<li>{esc(m)}</li>" for m in produk_copy["manfaat"]) + "</ul>"
 
 
+def catatan_pemakai_html(produk_copy):
+    """Catatan singkat dari pengalaman pemakai (data: produk[id].catatan_pemakai)."""
+    teks = produk_copy.get("catatan_pemakai")
+    if not teks:
+        return ""
+    return f'<p class="catatan-pemakai">{esc(teks)}</p>'
+
+
+def varian_dipilih_html(produk_copy):
+    """Listing berisi banyak varian, tapi yang dibandingkan hanya satu."""
+    v = produk_copy.get("varianDipilih")
+    if not v:
+        return ""
+    return f'<p class="varian-dipilih">Varian yang dibandingkan: <strong>{esc(v)}</strong>. Pilih varian ini saat checkout.</p>'
+
+
+# Catatan pemakai harus netral: tanpa nama platform atau kata "review".
+PLATFORM_CATATAN = re.compile(r"(?i)\b(review|reviewer|twitter|tiktok|shopee|instagram|female ?daily|pengguna x)\b|\bX\b")
+# Judul listing yang menandakan seri multi-varian.
+SERI_LISTING = re.compile(r"(?i)\b(all series|semua varian|all variant|series)\b")
+
+
 def kulit_html(produk_copy):
     return "".join(f'<li>{esc(k)}</li>' for k in produk_copy["kulit"])
 
@@ -743,7 +765,7 @@ def render_pair(data, produk, pair, sumber=None):
             f'<div class="photo photo-{asal} pos-{pos}">{foto_html}</div>',
             f"""<div class="sisi sisi-{asal} pos-{pos}">
       <p class="asal asal-{asal}">{badge}</p>
-      <h2>{esc(copy["nama"])}</h2>
+      <h2>{esc(copy["nama"])}</h2>{varian_dipilih_html(copy)}
       <p class="tekstur">{esc(copy["tekstur"])}</p>
       <ul class="kulit">{kulit_html(copy)}</ul>
       <p class="harga">{harga_html(p)}</p>
@@ -756,14 +778,14 @@ def render_pair(data, produk, pair, sumber=None):
         anchor = f"lokal-{kunci}" if lokal_lokal else asal
         return f"""<article class="detail sisi-{asal}" id="{anchor}">
       <p class="asal asal-{asal}">{badge}</p>
-      <h2>{esc(copy["nama"])}</h2>
+      <h2>{esc(copy["nama"])}</h2>{varian_dipilih_html(copy)}
       <p class="tekstur">{esc(copy["tekstur"])} · {esc(copy["isi"])}</p>
       <h3>Kandungan utama</h3>
       {list_bahan(copy)}
       <h3>Manfaat</h3>
       {list_manfaat(copy)}
       <h3>Cocok untuk kulit</h3>
-      <ul class="kulit">{kulit_html(copy)}</ul>
+      <ul class="kulit">{kulit_html(copy)}</ul>{catatan_pemakai_html(copy)}
       <p class="catatan">{esc(copy["catatan"])}</p>
       {sumber_html(sumber.get(p["id"]))}
       <p class="harga">{harga_html(p)}</p>
@@ -1055,6 +1077,23 @@ def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
                     raise SystemExit(f"{pair['id']} {iid} kosong: {kunci}")
             if len(copy["bahan"]) < 1 or len(copy["manfaat"]) < 2 or len(copy["kulit"]) < 1:
                 raise SystemExit(f"{pair['id']} {iid} isi kurang")
+            cp = copy.get("catatan_pemakai")
+            if cp is not None:
+                if not isinstance(cp, str) or not cp.strip():
+                    raise SystemExit(f"{pair['id']} {iid}: catatan_pemakai kosong")
+                if PLATFORM_CATATAN.search(cp):
+                    raise SystemExit(f"{pair['id']} {iid}: catatan_pemakai menyebut platform/review: {cp}")
+                if len(cp) > 220:
+                    raise SystemExit(f"{pair['id']} {iid}: catatan_pemakai terlalu panjang")
+            if copy.get("varianDipilih"):
+                if copy.get("varian"):
+                    raise SystemExit(f"{pair['id']} {iid}: varianDipilih tidak boleh digabung dengan varian")
+                if copy["varianDipilih"].lower() not in copy["nama"].lower():
+                    raise SystemExit(f"{pair['id']} {iid}: nama kartu harus menyebut varian {copy['varianDipilih']}")
+                if "varian lain" not in copy["catatan"].lower():
+                    raise SystemExit(f"{pair['id']} {iid}: tulis bahwa link berisi varian lain")
+            if b != "lokal-lokal" and SERI_LISTING.search(p["judul"]) and not (copy.get("varian") or copy.get("varianDipilih")):
+                raise SystemExit(f"{pair['id']} {iid}: listing seri di lokal vs Korea wajib memilih satu varian (varianDipilih)")
             for v in copy.get("varian", []):
                 for k in ("nama", "bahan", "kulit"):
                     if not v.get(k):

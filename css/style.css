@@ -330,3 +330,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
 .tentang p { margin: 0 0 12px; }
 .daftar-tentang { margin: 0 0 12px; padding-left: 20px; }
 .daftar-tentang li { margin: 0 0 8px; }
+
+.catatan-pemakai { color: #3f3832; background: #f3f6fb; border-left: 3px solid #9fb3cf; border-radius: 8px; padding: 8px 12px; margin: 0 0 10px; font-size: .95em; }
+.varian-dipilih { margin: -4px 0 8px; font-size: .92em; color: #3f3832; }
