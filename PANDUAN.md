@@ -19,6 +19,7 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `sumber/` | Data Shopee skincare, link affiliate, daftar merek Korea, pasangan yang sudah diposting. |
 | `sumber/tambahan-*.psv` | Batch produk baru. Kolom: type, brand, origin, name, price, original price, product URL, image URL, short link, key ingredients. |
 | `ulasan.html` | Halaman Kasih Pendapat. Hasil generator (daftar perbandingan di dropdown ikut terbarui). |
+| `tentang.html` | Halaman Tentang Kami: pengelola, alasan situs dibuat, cara perbandingan dibuat, link affiliate, kontak. Hasil generator. |
 | `js/config.js` | **Satu tempat** untuk alamat pengiriman formulir: `FEEDBACK_ENDPOINT`. |
 | `js/ulasan.js` | Perilaku formulir. |
 
@@ -150,4 +151,14 @@ function doPost(e) {
 
 Nama yang tampil ke pengunjung adalah PilihYuk. Repository GitHub tetap `bandingin-id`, branch `main`, folder root. Alamat yang hidup sekarang `https://albijulian59.github.io/bandingin-id/`.
 
-Tautan panduan (`https://lynk.id/albijulian`) hanya ada sekali, di beranda. Catatan affiliate hanya di footer.
+Tautan panduan (`https://lynk.id/albijulian`) hanya ada sekali, di beranda.
+
+## Kepercayaan pengunjung
+
+Teksnya ada di bagian atas `tools/build_site.py` (`CATATAN_AFFILIATE`, `CATATAN_AMAN`, `CATATAN_STATIS`), jadi cukup diubah di satu tempat.
+
+- Catatan affiliate Shopee tampil di footer semua halaman, di dekat tombol beli (beranda dan tiap perbandingan), dan di Tentang Kami (`tentang.html#affiliate`).
+- Di dekat tombol beli ada catatan bahwa pengunjung diarahkan ke Shopee resmi dan PilihYuk tidak meminta data pribadi atau pembayaran.
+- Tombol beli memakai `target="_blank"` dan `rel="sponsored noopener noreferrer"`. Generator gagal kalau ada link Shopee tanpa itu.
+- **Sumber kandungan**: URL di kolom `sumber` pada `sumber/kandungan-batch2.json` tampil sebagai tautan di kartu produk. Hanya URL dari data. Domain yang dimasukkan ke `SUMBER_DILEWATI` di `tools/build_site.py` tidak ditampilkan; saat ini kosong. `inkeedecoder.com` adalah nama baru resmi INCIDecoder (`incidecoder.com` dialihkan ke sana), jadi tautannya asli.
+- **Kontak**: belum ditentukan. Tentang Kami mengarahkan ke formulir Kasih Pendapat. Kalau email atau akun media sosial sudah dipilih, isi `KONTAK_LAIN` di `tools/build_site.py` lalu bangun ulang. Jangan isi alamat karangan.
