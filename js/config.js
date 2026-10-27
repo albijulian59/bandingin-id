@@ -6,4 +6,4 @@
    Biarkan string kosong kalau belum disiapkan. Formulir tetap bisa diisi;
    pengunjung mendapat ucapan terima kasih dan bisa menyalin jawabannya.
    Jangan taruh rahasia di file ini. File ini ikut terbit di situs. */
-var FEEDBACK_ENDPOINT = "";
+var FEEDBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycby6mkaITbjP_HiIpK_n1SKhKRjdrHoDLeHyZH1PaEhNZleEEsO3jOGD5HPE3XD1bCjFJg/exec";
