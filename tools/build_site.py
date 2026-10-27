@@ -54,12 +54,10 @@ KONTAK_LAIN = []
 # Kosong: semua URL dari data tampil. Catatan: inkeedecoder.com adalah nama baru resmi
 # INCIDecoder (incidecoder.com dialihkan ke sana, lihat https://inkeedecoder.com/new-name).
 SUMBER_DILEWATI = ()
-FAVICON = (
-    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>"
-    "<rect width='64' height='64' rx='14' fill='%230c6b52'/>"
-    "<text x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='white'>P</text>"
-    "</svg>"
-)
+# Logo dan ikon (dibuat dari img/logo-asli.jpg, warna disesuaikan ke palet situs).
+# File ini tidak ikut dihapus saat membersihkan foto produk lama di img/.
+LOGO_W, LOGO_H = 429, 120  # ukuran asli img/logo.png; tampil 40 px (CSS)
+ASET_MEREK = {"logo.png", "logo.webp", "logo-asli.jpg", "favicon-32.png", "apple-touch-icon.png"}
 
 BANNED = re.compile(
     r"\b(pria|wanita|cowok|cewek|perempuan|laki-laki|for men|terjual|rating|"
@@ -383,7 +381,9 @@ def head(title, description, base, canonical_path):
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="{base}css/style.css">
-  <link rel="icon" href="{FAVICON}">
+  <link rel="icon" href="{base}favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{base}img/favicon-32.png">
+  <link rel="apple-touch-icon" href="{base}img/apple-touch-icon.png">
 </head>
 """
 
@@ -404,7 +404,7 @@ def header(base, aktif=None):
     return f"""<a class="skip" href="{base}index.html#daftar">Langsung ke perbandingan</a>
 <header class="site-header">
   <div class="wrap nav">
-    <a class="logo" href="{base}index.html"><span class="mark" aria-hidden="true">P</span><span class="logo-pilih">Pilih</span><span class="logo-yuk">Yuk</span></a>
+    <a class="logo" href="{base}index.html"><picture><source srcset="{base}img/logo.webp" type="image/webp"><img src="{base}img/logo.png" alt="PilihYuk" width="{LOGO_W}" height="{LOGO_H}"></picture></a>
     <nav class="nav-links" aria-label="Menu">
       {''.join(tautan)}
     </nav>
@@ -1252,7 +1252,7 @@ def main():
     terpakai = {iid + ".jpg" for pair in pasangan for iid in id_pair(pair)}
     if os.path.isdir(IMG):
         for nama in os.listdir(IMG):
-            if nama not in terpakai:
+            if nama not in terpakai and nama not in ASET_MEREK:
                 os.remove(os.path.join(IMG, nama))
     laporan(produk, pasangan)
     print(f"\nSelesai: {len(pasangan)} perbandingan" + (" (DRAFT: jangan dipublikasikan sebelum link lengkap)" if DRAFT else ""))
