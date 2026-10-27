@@ -89,6 +89,11 @@ ALASAN_LEWAT = {
         "SCARLETT Moisturizer Series: bahan tidak tercantum dan daftar varian di listing tidak bisa dipastikan "
         "(halaman Shopee minta login). Jumlah pelembap lokal juga ganjil, jadi ini yang dilewati."
     ),
+    "28234426003": (
+        "HANASUI Ceramide Probiotics (Semua jenis kulit;Sensitif) dulu dipasangkan dengan COSRX HA Cream, "
+        "krim untuk kulit kering. Pasangan itu diganti Avoskin GCT Aqua Ceramide. Tidak ada pelembap lokal "
+        "lain tanpa pasangan dengan jenis kulit utama yang sama, jadi Hanasui disembunyikan (data tetap ada)."
+    ),
 }
 
 

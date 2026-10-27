@@ -2490,47 +2490,52 @@
       }
     },
     {
-      "id": "hanasui-vs-cosrx-ha-cream",
+      "id": "avoskin-gct-vs-cosrx-ha-cream",
       "jenis": "pelembab",
-      "hook": "Pelembap hidrasi: lokal vs Korea, mending yang mana?",
-      "lokal": "28234426003",
+      "hook": "Pelembap untuk kulit kering: lokal vs Korea, mending yang mana?",
+      "lokal": "15924460347",
       "korea": "22581600583",
       "lebihMurah": "lokal",
-      "ringkas": "Hanasui gel 100 ml dengan ceramide, hyaluronic acid, niacinamide, dan probiotik. COSRX krim 100 ml dengan hyaluronic acid 3.000 ppm dan air sea buckthorn. Gel vs krim, sama-sama untuk hidrasi.",
+      "ringkas": "Avoskin Your Skin Bae Aqua Ceramide: gel ringan berbasis air dengan ceramide NP, fermentasi probiotik, dan beberapa bentuk hyaluronic acid, isi 15 ml. COSRX krim 100 ml dengan hyaluronic acid 3.000 ppm dan air sea buckthorn. Dua-duanya ditujukan untuk kulit kering dan dehidrasi.",
       "verdict": {
-        "berminyak": "Hanasui berbentuk gel, lebih ringan untuk kulit berminyak. Ada niacinamide untuk tampilan minyak dan pori. COSRX krim dengan minyak bunga matahari dan macadamia, bisa terasa berat di kulit berminyak.",
-        "kering": "COSRX lebih kaya: hyaluronic acid, minyak, panthenol, dan allantoin. Untuk kulit kering yang butuh lapisan lebih tebal, COSRX. Hanasui bisa jadi pilihan kalau kulit keringnya ringan.",
-        "budget": "Hanasui Rp49.779 dan COSRX Rp197.340, isi sama-sama 100 ml (harga di data, bisa berubah). Hanasui jauh lebih hemat. Pilih COSRX kalau kulit kering dan mau tekstur krim."
+        "berminyak": "Pasangan ini untuk kulit kering, bukan kulit berminyak. Kalau kulit berminyak terasa haus, gel Avoskin lebih ringan dan tidak memakai minyak nabati. COSRX krim dengan minyak bunga matahari dan macadamia, bisa terasa berat.",
+        "kering": "Dua-duanya untuk kulit kering. Mau tekstur gel ringan dengan ceramide dan probiotik, Avoskin. Mau krim yang lebih kaya dengan minyak penutup dan kadar HA tertulis, COSRX. Kulit yang sangat kering biasanya lebih nyaman dengan krim.",
+        "budget": "Avoskin Rp110.500 untuk 15 ml, COSRX Rp197.340 untuk 100 ml (harga di data, bisa berubah). Harga awal Avoskin lebih rendah, tapi per ml COSRX jauh lebih hemat. Harga yang tampil adalah harga listing, cek harga varian Aqua Ceramide 15ml saat checkout."
       },
       "produk": {
-        "28234426003": {
-          "nama": "HANASUI Ceramide Probiotics Moisturizer Gel",
-          "tekstur": "Gel",
-          "isi": "100 ml",
+        "15924460347": {
+          "nama": "Avoskin Your Skin Bae GCT Aqua Ceramide 15ml",
+          "varianDipilih": "Aqua Ceramide 15ml",
+          "tekstur": "Gel ringan berbasis air",
+          "isi": "15 ml",
           "bahan": [
             {
-              "nama": "Ceramide",
-              "fungsi": "Membantu menjaga skin barrier."
+              "nama": "Ceramide NP (Aqua Ceramide)",
+              "fungsi": "Disebut Avoskin untuk menjaga kelembapan dan skin barrier. Di daftar bahan resmi posisinya di bagian akhir, kadarnya tidak ditulis."
             },
             {
-              "nama": "Hyaluronic acid",
-              "fungsi": "Menarik air supaya kulit terasa lembap."
+              "nama": "Fermentasi probiotik (Multi Probiome)",
+              "fungsi": "Beberapa ferment Lactobacillus, Lactococcus, dan Bifida di daftar bahan resmi."
             },
             {
-              "nama": "Niacinamide",
-              "fungsi": "Membantu tampilan minyak dan warna kulit."
+              "nama": "Hyaluronic acid, sodium hyaluronate, hydrolyzed hyaluronic acid",
+              "fungsi": "Menarik dan menahan air di kulit."
+            },
+            {
+              "nama": "Glycerin",
+              "fungsi": "Pelembap, urutan kedua di daftar bahan."
             }
           ],
           "manfaat": [
-            "Gel ringan",
-            "Isi besar, 100 ml",
-            "Harga rendah"
+            "Gel ringan, mudah menyerap",
+            "Ditujukan untuk kulit kering dan dehidrasi menurut web resmi Avoskin",
+            "Daftar bahan resmi tidak mencantumkan pewangi"
           ],
           "kulit": [
-            "Semua jenis kulit",
-            "Sensitif"
+            "Kering",
+            "Dehidrasi"
           ],
-          "catatan": "Bahan dari kolom data listing. Probiotik ada di nama produk, jenisnya tidak tercantum. Daftar lengkap belum ditemukan di situs resmi."
+          "catatan": "Link ini juga berisi varian lain. Yang dibandingkan di sini hanya varian Aqua Ceramide 15ml, jadi pilih varian ini saat checkout. Harga yang tampil adalah harga listing, harga varian ini bisa beda. Listing tidak menuliskan bahan; daftar di sini dari web resmi Avoskin. Toko ini reseller resmi, bukan toko utama Avoskin."
         },
         "22581600583": {
           "nama": "COSRX Hyaluronic Acid Intensive Cream",
