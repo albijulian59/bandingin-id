@@ -10,11 +10,12 @@
   },
   "2958551486": {
     "nama": "COSRX Salicylic Acid Daily Gentle Cleanser 150 ml",
-    "bahan": "Water, Glycerin, Myristic Acid, Stearic Acid, Potassium Hydroxide, Lauric Acid, Butylene Glycol, Glycol Distearate, Polysorbate 80, Salix Alba (Willow) Bark Water, Sodium Methyl Cocoyl Taurate, Cocamidopropyl Betaine, PEG-60 Hydrogenated Castor Oil, Salicylic Acid, Limonene, Citric Acid, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Sodium Chloride, Disodium EDTA, Citrus Limon (Lemon) Peel Oil, 1,2-Hexanediol, Ethylhexanediol, Caprylyl Glycol, Ethylhexylglycerin",
+    "bahan": "Versi Korea (cosrx.co.kr): Water, Glycerin, Myristic Acid, Stearic Acid, Potassium Hydroxide, Lauric Acid, Butylene Glycol, Glycol Distearate, Polysorbate 80, Salix Alba (Willow) Bark Water, Sodium Methyl Cocoyl Taurate, Cocamidopropyl Betaine, PEG-60 Hydrogenated Castor Oil, Salicylic Acid, Limonene, Citric Acid, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Sodium Chloride, Disodium EDTA, Citrus Limon (Lemon) Peel Oil, 1,2-Hexanediol, Ethylhexanediol, Caprylyl Glycol, Ethylhexylglycerin. Versi global (cosrx.com, 2026-09-30): Water, Glycerin, Myristic Acid, Stearic Acid, Potassium Hydroxide, Lauric Acid, Butylene Glycol, Glycol Distearate, Polysorbate 80, Sodium Methyl Cocoyl Taurate, Salicylic Acid, Cocamidopropyl Betaine, PEG-60 Hydrogenated Castor Oil, Fragrance, Sodium Chloride, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Caprylyl Glycol, Ethylhexylglycerin, Salix Alba (Willow) Bark Water, Saccharomyces Ferment, Cryptomeria Japonica Leaf Extract, Nelumbo Nucifera Leaf Extract, Pinus Palustris Leaf Extract, Ulmus Davidiana Root Extract, Oenothera Biennis (Evening Primrose) Flower Extract, Pueraria Lobata Root Extract, 1,2-Hexanediol, Ethyl Hexanediol, Citric Acid, Disodium EDTA",
     "sumber": [
+      "https://www.cosrx.com/products.json?limit=250",
       "http://www.cosrx.co.kr/shop/shopdetail.html?branduid=188"
     ],
-    "catatan": "Basis sabun (asam lemak + potassium hydroxide). Mengandung minyak tea tree dan kulit lemon. Situs resmi menyebut untuk kulit berminyak/kombinasi."
+    "catatan": "Basis sabun (asam lemak + potassium hydroxide). Dua versi: Korea ada minyak kulit lemon + limonene, global ada Fragrance; dua-duanya tea tree. Halaman produk cosrx.com 404 per 29 Okt 2026, data produk masih ada di products.json (handle salicylic-acid-daily-gentle-cleanser). Teks resmi global: 'Gently removes impurities and excess sebum while fighting acnes and blemishes'. Klaim kulit berminyak/kombinasi dari situs Korea tidak bisa dicek ulang (situs error 500)."
   },
   "22581600583": {
     "nama": "COSRX Hyaluronic Acid Intensive Cream 100 ml",
@@ -105,9 +106,10 @@
     "nama": "Azarine Brightening Glow Facial Cleanser with SymRadiance 399",
     "bahan": "SymRadiance 399, niacinamide, aloe vera, bioflavonoid, ekstrak brokoli (Brassica oleracea italica), tocopherol; pembersih Sodium Cocoyl Alaninate dan Cocamidopropyl Betaine",
     "sumber": [
-      "https://azarinecosmetic.com/p/brightening-glow-face-cleanser",
+      "https://web.archive.org/web/20260714101419/https://azarinecosmetic.com/a/facial-wash-gentle-untuk-semua-jenis-kulit-pilihan-aman-untuk-kulit-kering",
       "https://www.cosdna.com/chs/cosmetic_d75b670571.html"
-    ]
+    ],
+    "catatan": "Halaman produk lama di situs Azarine sudah 404 (arsipnya juga 404). Blog resmi Azarine 26 Nov 2025 (arsip 14 Jul 2026): untuk semua jenis kulit, kering sampai sensitif; SLS & SLES free; non-comedogenic; tekstur creamy dengan busa halus."
   },
   "1080210042": {
     "nama": "WARDAH Crystal Secret Hyperpigmentation Expert SPF 35 PA+++ Day Moisturizer",

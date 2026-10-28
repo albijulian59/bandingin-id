@@ -445,11 +445,11 @@
       "lokal": "51901773332",
       "korea": "11210228422",
       "lebihMurah": "lokal",
-      "ringkas": "Dua-duanya untuk noda dan kulit kusam. Kahf punya lebih banyak jenis bahan pencerah, tapi ada pewangi. SOME BY MI niacinamide 10% plus ekstrak yuja, aromanya citrus.",
+      "ringkas": "Dua-duanya untuk noda dan kulit kusam. Kahf punya lebih banyak jenis bahan pencerah, tapi ada pewangi. SOME BY MI niacinamide 10% plus ekstrak yuja, ada minyak kulit yuja dan wewangian.",
       "verdict": {
-        "berminyak": "Pilih SOME BY MI kalau mau kadar yang jelas: niacinamide 10%, teksturnya gel cair. Pilih Kahf kalau mau campuran bahan pencerah yang lebih banyak, termasuk eksfolian lembut (pengangkat sel kulit mati). Dua-duanya buat bekas jerawat gelap dan kulit kusam.",
+        "berminyak": "Pilih SOME BY MI kalau mau kadar yang jelas: niacinamide 10%. Pilih Kahf kalau mau campuran bahan pencerah yang lebih banyak, termasuk eksfolian lembut (pengangkat sel kulit mati). Dua-duanya buat bekas jerawat gelap dan kulit kusam.",
         "kering": "Coba Kahf dulu. Mereknya bilang serum ini cukup melembapkan sampai bisa dipakai tanpa pelembap. Dua-duanya ada wangi, jadi oles sedikit di rahang dulu dan tunggu sehari sebelum dipakai ke seluruh wajah.",
-        "budget": "Kahf lebih murah: Rp109.500 untuk 25 ml. SOME BY MI Rp143.040, tapi ukurannya nggak tertulis di judul, jadi cek dulu sebelum bandingin harga per ml."
+        "budget": "Kahf lebih murah: Rp109.500 untuk 25 ml. SOME BY MI Rp143.040, isinya 50 ml menurut situs resmi mereknya, jadi per ml malah lebih hemat. Judul produk di toko nggak menulis ukuran, jadi cek dulu."
       },
       "produk": {
         "51901773332": {
@@ -485,16 +485,16 @@
         },
         "11210228422": {
           "nama": "SOME BY MI Yuja Niacin Serum",
-          "tekstur": "Gel cair",
-          "isi": "Cek di halaman produk",
+          "tekstur": "Serum",
+          "isi": "50 ml menurut situs resmi SOME BY MI, cek di halaman produk",
           "bahan": [
             {
               "nama": "Ekstrak yuja",
-              "fungsi": "Sekitar 83% di formula terbaru. Yuja adalah jeruk dari Korea."
+              "fungsi": "Bahan pertama di daftar bahan resmi. Yuja adalah jeruk dari Korea."
             },
             {
               "nama": "Niacinamide 10%",
-              "fungsi": "Dikenal membantu mengontrol minyak. Kombinasi formulanya diarahkan untuk noda bekas jerawat, warna yang kurang rata, dan kulit kusam."
+              "fungsi": "Kadarnya tertulis di daftar bahan resmi. Niacinamide dikenal membantu mengontrol minyak. Di Korea, serum ini terdaftar untuk mencerahkan dan mengurangi kerutan."
             },
             {
               "nama": "Bahan lain yang tercantum",
@@ -502,15 +502,14 @@
             }
           ],
           "manfaat": [
-            "Kadar niacinamide dan yuja tertulis",
-            "Ringan dan tidak lengket",
-            "Gampang ditumpuk dengan produk lain, misalnya pelembap"
+            "Kadar niacinamide 10% tertulis",
+            "Isi 50 ml menurut situs resmi",
+            "Untuk semua jenis kulit menurut situs resmi"
           ],
           "kulit": [
-            "Semua jenis kulit",
-            "Sensitif"
+            "Semua jenis kulit"
           ],
-          "catatan": "Ada aroma citrus dari minyak kulit jeruk. Kalau kulitmu gampang bereaksi dengan pewangi, oles sedikit di rahang dulu dan tunggu sehari. Kalau tidak perih atau merah, baru pakai ke seluruh wajah. Ukuran tidak tertulis di judul produk di toko.",
+          "catatan": "Ada minyak kulit yuja, limonene, dan linalool (wewangian). Kalau kulitmu gampang bereaksi dengan pewangi, oles sedikit di rahang dulu dan tunggu sehari. Kalau tidak perih atau merah, baru pakai ke seluruh wajah. Ukurannya 50 ml menurut situs resmi SOME BY MI, tapi judul produk di toko tidak menulis ukuran.",
           "catatan_pemakai": "Catatan: sebagian pemakai kulit sensitif merasa tidak cocok, dan ada pemakai kulit kombinasi-kering yang merasa kulitnya makin kering."
         }
       }
@@ -551,11 +550,12 @@
           ],
           "manfaat": [
             "Gel ringan, cepat meresap, tidak lengket",
-            "Varian untuk kulit berminyak yang berjerawat atau kemerahan",
+            "Menurut Emina, untuk kulit berminyak dan sensitif yang berjerawat atau kemerahan",
             "Harga di toko rendah"
           ],
           "kulit": [
             "Berminyak",
+            "Sensitif",
             "Berjerawat",
             "Kemerahan"
           ],
@@ -1141,15 +1141,15 @@
       "lebihMurah": "lokal",
       "ringkas": "Mau pembersih lembut berbasis asam amino dengan bahan pencerah dan harga rendah: Azarine Brightening Glow. Mau busa centella 125 ml tanpa pewangi menurut halaman toko, dengan citric acid (AHA ringan) untuk eksfoliasi ringan: SKIN1004 Ampoule Foam.",
       "verdict": {
-        "berminyak": "Coba Azarine dulu. Dua-duanya nggak ditulis khusus buat kulit berminyak, tapi Azarine gel lembut dengan niacinamide dan harganya jauh lebih murah. SKIN1004 busa dengan citric acid (AHA ringan) yang menurut mereknya mengangkat sel kulit mati dengan lembut.",
-        "kering": "Buat kulit kering, pilih Azarine. Pembersihnya berbasis asam amino yang lembut, plus aloe vera, dan memang ditandai buat kulit normal sampai kering. Kulitmu sensitif? Dua-duanya bisa. SKIN1004 ditulis mereknya untuk kulit normal dan sensitif, dengan eksfoliasi ringan dari citric acid.",
+        "berminyak": "Coba Azarine dulu. Mereknya bilang pembersih ini untuk semua jenis kulit, termasuk berminyak, dan nggak menyumbat pori. Harganya juga jauh lebih murah. SKIN1004 nggak ditulis khusus buat kulit berminyak: busa dengan citric acid (AHA ringan) yang menurut mereknya mengangkat sel kulit mati dengan lembut.",
+        "kering": "Buat kulit kering, pilih Azarine. Pembersihnya berbasis asam amino yang lembut, plus aloe vera, dan mereknya bilang cocok untuk semua jenis kulit, termasuk kering dan sensitif. Kulitmu sensitif? Dua-duanya bisa. SKIN1004 ditulis mereknya untuk kulit normal dan sensitif, dengan eksfoliasi ringan dari citric acid.",
         "budget": "Azarine jauh lebih murah: Rp32.750. SKIN1004 Rp149.000 untuk 125 ml. Ukuran Azarine nggak tertulis di judul, jadi cek dulu kalau mau bandingin harga per ml."
       },
       "produk": {
         "7714028393": {
           "nama": "Azarine Brightening Glow Facial Cleanser with SymRadiance 399",
           "label": "Azarine Brightening",
-          "tekstur": "Gel cleanser lembut",
+          "tekstur": "Krim lembut dengan busa halus",
           "isi": "Tidak tercantum di judul produk di toko",
           "bahan": [
             {
@@ -1175,12 +1175,10 @@
             "Harga rendah"
           ],
           "kulit": [
-            "Normal",
-            "Kering",
-            "Kusam",
+            "Semua jenis kulit",
             "Sensitif"
           ],
-          "catatan": "Halaman toko tidak menuliskan bahan. Daftar di sini dari situs resmi Azarine dan CosDNA."
+          "catatan": "Halaman toko tidak menuliskan bahan. Daftar di sini dari situs resmi Azarine (arsip) dan CosDNA. Menurut Azarine, pembersih ini untuk semua jenis kulit, termasuk kering, berminyak, kombinasi, dan sensitif, dan tanpa SLS atau SLES (bahan pembersih yang keras)."
         },
         "15516099411": {
           "nama": "SKIN1004 Centella Ampoule Foam",
@@ -1987,17 +1985,17 @@
       "lokal": "9647576834",
       "korea": "11349352968",
       "lebihMurah": "lokal",
-      "ringkas": "Emina SPF 35 PA+++ (PA+++ artinya perlindungan dari sinar UVA; makin banyak tanda +, makin kuat), ringan dan tanpa alkohol menurut Emina. Dari namanya, SOME BY MI sunscreen mineral yang tone-up, artinya memberi warna tipis supaya kulit tampak lebih cerah. Angka SPF-nya tidak tercantum.",
+      "ringkas": "Emina SPF 35 PA+++ (PA+++ artinya perlindungan dari sinar UVA; makin banyak tanda +, makin kuat), ringan dan tanpa alkohol menurut Emina. SOME BY MI sunscreen mineral SPF50+ PA++++ yang tone-up, artinya memberi warna tipis supaya kulit tampak lebih cerah.",
       "verdict": {
         "berminyak": "Coba Emina dulu. Teksturnya ringan dan diuji tidak menyumbat pori menurut brand, tapi hasilnya bikin kulit tampak sedikit berkilau. Harganya juga jauh lebih murah.",
-        "kering": "Coba SOME BY MI. Bentuknya krim, yang biasanya lebih nyaman di kulit kering. Tapi bahan dan angka SPF-nya nggak tertulis, jadi cek kemasannya dulu.",
-        "budget": "Emina jauh lebih murah, dan SPF-nya tertulis: SPF 35 PA+++. SOME BY MI Rp157.400, tapi angka SPF-nya nggak ada di data kami, jadi jangan anggap setara SPF 50. Ukuran dua-duanya juga nggak tertulis."
+        "kering": "Coba SOME BY MI. Bentuknya krim, yang biasanya lebih nyaman di kulit kering, dan SPF-nya lebih tinggi: SPF50+ PA++++. Ada minyak lavender dan wewangian, jadi oles sedikit dulu kalau kulitmu gampang bereaksi.",
+        "budget": "Emina jauh lebih murah, SPF 35 PA+++, ada 20 ml dan 50 ml. SOME BY MI Rp157.400 untuk 50 ml, dengan SPF50+ PA++++. Cek ukuran yang kamu pilih di halaman toko."
       },
       "produk": {
         "9647576834": {
           "nama": "Emina Sun Battle SPF 35",
           "tekstur": "Sunscreen",
-          "isi": "Cek di halaman produk",
+          "isi": "20 ml atau 50 ml",
           "bahan": [
             {
               "nama": "Amino Vit C",
@@ -2011,27 +2009,35 @@
           "kulit": [
             "Semua jenis kulit"
           ],
-          "catatan": "Halaman toko tidak menuliskan daftar bahan, jadi keterangan di sini dari situs resmi Emina. Menurut Emina, hasilnya bikin kulit tampak sedikit berkilau. SPF 35 lebih rendah dari SPF 50. Ukuran tidak tertulis."
+          "catatan": "Halaman toko tidak menuliskan daftar bahan, jadi keterangan di sini dari situs resmi Emina. Menurut Emina, hasilnya bikin kulit tampak sedikit berkilau. SPF 35 lebih rendah dari SPF 50. Ada 20 ml dan 50 ml (toko resmi Emina), cek pilihan di halaman toko."
         },
         "11349352968": {
           "nama": "SOME BY MI Truecica Tone-up Suncream",
           "tekstur": "Sunscreen yang bikin kulit langsung tampak lebih cerah",
-          "isi": "Cek di halaman produk",
+          "isi": "50 ml",
           "bahan": [
             {
-              "nama": "Daftar bahan tidak tercantum",
-              "fungsi": "Halaman toko tidak menuliskan kandungan. Dari namanya ini sunscreen mineral, calming, dan tone-up (Truecica). Angka SPF tidak tercantum."
+              "nama": "Zinc oxide dan titanium dioxide",
+              "fungsi": "Filter UV mineral. Menurut situs resmi SOME BY MI Korea: SPF50+ PA++++."
+            },
+            {
+              "nama": "Air daun tea tree, centella, aloe vera, niacinamide",
+              "fungsi": "Air daun tea tree jadi bahan pertama di daftar. Truecica adalah nama lini produknya."
+            },
+            {
+              "nama": "Minyak lavender, linalool, limonene",
+              "fungsi": "Wewangian. Kalau kulitmu gampang bereaksi, oles sedikit dulu."
             }
           ],
           "manfaat": [
-            "Dari namanya sunscreen mineral",
-            "Bikin kulit langsung tampak lebih cerah (tone-up)"
+            "Filter mineral, SPF50+ PA++++",
+            "Bikin kulit langsung tampak lebih cerah (tone-up)",
+            "Isi 50 ml"
           ],
           "kulit": [
-            "Normal",
-            "Sensitif"
+            "Semua jenis kulit"
           ],
-          "catatan": "Bahan dan angka SPF tidak tercantum. Cek kemasan sebelum menganggap perlindungannya setara dengan SPF 50. Tone-up biasanya berwarna tipis. Truecica hanya nama lini produk. Bahannya tidak bisa dicek karena daftar bahan tidak ada."
+          "catatan": "Halaman toko tidak menuliskan daftar bahan, jadi keterangan di sini dari situs resmi SOME BY MI Korea: SPF50+ PA++++, filter mineral (zinc oxide, titanium dioxide), 50 ml, untuk semua jenis kulit. Ada minyak lavender, linalool, dan limonene (wewangian). Formula di kemasan bisa beda dengan versi Korea, jadi cek kemasan. Tone-up biasanya berwarna tipis."
         }
       }
     },
@@ -2420,10 +2426,10 @@
       "lokal": "1889291042",
       "korea": "2958551486",
       "lebihMurah": "lokal",
-      "ringkas": "Dua facial wash dengan salicylic acid untuk kulit berjerawat. Azarine berbasis bahan pembersih (surfaktan) yang lembut dengan aloe dan witch hazel. COSRX berbasis sabun dengan tea tree, untuk kulit berminyak dan kombinasi.",
+      "ringkas": "Dua facial wash dengan salicylic acid untuk kulit berjerawat. Azarine berbasis bahan pembersih (surfaktan) yang lembut dengan aloe dan witch hazel. COSRX berbasis sabun dengan tea tree, untuk minyak berlebih dan jerawat menurut COSRX.",
       "verdict": {
         "berminyak": "Pilih COSRX kalau mukamu berminyak banget. Basisnya sabun, busanya padat dan terasa bersih banget. Kalau minyaknya ringan sampai sedang, Azarine yang lebih lembut sudah cukup.",
-        "kering": "Coba Azarine dulu. Basisnya bukan sabun, jadi lebih lembut. Tapi ada alkohol dan pewangi, jadi stop kalau kulitmu perih. COSRX ada minyak tea tree dan minyak kulit lemon yang bisa bikin kulit kering atau sensitif nggak nyaman.",
+        "kering": "Coba Azarine dulu. Basisnya bukan sabun, jadi lebih lembut. Tapi ada alkohol dan pewangi, jadi stop kalau kulitmu perih. COSRX ada minyak tea tree, plus minyak kulit lemon atau pewangi (tergantung versi), yang bisa bikin kulit kering atau sensitif nggak nyaman.",
         "budget": "Azarine lebih murah: Rp32.750 untuk 75 ml. COSRX Rp119.350 untuk 150 ml. Dihitung per ml pun Azarine masih lebih murah."
       },
       "produk": {
@@ -2482,14 +2488,13 @@
           "manfaat": [
             "Busa padat, terasa sangat bersih",
             "Isi 150 ml",
-            "Untuk kulit berminyak dan kombinasi menurut situs resmi"
+            "Menurut COSRX, mengangkat minyak berlebih, untuk kulit berjerawat"
           ],
           "kulit": [
             "Berminyak",
-            "Kombinasi",
             "Berjerawat"
           ],
-          "catatan": "Halaman toko tidak menuliskan bahan. Daftar di sini dari situs resmi COSRX Korea. Ada minyak kulit lemon dan limonene."
+          "catatan": "Halaman toko tidak menuliskan bahan. Ada dua versi daftar bahan: versi Korea ada minyak kulit lemon dan limonene, versi global ada pewangi. Dua-duanya ada minyak tea tree. Cek kemasan."
         }
       }
     },
