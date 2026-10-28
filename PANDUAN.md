@@ -18,6 +18,7 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `tools/build_site.py` | Generator. |
 | `tools/analisa.json` | Catatan kandungan. Acuan fakta, tidak ditampilkan mentah. |
 | `sumber/kandungan-batch2.json` | Catatan kandungan batch 27 Oktober 2026 (per produk, per varian kalau ada), lengkap dengan sumbernya. |
+| `sumber/kandungan-batch3.json` | Catatan kandungan batch 28 Oktober 2026 dengan sumbernya. Generator membaca semua `kandungan-batch*.json`; satu produk hanya boleh tercatat di satu file. |
 | `sumber/` | Data Shopee skincare, link affiliate, daftar merek Korea, pasangan yang sudah diposting. |
 | `sumber/tambahan-*.psv` | Batch produk baru. Kolom: type, brand, origin, name, price, original price, product URL, image URL, short link, key ingredients. |
 | `ulasan.html` | Halaman Kasih Pendapat. Hasil generator (daftar perbandingan di dropdown ikut terbarui). |
@@ -53,7 +54,7 @@ Generator gagal kalau ada link affiliate yang bukan `https://s.shopee.co.id/…`
 
 1. Produk harus ada di `sumber/perempuan.psv`, `sumber/pria.psv` (plus `affiliate-links.psv`), atau di `sumber/tambahan-*.psv` (link pendeknya sudah di kolom short link).
 2. Merek Korea hanya yang tercantum di `sumber/merek-korea.txt`. Sisi lokal tidak boleh merek dari daftar itu. Anua dan ISNTREE masuk daftar itu lewat batch tambahan.
-3. Tambah objek di `tools/pasangan.json`. Pasangan yang sudah diposting (urutan di `sumber/posted.log`) harus tetap di awal. Tiap produk hanya sekali.
+3. Tambah objek di `tools/pasangan.json`. Pasangan yang sudah diposting (urutan di `sumber/posted.log`) harus tetap di awal. Produk boleh dipakai lagi di pasangan lain, tapi pasangan yang sama persis tidak boleh dua kali. Kalau produk lama dipakai lagi dengan harga atau link pendek listing yang baru, jangan ubah baris lamanya: isi `"listing": {"harga", "asli", "aff"}` di teks produk pasangan baru. Pasangan lama tetap memakai data lama.
 4. Tulis kandungan dari `tools/analisa.json`, dari kolom key ingredients di file tambahan, atau dari nama produk. Kalau kolomnya `tidak tercantum`, jangan karang daftar bahan: jelaskan dari jenis dan nama, dan tulis bahwa bahan tidak tercantum. Bentuk yang longgar (essence, stik, pelembap sekaligus sunscreen) disebut apa adanya. Jangan mengaku sudah mencoba, jangan membuat klaim medis.
 5. Bahasa untuk semua orang. Jangan menulis pria, wanita, cowok, atau sejenisnya.
 6. Jangan menampilkan rating atau jumlah terjual.
@@ -79,7 +80,11 @@ Generator gagal kalau ada varian yang tidak muncul di kolom `adu` sisinya, atau 
 
 Dropdown "perbandingan mana yang kamu baca" di halaman Kasih Pendapat terisi dari `pasangan.json`. Tidak perlu mengedit formulirnya. Kalau nanti ada pertanyaan baru, tambah kuncinya di `js/ulasan.js` (objek kiriman) dan di daftar `KOLOM` pada skrip Google di bawah.
 
-Tombol beli selalu memakai link affiliate pendek. Harga dan diskon diambil dari file `.psv`.
+Tombol beli selalu memakai link affiliate pendek. Harga dan diskon diambil dari file `.psv` (atau dari `listing` di pasangan, lihat di atas).
+
+Harga listing dengan beberapa pilihan (ukuran, paket, varian) boleh ditulis sebagai rentang di kolom price dan original price, misalnya `Rp47.900-222.500`. Halaman menampilkan `Rp47.900–Rp222.500` tanpa harga coret, dan pemeriksaan `lebihMurah` memakai harga terendah. Sebutkan di catatan produk bahwa harga ikut pilihan di listing. Harga setelah voucher toko ditulis sama di price dan original price, dan disebut di catatan.
+
+Listing banyak varian di **Lokal vs Korea** memakai `varianDipilih` (contoh: SKINTIFIC UV Shield, yang dibandingkan Bright Fit).
 
 ## Yang sengaja tidak masuk
 
@@ -87,7 +92,8 @@ Tombol beli selalu memakai link affiliate pendek. Harga dan diskon diambil dari 
 - Facial wash dari data awal: tidak ada analisa kandungan dan tidak ada pasangan Korea di batch itu. Facial wash yang tampil berasal dari `tambahan-*.psv`.
 - Garnier dan Nivea: bukan merek lokal dan bukan merek Korea.
 - Batch 27 Oktober 2026: Scarlett Moisturizer Series (bahan tidak tercantum, varian tidak bisa dicek, dan jumlah pelembab ganjil), Scarlett Glowtening Serum (sudah jadi varian di listing Scarlett Face Serum), dan Scarlett Ultra Light Sunscreen dari toko lain (produk sama dengan listing toko resmi yang dipakai).
-- Beberapa produk skincare lain tidak dipasangkan supaya setiap produk hanya muncul sekali, dengan prioritas penjualan di data. Daftarnya dicetak generator saat dijalankan.
+- Batch 28 Oktober 2026: Beauty of Joseon Aqua-Fresh, Round Lab Birch Juice Sunscreen, dan SKIN1004 Centella Soothing Cream dipakai lagi lewat `listing` (data lama tidak diubah).
+- Beberapa produk skincare lain tidak dipasangkan, dengan prioritas penjualan di data. Daftarnya dicetak generator saat dijalankan.
 
 ## Kasih Pendapat
 
