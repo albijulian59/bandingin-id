@@ -333,3 +333,105 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.02em
 
 .catatan-pemakai { color: #3f3832; background: #f3f6fb; border-left: 3px solid #9fb3cf; border-radius: 8px; padding: 8px 12px; margin: 0 0 10px; font-size: .95em; }
 .varian-dipilih { margin: -4px 0 8px; font-size: .92em; color: #3f3832; }
+
+/* Bandingin Sendiri (bandingkan.html) */
+.ajak-banding {
+  margin: 14px 0 4px; max-width: 520px; padding: 12px 14px; background: #fff; border: 1px solid var(--line);
+  border-radius: 14px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between;
+}
+.ajak-banding p { margin: 0; font-size: .95rem; flex: 1 1 220px; }
+.btn-banding { background: var(--lokal); min-height: 42px; padding: 8px 16px; }
+.langkah { font-family: var(--sans); font-size: 1.05rem; margin: 22px 0 0; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+.langkah span {
+  display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--ink); color: #fff; font-size: .8rem;
+}
+.filter-pilih { flex-wrap: wrap; padding-top: 12px; }
+.search-pilih { margin: 12px 0 0; }
+.search-pilih input:disabled { cursor: not-allowed; }
+.info-pilih { margin: 10px 0; color: var(--muted); font-size: .92rem; }
+.grid-pilih { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.kartu-pilih {
+  width: 100%; height: 100%; display: flex; flex-direction: column; gap: 6px; text-align: left;
+  font: inherit; color: var(--ink); background: var(--card); border: 2px solid var(--line);
+  border-radius: 14px; padding: 8px; cursor: pointer; position: relative;
+}
+.kartu-pilih[aria-pressed="true"] { border-color: var(--lokal); background: var(--lokal-soft); }
+.kp-foto { display: block; aspect-ratio: 1; background: #fff; border-radius: 10px; overflow: hidden; }
+.kp-foto img { width: 100%; height: 100%; object-fit: contain; }
+.kp-teks { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.kp-teks .asal { align-self: flex-start; }
+.kp-nama { font-weight: 700; font-size: .86rem; line-height: 1.3; }
+.kp-harga { color: var(--shopee); font-weight: 800; font-size: .88rem; }
+.kp-cek {
+  align-self: stretch; text-align: center; border-radius: 8px; padding: 6px; font-size: .8rem; font-weight: 800;
+  background: #f6f1ea; color: var(--ink);
+}
+.kartu-pilih[aria-pressed="true"] .kp-cek { background: var(--lokal); color: #fff; }
+.hasil-banding { scroll-margin-top: 80px; outline: none; }
+.ringkas-harga { margin: 0 0 12px; font-weight: 700; }
+.pair-ada {
+  margin: 0 0 14px; padding: 12px 14px; background: #fffaf2; border: 1px solid #ead9b8; border-radius: 14px;
+}
+.pair-ada p { margin: 0 0 8px; }
+.btn-lengkap { background: var(--ink); display: inline-flex; }
+.banding-grid {
+  --n: 2; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 0 10px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 10px;
+}
+.bg-label {
+  grid-column: 1 / -1; font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--muted); border-top: 1px solid var(--line); padding: 12px 0 6px;
+}
+.bg-sel { min-width: 0; padding: 0 0 10px; font-size: .9rem; overflow-wrap: anywhere; }
+.bg-sel p { margin: 0 0 4px; }
+.bg-sel .harga { margin: 0 0 4px; }
+.bg-foto { max-width: 220px; aspect-ratio: 1; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 8px; }
+.bg-foto img { width: 100%; height: 100%; object-fit: contain; }
+.bg-merek { margin: 2px 0 0 !important; color: var(--muted); font-size: .8rem; font-weight: 700; }
+.bg-nama { font-family: var(--sans); font-size: .95rem; line-height: 1.3; margin: 0 0 4px; letter-spacing: 0; }
+.bg-redup { color: var(--muted); font-size: .84rem; }
+.bg-kecil { font-size: .84rem; }
+.bg-bahan { margin: 0; padding-left: 16px; }
+.bg-bahan li { margin: 0 0 3px; }
+.bg-murah .now { font-size: 1.05rem; }
+.lencana-murah {
+  display: inline-block; background: var(--lokal); color: #fff; font-size: .7rem; font-weight: 800;
+  border-radius: 999px; padding: 2px 8px;
+}
+.kulit li.kulit-sama { background: var(--lokal-soft); border-color: #bfe3d4; color: var(--lokal); }
+.catatan-harga { margin: 10px 0 0; color: var(--muted); font-size: .86rem; }
+.tautan-tombol {
+  background: none; border: 0; padding: 0; font: inherit; font-size: .85rem; font-weight: 700;
+  color: var(--lokal); text-decoration: underline; cursor: pointer;
+}
+.bg-hapus { min-height: 32px; }
+.request { margin-top: 30px; }
+.request .form-kartu { max-width: 40rem; }
+.request .sukses h3 { font-family: var(--sans); margin: 0 0 6px; letter-spacing: 0; }
+.pesan-form { margin: 0 0 12px; color: var(--off); font-weight: 700; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.baki {
+  position: sticky; bottom: 0; z-index: 9; background: rgba(255, 252, 248, .97);
+  border-top: 1px solid var(--line); box-shadow: 0 -6px 18px rgba(60, 40, 20, .08);
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+}
+.baki-isi { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.baki-teks { margin: 0; font-weight: 700; font-size: .92rem; }
+.baki-lihat { border: 0; cursor: pointer; background: var(--lokal); min-width: 128px; font: inherit; font-weight: 700; color: #fff; }
+.baki-lihat:disabled { background: #b9ada0; cursor: default; }
+@media (max-width: 520px) {
+  .banding-grid { padding: 10px 8px; gap: 0 8px; }
+  .banding-grid[data-n="3"] .bg-sel { font-size: .8rem; }
+  .banding-grid[data-n="3"] .bg-nama { font-size: .82rem; }
+  .banding-grid[data-n="3"] .btn { font-size: .74rem; padding: 6px 4px; }
+  .banding-grid[data-n="3"] .kulit li { font-size: .68rem; padding: 2px 6px; }
+}
+@media (min-width: 800px) {
+  .grid-pilih { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .banding-grid { padding: 16px; gap: 0 18px; }
+  .baki { display: none; }
+}
+.bg-ulasan { margin: 0; padding-left: 16px; }
+.bg-ulasan li { margin: 0 0 4px; }
+.pair-ada .btn-lengkap + .btn-lengkap { margin-top: 8px; }

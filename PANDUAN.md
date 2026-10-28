@@ -25,6 +25,8 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `tentang.html` | Halaman Tentang Kami: pengelola, alasan situs dibuat, cara perbandingan dibuat, link affiliate, kontak. Hasil generator. |
 | `js/config.js` | **Satu tempat** untuk alamat pengiriman formulir: `FEEDBACK_ENDPOINT`. |
 | `js/ulasan.js` | Perilaku formulir. |
+| `bandingkan.html` | Halaman Bandingin Sendiri: pengunjung memilih 2–3 produk dan melihatnya berdampingan, plus formulir request produk. Hasil generator. |
+| `js/bandingkan.js` | Perilaku pemilih produk dan formulir request. |
 
 `review.html` dan `perbandingan.html` hanya mengalihkan ke beranda, supaya tautan lama tidak buntu.
 
@@ -154,6 +156,26 @@ function doPost(e) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 ```
+
+## Bandingin Sendiri
+
+Halaman `bandingkan.html` (menu **Bandingin Sendiri**, kotak ajakan di beranda, dan footer). Pengunjung memilih jenis produk, lalu 2 atau 3 produk. Hasilnya: foto, asal, harga (plus mana yang lebih murah), isi dan tekstur, jenis kulit, kandungan utama, tautan ke perbandingan lengkap, dan tombol beli.
+
+- Datanya dibangun generator dari `pasangan.json` dan `sumber/*.psv`, lalu ditanam di halaman sebagai JSON (`<script id="data-bandingkan">`). Produk yang bisa dipilih = semua produk yang ada di pasangan, satu kali per produk. Produk yang dipakai di beberapa pasangan memakai data pasangan terbaru (termasuk harga dan link dari `listing`), dan semua halaman perbandingannya ditautkan. Pasangan baru otomatis ikut.
+- Harga rentang (listing dengan beberapa ukuran) tampil sebagai rentang; untuk menentukan mana yang lebih murah, dipakai harga terendahnya.
+- Tidak ada teks baru per produk. Nama, isi, tekstur, kulit, dan bahan diambil dari teks pasangan. Harga dari `.psv`.
+- Kalau dua produk yang dipilih memang satu pasangan, muncul tautan ke halaman perbandingan lengkapnya.
+- Merek ditulis sesuai `MEREK_TAMPIL` di `tools/build_site.py`. Merek baru yang belum ada di daftar itu tetap tampil (pakai kolom brand), generator hanya memberi peringatan.
+- Tombol beli memakai link pendek affiliate; kalau tidak ada, URL produk Shopee.
+- URL bisa dibagikan, misalnya `bandingkan.html?pilih=20803489571,25080136975`.
+
+### Request produk
+
+Bagian "Produk yang kamu mau belum ada? Request di sini" di halaman yang sama. Kiriman masuk ke `FEEDBACK_ENDPOINT` di `js/config.js`, yaitu Google Sheet yang sama dengan Kasih Pendapat. Tidak perlu akun baru.
+
+Di sheet, baris request ditandai `perbandingan` = `Request produk` dan `perbandingan_id` = `request-produk`. Isinya ada di kolom `berikutnya` (Produk 1, Produk 2, Jenis kulit, Catatan); catatan juga masuk kolom `saran`. Kiriman juga membawa kunci `produk_1`, `produk_2`, `jenis_kulit`, `catatan`: kalau mau jadi kolom sendiri, tambahkan ke array `KOLOM` di skrip Google, lalu deploy versi baru.
+
+Untuk menyembunyikan bagian ini, isi `REQUEST_AKTIF = False` di `tools/build_site.py`, lalu bangun ulang.
 
 ## Online
 

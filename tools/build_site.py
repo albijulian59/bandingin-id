@@ -8,7 +8,7 @@
 
 Sumber: sumber/*.psv, sumber/tambahan-*.psv, sumber/merek-korea.txt,
 sumber/posted.log, tools/pasangan.json
-Hasil: index.html, banding/*.html, ulasan.html, tentang.html, img/*.jpg
+Hasil: index.html, banding/*.html, bandingkan.html, ulasan.html, tentang.html, img/*.jpg
 """
 import argparse, glob, json, os, re, sys, urllib.request
 from html import escape
@@ -478,6 +478,9 @@ def header(base, aktif=None):
         kelas = " class=\"aktif\"" if aktif == kunci else ""
         aria = " aria-current=\"true\"" if aktif == kunci else ""
         tautan.append(f'<a href="{href}"{kelas}{aria}>{esc(label)}</a>')
+    kelas_s = " class=\"aktif\"" if aktif == "bandingkan" else ""
+    aria_s = " aria-current=\"page\"" if aktif == "bandingkan" else ""
+    tautan.append(f'<a href="{base}bandingkan.html"{kelas_s}{aria_s}>Bandingin Sendiri</a>')
     kelas_p = " class=\"aktif\"" if aktif == "pendapat" else ""
     aria_p = " aria-current=\"page\"" if aktif == "pendapat" else ""
     tautan.append(f'<a href="{base}ulasan.html"{kelas_p}{aria_p}>Kasih Pendapat</a>')
@@ -501,7 +504,7 @@ def footer(base, tanggal):
   <div class="wrap">
     <p class="footnote" id="disclosure">{esc(CATATAN_AFFILIATE)}</p>
     <p class="footnote">Ulasan disusun dari analisa kandungan dan informasi produk, bukan saran medis. {esc(CATATAN_STATIS)}</p>
-    <p class="footer-nav"><a href="{base}tentang.html">Tentang Kami</a> · <a href="{base}ulasan.html">Kasih Pendapat</a></p>
+    <p class="footer-nav"><a href="{base}bandingkan.html">Bandingin Sendiri</a> · <a href="{base}tentang.html">Tentang Kami</a> · <a href="{base}ulasan.html">Kasih Pendapat</a></p>
     <p class="copy">© 2026 {MEREK} · Dikelola secara independen oleh Albi · Harga mengikuti listing Shopee per {esc(tanggal)} dan bisa berubah.</p>
   </div>
 </footer>
@@ -628,6 +631,10 @@ def render_index(data, produk, pasangan):
         <label class="sr" for="q">Cari perbandingan</label>
         <input id="q" type="search" placeholder="Cari merek atau bahan, misalnya niacinamide" autocomplete="off">
       </form>
+      <aside class="ajak-banding">
+        <p><strong>Mau adu produk pilihanmu sendiri?</strong> Pilih dua atau tiga produk, bedanya langsung kelihatan.</p>
+        <a class="btn btn-banding" href="bandingkan.html">Bandingin sendiri</a>
+      </aside>
     </div>
   </section>
   <div class="wrap" id="daftar">
@@ -1059,6 +1066,236 @@ def render_tentang(data, pasangan):
     return html
 
 
+# Halaman Bandingin Sendiri (bandingkan.html): pengunjung memilih 2-3 produk sendiri.
+# Datanya dibangun dari pasangan.json + sumber/*.psv setiap kali build, jadi produk baru
+# di pasangan otomatis ikut. Hanya produk yang tampil di situs (ada di pasangan) yang bisa
+# dipilih, karena hanya produk itu yang punya foto, jenis kulit, dan kandungan yang sudah dicek.
+#
+# REQUEST_AKTIF: bagian "Produk yang kamu mau belum ada?" di halaman yang sama. Kiriman masuk
+# ke alamat FEEDBACK_ENDPOINT di js/config.js (Google Sheet yang sama dengan Kasih Pendapat).
+# Isi False untuk menyembunyikan bagian itu tanpa menghapus kodenya.
+REQUEST_AKTIF = True
+
+# Nama merek seperti yang ditulis di situs. Dicocokkan dengan awal nama produk (tanpa beda
+# huruf besar/kecil) atau dengan kolom brand di tambahan-*.psv. Merek baru yang belum ada di
+# sini tetap tampil (pakai kolom brand), generator hanya memberi peringatan.
+MEREK_TAMPIL = [
+    "Anua", "Avoskin", "Azarine", "Barber", "Beauty of Joseon", "COSRX", "ELVICTO", "Emina",
+    "Glad2Glow", "Gloow&be", "Hanasui", "ILLIYOON", "ISNTREE", "Kahf", "LANEIGE", "MS Glow",
+    "Nature Republic", "NEXTPRIME", "OMG", "Round Lab", "Scarlett", "SCORA", "SKIN1004", "SKINTIFIC",
+    "SOME BY MI", "Somethinc",
+    "The Originote", "Torriden", "Wardah", "Whitelab",
+]
+JENIS_KULIT_REQUEST = ["Berminyak", "Kering", "Kombinasi", "Normal", "Sensitif", "Berjerawat", "Belum tahu"]
+
+
+def merek_tampil(p, copy):
+    nama = copy["nama"].lower()
+    mentah = (p.get("merek") or "").strip().lower()
+    for m in sorted(MEREK_TAMPIL, key=len, reverse=True):
+        ml = m.lower()
+        if nama.startswith(ml) or (mentah and mentah in (ml, ml.replace("the ", ""))):
+            return m
+    if p.get("merek"):
+        print(f"PERINGATAN: merek {p['merek']!r} ({p['id']}) belum ada di MEREK_TAMPIL")
+        return p["merek"]
+    tebak = copy["nama"].split()[0]
+    print(f"PERINGATAN: merek {p['id']} ditebak dari nama: {tebak!r}. Tambahkan ke MEREK_TAMPIL.")
+    return tebak
+
+
+def data_bandingkan(produk, pasangan):
+    """Daftar produk untuk halaman Bandingin Sendiri. Semua isinya dari data, tidak ada teks baru.
+
+    Satu entri per produk. Produk yang dipakai di beberapa pasangan memakai data pasangan
+    terbaru (urutan terakhir di pasangan.json, termasuk harga/link dari "listing"), dan
+    semua pasangannya dicatat di "pairs".
+    """
+    per_id = {}
+    for pair in pasangan:
+        sisi = sisi_pair(pair)
+        nama_pair = " vs ".join(pair["produk"][iid]["nama"] for _, iid, _ in sisi)
+        for _, iid, asal in sisi:
+            p = produk_pair(produk, pair, iid)
+            copy = pair["produk"][iid]
+            catatan_varian = ""
+            if copy.get("varianDipilih"):
+                catatan_varian = f"Varian yang dibahas: {copy['varianDipilih']}"
+            elif copy.get("varian"):
+                catatan_varian = f"{len(copy['varian'])} varian dalam satu link: " + ", ".join(
+                    v["nama"] for v in copy["varian"]
+                )
+            pairs = per_id[iid]["pairs"] if iid in per_id else []
+            pairs.append([pair["id"], nama_pair])
+            per_id[iid] = {
+                "id": iid,
+                "jenis": pair["jenis"],
+                "nama": copy["nama"],
+                "merek": merek_tampil(p, copy),
+                "asal": asal,
+                "harga": p["harga"],
+                # listing dengan beberapa pilihan ukuran/varian: rentang harga, tanpa coret
+                "hargaMaks": p.get("harga_maks") or None,
+                "asli": p["asli"] if not p.get("harga_maks") and p["asli"] and p["asli"] > p["harga"] else None,
+                "isi": copy["isi"],
+                "tekstur": copy["tekstur"],
+                "kulit": list(copy["kulit"]),
+                "bahan": [b["nama"] for b in copy["bahan"]],
+                "varian": catatan_varian,
+                # tombol beli: link pendek affiliate; kalau belum ada, URL produk Shopee
+                "link": p["aff"] or p["url"],
+                "pairs": pairs,
+            }
+    hasil = list(per_id.values())
+    hasil.sort(key=lambda x: (x["merek"].lower(), x["nama"].lower()))
+    return hasil
+
+
+def json_aman(obj):
+    """JSON untuk <script type="application/json">: tanpa '</' supaya tag tidak tertutup."""
+    return json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+def render_bandingkan(data, produk, pasangan):
+    daftar = data_bandingkan(produk, pasangan)
+    chips = []
+    for kunci, label in JENIS:
+        n = sum(1 for d in daftar if d["jenis"] == kunci)
+        if not n:
+            continue
+        chips.append(
+            f'<button type="button" class="chip" data-jenis="{kunci}" aria-pressed="false">'
+            f'{esc(label)} <span class="count">{n}</span></button>'
+        )
+    payload = {
+        "tanggal": data["tanggal"],
+        "jenis": {k: l for k, l in JENIS},
+        "produk": daftar,
+    }
+    opsi_kulit = '<option value="">Lewati saja</option>' + "".join(
+        f'<option value="{esc(k)}">{esc(k)}</option>' for k in JENIS_KULIT_REQUEST
+    )
+    hidden_req = "" if REQUEST_AKTIF else " hidden"
+    desk = (
+        "Pilih dua atau tiga skincare sendiri, lalu lihat berdampingan: harga, asal, jenis kulit, "
+        "dan kandungan utama. Facial wash, pelembab, serum, dan sunscreen."
+    )
+    html = head("Bandingin Sendiri — " + MEREK, desk, "", "bandingkan.html")
+    html += f"""<body>
+{header("", "bandingkan")}
+<main class="wrap artikel bandingkan">
+  <p class="crumbs"><a href="index.html">Beranda</a> / Bandingin Sendiri</p>
+  <h1>Bandingin sendiri</h1>
+  <p class="intro-form">Pilih jenis produknya dulu. Lalu pilih dua produk, atau tiga kalau masih galau. Hasilnya muncul berdampingan di bawah.</p>
+
+  <section class="pilih-langkah" aria-labelledby="langkah-1">
+    <h2 class="langkah" id="langkah-1"><span>1</span> Pilih jenis</h2>
+    <div class="filter filter-pilih" role="group" aria-label="Jenis produk">{''.join(chips)}</div>
+  </section>
+
+  <section class="pilih-langkah" aria-labelledby="langkah-2">
+    <h2 class="langkah" id="langkah-2"><span>2</span> Pilih 2 atau 3 produk</h2>
+    <form class="search search-pilih" id="form-cari-produk" role="search">
+      <label class="sr" for="cari-produk">Cari produk</label>
+      <input id="cari-produk" type="search" placeholder="Cari merek atau bahan" autocomplete="off" disabled>
+    </form>
+    <p class="info-pilih" id="info-pilih" aria-live="polite">Pilih jenis produknya dulu, ya.</p>
+    <ul class="grid-pilih" id="grid-pilih"></ul>
+    <p class="kosong" id="kosong-pilih" hidden>Nggak ada yang cocok. Coba kata lain.</p>
+  </section>
+
+  <section class="hasil-banding" id="hasil-banding" hidden aria-labelledby="judul-hasil" tabindex="-1">
+    <h2 class="bagian" id="judul-hasil">Hasil perbandingan</h2>
+    <p class="ringkas-harga" id="ringkas-harga"></p>
+    <div class="pair-ada" id="pair-ada" hidden></div>
+    <div class="banding-grid" id="banding-grid"></div>
+    <p class="catatan-harga">Harga dari listing Shopee per {esc(data["tanggal"])} dan bisa berubah. Ukuran tiap produk bisa beda, jadi cek juga isinya.</p>
+    {catatan_beli("")}
+  </section>
+
+  <template id="tpl-beli"><a class="btn btn-sm" target="_blank" rel="sponsored noopener noreferrer">Beli di Shopee</a></template>
+
+  <section class="request" id="request" aria-labelledby="judul-request"{hidden_req}>
+    <h2 class="bagian" id="judul-request">Produk yang kamu mau belum ada? Request di sini</h2>
+    <p class="intro-form">Tulis nama produknya. Kalau mau diadu sama produk lain, tulis juga yang kedua. Albi baca semua request yang masuk.</p>
+    <form class="form-kartu" id="form-request" action="#" method="post" novalidate>
+      <div class="field">
+        <label class="label" for="req-produk-1">Nama produk 1</label>
+        <input id="req-produk-1" name="produk_1" type="text" maxlength="150" required placeholder="Merek dan nama produknya">
+      </div>
+      <div class="field">
+        <label class="label" for="req-produk-2">Nama produk 2 <span class="opsional">opsional</span></label>
+        <input id="req-produk-2" name="produk_2" type="text" maxlength="150" placeholder="Kalau mau dibandingin sama produk lain">
+      </div>
+      <div class="field">
+        <label class="label" for="req-kulit">Jenis kulit kamu <span class="opsional">opsional</span></label>
+        <select id="req-kulit" name="jenis_kulit">{opsi_kulit}</select>
+      </div>
+      <div class="field">
+        <label class="label" for="req-catatan">Catatan <span class="opsional">opsional</span></label>
+        <textarea id="req-catatan" name="catatan" maxlength="1000" placeholder="Misalnya budget kamu, atau masalah kulit yang lagi dicari solusinya"></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="req-situs">Jangan diisi</label>
+        <input id="req-situs" name="situs" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="pesan-form" id="pesan-request" aria-live="polite" hidden></p>
+      <button class="btn btn-kirim" type="submit">Kirim request</button>
+    </form>
+    <section class="sukses" id="sukses-request" hidden aria-live="polite">
+      <h3>Request kamu sudah masuk. Makasih!</h3>
+      <p>Mau request produk lain? <button type="button" class="tautan-tombol" id="request-lagi">Isi lagi</button></p>
+    </section>
+  </section>
+</main>
+<div class="baki" id="baki" hidden>
+  <div class="wrap baki-isi">
+    <p class="baki-teks" id="baki-teks"></p>
+    <button type="button" class="btn baki-lihat" id="baki-lihat">Lihat hasil</button>
+  </div>
+</div>
+{footer("", data["tanggal"])}
+<script type="application/json" id="data-bandingkan">{json_aman(payload)}</script>
+<script src="js/config.js"></script>
+<script src="js/bandingkan.js"></script>
+</body>
+</html>
+"""
+    return html, daftar
+
+
+def periksa_bandingkan(html, daftar, pasangan):
+    """Data Bandingin Sendiri: satu entri per produk di pasangan, semua punya foto dan link."""
+    m = re.search(r'<script type="application/json" id="data-bandingkan">(.*?)</script>', html, re.S)
+    if not m:
+        raise SystemExit("bandingkan.html: data produk tidak ada")
+    isi = json.loads(m.group(1))["produk"]
+    harus = {iid for pair in pasangan for iid in id_pair(pair)}
+    ada = [d["id"] for d in isi]
+    if len(ada) != len(set(ada)) or set(ada) != harus:
+        raise SystemExit("bandingkan.html: daftar produk tidak sama dengan produk di pasangan")
+    per_pair = {}
+    for d in isi:
+        for k in ("nama", "merek", "asal", "harga", "kulit", "bahan", "link", "pairs", "jenis"):
+            if not d.get(k):
+                raise SystemExit(f"bandingkan.html: {d['id']} kosong: {k}")
+        if d["asal"] not in ("lokal", "korea"):
+            raise SystemExit(f"bandingkan.html: asal salah {d['id']}")
+        if not os.path.isfile(os.path.join(IMG, d["id"] + ".jpg")):
+            raise SystemExit(f"bandingkan.html: foto {d['id']} tidak ada")
+        if not (d["link"].startswith("https://s.shopee.co.id/") or d["link"].startswith("https://shopee.co.id/")):
+            raise SystemExit(f"bandingkan.html: link beli aneh {d['id']}")
+        for pid, _ in d["pairs"]:
+            per_pair.setdefault(pid, []).append(d)
+    for pair in pasangan:
+        if len(per_pair.get(pair["id"], [])) != 2:
+            raise SystemExit(f"bandingkan.html: pasangan {pair['id']} tidak lengkap")
+        if not os.path.isfile(os.path.join(BANDING, pair["id"] + ".html")):
+            raise SystemExit(f"bandingkan.html: banding/{pair['id']}.html tidak ada")
+    if 'id="form-request"' not in html or "js/config.js" not in html:
+        raise SystemExit("bandingkan.html: formulir request tidak lengkap")
+
+
 def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
     # posted.log tetap disimpan sebagai arsip. Posting affiliate di X/Threads sudah berhenti,
     # jadi pasangan yang pernah diposting boleh dirombak. Yang dicek: kalau pasangan itu masih
@@ -1422,6 +1659,7 @@ def main():
     }
     for pair in pasangan:
         berkas[f"banding/{pair['id']}.html"] = render_pair(data, produk, pair, sumber)
+    berkas["bandingkan.html"], daftar_banding = render_bandingkan(data, produk, pasangan)
     for path, html in berkas.items():
         tujuan = os.path.join(ROOT, path)
         os.makedirs(os.path.dirname(tujuan), exist_ok=True)
@@ -1431,9 +1669,12 @@ def main():
     tulis_redirect_banding(redirect)
     # redirect tidak ikut pemeriksaan kata (hampir kosong) tapi tautannya diperiksa lewat berkas
     periksa(berkas, produk, pasangan, posted, merek, sumber)
+    periksa_bandingkan(berkas["bandingkan.html"], daftar_banding, pasangan)
     for path, html in berkas.items():
         if f'content="{GOOGLE_SITE_VERIFICATION}"' not in html:
             raise SystemExit("Meta verifikasi Google hilang di " + path)
+        if 'src="https://gc.zgo.at/count.js"' not in html:
+            raise SystemExit("Skrip GoatCounter hilang di " + path)
     n_sitemap = tulis_sitemap(berkas.keys())
     # CNAME (custom domain pilihyuk.id) tidak pernah ditulis atau dihapus generator.
     if not os.path.isfile(os.path.join(ROOT, "CNAME")):
@@ -1445,6 +1686,10 @@ def main():
             if nama not in terpakai and nama not in ASET_MEREK:
                 os.remove(os.path.join(IMG, nama))
     laporan(produk, pasangan)
+    print("Bandingin Sendiri (produk yang bisa dipilih):")
+    for kunci, label in JENIS:
+        print(f"  {label}: {sum(1 for d in daftar_banding if d['jenis'] == kunci)}")
+    print(f"  Total: {len(daftar_banding)}" + ("" if REQUEST_AKTIF else " (form request disembunyikan)"))
     print(f"sitemap.xml: {n_sitemap} URL")
     print(f"\nSelesai: {len(pasangan)} perbandingan" + (" (DRAFT: jangan dipublikasikan sebelum link lengkap)" if DRAFT else ""))
 
