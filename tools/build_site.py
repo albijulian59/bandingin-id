@@ -430,6 +430,7 @@ def head(title, description, base, canonical_path):
   <link rel="icon" href="{base}favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="{base}img/favicon-32.png">
   <link rel="apple-touch-icon" href="{base}img/apple-touch-icon.png">
+  <script data-goatcounter="https://pilihyuk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 """
 
@@ -1169,6 +1170,8 @@ def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
         for m in re.finditer(r'src="([^"]+)"', html):
             src = m.group(1)
             if src.startswith("data:"):
+                continue
+            if src == "https://gc.zgo.at/count.js":  # penghitung pengunjung GoatCounter
                 continue
             tujuan = os.path.normpath(os.path.join(ROOT, os.path.dirname(path), src))
             if not os.path.isfile(tujuan):
