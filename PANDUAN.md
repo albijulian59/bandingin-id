@@ -20,6 +20,7 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `tools/analisa.json` | Catatan kandungan. Acuan fakta, tidak ditampilkan mentah. |
 | `sumber/kandungan-batch2.json` | Catatan kandungan batch 27 Oktober 2026 (per produk, per varian kalau ada), lengkap dengan sumbernya. |
 | `sumber/kandungan-batch3.json` | Catatan kandungan batch 28 Oktober 2026 dengan sumbernya. Generator membaca semua `kandungan-batch*.json`; satu produk hanya boleh tercatat di satu file. |
+| `sumber/kandungan-batch4.json` | Sumber resmi merek untuk label kulit dan bahan COSRX Good Morning, Nature Republic Aloe, SKIN1004 Ampoule Foam, dan Torriden DIVE-IN (28 Oktober 2026). |
 | `sumber/` | Data Shopee skincare, link affiliate, daftar merek Korea, pasangan yang sudah diposting. |
 | `sumber/tambahan-*.psv` | Batch produk baru. Kolom: type, brand, origin, name, price, original price, product URL, image URL, short link, key ingredients. |
 | `ulasan.html` | Halaman Kasih Pendapat. Hasil generator (daftar perbandingan di dropdown ikut terbarui). |
