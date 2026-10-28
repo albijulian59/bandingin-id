@@ -111,6 +111,36 @@ def parse_rp(teks):
     return int(digit) if digit else None
 
 
+RENTANG = re.compile(r"^\s*(?:Rp)?\s*([\d.]+)\s*[-\u2013]\s*(?:Rp)?\s*([\d.]+)\s*$", re.I)
+
+
+def parse_rentang(teks):
+    """"Rp47.900-222.500" -> (47900, 222500). Harga tunggal -> (harga, None)."""
+    m = RENTANG.match(teks or "")
+    if not m:
+        return parse_rp(teks), None
+    lo, hi = parse_rp(m.group(1)), parse_rp(m.group(2))
+    if not lo or not hi or hi <= lo:
+        raise SystemExit(f"Rentang harga tidak sah: {teks}")
+    return lo, hi
+
+
+def produk_pair(produk, pair, iid):
+    """Data produk untuk satu pasangan.
+
+    Produk lama boleh dipakai lagi di pasangan baru. Kalau harga atau link pendek listing
+    baru berbeda, isi pair["produk"][iid]["listing"] = {"harga", "asli", "aff"}.
+    Data lama di sumber/ tetap utuh dan pasangan lama tetap memakai data lama.
+    """
+    p = produk[iid]
+    ov = (pair["produk"].get(iid) or {}).get("listing")
+    if not ov:
+        return p
+    harga, maks = parse_rentang(ov.get("harga"))
+    asli = parse_rp(ov.get("asli")) if ov.get("asli") else harga
+    return {**p, "harga": harga, "harga_maks": maks, "asli": asli, "aff": ov.get("aff") or None}
+
+
 def rp(n):
     return "Rp" + f"{int(n):,}".replace(",", ".")
 
@@ -254,7 +284,7 @@ def muat_tambahan(produk):
                 )
             if row["origin"] not in ("lokal", "korea"):
                 raise SystemExit(f"origin tidak dikenal: {row['origin']}")
-            harga = parse_rp(row["price"])
+            harga, harga_maks = parse_rentang(row["price"])
             if not harga:
                 raise SystemExit(f"harga kosong: {iid}")
             produk[iid] = {
@@ -262,7 +292,8 @@ def muat_tambahan(produk):
                 "keyword": row["type"],
                 "judul": row["name"],
                 "harga": harga,
-                "asli": parse_rp(row["original price"]),
+                "harga_maks": harga_maks,
+                "asli": parse_rentang(row["original price"])[0],
                 "url": row["product url"],
                 "gambar": row["image url"],
                 "aff": aff,
@@ -273,15 +304,17 @@ def muat_tambahan(produk):
 
 
 def muat_sumber_kandungan():
-    """sumber/kandungan-batch2.json: {item id: {"sumber": [URL, ...], ...}}.
+    """sumber/kandungan-batch*.json: {item id: {"sumber": [URL, ...], ...}}.
 
     Hanya URL http(s) dari data yang dipakai. Tidak ada URL tambahan.
     """
-    path = os.path.join(SUMBER, "kandungan-batch2.json")
-    if not os.path.exists(path):
-        return {}
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
+    data = {}
+    for path in sorted(glob.glob(os.path.join(SUMBER, "kandungan-batch*.json"))):
+        with open(path, encoding="utf-8") as f:
+            for iid, isi in json.load(f).items():
+                if iid in data:
+                    raise SystemExit(f"Sumber kandungan {iid} tercatat dua kali ({os.path.basename(path)})")
+                data[iid] = isi
     hasil = {}
     for iid, isi in data.items():
         urls = []
@@ -345,6 +378,9 @@ def pastikan_gambar(produk, pasangan, ulang):
 
 
 def harga_html(p):
+    if p.get("harga_maks"):
+        # listing dengan beberapa pilihan ukuran/varian: tampil sebagai rentang, tanpa coret
+        return f'<span class="now">{esc(rp(p["harga"]))}–{esc(rp(p["harga_maks"]))}</span>'
     potong = diskon(p["harga"], p["asli"])
     html = f'<span class="now">{esc(rp(p["harga"]))}</span>'
     if potong:
@@ -527,8 +563,8 @@ def render_index(data, produk, pasangan):
     kartu = []
     for i, pair in enumerate(pasangan):
         (_, ia, asal_a), (_, ib, asal_b) = sisi_pair(pair)
-        lok = produk[ia]
-        kor = produk[ib]
+        lok = produk_pair(produk, pair, ia)
+        kor = produk_pair(produk, pair, ib)
         cl = pair["produk"][ia]
         ck = pair["produk"][ib]
         href = f"banding/{pair['id']}.html"
@@ -752,8 +788,8 @@ def bagian_varian(pair):
 def render_pair(data, produk, pair, sumber=None):
     sumber = sumber or {}
     (ka, ia, asal_a), (kb, ib, asal_b) = sisi_pair(pair)
-    lok = produk[ia]
-    kor = produk[ib]
+    lok = produk_pair(produk, pair, ia)
+    kor = produk_pair(produk, pair, ib)
     cl = pair["produk"][ia]
     ck = pair["produk"][ib]
     lokal_lokal = jenis_banding(pair) == "lokal-lokal"
@@ -1053,7 +1089,7 @@ def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
         for kunci_sisi_ini, iid, sisi in sisi_pair(pair):
             if iid not in pair["produk"]:
                 raise SystemExit(f"{pair['id']} tanpa teks {iid}")
-            p = produk[iid]
+            p = produk_pair(produk, pair, iid)
             if p["aff"] is None:
                 if not DRAFT:
                     raise SystemExit("Link affiliate kosong " + iid)
@@ -1121,16 +1157,18 @@ def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
         if pair["lebihMurah"] not in kunci_sisi:
             raise SystemExit("lebihMurah salah " + pair["id"])
         (k1, i1, _), (k2, i2, _) = sisi_pair(pair)
-        harga = {k1: produk[i1]["harga"], k2: produk[i2]["harga"]}
+        harga = {k1: produk_pair(produk, pair, i1)["harga"], k2: produk_pair(produk, pair, i2)["harga"]}
         lain = k2 if pair["lebihMurah"] == k1 else k1
         if not harga[pair["lebihMurah"]] < harga[lain]:
             raise SystemExit(f"{pair['id']} {pair['lebihMurah']} tidak lebih murah")
         for kunci in ("berminyak", "kering", "budget"):
             if not pair["verdict"].get(kunci):
                 raise SystemExit(f"verdict {kunci} kosong {pair['id']}")
-        terpakai.extend(id_pair(pair))
+        terpakai.append(frozenset(id_pair(pair)))
+    # Produk boleh dipakai lagi di pasangan lain (lihat produk_pair), tapi pasangan yang
+    # sama persis tidak boleh muncul dua kali.
     if len(terpakai) != len(set(terpakai)):
-        raise SystemExit("Ada produk yang dipakai lebih dari sekali")
+        raise SystemExit("Ada pasangan produk yang sama persis lebih dari sekali")
 
     for jenis, _ in JENIS:
         if not any(p["jenis"] == jenis for p in pasangan):
@@ -1227,6 +1265,7 @@ def periksa(html_per_path, produk, pasangan, posted, merek, sumber=None):
 
     # setiap tombol beli di situs memakai link yang ada di data
     aff_sah = {p["aff"] for p in produk.values() if p["aff"]}
+    aff_sah |= {produk_pair(produk, pair, iid)["aff"] for pair in pasangan for iid in id_pair(pair)} - {None}
     for path, html in html_per_path.items():
         for m in re.finditer(r'https://s\.shopee\.co\.id/[A-Za-z0-9]+', html):
             if m.group(0) not in aff_sah:
@@ -1241,7 +1280,7 @@ def laporan(produk, pasangan):
         print(f"  {blabel}: {len(sub)}")
         for jenis, label in JENIS:
             print(f"    {label}: {sum(1 for p in sub if p['jenis'] == jenis)}")
-    kosong = [iid for iid in sorted(terpakai) if not produk[iid]["aff"]]
+    kosong = sorted({iid for p in pasangan for iid in id_pair(p) if not produk_pair(produk, p, iid)["aff"]})
     if kosong:
         print("Belum punya link pendek (tombol 'Link menyusul'):")
         for iid in kosong:
