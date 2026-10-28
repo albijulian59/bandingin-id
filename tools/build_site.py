@@ -524,7 +524,7 @@ def footer(base, tanggal):
     <p class="footnote" id="disclosure">{esc(CATATAN_AFFILIATE)}</p>
     <p class="footnote">Ulasan disusun dari analisa kandungan dan informasi produk, bukan saran medis. {esc(CATATAN_STATIS)}</p>
     <p class="footer-nav"><a href="{base}bandingkan.html">Bandingin Sendiri</a> · <a href="{base}tentang.html">Tentang Kami</a> · <a href="{base}ulasan.html">Kasih Pendapat</a></p>
-    <p class="copy">© 2026 {MEREK} · Dikelola secara independen oleh Albi · Harga mengikuti listing Shopee per {esc(tanggal)} dan bisa berubah.</p>
+    <p class="copy">© 2026 {MEREK} · Dikelola secara independen oleh Albi · Harga mengikuti halaman produk Shopee per {esc(tanggal)} dan bisa berubah.</p>
   </div>
 </footer>
 """
@@ -1103,7 +1103,7 @@ def render_tentang(data, pasangan):
   <section id="cara">
     <h2 class="bagian">Cara perbandingan dibuat</h2>
     <ul class="daftar-tentang">
-      <li><strong>Harga</strong> diambil dari listing Shopee per {esc(data["tanggal"])}. Harga dan diskon bisa berubah sewaktu-waktu, jadi cek lagi harga terakhir di Shopee.</li>
+      <li><strong>Harga</strong> diambil dari halaman produk Shopee per {esc(data["tanggal"])}. Harga dan diskon bisa berubah sewaktu-waktu, jadi cek lagi harga terakhir di Shopee.</li>
       <li><strong>Kandungan</strong> diambil dari informasi produk di Shopee, website resmi merek, dan database bahan seperti INKEEDecoder (dulu INCIDecoder) dan Skinsort. Kalau sumbernya tercatat, tautannya ada di bagian <em>Sumber kandungan</em> di halaman perbandingan.</li>
       <li>Kalau daftar bahan tidak tercantum, kami tulis apa adanya dan tidak mengarang.</li>
       <li><strong>Tidak ada klaim medis.</strong> Isi situs ini informasi umum, bukan pengganti saran dokter. Kalau kulitmu bermasalah atau sensitif, konsultasikan ke dokter kulit.</li>
@@ -1278,7 +1278,7 @@ def render_bandingkan(data, produk, pasangan):
     <p class="ringkas-harga" id="ringkas-harga"></p>
     <div class="pair-ada" id="pair-ada" hidden></div>
     <div class="banding-grid" id="banding-grid"></div>
-    <p class="catatan-harga">Harga dari listing Shopee per {esc(data["tanggal"])} dan bisa berubah. Ukuran tiap produk bisa beda, jadi cek juga isinya.</p>
+    <p class="catatan-harga">Harga dari halaman produk Shopee per {esc(data["tanggal"])} dan bisa berubah. Ukuran tiap produk bisa beda, jadi cek juga isinya.</p>
     {catatan_beli("")}
   </section>
 

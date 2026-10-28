@@ -89,7 +89,7 @@
     "nama": "Azarine Hydrasoothe Sunscreen Gel SPF45 PA++++",
     "bahan": "Aqua, Glycerin, Propanediol, Ethylhexyl Methoxycinnamate, Butyl Methoxydibenzoylmethane, Aloe Barbadensis Juice Extract, Portulaca Oleracea Extract, Sodium Hyaluronate, Niacinamide, Cucumis Sativus Fruit Extract, Camellia Sinensis Extract, Punica Granatum Fruit Extract, Phenoxyethanol, Octocrylene, Butylene Glycol, Sodium Acrylates/C10-30 Alkyl Acrylates Crosspolymer, Propolis, Picea Abies Extract, Allantoin, Xanthan Gum, Panthenol, Disodium EDTA, Lecithin",
     "sumber": [
-      "https://azarinecosmetic.com/p/hydrasoothe-sunscreen-gel-spf45-pa"
+      "https://azarinecosmetic.com/product/hydrasoothe-sunscreen-gel-spf-45-pa-"
     ],
     "catatan": "Listing menawarkan ukuran 30/50/110 ml; harga data Rp45.000 untuk varian yang tampil di data."
   },
@@ -343,7 +343,7 @@
       "https://www.beautyhaul.com/product/detail/elvicto-sunscreen-expert-spf-50pa/r/0",
       "tools/analisa.json"
     ],
-    "catatan": "Daftar INCI lengkap tidak ditemukan di situs resmi."
+    "catatan": "Daftar INCI lengkap tidak ditemukan di situs resmi. Toko resmi ELVICTO di Tokopedia (dicek 28 Okt 2026) menyebut hybrid tanpa nama filter; URL tidak ditampilkan karena slug-nya memuat kata terlarang: https://www.tokopedia.com/elvictomastermen/elvicto-sunscreen-expert-spf-50-pa-30gr-hybrid-sunscreen-pria-5x-ceramide-dna-salmon-uv-protection-skin-barrier-1737448965392205129"
   },
   "15924460347": {
     "nama": "Avoskin Your Skin Bae GCT Aqua Ceramide 15 ml",
