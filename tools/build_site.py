@@ -40,6 +40,10 @@ MEREK = "PilihYuk"
 BASE_URL = "https://pilihyuk.id/"
 # Verifikasi Google Search Console (properti https://pilihyuk.id/).
 GOOGLE_SITE_VERIFICATION = "ygg-CttU-Raot4lAzh9pI1CV8HeUt5f1_sjWReFvTng"
+# Gambar untuk og:image, twitter:image, dan logo Organization (JSON-LD). URL absolut, 512x512.
+GAMBAR_SOSIAL = BASE_URL + "img/favicon-512.png"
+# Akun resmi PilihYuk untuk sameAs di JSON-LD beranda.
+AKUN_RESMI = ["https://x.com/pilihyukid", "https://www.threads.com/@pret.zel59"]
 
 # Teks kepercayaan: dipakai di footer, dekat tombol beli, dan di Tentang Kami.
 CATATAN_AFFILIATE = (
@@ -62,7 +66,11 @@ SUMBER_DILEWATI = ()
 # Logo dan ikon (dibuat dari img/logo-asli.jpg, warna disesuaikan ke palet situs).
 # File ini tidak ikut dihapus saat membersihkan foto produk lama di img/.
 LOGO_W, LOGO_H = 429, 120  # ukuran asli img/logo.png; tampil 40 px (CSS)
-ASET_MEREK = {"logo.png", "logo.webp", "logo-asli.jpg", "favicon-32.png", "apple-touch-icon.png"}
+ASET_MEREK = {
+    "logo.png", "logo.webp", "logo-asli.jpg", "favicon-32.png", "apple-touch-icon.png",
+    # favicon persegi untuk Google, manifest, dan og:image (tools/buat_favicon.py)
+    "favicon-48.png", "favicon-96.png", "favicon-192.png", "favicon-512.png",
+}
 
 BANNED = re.compile(
     r"\b(pria|wanita|cowok|cewek|perempuan|laki-laki|for men|terjual|rating|"
@@ -443,7 +451,7 @@ def url_absolut(path):
     return BASE_URL + path
 
 
-def head(title, description, base, canonical_path):
+def head(title, description, base, canonical_path, extra_head=""):
     # Aset dan tautan tetap relatif. canonical_path: path halaman dari root situs
     # ("" atau "index.html" = beranda), dipakai untuk canonical dan og:url.
     url = url_absolut(canonical_path)
@@ -460,12 +468,23 @@ def head(title, description, base, canonical_path):
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(url)}">
+  <meta property="og:image" content="{GAMBAR_SOSIAL}">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Logo {MEREK}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{esc(title)}">
+  <meta name="twitter:description" content="{esc(description)}">
+  <meta name="twitter:image" content="{GAMBAR_SOSIAL}">
   <link rel="canonical" href="{esc(url)}">
   <meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}" />
   <link rel="stylesheet" href="{base}css/style.css">
   <link rel="icon" href="{base}favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="{base}img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="{base}img/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{base}img/favicon-192.png">
   <link rel="apple-touch-icon" href="{base}img/apple-touch-icon.png">
+  <link rel="manifest" href="{base}site.webmanifest">{extra_head}
   <script data-goatcounter="https://pilihyuk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 """
@@ -562,6 +581,55 @@ def meta_kartu(p, copy, asal, href, pos):
     </div>"""
 
 
+def json_ld_beranda():
+    """Data terstruktur beranda: nama situs dan logo untuk hasil pencarian Google."""
+    graf = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": BASE_URL + "#website",
+                "name": MEREK,
+                "alternateName": "PilihYuk.id",
+                "url": BASE_URL,
+                "inLanguage": "id-ID",
+                "publisher": {"@id": BASE_URL + "#organization"},
+            },
+            {
+                "@type": "Organization",
+                "@id": BASE_URL + "#organization",
+                "name": MEREK,
+                "url": BASE_URL,
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": GAMBAR_SOSIAL,
+                    "width": 512,
+                    "height": 512,
+                },
+                "sameAs": AKUN_RESMI,
+            },
+        ],
+    }
+    return '<script type="application/ld+json">' + json_aman(graf) + "</script>"
+
+
+def tulis_manifest():
+    manifest = {
+        "name": MEREK,
+        "short_name": MEREK,
+        "start_url": "/",
+        "display": "browser",
+        "background_color": "#fffcf8",
+        "theme_color": "#f3efe7",
+        "icons": [
+            {"src": f"/img/favicon-{n}.png", "sizes": f"{n}x{n}", "type": "image/png"}
+            for n in (48, 96, 192, 512)
+        ],
+    }
+    with open(os.path.join(ROOT, "site.webmanifest"), "w", encoding="utf-8") as f:
+        f.write(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+
+
 def render_index(data, produk, pasangan):
     kartu = []
     for i, pair in enumerate(pasangan):
@@ -610,14 +678,15 @@ def render_index(data, produk, pasangan):
         )
 
     desk = (
-        "PilihYuk membandingkan facial wash, pelembab, serum, dan sunscreen. Lokal vs Korea, atau lokal vs lokal, "
-        "jenisnya sama: kandungan, harga, dan cocok untuk kulit yang mana."
+        "PilihYuk mengadu dua skincare sejenis, lokal vs Korea atau lokal vs lokal: facial wash, pelembab, "
+        "serum, dan sunscreen. Lihat kandungan, harga, dan cocok untuk kulit yang mana."
     )
     html = head(
         "PilihYuk — Facial Wash, Pelembab, Serum, Sunscreen Lokal vs Korea",
         desk,
         "",
         "index.html",
+        "\n  " + json_ld_beranda(),
     )
     html += f"""<body>
 {header("")}
@@ -626,7 +695,7 @@ def render_index(data, produk, pasangan):
     <div class="wrap">
       <p class="kicker kicker-terang">Lokal vs Korea · Lokal vs Lokal</p>
       <h1>Skincare mana yang mending?</h1>
-      <p>Facial wash, pelembab, serum, dan sunscreen. Lokal dibanding Korea, atau lokal dibanding lokal, jenisnya sama. Lihat kandungan, harga, dan cocok untuk kulit yang mana.</p>
+      <p>Dua produk sejenis diadu berdampingan: lokal vs Korea, atau lokal vs lokal. Ada facial wash, pelembab, serum, dan sunscreen. Lihat kandungan, harga, dan cocok untuk kulit yang mana.</p>
       <form class="search" id="form-cari" role="search">
         <label class="sr" for="q">Cari perbandingan</label>
         <input id="q" type="search" placeholder="Cari merek atau bahan, misalnya niacinamide" autocomplete="off">
@@ -1021,7 +1090,7 @@ def render_tentang(data, pasangan):
 
   <section id="pengelola">
     <h2 class="bagian">Siapa yang mengelola</h2>
-    <p>PilihYuk dikelola secara independen oleh Albi. Perbandingan disusun dari data produk yang bisa dicek (harga Shopee, daftar kandungan dari situs resmi merek dan database kandungan). Isinya informasi umum, bukan saran medis — kalau ragu, konsultasikan ke dokter kulit.</p>
+    <p>PilihYuk dikelola secara independen oleh Albi. Perbandingan disusun dari data produk yang bisa dicek (harga Shopee, daftar kandungan dari situs resmi merek dan database kandungan). Isinya informasi umum, bukan saran medis. Kalau ragu, konsultasikan ke dokter kulit.</p>
     <p>Ini proyek pribadi, bukan toko dan bukan bagian dari merek mana pun.</p>
   </section>
 
@@ -1665,6 +1734,7 @@ def main():
         os.makedirs(os.path.dirname(tujuan), exist_ok=True)
         with open(tujuan, "w", encoding="utf-8") as f:
             f.write(html)
+    tulis_manifest()
     tulis_redirect()
     tulis_redirect_banding(redirect)
     # redirect tidak ikut pemeriksaan kata (hampir kosong) tapi tautannya diperiksa lewat berkas
@@ -1675,6 +1745,12 @@ def main():
             raise SystemExit("Meta verifikasi Google hilang di " + path)
         if 'src="https://gc.zgo.at/count.js"' not in html:
             raise SystemExit("Skrip GoatCounter hilang di " + path)
+    for path, html in berkas.items():
+        for wajib in ('img/favicon-48.png"', 'img/favicon-192.png"', 'site.webmanifest"', 'name="twitter:card"', 'property="og:image"'):
+            if wajib not in html:
+                raise SystemExit(f"{wajib} hilang di {path}")
+    if '"@type":"Organization"' not in berkas["index.html"]:
+        raise SystemExit("JSON-LD Organization hilang di index.html")
     n_sitemap = tulis_sitemap(berkas.keys())
     # CNAME (custom domain pilihyuk.id) tidak pernah ditulis atau dihapus generator.
     if not os.path.isfile(os.path.join(ROOT, "CNAME")):

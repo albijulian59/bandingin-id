@@ -14,6 +14,7 @@ Situs ini statis (HTML, CSS, gambar). Cocok untuk GitHub Pages, tanpa server.
 | `img/` | Foto produk (hasil generator) plus logo dan ikon: `logo.png`, `logo.webp`, `favicon-32.png`, `apple-touch-icon.png`, dan `logo-asli.jpg` (desain asli). Logo dan ikon tidak ikut dihapus generator. |
 | `favicon.ico` | Ikon tab browser (16/32/48 px). |
 | `tools/proses_logo.py` | Membuat ulang logo dan ikon dari `img/logo-asli.jpg`, warnanya disesuaikan ke palet situs (#0c6b52 dan #1a4f86). |
+| `tools/buat_favicon.py` | Membuat favicon persegi `img/favicon-48/96/192/512.png` (latar terang) dari `img/logo-asli.jpg`. Dipakai di tag ikon, `site.webmanifest`, og:image, dan logo JSON-LD beranda. |
 | `tools/pasangan.json` | Teks perbandingan: kandungan, manfaat, jenis kulit, verdict. |
 | `tools/build_site.py` | Generator. |
 | `tools/analisa.json` | Catatan kandungan. Acuan fakta, tidak ditampilkan mentah. |
